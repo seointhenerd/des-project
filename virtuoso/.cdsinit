@@ -100,3 +100,5 @@ envSetVal("graphic" "drfPath" 'string strcat(getShellEnvVar("pdk_dir") "/tsmc18r
 envSetVal("license" "VLSLicenseCheckoutOrder" 'string "GXL,XL,L")
 envSetVal("license" "ADELicenseCheckoutOrder" 'string "XL,GXL,L")
 envSetVal("license" "VSELicenseCheckoutOrder" 'string "XL,L")
+
+envSetVal("perf" "installAtStartup" 'boolean nil)
