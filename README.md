@@ -1,4 +1,4 @@
-# ECE_5710_6710_F24
+# ECE_5710_6710_F25
 
 ## Getting Started
 
@@ -18,7 +18,7 @@ cd modelsim
 ```
 ### Lab 2: RapidGPT
   [VisualStudioCode](https://code.visualstudio.com/download) Note: VS code is already installed on the CADE Machines.
-  
+
   [RapidGPT](https://getrapidgpt.rapidsilicon.com/User/SignUp) Registration and Login
 
 ### Labs 3 Standard Cell Evaluation - Schematic
@@ -43,5 +43,3 @@ cd innovus
 ```
 ### Project
   Check Canvas
-
-
