@@ -5,6 +5,3 @@ module xor2 (
 );
   assign out = a ^ b;
 endmodule
-
-
-// test push
