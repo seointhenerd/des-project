@@ -11,7 +11,7 @@ module Control_State_Machine (
   output wire done_decrypt,
   output wire [63:0] output_text,
   output wire subkey_req,
-  output wire [15:0] round_counter
+  output wire [4:0] round_counter
 );
 
     INTERNAL SIGNALS:
