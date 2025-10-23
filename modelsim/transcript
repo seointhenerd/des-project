@@ -12,4 +12,49 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# Loading project DES_project
+# Loading project IP
+project open /home/u1425837/des-project/modelsim/IP
+project open /home/u1425837/des-project/modelsim/FP
+# reading /uusoc/facility/cad_tools/Mentor/modelsim2019.4/questasim/linux_x86_64/../modelsim.ini
+# Loading project FP
+# Compile of Final_Permutation.v was successful.
+# Compile of tb_Final_Permutation.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim FP.tb_Final_Permutation -voptargs=+acc
+# vsim FP.tb_Final_Permutation -voptargs="+acc" 
+# Start time: 12:46:14 on Oct 23,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_Final_Permutation(fast)
+# Loading work.Final_Permutation(fast)
+run -all
+# Test: IP -> FP = identity check
+# left half: cc00ccff
+# right half: f0aaf0aa
+# PASSED: FP(IP(x)) = x
+# 
+# Testing all zeros
+# left half: 00000000
+# right half: 00000000
+# PASSED: All zeros
+# 
+# Testing all ones
+# left half: ffffffff
+# right half: ffffffff
+# PASSED: All ones
+# 
+# Testing known DES output
+# Result = aaaaaaaa00005500
+# 
+# Testing Swap verification
+# Result = aa55aa55aa55aa55
+# 
+# ========================================
+# ALL TESTS PASSED!
+# ========================================
+# 
+# ** Note: $finish    : /home/u1425837/des-project/modelsim/RTL/tb_Final_Permutation.v(99)
+#    Time: 50 ns  Iteration: 0  Instance: /tb_Final_Permutation
+# 1
+# Break in Module tb_Final_Permutation at /home/u1425837/des-project/modelsim/RTL/tb_Final_Permutation.v line 99
+# End time: 12:46:25 on Oct 23,2025, Elapsed time: 0:00:11
+# Errors: 0, Warnings: 0

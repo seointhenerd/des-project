@@ -1,0 +1,92 @@
+m255
+K4
+z2
+!s11f vlog 2019.4 2019.10, Oct 15 2019
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/u1425837/des-project/modelsim
+T_opt
+!s110 1761245096
+VCcoZ6M:5`dfS_h9N[585m2
+04 22 4 work tb_Initial_Permutation fast 0
+=1-18c04d8e309a-68fa77a8-ad046-2adebe
+o-quiet -auto_acc_if_foreign -work IP +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2019.4;69
+vInitial_Permutation
+Z2 !s110 1761245091
+!i10b 1
+!s100 fVM8Rm?QPe705D^iXO9OP0
+!s11b >n3=AR^:nY6V9^M3YmI?T2
+ILa^:R=IeVIlDgYSzF[B1<0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1761243406
+8/home/u1425837/des-project/modelsim/RTL/Initial_Permutation.v
+F/home/u1425837/des-project/modelsim/RTL/Initial_Permutation.v
+!i122 -1
+L0 1
+Z4 OL;L;2019.4;69
+r1
+!s85 0
+31
+Z5 !s108 1761245091.000000
+!s107 /home/u1425837/des-project/modelsim/RTL/Initial_Permutation.v|
+!s90 -reportprogress|300|-work|IP|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/Initial_Permutation.v|
+!i113 0
+Z6 o-work IP -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+n@initial_@permutation
+vtb_Initial_Permutation
+R2
+!i10b 1
+!s100 O41i[g4W`GHe:c[lFbWWn3
+!s11b :KEncT[3Q?9=ME0jGO4Yn0
+I`DP?4G;3fhomzYG_5?<M93
+R3
+R0
+w1761245088
+Z7 8/home/u1425837/des-project/modelsim/RTL/tb_Initial_Permutation.v
+Z8 F/home/u1425837/des-project/modelsim/RTL/tb_Initial_Permutation.v
+!i122 -1
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+Z9 !s107 /home/u1425837/des-project/modelsim/RTL/tb_Initial_Permutation.v|
+Z10 !s90 -reportprogress|300|-work|IP|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/tb_Initial_Permutation.v|
+!i113 0
+R6
+R1
+ntb_@initial_@permutation
+vtb_Initial_Permutation_debug
+!s110 1761242427
+!i10b 1
+!s100 egGPd5E7JOYefTEoGCXW30
+!s11b <=okh5mz<T;ge59@eFlz@3
+Ia?=AP?ZKWM5Y[;gQ=ddXF2
+R3
+R0
+w1761112810
+R7
+R8
+!i122 -1
+L0 4
+R4
+r1
+!s85 0
+31
+!s108 1761242427.000000
+R9
+R10
+!i113 0
+R6
+R1
+ntb_@initial_@permutation_debug

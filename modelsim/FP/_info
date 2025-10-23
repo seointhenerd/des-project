@@ -1,0 +1,68 @@
+m255
+K4
+z2
+!s11f vlog 2019.4 2019.10, Oct 15 2019
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/u1425837/des-project/modelsim
+T_opt
+!s110 1761245175
+V<ji5?Ae9YR3FIT3^LFz2C2
+04 20 4 work tb_Final_Permutation fast 0
+=1-18c04d8e309a-68fa77f6-b73ed-2adfd5
+o-quiet -auto_acc_if_foreign -work FP +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2019.4;69
+vFinal_Permutation
+Z2 !s110 1761245171
+!i10b 1
+!s100 <lIPoN[XdODz`hMG9P;cM0
+!s11b 4f;NgRR>^Ch]0LN@0mN0S2
+IRf1Eb7K=B2__TENdNAeGF3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1761244144
+8/home/u1425837/des-project/modelsim/RTL/Final_Permutation.v
+F/home/u1425837/des-project/modelsim/RTL/Final_Permutation.v
+!i122 -1
+L0 1
+Z4 OL;L;2019.4;69
+r1
+!s85 0
+31
+Z5 !s108 1761245171.000000
+!s107 /home/u1425837/des-project/modelsim/RTL/Final_Permutation.v|
+!s90 -reportprogress|300|-work|FP|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/Final_Permutation.v|
+!i113 0
+Z6 o-work FP -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+n@final_@permutation
+vtb_Final_Permutation
+R2
+!i10b 1
+!s100 l?PD[Qm^Doz`^bL:ai_iU2
+!s11b ?nD?cO`J[2YM5R7K>_B@^1
+I@l2eXo5]1a@TPXcGT`jAG2
+R3
+R0
+w1761245167
+8/home/u1425837/des-project/modelsim/RTL/tb_Final_Permutation.v
+F/home/u1425837/des-project/modelsim/RTL/tb_Final_Permutation.v
+!i122 -1
+L0 3
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/u1425837/des-project/modelsim/RTL/tb_Final_Permutation.v|
+!s90 -reportprogress|300|-work|FP|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/tb_Final_Permutation.v|
+!i113 0
+R6
+R1
+ntb_@final_@permutation
