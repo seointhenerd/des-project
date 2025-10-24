@@ -80,6 +80,6 @@ module tb_PC1;
     in = 64'h133457799BBCDFF1; #1; if (out !== exp) begin $display("PC1 fail: pattern"); $fatal(1); end
 
     $display("PC1: all tests PASSED");
-    $finish;
+    $stop;
   end
 endmodule
