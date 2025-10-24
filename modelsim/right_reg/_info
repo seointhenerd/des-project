@@ -1,0 +1,66 @@
+m255
+K4
+z2
+!s11f vlog 2019.4 2019.10, Oct 15 2019
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/u1324614/ece6710/des-project/modelsim
+T_opt
+!s110 1761335778
+VhOPW6<>dK=0SS6iN>L;eM1
+04 12 4 work right_reg_tb fast 0
+=1-18c04d8cebdd-68fbd9e2-7f1d8-140c59
+o-quiet -auto_acc_if_foreign -work right_reg +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2019.4;69
+vright_reg
+Z2 !s110 1761335737
+!i10b 1
+!s100 SE>X_3o`Bk_oH[0YFc2f61
+!s11b j`NH^aLk[U0@^3;4nP6zM3
+IRzhmejl=BD;UGGCPTSIlm3
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1761335551
+8/home/u1324614/ece6710/des-project/modelsim/right_reg.v
+F/home/u1324614/ece6710/des-project/modelsim/right_reg.v
+!i122 -1
+L0 7
+Z4 OL;L;2019.4;69
+r1
+!s85 0
+31
+Z5 !s108 1761335737.000000
+!s107 /home/u1324614/ece6710/des-project/modelsim/right_reg.v|
+!s90 -reportprogress|300|-work|right_reg|-vopt|-stats=none|/home/u1324614/ece6710/des-project/modelsim/right_reg.v|
+!i113 0
+Z6 o-work right_reg -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+vright_reg_tb
+R2
+!i10b 1
+!s100 @8Ohl5O1meRhhY3j]6Vj[2
+!s11b bL?[c^nUaW:]L9R9;A`[h3
+Ig6XS5GB[^GkR[c9?z4VcD0
+R3
+R0
+w1761335733
+8/home/u1324614/ece6710/des-project/modelsim/tb_right_reg.v
+F/home/u1324614/ece6710/des-project/modelsim/tb_right_reg.v
+!i122 -1
+L0 2
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/u1324614/ece6710/des-project/modelsim/tb_right_reg.v|
+!s90 -reportprogress|300|-work|right_reg|-vopt|-stats=none|/home/u1324614/ece6710/des-project/modelsim/tb_right_reg.v|
+!i113 0
+R6
+R1

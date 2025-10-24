@@ -47,3 +47,34 @@ run
 # ** Note: $stop    : /home/u1324614/ece6710/des-project/modelsim/tb_left_reg.v(83)
 #    Time: 322 ns  Iteration: 0  Instance: /tb_left_reg
 # Break in Module tb_left_reg at /home/u1324614/ece6710/des-project/modelsim/tb_left_reg.v line 83
+quit -sim
+# End time: 13:28:41 on Oct 24,2025, Elapsed time: 12:31:57
+# Errors: 21, Warnings: 0
+# reading /uusoc/facility/cad_tools/Mentor/modelsim2019.4/questasim/linux_x86_64/../modelsim.ini
+# Loading project right_reg
+# Compile of right_reg.v was successful.
+# Compile of tb_right_reg.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim right_reg.right_reg_tb -t ns -voptargs=+acc
+# vsim right_reg.right_reg_tb -t ns -voptargs="+acc" 
+# Start time: 13:56:18 on Oct 24,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.right_reg_tb(fast)
+# Loading work.right_reg(fast)
+add wave -position insertpoint  \
+sim:/right_reg_tb/clk \
+sim:/right_reg_tb/rst \
+sim:/right_reg_tb/en \
+sim:/right_reg_tb/load_init \
+sim:/right_reg_tb/R_0 \
+sim:/right_reg_tb/R_in \
+sim:/right_reg_tb/R_curr
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.right_reg_tb(fast)
+# Loading work.right_reg(fast)
+run
+# ** Note: $stop    : /home/u1324614/ece6710/des-project/modelsim/tb_right_reg.v(83)
+#    Time: 322 ns  Iteration: 0  Instance: /right_reg_tb
+# Break in Module right_reg_tb at /home/u1324614/ece6710/des-project/modelsim/tb_right_reg.v line 83

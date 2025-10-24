@@ -5,4 +5,11 @@ QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
 Top level modules:
 	left_reg
 
+} {} {}} /home/u1324614/ece6710/des-project/modelsim/tb_left_reg.v {1 {vlog -work left_register -vopt -stats=none /home/u1324614/ece6710/des-project/modelsim/tb_left_reg.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module tb_left_reg
+
+Top level modules:
+	tb_left_reg
+
 } {} {}}
