@@ -1,0 +1,58 @@
+# =========================
+# QuestaSim / ModelSim
+# =========================
+
+# Keep HDL sources & scripts (adjust as needed)
+!**/*.v
+!**/*.sv
+!**/*.vh
+!**/*.vhd
+!**/*.do
+!**/*.tcl
+!**/Makefile
+!README*
+
+# --- Generated library/temp dirs ---
+_temp/
+_@*/               # e.g., @_opt or similar vendor temp dirs
+work/
+**/@__opt/**       # optimization cache
+**/_opt__lock
+
+# --- Automatically generated files ---
+*.dat
+*.mti
+*.dbs
+*.psm
+*.cmp
+*.bak
+transcript
+vsim.dbg
+vsim.history
+modelsim.ini
+
+# Questa database/caches
+*.qdb
+*.qpg
+*.qtl
+*.qsrc
+*.qwork
+
+# --- Waveforms & coverage ---
+*.wlf
+wlf*
+*.ucdb
+cov*/
+
+# --- Common sim outputs ---
+*.vcd
+*.fsdb
+*.saif
+
+# --- Logs ---
+*.log
+*.lst
+
+# --- Project/session files (often machine-specific; keep if your team wants them) ---
+*.mpf
+*.cr.mti
