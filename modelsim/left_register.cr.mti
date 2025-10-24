@@ -1,0 +1,8 @@
+/home/u1324614/ece6710/des-project/modelsim/left_reg.v {1 {vlog -work left_register -vopt -stats=none /home/u1324614/ece6710/des-project/modelsim/left_reg.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module left_reg
+
+Top level modules:
+	left_reg
+
+} {} {}}
