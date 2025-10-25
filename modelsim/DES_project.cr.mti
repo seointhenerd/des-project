@@ -1,0 +1,39 @@
+/home/u1425837/des-project/modelsim/RTL/tb_Initial_Permutation.v {1 {vlog -work work -vopt -stats=none /home/u1425837/des-project/modelsim/RTL/tb_Initial_Permutation.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module tb_Initial_Permutation_debug
+
+Top level modules:
+	tb_Initial_Permutation_debug
+
+} {} {}} /home/u1425837/des-project/modelsim/RTL/tb_Control_State_Machine.v {1 {vlog -work work -vopt -stats=none /home/u1425837/des-project/modelsim/RTL/tb_Control_State_Machine.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module tb_Control_State_Machine
+
+Top level modules:
+	tb_Control_State_Machine
+
+} {} {}} /home/u1425837/des-project/modelsim/RTL/tb_Final_Permutation.v {0 {vlog -work work -vopt -stats=none /home/u1425837/des-project/modelsim/RTL/tb_Final_Permutation.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module tb_Final_Permutation
+** Error: (vlog-13032) /home/u1425837/des-project/modelsim/RTL/tb_Final_Permutation.v(17): near "error_count": Syntax error.
+
+} {4.0 5.0} {}} /home/u1425837/des-project/modelsim/RTL/Initial_Permutation.v {1 {vlog -work work -vopt -stats=none /home/u1425837/des-project/modelsim/RTL/Initial_Permutation.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module Initial_Permutation
+
+Top level modules:
+	Initial_Permutation
+
+} {} {}} /home/u1425837/des-project/modelsim/RTL/Final_Permutation.v {1 {vlog -work work -vopt -stats=none /home/u1425837/des-project/modelsim/RTL/Final_Permutation.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module Final_Permutation
+
+Top level modules:
+	Final_Permutation
+
+} {} {}} /home/u1425837/des-project/modelsim/RTL/Control_State_Machine.v {0 {vlog -work work -vopt -stats=none /home/u1425837/des-project/modelsim/RTL/Control_State_Machine.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module Control_State_Machine
+** Error: (vlog-13032) /home/u1425837/des-project/modelsim/RTL/Control_State_Machine.v(17): near ":": Syntax error.
+
+} {4.0 5.0} {}}
