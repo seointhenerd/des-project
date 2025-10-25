@@ -1,0 +1,26 @@
+// wrapper module to instantiate the 8 s boxes in parallel
+
+module SBoxArray (
+	input wire [48:0] xor_result,
+	output wire [31:0] sbox_out
+);
+
+
+	wire [3:0] s1_out, s2_out, s3_out, s4_out;
+	wire [3:0] s5_out, s6_out, s7_out, s8_out;
+
+      // Split 48-bit input into 8 groups of 6 bits for each s box
+	SBox sbox1 (.s_in(xor_result[47:42]), .box_num(3'd0), .s_out(s1_out));
+	SBox sbox2 (.s_in(xor_result[41:36]), .box_num(3'd1), .s_out(s2_out));
+	SBox sbox3 (.s_in(xor_result[35:30]), .box_num(3'd2), .s_out(s3_out));
+	SBox sbox4 (.s_in(xor_result[29:24]), .box_num(3'd3), .s_out(s4_out));
+	SBox sbox5 (.s_in(xor_result[23:18]), .box_num(3'd4), .s_out(s5_out));
+	SBox sbox6 (.s_in(xor_result[17:12]), .box_num(3'd5), .s_out(s6_out));
+	SBox sbox7 (.s_in(xor_result[11:6]),  .box_num(3'd6), .s_out(s7_out));
+	SBox sbox8 (.s_in(xor_result[5:0]),   .box_num(3'd7), .s_out(s8_out));
+
+	// Combine 8 outputs (4 bits each) into 32-bit result
+      	assign sbox_out = {s1_out, s2_out, s3_out, s4_out,
+                         s5_out, s6_out, s7_out, s8_out};
+
+endmodule
