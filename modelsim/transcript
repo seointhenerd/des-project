@@ -12,4 +12,474 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# Loading project FP
+# Project file /home/u1425837/des-project/modelsim/Control State Machine.mpf was not found.
+# Unable to open project.
+# Loading project Control State Machine
+# Compile of Control_State_Machine.v was successful.
+# Compile of tb_Control_State_Machine.v failed with 8 errors.
+# 2 compiles, 1 failed with 8 errors.
+# Compile of Control_State_Machine.v was successful.
+# Compile of tb_Control_State_Machine.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim {Control State Machine.tb_Control_State_Machine} -voptargs=+acc
+# vsim Control State Machine.tb_Control_State_Machine -voptargs="+acc" 
+# Start time: 17:34:30 on Oct 25,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: /home/u1425837/des-project/modelsim/RTL/Control_State_Machine.v(41): Module 'Initial_Permutation' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/RTL/Control_State_Machine.v(48): Module 'key_schedule' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/RTL/Control_State_Machine.v(57): Module 'f_function' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/RTL/Control_State_Machine.v(64): Module 'Final_Permutation' is not defined.
+# Optimization failed
+# Error loading design
+# End time: 17:34:31 on Oct 25,2025, Elapsed time: 0:00:01
+# Errors: 4, Warnings: 0
+# Compile of Control_State_Machine.v was successful.
+# Compile of tb_Control_State_Machine.v was successful.
+# Compile of f_func.v was successful.
+# Compile of Final_Permutation.v was successful.
+# Compile of Initial_Permutation.v was successful.
+# Compile of key_schedule.v was successful.
+# 6 compiles, 0 failed with no errors.
+vsim {Control State Machine.tb_Control_State_Machine} -voptargs=+acc
+# vsim Control State Machine.tb_Control_State_Machine -voptargs="+acc" 
+# Start time: 17:36:22 on Oct 25,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(37): Module 'PC1' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(67): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(68): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(69): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(70): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(71): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(72): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(73): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(74): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(75): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(76): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(77): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(78): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(79): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(80): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(81): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(82): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(83): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(84): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(85): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(86): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(87): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(88): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(89): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(90): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(91): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(92): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(93): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(94): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(95): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(96): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(97): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(98): Module 'left_shift' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(128): Module 'PC2' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(129): Module 'PC2' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(130): Module 'PC2' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(131): Module 'PC2' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(132): Module 'PC2' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(133): Module 'PC2' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(134): Module 'PC2' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(135): Module 'PC2' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(136): Module 'PC2' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(137): Module 'PC2' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(138): Module 'PC2' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(139): Module 'PC2' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(140): Module 'PC2' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(141): Module 'PC2' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(142): Module 'PC2' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/key_schedule.v(143): Module 'PC2' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/RTL/Control_State_Machine.v(57): Module 'f_function' is not defined.
+# Optimization failed
+# Error loading design
+# End time: 17:36:22 on Oct 25,2025, Elapsed time: 0:00:00
+# Errors: 50, Warnings: 0
+# Compile of Control_State_Machine.v was successful.
+# Compile of tb_Control_State_Machine.v was successful.
+# Compile of f_func.v was successful.
+# Compile of Final_Permutation.v was successful.
+# Compile of Initial_Permutation.v was successful.
+# Compile of key_schedule.v was successful.
+# Compile of left_shift.v was successful.
+# Compile of PC1.v was successful.
+# Compile of PC2.v was successful.
+# 9 compiles, 0 failed with no errors.
+vsim {Control State Machine.tb_Control_State_Machine} -voptargs=+acc
+# vsim Control State Machine.tb_Control_State_Machine -voptargs="+acc" 
+# Start time: 17:37:17 on Oct 25,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: /home/u1425837/des-project/modelsim/RTL/f_func.v(14): Module 'Expansion' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/RTL/f_func.v(23): Module 'SBoxArray' is not defined.
+# ** Error: /home/u1425837/des-project/modelsim/RTL/f_func.v(29): Module 'PBox' is not defined.
+# Optimization failed
+# Error loading design
+# End time: 17:37:17 on Oct 25,2025, Elapsed time: 0:00:00
+# Errors: 3, Warnings: 0
+# Compile of Control_State_Machine.v was successful.
+# Compile of tb_Control_State_Machine.v was successful.
+# Compile of f_func.v was successful.
+# Compile of Final_Permutation.v was successful.
+# Compile of Initial_Permutation.v was successful.
+# Compile of key_schedule.v was successful.
+# Compile of left_shift.v was successful.
+# Compile of PC1.v was successful.
+# Compile of PC2.v was successful.
+# Compile of expansion.v was successful.
+# Compile of pbox.v was successful.
+# Compile of sbox.v was successful.
+# 12 compiles, 0 failed with no errors.
+vsim {Control State Machine.tb_Control_State_Machine} -voptargs=+acc
+# vsim Control State Machine.tb_Control_State_Machine -voptargs="+acc" 
+# Start time: 17:38:01 on Oct 25,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: /home/u1425837/des-project/modelsim/RTL/f_func.v(23): Module 'SBoxArray' is not defined.
+# Optimization failed
+# Error loading design
+# End time: 17:38:02 on Oct 25,2025, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# Compile of Control_State_Machine.v was successful.
+# Compile of tb_Control_State_Machine.v was successful.
+# Compile of f_func.v was successful.
+# Compile of Final_Permutation.v was successful.
+# Compile of Initial_Permutation.v was successful.
+# Compile of key_schedule.v was successful.
+# Compile of left_shift.v was successful.
+# Compile of PC1.v was successful.
+# Compile of PC2.v was successful.
+# Compile of expansion.v was successful.
+# Compile of pbox.v was successful.
+# Compile of sbox.v was successful.
+# Compile of sbox_array.v was successful.
+# 13 compiles, 0 failed with no errors.
+vsim {Control State Machine.tb_Control_State_Machine} -voptargs=+acc
+# vsim Control State Machine.tb_Control_State_Machine -voptargs="+acc" 
+# Start time: 17:38:36 on Oct 25,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "Control_State_Machine(fast)".
+# Loading work.tb_Control_State_Machine(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+run -all
+# ========================================
+# Control State Machine Testbench
+# ========================================
+# 
+# Test 1: Reset behavior
+#   ? PASSED: Reset works correctly
+#   State = IDLE, done signals = 0
+# 
+# Test 2: Encryption sequence
+#   Input:  0123456789abcdef
+#   Key:    133457799bbcdff1
+#   [Cycle  1] State: ROUND_PROCESS, Round:  0
+#   [Cycle  6] State: ROUND_PROCESS, Round:  5
+#   [Cycle 11] State: ROUND_PROCESS, Round: 10
+#   [Cycle 16] State: ROUND_PROCESS, Round: 15
+#   [Cycle 17] State: FINAL_PERM
+#   [Cycle 18] State: DONE
+#   ? Encryption completed
+#   Total cycles:          19
+#   Output: ff21d840d80338ae
+#   ? Cycle count reasonable
+# 
+# Test 3: Decryption sequence
+#   Input (ciphertext): ff21d840d80338ae
+#   Key:                133457799bbcdff1
+#   ? Decryption completed
+#   Total cycles:          19
+#   Output: ef92b9f7e70c87d3
+#   ? FAILED: Decryption mismatch
+#   Expected: 0123456789abcdef
+#   Got:      ef92b9f7e70c87d3
+# 
+# Test 4: Different test vector
+#   Input:  1122334455667788
+#   Key:    0e329232ea6d0d73
+#   ? Encryption completed
+#   Output: 405836037f551dbc
+# 
+# Test 5: Round counter verification
+#   ? PASSED: Round counter reached          15
+# 
+# Test 6: Back-to-back operations
+#   First encryption:  a0084c94b261131e
+#   Second encryption: ef4027a749e18fb2
+#   ? PASSED: Back-to-back operations work
+# 
+# ========================================
+# ??? 1 TEST(S) FAILED ???
+# ========================================
+# 
+# ** Note: $finish    : /home/u1425837/des-project/modelsim/RTL/tb_Control_State_Machine.v(290)
+#    Time: 1375 ns  Iteration: 0  Instance: /tb_Control_State_Machine
+# 1
+# Break in Module tb_Control_State_Machine at /home/u1425837/des-project/modelsim/RTL/tb_Control_State_Machine.v line 290
+quit -sim
+# End time: 17:39:23 on Oct 25,2025, Elapsed time: 0:00:47
+# Errors: 2, Warnings: 0
+# Compile of Control_State_Machine.v was successful.
+# Compile of tb_Control_State_Machine.v was successful.
+# Compile of f_func.v was successful.
+# Compile of Final_Permutation.v was successful.
+# Compile of Initial_Permutation.v was successful.
+# Compile of key_schedule.v was successful.
+# Compile of left_shift.v was successful.
+# Compile of PC1.v was successful.
+# Compile of PC2.v was successful.
+# Compile of expansion.v was successful.
+# Compile of pbox.v was successful.
+# Compile of sbox.v was successful.
+# Compile of sbox_array.v was successful.
+# 13 compiles, 0 failed with no errors.
+vsim {Control State Machine.tb_Control_State_Machine} -voptargs=+acc
+# vsim Control State Machine.tb_Control_State_Machine -voptargs="+acc" 
+# Start time: 17:41:11 on Oct 25,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_Control_State_Machine(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+run -all
+# ========================================
+# Control State Machine Testbench
+# ========================================
+# 
+# Test 1: Reset behavior
+#   PASSED: Reset works correctly
+#   State = IDLE, done signals = 0
+# 
+# Test 2: Encryption sequence
+#   Input:  0123456789abcdef
+#   Key:    133457799bbcdff1
+#   [Cycle  1] State: ROUND_PROCESS, Round:  0
+#   [Cycle  6] State: ROUND_PROCESS, Round:  5
+#   [Cycle 11] State: ROUND_PROCESS, Round: 10
+#   [Cycle 16] State: ROUND_PROCESS, Round: 15
+#   [Cycle 17] State: FINAL_PERM
+#   [Cycle 18] State: DONE
+#   Encryption completed
+#   Total cycles:          19
+#   Output: ff21d840d80338ae
+#   Cycle count reasonable
+# 
+# Test 3: Decryption sequence
+#   Input (ciphertext): ff21d840d80338ae
+#   Key:                133457799bbcdff1
+#   Decryption completed
+#   Total cycles:          19
+#   Output: ef92b9f7e70c87d3
+#   FAILED: Decryption mismatch
+#   Expected: 0123456789abcdef
+#   Got:      ef92b9f7e70c87d3
+# 
+# Test 4: Different test vector
+#   Input:  1122334455667788
+#   Key:    0e329232ea6d0d73
+#   Encryption completed
+#   Output: 405836037f551dbc
+# 
+# Test 5: Round counter verification
+#   PASSED: Round counter reached          15
+# 
+# Test 6: Back-to-back operations
+#   First encryption:  a0084c94b261131e
+#   Second encryption: ef4027a749e18fb2
+#   PASSED: Back-to-back operations work
+# 
+# ========================================
+# 1 TEST(S) FAILED 
+# ========================================
+# 
+# ** Note: $finish    : /home/u1425837/des-project/modelsim/RTL/tb_Control_State_Machine.v(289)
+#    Time: 1375 ns  Iteration: 0  Instance: /tb_Control_State_Machine
+# 1
+# Break in Module tb_Control_State_Machine at /home/u1425837/des-project/modelsim/RTL/tb_Control_State_Machine.v line 289
+quit -sim
+# End time: 17:42:06 on Oct 25,2025, Elapsed time: 0:00:55
+# Errors: 26, Warnings: 0
+# Compile of Control_State_Machine.v was successful.
+# Compile of tb_Control_State_Machine.v was successful.
+# Compile of f_func.v was successful.
+# Compile of Final_Permutation.v was successful.
+# Compile of Initial_Permutation.v was successful.
+# Compile of key_schedule.v was successful.
+# Compile of left_shift.v was successful.
+# Compile of PC1.v was successful.
+# Compile of PC2.v was successful.
+# Compile of expansion.v was successful.
+# Compile of pbox.v was successful.
+# Compile of sbox.v was successful.
+# Compile of sbox_array.v was successful.
+# 13 compiles, 0 failed with no errors.
+vsim {Control State Machine.tb_Control_State_Machine} -voptargs=+acc
+# vsim Control State Machine.tb_Control_State_Machine -voptargs="+acc" 
+# Start time: 17:47:52 on Oct 25,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_Control_State_Machine(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+run -all
+# Reset behavior
+#   PASSED: Reset works correctly
+#   State = IDLE, done signals = 0
+# 
+# Encryption sequence
+#   Input:  0123456789abcdef
+#   Key:    133457799bbcdff1
+#   [Cycle  1] State: ROUND_PROCESS, Round:  0
+#   [Cycle  6] State: ROUND_PROCESS, Round:  5
+#   [Cycle 11] State: ROUND_PROCESS, Round: 10
+#   [Cycle 16] State: ROUND_PROCESS, Round: 15
+#   [Cycle 17] State: FINAL_PERM
+#   [Cycle 18] State: DONE
+#   Encryption completed
+#   Total cycles:          19
+#   Output: ff21d840d80338ae
+#   Cycle count reasonable
+# 
+# Different test vector
+#   Input:  1122334455667788
+#   Key:    0e329232ea6d0d73
+#   Encryption completed
+#   Output: f0ec4b129c953f44
+# 
+# Test 5: Round counter verification
+#   PASSED: Round counter reached          15
+# 
+# Back-to-back operations
+#   First encryption:  a0084c94b261131e
+#   Second encryption: ef4027a749e18fb2
+#   PASSED: Back-to-back operations work
+# 
+# ========================================
+# ALL TESTS PASSED! 
+# ========================================
+# 
+# ** Note: $finish    : /home/u1425837/des-project/modelsim/RTL/tb_Control_State_Machine.v(256)
+#    Time: 1145 ns  Iteration: 0  Instance: /tb_Control_State_Machine
+# 1
+# Break in Module tb_Control_State_Machine at /home/u1425837/des-project/modelsim/RTL/tb_Control_State_Machine.v line 256
+quit -sim
+# End time: 17:48:06 on Oct 25,2025, Elapsed time: 0:00:14
+# Errors: 43, Warnings: 0
+# Compile of Control_State_Machine.v was successful.
+# Compile of tb_Control_State_Machine.v was successful.
+# Compile of f_func.v was successful.
+# Compile of Final_Permutation.v was successful.
+# Compile of Initial_Permutation.v was successful.
+# Compile of key_schedule.v was successful.
+# Compile of left_shift.v was successful.
+# Compile of PC1.v was successful.
+# Compile of PC2.v was successful.
+# Compile of expansion.v was successful.
+# Compile of pbox.v was successful.
+# Compile of sbox.v was successful.
+# Compile of sbox_array.v was successful.
+# 13 compiles, 0 failed with no errors.
+# Compile of Control_State_Machine.v was successful.
+# Compile of tb_Control_State_Machine.v was successful.
+# Compile of f_func.v was successful.
+# Compile of Final_Permutation.v was successful.
+# Compile of Initial_Permutation.v was successful.
+# Compile of key_schedule.v was successful.
+# Compile of left_shift.v was successful.
+# Compile of PC1.v was successful.
+# Compile of PC2.v was successful.
+# Compile of expansion.v was successful.
+# Compile of pbox.v was successful.
+# Compile of sbox.v was successful.
+# Compile of sbox_array.v was successful.
+# 13 compiles, 0 failed with no errors.
+vsim {Control State Machine.tb_Control_State_Machine} -voptargs=+acc
+# vsim Control State Machine.tb_Control_State_Machine -voptargs="+acc" 
+# Start time: 17:49:04 on Oct 25,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_Control_State_Machine(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+run -all
+# Reset behavior
+#   PASSED: Reset works correctly
+#   State = IDLE, done signals = 0
+# 
+# Encryption sequence
+#   Input:  0123456789abcdef
+#   Key:    133457799bbcdff1
+#   [Cycle  1] State: ROUND_PROCESS, Round:  0
+#   [Cycle  6] State: ROUND_PROCESS, Round:  5
+#   [Cycle 11] State: ROUND_PROCESS, Round: 10
+#   [Cycle 16] State: ROUND_PROCESS, Round: 15
+#   [Cycle 17] State: FINAL_PERM
+#   [Cycle 18] State: DONE
+#   Encryption completed
+#   Total cycles:          19
+#   Output: ff21d840d80338ae
+#   Cycle count reasonable
+# 
+# Different test vector
+#   Input:  1122334455667788
+#   Key:    0e329232ea6d0d73
+#   Encryption completed
+#   Output: f0ec4b129c953f44
+# 
+# Test 5: Round counter verification
+#   PASSED: Round counter reached          15
+# 
+# Back-to-back operations
+#   First encryption:  a0084c94b261131e
+#   Second encryption: ef4027a749e18fb2
+#   PASSED: Back-to-back operations work
+# 
+# ========================================
+# ALL TESTS PASSED! 
+# ========================================
+# 
+# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_Control_State_Machine.v(253)
+#    Time: 1145 ns  Iteration: 0  Instance: /tb_Control_State_Machine
+# Break in Module tb_Control_State_Machine at /home/u1425837/des-project/modelsim/RTL/tb_Control_State_Machine.v line 253
+quit -sim
+# End time: 17:49:14 on Oct 25,2025, Elapsed time: 0:00:10
+# Errors: 50, Warnings: 0

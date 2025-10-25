@@ -1,1 +1,85 @@
+/home/u1425837/des-project/modelsim/PC1.v {1 {vlog -work {Control State Machine} -vopt -stats=none /home/u1425837/des-project/modelsim/PC1.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module PC1
 
+Top level modules:
+	PC1
+
+} {} {}} /home/u1425837/des-project/modelsim/PC2.v {1 {vlog -work {Control State Machine} -vopt -stats=none /home/u1425837/des-project/modelsim/PC2.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module PC2
+
+Top level modules:
+	PC2
+
+} {} {}} /home/u1425837/des-project/modelsim/RTL/Initial_Permutation.v {1 {vlog -work {Control State Machine} -vopt -stats=none /home/u1425837/des-project/modelsim/RTL/Initial_Permutation.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module Initial_Permutation
+
+Top level modules:
+	Initial_Permutation
+
+} {} {}} /home/u1425837/des-project/modelsim/RTL/tb_Control_State_Machine.v {1 {vlog -work {Control State Machine} -vopt -stats=none /home/u1425837/des-project/modelsim/RTL/tb_Control_State_Machine.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module tb_Control_State_Machine
+
+Top level modules:
+	tb_Control_State_Machine
+
+} {} {}} /home/u1425837/des-project/modelsim/RTL/sbox_array.v {1 {vlog -work {Control State Machine} -vopt -stats=none /home/u1425837/des-project/modelsim/RTL/sbox_array.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module SBoxArray
+
+Top level modules:
+	SBoxArray
+
+} {} {}} /home/u1425837/des-project/modelsim/key_schedule.v {1 {vlog -work {Control State Machine} -vopt -stats=none /home/u1425837/des-project/modelsim/key_schedule.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module key_schedule
+
+Top level modules:
+	key_schedule
+
+} {} {}} /home/u1425837/des-project/modelsim/RTL/sbox.v {1 {vlog -work {Control State Machine} -vopt -stats=none /home/u1425837/des-project/modelsim/RTL/sbox.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module SBox
+
+Top level modules:
+	SBox
+
+} {} {}} /home/u1425837/des-project/modelsim/RTL/expansion.v {1 {vlog -work {Control State Machine} -vopt -stats=none /home/u1425837/des-project/modelsim/RTL/expansion.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module Expansion
+
+Top level modules:
+	Expansion
+
+} {} {}} /home/u1425837/des-project/modelsim/left_shift.v {1 {vlog -work {Control State Machine} -vopt -stats=none /home/u1425837/des-project/modelsim/left_shift.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module left_shift
+
+Top level modules:
+	left_shift
+
+} {} {}} /home/u1425837/des-project/modelsim/RTL/f_func.v {1 {vlog -work {Control State Machine} -vopt -stats=none /home/u1425837/des-project/modelsim/RTL/f_func.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module Feistel_Function
+
+Top level modules:
+	Feistel_Function
+
+} {} {}} /home/u1425837/des-project/modelsim/RTL/Final_Permutation.v {1 {vlog -work {Control State Machine} -vopt -stats=none /home/u1425837/des-project/modelsim/RTL/Final_Permutation.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module Final_Permutation
+
+Top level modules:
+	Final_Permutation
+
+} {} {}} /home/u1425837/des-project/modelsim/RTL/pbox.v {1 {vlog -work {Control State Machine} -vopt -stats=none /home/u1425837/des-project/modelsim/RTL/pbox.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module PBox
+
+Top level modules:
+	PBox
+
+} {} {}}

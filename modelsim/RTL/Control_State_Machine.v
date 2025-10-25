@@ -24,17 +24,19 @@ module Control_State_Machine (
     
     // Registers
     reg [31:0] left_reg, right_reg;
+    reg [31:0] temp_reg;  // For swapping
     
     // Wires connecting to other modules
     wire [31:0] ip_left, ip_right;
-    wire [47:0] expanded_right;
-    wire [47:0] current_subkey;
-    wire [47:0] xor_with_key;
-    wire [31:0] sbox_output;
-    wire [31:0] new_right;
     wire [63:0] fp_output;
+    wire [31:0] f_output;
     
-    // Module instantiations based on block diagram
+    // Subkey wires
+    wire [47:0] k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11, k12, k13, k14, k15, k16;
+    
+    // Current round subkey
+    reg [47:0] current_subkey;
+    
     // Initial Permutation
     Initial_Permutation ip_inst (
         .input_text(input_text),
@@ -42,30 +44,20 @@ module Control_State_Machine (
         .right_half(ip_right)
     );
     
-    // Expansion (32 bits -> 48 bits) :  variables have to be modified
-    Expansion expansion_inst (
-        .input_32b(right_reg),
-        .output_48b(expanded_right)
-    );
-    
-    // XOR with subkey
-    assign xor_with_key = expanded_right ^ current_subkey;
-    
-    // S-boxes (48 bits -> 32 bits) :  variables have to be modified
-    S_Boxes sboxes_inst (
-        .input_48b(xor_with_key),
-        .output_32b(sbox_output)
-    );
-    
-    // XOR with left half
-    assign new_right = left_reg ^ sbox_output;
-    
-    // Subkey Generator : variables have to be modified
-    Subkey_Generator keygen_inst (
+    // Subkey Generator
+    key_schedule keygen_inst (
         .key(key),
-        .round_num(round_counter),
-        .mode(mode),
-        .subkey(current_subkey)
+        .k1(k1), .k2(k2), .k3(k3), .k4(k4),
+        .k5(k5), .k6(k6), .k7(k7), .k8(k8),
+        .k9(k9), .k10(k10), .k11(k11), .k12(k12),
+        .k13(k13), .k14(k14), .k15(k15), .k16(k16)
+    );
+    
+    // F-function (Expansion + S-boxes + P-box)
+    Feistel_Function f_inst (
+        .R_in(right_reg),
+        .subkey(current_subkey),
+        .f_out(f_output)
     );
     
     // Final Permutation
@@ -74,74 +66,99 @@ module Control_State_Machine (
         .right_half(right_reg),
         .output_text(fp_output)
     );
-    PROCESS:
-        ON RESET:
-            state = IDLE
-            round_counter = 0
-            done_encrypt = 0
-            done_decrypt = 0
-            left_reg = 0
-            right_reg = 0
-            
-        ON CLOCK:
-            CASE state OF
-            
-                IDLE:
-                    done_encrypt = 0
-                    done_decrypt = 0
-                    round_counter = 0
+    
+    // Subkey selection -combinational
+    always @(round_counter, mode) begin
+        case (round_counter)
+            4'd0:  current_subkey = mode ? k16 : k1;
+            4'd1:  current_subkey = mode ? k15 : k2;
+            4'd2:  current_subkey = mode ? k14 : k3;
+            4'd3:  current_subkey = mode ? k13 : k4;
+            4'd4:  current_subkey = mode ? k12 : k5;
+            4'd5:  current_subkey = mode ? k11 : k6;
+            4'd6:  current_subkey = mode ? k10 : k7;
+            4'd7:  current_subkey = mode ? k9  : k8;
+            4'd8:  current_subkey = mode ? k8  : k9;
+            4'd9:  current_subkey = mode ? k7  : k10;
+            4'd10: current_subkey = mode ? k6  : k11;
+            4'd11: current_subkey = mode ? k5  : k12;
+            4'd12: current_subkey = mode ? k4  : k13;
+            4'd13: current_subkey = mode ? k3  : k14;
+            4'd14: current_subkey = mode ? k2  : k15;
+            4'd15: current_subkey = mode ? k1  : k16;
+            default: current_subkey = k1;
+        endcase
+    end
+    
+    // FSM -sequential
+    always @(posedge clk or posedge rst) begin
+        if (rst) begin
+            state <= IDLE;
+            round_counter <= 4'd0;
+            done_encrypt <= 1'b0;
+            done_decrypt <= 1'b0;
+            left_reg <= 32'h0;
+            right_reg <= 32'h0;
+            output_text <= 64'h0;
+            mode <= 1'b0;
+        end else begin
+            case (state)
+                IDLE: begin
+                    done_encrypt <= 1'b0;
+                    done_decrypt <= 1'b0;
+                    round_counter <= 4'd0;
                     
-                    IF (start_encrypt OR start_decrypt) THEN
-                        state = INIT_PERM
-                    END IF
+                    if (start_encrypt) begin
+                        mode <= 1'b0;  // Encrypt
+                        state <= INIT_PERM;
+                    end else if (start_decrypt) begin
+                        mode <= 1'b1;  // Decrypt
+                        state <= INIT_PERM;
+                    end
+                end
                 
-                INIT_PERM:
-                    // Apply Initial Permutation
-                    (left_reg, right_reg) = Initial_Permutation(input_text)
-                    round_counter = 0
-                    state = ROUND_PROCESS
+                INIT_PERM: begin
+                    // IP output -> registers
+                    left_reg <= ip_left;
+                    right_reg <= ip_right;
+                    round_counter <= 4'd0;
+                    state <= ROUND_PROCESS;
+                end
+                
+                ROUND_PROCESS: begin
+                    // Feistel structure
+                    temp_reg <= right_reg;
+                    left_reg <= right_reg;
+                    right_reg <= left_reg ^ f_output;
                     
-                ROUND_PROCESS:
-                    // Request appropriate subkey
-                    IF mode == ENCRYPT THEN
-                        subkey_index = round_counter
-                    ELSE  // DECRYPT
-                        subkey_index = 15 - round_counter
-                    END IF
+                    round_counter <= round_counter + 4'd1;
                     
-                    // Perform Feistel round
-                    // temp = right_reg
-                    // right_reg = left_reg XOR f(right_reg, subkey[round_counter])
-                    // left_reg = temp
+                    if (round_counter == 4'd15) begin
+                        state <= FINAL_PERM;
+                    end
+                end
+                
+                FINAL_PERM: begin
+                    // FP output
+                    output_text <= fp_output;
+                    state <= DONE;
+                end
+                
+                DONE: begin
+                    if (mode == 1'b0) begin
+                        done_encrypt <= 1'b1;
+                    end else begin
+                        done_decrypt <= 1'b1;
+                    end
                     
-                    temp[32] = right_reg
-                    round_output = Feistel_Function(right_reg, subkey[subkey_index])
-                    right_reg = left_reg XOR round_output
-                    left_reg = temp
-                    
-                    round_counter = round_counter + 1
-                    
-                    IF round_counter == 16 THEN
-                        state = FINAL_PERM
-                    END IF
-                    
-                FINAL_PERM:
-                    // Apply Final Permutation (with swap)
-                    output_text = Final_Permutation(left_reg, right_reg)
-                    state = DONE
-                    
-                DONE:
-                    IF mode == ENCRYPT THEN
-                        done_encrypt = 1
-                    ELSE
-                        done_decrypt = 1
-                    END IF
-                    
-                    // Wait for acknowledgment
-                    IF (NOT start_encrypt AND NOT start_decrypt) THEN
-                        state = IDLE
-                    END IF
-                    
-            END CASE
-            
+                    if (!start_encrypt && !start_decrypt) begin
+                        state <= IDLE;
+                    end
+                end
+                
+                default: state <= IDLE;
+            endcase
+        end
+    end
+
 endmodule
