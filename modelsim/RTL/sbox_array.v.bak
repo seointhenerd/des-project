@@ -6,8 +6,7 @@ module SBoxArray (
 );
 
 
-	wire [3:0] s1_out, s2_out, s3_out, s4_out;
-	wire [3:0] s5_out, s6_out, s7_out, s8_out;
+	wire [3:0] s1_out, s2_out, s3_out, s4_out, s5_out, s6_out, s7_out, s8_out;
 
       // Split 48-bit input into 8 groups of 6 bits for each s box
 	SBox sbox1 (.s_in(xor_result[47:42]), .box_num(3'd0), .s_out(s1_out));

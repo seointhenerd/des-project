@@ -6,23 +6,15 @@ module Expansion (
 );
 
 
-      localparam [5:0] E_table [0:47] = {
-          32, 1,  2,  3,  4,  5,
-          4,  5,  6,  7,  8,  9,
-          8,  9,  10, 11, 12, 13,
-          12, 13, 14, 15, 16, 17,
-          16, 17, 18, 19, 20, 21,
-          20, 21, 22, 23, 24, 25,
-          24, 25, 26, 27, 28, 29,
-          28, 29, 30, 31, 32, 1
-      };
+	assign E_out = {
+          R_in[31], R_in[0],  R_in[1],  R_in[2],  R_in[3],  R_in[4],
+          R_in[3],  R_in[4],  R_in[5],  R_in[6],  R_in[7],  R_in[8],
+          R_in[7],  R_in[8],  R_in[9],  R_in[10], R_in[11], R_in[12],
+          R_in[11], R_in[12], R_in[13], R_in[14], R_in[15], R_in[16],
+          R_in[15], R_in[16], R_in[17], R_in[18], R_in[19], R_in[20],
+          R_in[19], R_in[20], R_in[21], R_in[22], R_in[23], R_in[24],
+          R_in[23], R_in[24], R_in[25], R_in[26], R_in[27], R_in[28],
+          R_in[27], R_in[28], R_in[29], R_in[30], R_in[31], R_in[0]
+	};
 
-      integer i;
-
-      always @(*) begin
-          for (i = 0; i < 48; i = i + 1) begin
-              E_out[47-i] = R_in[32 - E_table[i]];
-          end
-      end
-
-  endmodule
+endmodule

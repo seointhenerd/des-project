@@ -19,16 +19,16 @@ module Feistel_Function (
       	// Stage 2: XOR with subkey (48 bits)
       	assign xor_result = expansion_result ^ subkey;
 	
-      	// Stage 3: S-box substitution (48 bits to 32 bits)
-      	SBoxArray sbox_inst (
+      // Stage 3: S-box substitution (48 bits to 32 bits)
+      SBoxArray sbox_inst (
           .xor_result(xor_result),
           .sbox_out(sbox_result)
-      	);
+      );
 
-      	// Stage 4: P-box permutation (32 bits to 32 bits)
-      	PBox pbox_inst (
+      // Stage 4: P-box permutation (32 bits to 32 bits)
+      PBox pbox_inst (
           .p_in(sbox_result),
           .p_out(f_out)
-      	);
+      );
 
   endmodule

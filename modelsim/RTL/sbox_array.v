@@ -1,7 +1,7 @@
 // wrapper module to instantiate the 8 s boxes in parallel
 
 module SBoxArray (
-	input wire [48:0] xor_result,
+	input wire [47:0] xor_result,
 	output wire [31:0] sbox_out
 );
 
