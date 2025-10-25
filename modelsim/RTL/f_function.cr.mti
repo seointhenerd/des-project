@@ -1,0 +1,36 @@
+/home/u1419358/des-project/modelsim/RTL/f_func.v {1 {vlog -work f_function -vopt -stats=none /home/u1419358/des-project/modelsim/RTL/f_func.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module Feistel_Function
+
+Top level modules:
+	Feistel_Function
+
+} {} {}} /home/u1419358/des-project/modelsim/RTL/expansion.v {1 {vlog -work f_function -vopt -stats=none /home/u1419358/des-project/modelsim/RTL/expansion.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module Expansion
+
+Top level modules:
+	Expansion
+
+} {} {}} /home/u1419358/des-project/modelsim/RTL/pbox.v {1 {vlog -work f_function -vopt -stats=none /home/u1419358/des-project/modelsim/RTL/pbox.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module PBox
+
+Top level modules:
+	PBox
+
+} {} {}} /home/u1419358/des-project/modelsim/RTL/sbox_array.v {1 {vlog -work f_function -vopt -stats=none /home/u1419358/des-project/modelsim/RTL/sbox_array.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module SBoxArray
+
+Top level modules:
+	SBoxArray
+
+} {} {}} /home/u1419358/des-project/modelsim/RTL/sbox.v {1 {vlog -work f_function -vopt -stats=none /home/u1419358/des-project/modelsim/RTL/sbox.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module SBox
+
+Top level modules:
+	SBox
+
+} {} {}}
