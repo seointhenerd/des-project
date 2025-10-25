@@ -31,6 +31,7 @@ _info
 vsim.dbg
 vsim.history
 modelsim.ini
+_vmake
 
 # Questa database/caches
 *.qdb
