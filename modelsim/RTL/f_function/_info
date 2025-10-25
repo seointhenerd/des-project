@@ -10,26 +10,36 @@ z2
 cModel Technology
 Z0 d/home/u1419358/des-project/modelsim
 T_opt
-!s110 1761408744
-V9KLQUbz3YNY<EL?1oZa2=3
-04 17 4 work tb_Feistel_Simple fast 0
-=1-18c04d8cebf4-68fcf6e8-154dc-161398
+!s110 1761411289
+V4aNTVdaW7HnG>z[a[eJi20
+04 20 4 work tb_Feistel_Zero_Test fast 0
+=1-18c04d8cebf4-68fd00d8-dd557-16265a
 Z1 o-quiet -auto_acc_if_foreign -work f_function +acc
 Z2 tCvgOpt 0
 n@_opt
 Z3 OL;O;2019.4;69
-R0
 T_opt1
-!s110 1761409552
-VPQU>b2?VDeTlNnDEe8ZcZ2
+!s110 1761410157
+VgdBbT@LI1Ue4>[a63ND0X0
 04 21 4 work tb_Feistel_Diagnostic fast 0
-=1-18c04d8cebf4-68fcfa0f-edc55-16161b
+=1-18c04d8cebf4-68fcfc6d-3979d-16181f
 R1
 R2
 n@_opt1
 R3
+R0
+T_opt2
+!s110 1761409993
+V7hjC3Cf2bG^cm0b?MXMN31
+04 14 4 work tb_SBox_Verify fast 0
+=1-18c04d8cebf4-68fcfbc9-4c4f1-161747
+R1
+R2
+n@_opt2
+R3
+R0
 vExpansion
-Z4 !s110 1761409458
+Z4 !s110 1761411231
 !i10b 1
 !s100 ^L7ijo@=_JQ>;?WjfL@ie1
 !s11b m1U1=58e=PF@BG1@n90Tl3
@@ -45,7 +55,7 @@ Z7 OL;L;2019.4;69
 r1
 !s85 0
 31
-Z8 !s108 1761409458.000000
+Z8 !s108 1761411231.000000
 !s107 /home/u1419358/des-project/modelsim/RTL/expansion.v|
 !s90 -reportprogress|300|-work|f_function|-vopt|-stats=none|/home/u1419358/des-project/modelsim/RTL/expansion.v|
 !i113 0
@@ -79,12 +89,12 @@ n@feistel_@function
 vPBox
 R4
 !i10b 1
-!s100 HoMfAGC`BIW[[QWcoHdBP0
-!s11b Q8iAHXEk5TbIl:J:9c9=e0
-IcCQVLXIPhcNWi]h9OfE3d2
+!s100 _^LRHf_^hPe4>UH9U@HkC2
+!s11b ZmkQkCao:k]P@6hKSYQTf2
+IWbKKLVz=IieezZ6F2K7gX1
 R5
 R6
-w1761403660
+w1761410141
 8/home/u1419358/des-project/modelsim/RTL/pbox.v
 F/home/u1419358/des-project/modelsim/RTL/pbox.v
 !i122 -1
@@ -149,25 +159,25 @@ R9
 R2
 n@s@box@array
 vtb_Feistel_Diagnostic
-R4
+Z10 !s110 1761410147
 !i10b 1
-!s100 U1XUa_BX@P>_B5hn9Ac6A3
-!s11b >aYcoN<T<h;f]3Lz:B@mS3
-IhRPjG5gSVY1M;aGo7AG:d2
+!s100 hWScJ=7fHTJ@TLTRi:?jO1
+!s11b 2mPjG<kl_f1PPU052PfCM2
+I]4SH;F0@EncSVJT[;F3?03
 R5
 R6
-w1761409256
-Z10 8/home/u1419358/des-project/modelsim/RTL/f_func_tb.v
-Z11 F/home/u1419358/des-project/modelsim/RTL/f_func_tb.v
+Z11 w1761410088
+Z12 8/home/u1419358/des-project/modelsim/RTL/f_func_tb.v
+Z13 F/home/u1419358/des-project/modelsim/RTL/f_func_tb.v
 !i122 -1
 L0 23
 R7
 r1
 !s85 0
 31
-R8
-Z12 !s107 /home/u1419358/des-project/modelsim/RTL/f_func_tb.v|
-Z13 !s90 -reportprogress|300|-work|f_function|-vopt|-stats=none|/home/u1419358/des-project/modelsim/RTL/f_func_tb.v|
+Z14 !s108 1761410147.000000
+Z15 !s107 /home/u1419358/des-project/modelsim/RTL/f_func_tb.v|
+Z16 !s90 -reportprogress|300|-work|f_function|-vopt|-stats=none|/home/u1419358/des-project/modelsim/RTL/f_func_tb.v|
 !i113 0
 R9
 R2
@@ -181,8 +191,8 @@ IQ]TR3HgKP:AVR2c1`KY;J3
 R5
 R6
 w1761408604
-R10
-R11
+R12
+R13
 !i122 -1
 L0 3
 R7
@@ -190,9 +200,57 @@ r1
 !s85 0
 31
 !s108 1761408653.000000
-R12
-R13
+R15
+R16
 !i113 0
 R9
 R2
 ntb_@feistel_@simple
+vtb_Feistel_Zero_Test
+R4
+!i10b 1
+!s100 YCBQBO>M]f:8C]_]0G@Cl1
+!s11b il;g25=fjOM@?SMB>MQj;0
+IMBDg2[KanUFk_VgZ@l1Az0
+R5
+R6
+w1761411227
+R12
+R13
+!i122 -1
+L0 268
+R7
+r1
+!s85 0
+31
+R8
+R15
+R16
+!i113 0
+R9
+R2
+ntb_@feistel_@zero_@test
+vtb_SBox_Verify
+R10
+!i10b 1
+!s100 oQF]:@;_Q^7edN8j[XD552
+!s11b Vlz@Bmm^GTW7JU7N@`j4_2
+Ie[`b89eD^Ce;z9Vm=e>HW2
+R5
+R6
+R11
+R12
+R13
+!i122 -1
+L0 172
+R7
+r1
+!s85 0
+31
+R14
+R15
+R16
+!i113 0
+R9
+R2
+ntb_@s@box_@verify
