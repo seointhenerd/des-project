@@ -1,32 +1,67 @@
 module Control_State_Machine (
-  input wire clk,                 // System clock
-  input wire rst,                 // Reset signal
-  input wire start_encrypt,       // Start encryption signal from SPI
-  input wire start_decrypt,       // Start decryption signal from SPI
-  input wire mode,                // Mode bit (0=encrypt, 1=decrypt)
-  input wire key[64],             // 64-bit key
-  input wire input_text[64]      // 64-bit input data
+  input wire clk,
+  input wire rst,
+  input wire start_encrypt,
+  input wire start_decrypt,
+  input wire mode,
+  input wire [63:0] key,
+  input wire [63:0] input_text,
 
-  output wire done_encrypt        // Encryption complete signal
-  output wire done_decrypt        // Decryption complete signal
-  output wire output_text[64]     // 64-bit output data
-  output wire subkey_req          // Request subkey from key generator
-  output wire round_counter[4]    // Current round number (0-15)
+  output wire done_encrypt,
+  output wire done_decrypt,
+  output wire [63:0] output_text,
+  output wire subkey_req,
+  output wire [4:0] round_counter
 );
-
-    INTERNAL SIGNALS:
-        state               // Current FSM state
-        left_reg[32]        // Left register
-        right_reg[32]       // Right register
-        round_output[32]    // Output from round function
-        
-    STATES:
-        IDLE                // Waiting for start signal
-        INIT_PERM           // Initial Permutation
-        ROUND_PROCESS       // Processing 16 rounds
-        FINAL_PERM          // Final Permutation
-        DONE                // Output result
+   // State definitions
+    localparam IDLE         = 3'b000;
+    localparam INIT_PERM    = 3'b001;
+    localparam ROUND_PROCESS = 3'b010;
+    localparam FINAL_PERM   = 3'b011;
+    localparam DONE         = 3'b100;
     
+    reg [2:0] state;
+    reg [3:0] round_counter;
+    reg mode;  // 0=encrypt, 1=decrypt
+    
+    // Registers for intermediate values
+    reg [31:0] left_reg, right_reg;
+    reg [31:0] new_left, new_right;
+    
+    // Wires for module connections
+    wire [31:0] ip_left, ip_right;
+    wire [31:0] f_output;
+    wire [47:0] current_subkey;
+    wire [63:0] fp_output;
+    
+    // Module instantiations
+    Initial_Permutation ip_module (
+        .input_text(input_text),
+        .left_half(ip_left),
+        .right_half(ip_right)
+    );
+
+    // 
+    Feistel_Round feistel_module (
+        .right_in(right_reg),
+        .subkey(current_subkey),
+        .f_output(f_output)
+    );
+
+    //
+    Key_Generator keygen_module (
+        .key(key),
+        .round_num(round_counter),
+        .mode(mode),
+        .subkey(current_subkey)
+    );
+    
+    Final_Permutation fp_module (
+        .left_half(left_reg),
+        .right_half(right_reg),
+        .output_text(fp_output)
+    );
+
     PROCESS:
         ON RESET:
             state = IDLE

@@ -19,7 +19,7 @@ module Final_Permutation (
     reg [63:0] combined;
     integer i;
 
-    always @(*) begin
+    always @(left_half, right_half) begin
 	combined[63:32]= left_half;
 	combined[31:0]= right_half;
 	for (i=0; i<64; i=i+1) begin

@@ -88,6 +88,22 @@ initial begin
     end
     $display("");
 
+    // 1122334455667788 test
+    $display("Testing input 1122334455667788 :");
+    input_text = 64'h1122_3344_5566_7788;
+    #10;
+    $display("Input    = %h", input_text);
+
+    $display("Left     = %h (expected: 78557855)", left_half);
+    $display("Right    = %h (expected: 80668066)", right_half);
+
+    if (left_half === 32'h78557855 && right_half === 32'h80668066) begin
+        $display("PASSED: DES test vector");
+    end else begin
+        $display("FAILED: DES test vector");
+        error_count = error_count + 1;
+    end
+    $display("");
     $display("========================================");
     if (error_count == 0)
         $display("ALL TESTS PASSED!");
@@ -95,6 +111,6 @@ initial begin
         $display("%0d TEST(S) FAILED", error_count);
     $display("========================================\n");
 
-    $finish;
+    $stop;
 end
 endmodule

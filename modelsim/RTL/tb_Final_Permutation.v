@@ -89,6 +89,26 @@ initial begin
     $display("Result = %h", output_text);
     $display("");
 
+    //11223344556677 test
+    $display("Custom test vector");
+    original_data = 64'h1122_3344_5566_7788;
+
+    left_half  = 32'h7855_7855;
+    right_half = 32'h8066_8066;
+    $display("left half: %h", left_half);
+    $display("right half: %h", right_half);
+    #10;
+
+    if (output_text === original_data) begin
+        $display("PASSED: FP(IP(x)) = x");
+    end else begin
+        $display("FAILED: FP is not inverse of IP");
+        $display("  Expected: %h", original_data);
+        $display("  Got:      %h", output_text);
+        error_count = error_count + 1;
+    end
+    $display("");
+
     $display("========================================");
     if (error_count == 0)
         $display("ALL TESTS PASSED!");
@@ -96,7 +116,7 @@ initial begin
         $display("%0d TEST(S) FAILED", error_count);
     $display("========================================\n");
 
-    $finish;
+    $stop;
 end
 
 endmodule

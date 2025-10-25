@@ -18,7 +18,7 @@ module Initial_Permutation (
     reg [63:0] permuted_data;
     integer i;
 
-    always @(*) begin
+    always @(input_text) begin
         for (i = 0; i < 64; i = i + 1) begin
             permuted_data[i] = input_text[IP_table[i] - 1];
         end
