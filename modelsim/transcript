@@ -1,0 +1,181 @@
+# //  Questa Sim-64
+# //  Version 2019.4 linux_x86_64 Oct 15 2019
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading project f_function
+vsim f_function.tb_Feistel_Diagnostic -voptargs=+acc
+# vsim f_function.tb_Feistel_Diagnostic -voptargs="+acc" 
+# Start time: 10:37:51 on Oct 25,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb_Feistel_Diagnostic(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+run -all
+# ========================================
+# Feistel Function Diagnostic Test
+# ========================================
+# 
+# Input Values:
+#   R_in   = f0aaf0aa
+#   subkey = 1b02effc7072
+# 
+# Stage 1: Expansion (32 -> 48 bits)
+#   Input:    R_in = f0aaf0aa
+#   Output:   E(R) = 7a15557a1555
+#   Expected: E(R) = 7a15557a1555
+#   PASS: Expansion correct
+# 
+# Stage 2: XOR with subkey
+#   E(R)      = 7a15557a1555
+#   subkey    = 1b02effc7072
+#   XOR result= 6117ba866527
+#   Expected  = 6117ba866527
+#   PASS: XOR correct
+# 
+# Stage 3: S-box Array (48 -> 32 bits)
+#   Input:  xor_result = 6117ba866527
+#   Output: sbox_out   = 5c82b597
+#   Expected (verify): = 234aa9bb
+# 
+#   Individual S-box inputs and outputs:
+#     S1: input=011000 (18), output=?
+#     S2: input=010001 (11), output=?
+#     S3: input=011110 (1e), output=?
+#     S4: input=111010 (3a), output=?
+#     S5: input=100001 (21), output=?
+#     S6: input=100110 (26), output=?
+#     S7: input=010100 (14), output=?
+#     S8: input=100111 (27), output=?
+#     Combined sbox_out = 5c82b597
+# 
+# Stage 4: P-box (32 -> 32 bits permutation)
+#   Input:  sbox_result = 5c82b597
+#   Output: pbox_out    = 234aa9bb
+#   Expected final      = 00ef5700
+#   FAIL: P-box output incorrect!
+# 
+# ========================================
+# Final Result:
+#   Got:      234aa9bb
+#   Expected: 00ef5700
+#   OVERALL FAIL
+# ========================================
+# 
+# Compile of f_func.v was successful.
+# Compile of expansion.v was successful.
+# Compile of sbox.v was successful.
+# Compile of pbox.v was successful.
+# Compile of sbox_array.v was successful.
+# Compile of f_func_tb.v was successful.
+# 6 compiles, 0 failed with no errors.
+vsim f_function.tb_Feistel_Diagnostic -voptargs=+acc
+# End time: 10:54:12 on Oct 25,2025, Elapsed time: 0:16:21
+# Errors: 90, Warnings: 0
+# vsim f_function.tb_Feistel_Diagnostic -voptargs="+acc" 
+# Start time: 10:54:12 on Oct 25,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb_Feistel_Diagnostic(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+run -all
+# ========================================
+# Feistel Function Diagnostic Test
+# ========================================
+# 
+# Input Values:
+#   R_in   = f0aaf0aa
+#   subkey = 1b02effc7072
+# 
+# Stage 1: Expansion (32 -> 48 bits)
+#   Input:    R_in = f0aaf0aa
+#   Output:   E(R) = 7a15557a1555
+#   Expected: E(R) = 7a15557a1555
+#   PASS: Expansion correct
+# 
+# Stage 2: XOR with subkey
+#   E(R)      = 7a15557a1555
+#   subkey    = 1b02effc7072
+#   XOR result= 6117ba866527
+#   Expected  = 6117ba866527
+#   PASS: XOR correct
+# 
+# Stage 3: S-box Array (48 -> 32 bits)
+#   Input:  xor_result = 6117ba866527
+#   Output: sbox_out   = 5c82b597
+#   Expected (verify): = 234aa9bb
+# 
+#   Individual S-box inputs and outputs:
+#     S1: input=011000 (18), output=?
+#     S2: input=010001 (11), output=?
+#     S3: input=011110 (1e), output=?
+#     S4: input=111010 (3a), output=?
+#     S5: input=100001 (21), output=?
+#     S6: input=100110 (26), output=?
+#     S7: input=010100 (14), output=?
+#     S8: input=100111 (27), output=?
+#     Combined sbox_out = 5c82b597
+# 
+# Stage 4: P-box (32 -> 32 bits permutation)
+#   Input:  sbox_result = 5c82b597
+#   Output: pbox_out    = 234aa9bb
+#   Expected final      = 00ef5700
+#   FAIL: P-box output incorrect!
+# 
+# ========================================
+# Final Result:
+#   Got:      234aa9bb
+#   Expected: 00ef5700
+#   OVERALL FAIL
+# ========================================
+# 
+vsim f_function.tb_Feistel_Zero_Test -voptargs=+acc
+# End time: 10:54:48 on Oct 25,2025, Elapsed time: 0:00:36
+# Errors: 45, Warnings: 0
+# vsim f_function.tb_Feistel_Zero_Test -voptargs="+acc" 
+# Start time: 10:54:48 on Oct 25,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.tb_Feistel_Zero_Test(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+run -all
+# ========================================
+# DES Zero Test - Round 1
+# Plaintext: 0x0000000000000000
+# Key:       0x0000000000000000
+# ========================================
+# 
+# Round 1 Inputs:
+#   R0 = 00000000
+#   K1 = 000000000000
+# 
+# Pipeline Stages:
+#   1. Expansion:   000000000000 (000000000000000000000000000000000000000000000000)
+#   2. XOR result:  000000000000 (000000000000000000000000000000000000000000000000)
+#   3. S-box out:   efa72c4d (11101111101001110010110001001101)
+#   4. P-box out:   d8d8dbbc (11011000110110001101101110111100)
+# 
+# ========================================
+# Expected from DES specification:
+#   Expansion of 0x00000000 = 0x000000000000
+#   XOR with 0x000000000000 = 0x000000000000
+#   S-box output should be:  EFA72C4D
+#   (S1=14, S2=15, S3=10, S4=7, S5=2, S6=12, S7=4, S8=13)
+#   PASS: S-box output correct!
+# ========================================
+# 
