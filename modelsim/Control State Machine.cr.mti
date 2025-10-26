@@ -36,7 +36,6 @@ Top level modules:
 } {} {}} /home/u1425837/des-project/modelsim/key_schedule.v {1 {vlog -work {Control State Machine} -vopt -stats=none /home/u1425837/des-project/modelsim/key_schedule.v
 QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
 -- Compiling module key_schedule
-do_write(): BLOCKFILE ERROR (write): unexpected error (errno = 122)
 
 Top level modules:
 	key_schedule
@@ -69,6 +68,13 @@ QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
 Top level modules:
 	left_shift
 
+} {} {}} /home/u1425837/des-project/modelsim/RTL/pbox.v {1 {vlog -work {Control State Machine} -vopt -stats=none /home/u1425837/des-project/modelsim/RTL/pbox.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module PBox
+
+Top level modules:
+	PBox
+
 } {} {}} /home/u1425837/des-project/modelsim/RTL/f_func.v {1 {vlog -work {Control State Machine} -vopt -stats=none /home/u1425837/des-project/modelsim/RTL/f_func.v
 QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
 -- Compiling module Feistel_Function
@@ -82,12 +88,5 @@ QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
 
 Top level modules:
 	Final_Permutation
-
-} {} {}} /home/u1425837/des-project/modelsim/RTL/pbox.v {1 {vlog -work {Control State Machine} -vopt -stats=none /home/u1425837/des-project/modelsim/RTL/pbox.v
-QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
--- Compiling module PBox
-
-Top level modules:
-	PBox
 
 } {} {}}

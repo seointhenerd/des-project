@@ -12,233 +12,202 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-project open {/home/u1425837/des-project/modelsim/Top Module}
-# Loading project DES
+project open {/home/u1425837/des-project/modelsim/Control State Machine}
+# Loading project Control State Machine
 # Compile of Control_State_Machine.v was successful.
-# Compile of expansion.v was successful.
+# Compile of tb_Control_State_Machine.v was successful.
 # Compile of f_func.v was successful.
 # Compile of Final_Permutation.v was successful.
 # Compile of Initial_Permutation.v was successful.
 # Compile of key_schedule.v was successful.
 # Compile of left_shift.v was successful.
-# Compile of pbox.v was successful.
 # Compile of PC1.v was successful.
 # Compile of PC2.v was successful.
+# Compile of expansion.v was successful.
+# Compile of pbox.v was successful.
 # Compile of sbox.v was successful.
 # Compile of sbox_array.v was successful.
-# Compile of SPI.v was successful.
-# Compile of tb_TopModule.v was successful.
-# Compile of TopModule.v was successful.
-# 15 compiles, 0 failed with no errors.
+# 13 compiles, 0 failed with no errors.
 # Compile of Control_State_Machine.v was successful.
-# Compile of expansion.v was successful.
+# Compile of tb_Control_State_Machine.v was successful.
 # Compile of f_func.v was successful.
 # Compile of Final_Permutation.v was successful.
 # Compile of Initial_Permutation.v was successful.
 # Compile of key_schedule.v was successful.
 # Compile of left_shift.v was successful.
-# Compile of pbox.v was successful.
 # Compile of PC1.v was successful.
 # Compile of PC2.v was successful.
-# Compile of sbox.v was successful.
-# Compile of sbox_array.v was successful.
-# Compile of SPI.v was successful.
-# Compile of tb_TopModule.v was successful.
-# Compile of TopModule.v was successful.
-# 15 compiles, 0 failed with no errors.
-vsim DES.tb_TopModule
-# vsim DES.tb_TopModule 
-# Start time: 15:38:14 on Oct 26,2025
-# ** Note: (vsim-3812) Design is being optimized...
-# Loading work.tb_TopModule(fast)
-run -all
-# 
-# === SPI Write Sequence ===
-# [6910000] Waiting for DES operation...
-# [6935000] Reading ciphertext...
-# 
-# === Results ===
-# Plaintext  = 0xfedcba9876543210
-# Ciphertext = 0x21c9195f0a478337
-# ** Note: $finish    : /home/u1425837/des-project/modelsim/tb_TopModule.v(95)
-#    Time: 14610 ns  Iteration: 0  Instance: /tb_TopModule
-# 1
-# Break at /home/u1425837/des-project/modelsim/tb_TopModule.v line 95
-quit -sim
-# End time: 15:39:51 on Oct 26,2025, Elapsed time: 0:01:37
-# Errors: 16, Warnings: 0
-# Compile of Control_State_Machine.v was successful.
 # Compile of expansion.v was successful.
-# Compile of f_func.v was successful.
-# Compile of Final_Permutation.v was successful.
-# Compile of Initial_Permutation.v was successful.
-# Compile of key_schedule.v was successful.
-# Compile of left_shift.v was successful.
 # Compile of pbox.v was successful.
-# Compile of PC1.v was successful.
-# Compile of PC2.v was successful.
 # Compile of sbox.v was successful.
 # Compile of sbox_array.v was successful.
-# Compile of SPI.v was successful.
-# Compile of tb_TopModule.v was successful.
-# Compile of TopModule.v was successful.
-# 15 compiles, 0 failed with no errors.
-vsim DES.tb_TopModule
-# vsim DES.tb_TopModule 
-# Start time: 15:39:59 on Oct 26,2025
+# 13 compiles, 0 failed with no errors.
+vsim {Control State Machine.tb_Control_State_Machine} -voptargs=+acc
+# vsim Control State Machine.tb_Control_State_Machine -voptargs="+acc" 
+# Start time: 16:05:34 on Oct 26,2025
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading work.tb_TopModule(fast)
+# ** Note: (vopt-143) Recognized 1 FSM in module "Control_State_Machine(fast)".
+# Loading work.tb_Control_State_Machine(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
 run -all
+# Reset behavior
+#   PASSED: Reset works correctly
+#   State = IDLE, done signals = 0
+# 
+# Encryption sequence
+#   Input:  0123456789abcdef
+#   Key:    133457799bbcdff1
+#   [Cycle  1] State: ROUND_PROCESS, Round:  0
+#   [Cycle  6] State: ROUND_PROCESS, Round:  5
+#   [Cycle 11] State: ROUND_PROCESS, Round: 10
+#   [Cycle 16] State: ROUND_PROCESS, Round: 15
+#   [Cycle 17] State: FINAL_PERM
+#   [Cycle 18] State: DONE
+#   Encryption completed
+#   Total cycles:          19
+#   Output: 85e813540f0ab405
+#   Cycle count reasonable
+# 
+# Different test vector
+#   Input:  1122334455667788
+#   Key:    0e329232ea6d0d73
+#   Encryption completed
+#   Output: 80a43903bfaa2e7c
+# 
+# Test 5: Round counter verification
+#   PASSED: Round counter reached          15
+# 
+# Back-to-back operations
+#   First encryption:  08024fcf811da672
+#   Second encryption: df801b5b86d24f71
+#   PASSED: Back-to-back operations work
+# 
+# Decryption sequence
+#   Input (ciphertext): 85e813540f0ab405
+#   Key:                2222222222222222
+#   Decryption completed
+#   Total cycles:          19
+#   Output: a6c1039bffc4cb46
+#   FAILED: Decryption mismatch
+#   Expected: 0123456789abcdef
+#   Got:      a6c1039bffc4cb46
 # 
 # ========================================
-#     DES Encryption Test via SPI
-# ========================================
-# Plaintext = 0xfedcba9876543210
-# Key       = 0x0123456789abcdef
-# 
-# [300000] Step 1: Writing plaintext...
-# [6910000] SPI RX: 0xfedcba9876543210
-# 
-# [6910000] Step 2: Waiting for encryption...
-# [6940000] ? Encryption completed!
-# [6940000] CSM output: 0x21c9195f0a478337
-# 
-# [7940000] Step 3: Reading ciphertext...
-# 
-# ========================================
-#            Results
-# ========================================
-# Plaintext  = 0xfedcba9876543210
-# Ciphertext = 0x21c9195f0a478337
-# ? PASS - Encryption successful!
+# 1 TEST(S) FAILED 
 # ========================================
 # 
-# ** Note: $finish    : /home/u1425837/des-project/modelsim/tb_TopModule.v(132)
-#    Time: 14610 ns  Iteration: 0  Instance: /tb_TopModule
-# 1
-# Break at /home/u1425837/des-project/modelsim/tb_TopModule.v line 132
+# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_Control_State_Machine.v(252)
+#    Time: 1375 ns  Iteration: 0  Instance: /tb_Control_State_Machine
+# Break in Module tb_Control_State_Machine at /home/u1425837/des-project/modelsim/RTL/tb_Control_State_Machine.v line 252
 quit -sim
-# End time: 15:41:37 on Oct 26,2025, Elapsed time: 0:01:38
-# Errors: 32, Warnings: 0
+# End time: 16:07:23 on Oct 26,2025, Elapsed time: 0:01:49
+# Errors: 44, Warnings: 0
 # Compile of Control_State_Machine.v was successful.
-# Compile of expansion.v was successful.
+# Compile of tb_Control_State_Machine.v was successful.
 # Compile of f_func.v was successful.
 # Compile of Final_Permutation.v was successful.
 # Compile of Initial_Permutation.v was successful.
 # Compile of key_schedule.v was successful.
 # Compile of left_shift.v was successful.
-# Compile of pbox.v was successful.
 # Compile of PC1.v was successful.
 # Compile of PC2.v was successful.
+# Compile of expansion.v was successful.
+# Compile of pbox.v was successful.
 # Compile of sbox.v was successful.
 # Compile of sbox_array.v was successful.
-# Compile of SPI.v was successful.
-# Compile of tb_TopModule.v was successful.
-# Compile of TopModule.v was successful.
-# 15 compiles, 0 failed with no errors.
-vsim DES.tb_TopModule
-# vsim DES.tb_TopModule 
-# Start time: 15:41:45 on Oct 26,2025
+# 13 compiles, 0 failed with no errors.
+vsim {Control State Machine.tb_Control_State_Machine} -voptargs=+acc
+# vsim Control State Machine.tb_Control_State_Machine -voptargs="+acc" 
+# Start time: 16:07:29 on Oct 26,2025
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading work.tb_TopModule(fast)
+# Loading work.tb_Control_State_Machine(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
 run -all
+# Reset behavior
+#   PASSED: Reset works correctly
+#   State = IDLE, done signals = 0
+# 
+# Encryption sequence
+#   Input:  0123456789abcdef
+#   Key:    133457799bbcdff1
+#   [Cycle  1] State: ROUND_PROCESS, Round:  0
+#   [Cycle  6] State: ROUND_PROCESS, Round:  5
+#   [Cycle 11] State: ROUND_PROCESS, Round: 10
+#   [Cycle 16] State: ROUND_PROCESS, Round: 15
+#   [Cycle 17] State: FINAL_PERM
+#   [Cycle 18] State: DONE
+#   Encryption completed
+#   Total cycles:          19
+#   Output: 85e813540f0ab405
+#   Cycle count reasonable
+# 
+# Different test vector
+#   Input:  1122334455667788
+#   Key:    0e329232ea6d0d73
+#   Encryption completed
+#   Output: 80a43903bfaa2e7c
+# 
+# Test 5: Round counter verification
+#   PASSED: Round counter reached          15
+# 
+# Back-to-back operations
+#   First encryption:  08024fcf811da672
+#   Second encryption: df801b5b86d24f71
+#   PASSED: Back-to-back operations work
+# 
+# Decryption sequence
+#   Input (ciphertext): 85e813540f0ab405
+#   Key:                133457799bbcdff1
+#   Decryption completed
+#   Total cycles:          19
+#   Output: 0123456789abcdef
+#   PASSED: Decrypt(Encrypt(x)) = x
+#   Original:  0123456789abcdef
+#   Decrypted: 0123456789abcdef
 # 
 # ========================================
-#     DES Encryption Validation Test
+# ALL TESTS PASSED! 
 # ========================================
 # 
-# [300000] Testing DES...
-#   Plaintext = 0xfedcba9876543210
-#   Key       = 0x0123456789abcdef
-#   Expected  = 0x21c9195f0a478337
-#   Result    = 0x21c9195f0a478337
-#   ? PASS - Correct!
-# 
-# ========================================
-#     All Tests Complete
-# ========================================
-# 
-# ** Note: $finish    : /home/u1425837/des-project/modelsim/tb_TopModule.v(119)
-#    Time: 15610 ns  Iteration: 0  Instance: /tb_TopModule
-# 1
-# Break at /home/u1425837/des-project/modelsim/tb_TopModule.v line 119
+# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_Control_State_Machine.v(250)
+#    Time: 1345 ns  Iteration: 0  Instance: /tb_Control_State_Machine
+# Break in Module tb_Control_State_Machine at /home/u1425837/des-project/modelsim/RTL/tb_Control_State_Machine.v line 250
 quit -sim
-# End time: 15:42:06 on Oct 26,2025, Elapsed time: 0:00:21
-# Errors: 20, Warnings: 0
+# End time: 16:07:51 on Oct 26,2025, Elapsed time: 0:00:22
+# Errors: 22, Warnings: 0
 # Compile of Control_State_Machine.v was successful.
-# Compile of expansion.v was successful.
+# Compile of tb_Control_State_Machine.v was successful.
 # Compile of f_func.v was successful.
 # Compile of Final_Permutation.v was successful.
 # Compile of Initial_Permutation.v was successful.
 # Compile of key_schedule.v was successful.
 # Compile of left_shift.v was successful.
-# Compile of pbox.v was successful.
 # Compile of PC1.v was successful.
 # Compile of PC2.v was successful.
-# Compile of sbox.v was successful.
-# Compile of sbox_array.v was successful.
-# Compile of SPI.v was successful.
-# Compile of tb_TopModule.v was successful.
-# Compile of TopModule.v was successful.
-# 15 compiles, 0 failed with no errors.
-vsim DES.tb_TopModule
-# vsim DES.tb_TopModule 
-# Start time: 15:48:20 on Oct 26,2025
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading work.tb_TopModule(fast)
-run -all
-# 
-# ========================================
-#     DES Encryption Validation Test
-# ========================================
-# 
-# [300000] Testing DES...
-#   original text = 0xfedcba9876543210
-#   Key       = 0x0123456789abcdef
-#   Expected  = 0x21c9195f0a478337
-#   Result    = 0x21c9195f0a478337
-# PASS
-# 
-# ========================================
-#     All Tests Complete
-# ========================================
-# 
-# ** Note: $finish    : /home/u1425837/des-project/modelsim/tb_TopModule.v(119)
-#    Time: 15610 ns  Iteration: 0  Instance: /tb_TopModule
-# 1
-# Break at /home/u1425837/des-project/modelsim/tb_TopModule.v line 119
-quit -sim
-# End time: 15:48:32 on Oct 26,2025, Elapsed time: 0:00:12
-# Errors: 34, Warnings: 0
-# Compile of Control_State_Machine.v was successful.
 # Compile of expansion.v was successful.
-# Compile of f_func.v was successful.
-# Compile of Final_Permutation.v was successful.
-# Compile of Initial_Permutation.v was successful.
-# Compile of key_schedule.v was successful.
-# Compile of left_shift.v was successful.
 # Compile of pbox.v was successful.
-# Compile of PC1.v was successful.
-# Compile of PC2.v was successful.
 # Compile of sbox.v was successful.
 # Compile of sbox_array.v was successful.
-# Compile of SPI.v was successful.
-# Compile of tb_TopModule.v was successful.
-# Compile of TopModule.v was successful.
-# 15 compiles, 0 failed with no errors.
-# Compile of Control_State_Machine.v was successful.
-# Compile of expansion.v was successful.
-# Compile of f_func.v was successful.
-# Compile of Final_Permutation.v was successful.
-# Compile of Initial_Permutation.v was successful.
-# Compile of key_schedule.v was successful.
-# Compile of left_shift.v was successful.
-# Compile of pbox.v was successful.
-# Compile of PC1.v was successful.
-# Compile of PC2.v was successful.
-# Compile of sbox.v was successful.
-# Compile of sbox_array.v was successful.
-# Compile of SPI.v was successful.
-# Compile of tb_TopModule.v was successful.
-# Compile of TopModule.v was successful.
-# 15 compiles, 0 failed with no errors.
+# 13 compiles, 0 failed with no errors.

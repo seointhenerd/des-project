@@ -136,7 +136,7 @@ module tb_Control_State_Machine;
         
         #30;
         
-        $display("Test 5: Round counter verification");
+        $display("Round counter verification");
         
         input_text = 64'hAAAAAAAAAAAAAAAA;
         key = 64'h5555555555555555;
@@ -199,48 +199,43 @@ module tb_Control_State_Machine;
         
         #30;
 
-        /* TO DO: FUTURE EXTENSION
-        $display("Decryption sequence");
-        
-        input_text = ciphertext;
-        $display("  Input (ciphertext): %h", input_text);
-        $display("  Key:                %h", key);
-        
-        // Start decryption
-        start_decrypt = 1;
-        #10;
-        start_decrypt = 0;
-        
-        cycle_count = 0;
-        
-        // Wait for decryption to complete
-        while (!done_decrypt && cycle_count < 100) begin
-            #10;
-            cycle_count = cycle_count + 1;
-        end
-        
-        if (done_decrypt) begin
-            $display("  Decryption completed");
-            $display("  Total cycles: %d", cycle_count);
-            $display("  Output: %h", output_text);
-            
-            if (output_text == 64'h0123456789ABCDEF) begin
-                $display("  PASSED: Decrypt(Encrypt(x)) = x");
-                $display("  Original:  %h", 64'h0123456789ABCDEF);
-                $display("  Decrypted: %h\n", output_text);
-            end else begin
-                $display("  FAILED: Decryption mismatch");
-                $display("  Expected: %h", 64'h0123456789ABCDEF);
-                $display("  Got:      %h\n", output_text);
-                error_count = error_count + 1;
-            end
-        end else begin
-            $display("  FAILED: Decryption timeout\n");
-            error_count = error_count + 1;
-        end
-        
-        #30;
-        */
+$display("Decryption sequence");
+
+key = 64'h133457799BBCDFF1;
+input_text = ciphertext;
+$display("  Input (ciphertext): %h", input_text);
+$display("  Key:                %h", key);
+
+start_decrypt = 1;
+#10;
+start_decrypt = 0;
+
+cycle_count = 0;
+
+while (!done_decrypt && cycle_count < 100) begin
+    #10;
+    cycle_count = cycle_count + 1;
+end
+
+if (done_decrypt) begin
+    $display("  Decryption completed");
+    $display("  Total cycles: %d", cycle_count);
+    $display("  Output: %h", output_text);
+    
+    if (output_text == 64'h0123456789ABCDEF) begin
+        $display("  PASSED: Decrypt(Encrypt(x)) = x");
+        $display("  Original:  %h", 64'h0123456789ABCDEF);
+        $display("  Decrypted: %h\n", output_text);
+    end else begin
+        $display("  FAILED: Decryption mismatch");
+        $display("  Expected: %h", 64'h0123456789ABCDEF);
+        $display("  Got:      %h\n", output_text);
+        error_count = error_count + 1;
+    end
+end else begin
+    $display("  FAILED: Decryption timeout\n");
+    error_count = error_count + 1;
+end
 
         $display("========================================");
         if (error_count == 0) begin

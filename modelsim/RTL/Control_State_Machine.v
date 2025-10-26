@@ -22,9 +22,7 @@ module Control_State_Machine (
     reg [3:0] round_counter;
     reg mode;  // 0=encrypt, 1=decrypt
     
-    // Registers
     reg [31:0] left_reg, right_reg;
-    reg [31:0] temp_reg;  // For swapping
     
     // Wires connecting to other modules
     wire [31:0] ip_left, ip_right;
@@ -60,15 +58,15 @@ module Control_State_Machine (
         .f_out(f_output)
     );
     
-    // Final Permutation
+    // Final Permutation - ??: 32-bit swap ??
     Final_Permutation fp_inst (
-        .left_half(left_reg),
-        .right_half(right_reg),
+        .left_half(right_reg),   // ? L? R ??!
+        .right_half(left_reg),   // ? L? R ??!
         .output_text(fp_output)
     );
     
-    // Subkey selection -combinational
-    always @(round_counter, mode) begin
+    // Subkey selection - combinational
+    always @(*) begin
         case (round_counter)
             4'd0:  current_subkey = mode ? k16 : k1;
             4'd1:  current_subkey = mode ? k15 : k2;
@@ -90,7 +88,7 @@ module Control_State_Machine (
         endcase
     end
     
-    // FSM -sequential
+    // FSM - sequential
     always @(posedge clk or posedge rst) begin
         if (rst) begin
             state <= IDLE;
@@ -126,20 +124,21 @@ module Control_State_Machine (
                 end
                 
                 ROUND_PROCESS: begin
-                    // Feistel structure
-                    temp_reg <= right_reg;
+                    // Feistel structure: (L, R) ? (R, L?f(R,K))
                     left_reg <= right_reg;
                     right_reg <= left_reg ^ f_output;
                     
-                    round_counter <= round_counter + 4'd1;
-                    
+                    // ??? ??? ??? ??
                     if (round_counter == 4'd15) begin
                         state <= FINAL_PERM;
+                    end else begin
+                        round_counter <= round_counter + 4'd1;
                     end
                 end
                 
                 FINAL_PERM: begin
                     // FP output
+                    // fp_inst? ?? (right_reg, left_reg)? ??? (32-bit swap)
                     output_text <= fp_output;
                     state <= DONE;
                 end
