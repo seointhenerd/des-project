@@ -10,23 +10,23 @@ z2
 cModel Technology
 Z0 d/home/u1425837/des-project/modelsim
 T_opt
-!s110 1761436145
-VgXV0nBRHPIIf>RiQ55T`91
+!s110 1761513374
+V^>V9D<dh[L;SCM7d^?1>k2
 04 24 4 work tb_Control_State_Machine fast 0
-=1-18c04d8e309a-68fd61f1-1ed6d-3100c2
+=1-18c04d8e309a-68fe8f9e-34ae5-32c297
 o-quiet -auto_acc_if_foreign -work {Control State Machine} +acc
 Z1 tCvgOpt 0
 n@_opt
 OL;O;2019.4;69
 vControl_State_Machine
-Z2 !s110 1761436141
+Z2 !s110 1761513369
 !i10b 1
-!s100 Cdm<l;Q=8iolBB0jCV7m`0
+!s100 339FzB;bmJL8=02O5Y>o63
 !s11b T9mkcknm8_c5[0loYWMX31
-I<dhG7iIM@eP9d2SM0j=NW1
+I`@X@Y4KHJ_0TMEFDLmV^92
 Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1761435428
+w1761513364
 8/home/u1425837/des-project/modelsim/RTL/Control_State_Machine.v
 F/home/u1425837/des-project/modelsim/RTL/Control_State_Machine.v
 !i122 -1
@@ -35,19 +35,19 @@ Z4 OL;L;2019.4;69
 r1
 !s85 0
 31
-Z5 !s108 1761436141.000000
+Z5 !s108 1761513369.000000
 !s107 /home/u1425837/des-project/modelsim/RTL/Control_State_Machine.v|
 !s90 -reportprogress|300|-work|Control State Machine|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/Control_State_Machine.v|
 !i113 0
-Z6 o-work {Control State Machine} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z6 o-work {Control State Machine}
 R1
 n@control_@state_@machine
 vExpansion
-Z7 !s110 1761436142
+Z7 !s110 1761513370
 !i10b 1
 !s100 ^L7ijo@=_JQ>;?WjfL@ie1
 !s11b m1U1=58e=PF@BG1@n90Tl3
-I;4dlDLK8QMbe;ccTQhCog1
+IELPf0@FI=2>?DQ4]e7VOz3
 R3
 R0
 Z8 w1761431596
@@ -59,7 +59,7 @@ R4
 r1
 !s85 0
 31
-Z9 !s108 1761436142.000000
+Z9 !s108 1761513370.000000
 !s107 /home/u1425837/des-project/modelsim/RTL/expansion.v|
 !s90 -reportprogress|300|-work|Control State Machine|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/expansion.v|
 !i113 0
@@ -71,7 +71,7 @@ R2
 !i10b 1
 !s100 mHb`mJ9CHRXSB8[Td72TB2
 !s11b lAnI4oJEGYE=IkEAAENJP3
-I<;a8GMB2:_h_ZVR6SZi3W1
+IDeAS4:G5CDE@9?@Z89odg0
 R3
 R0
 R8
@@ -95,7 +95,7 @@ R2
 !i10b 1
 !s100 ;>JGzO?]Hc3b<<>h8GI7;2
 !s11b j3lAJh`dUzSX<7fL5T][51
-I0nDClf6bQniE]nF^=_mk13
+IM^4?[3oRe[VWizXYzf>IB2
 R3
 R0
 w1761430127
@@ -119,7 +119,7 @@ R2
 !i10b 1
 !s100 8i9:SSWlV_YJ;FV6_jG`92
 !s11b T23UNk[e03OZ]9;gaCF6e2
-IldGf2AD;5Hd47faocJ<jM3
+ITG15>RJ?OI1Q[24az;?BX3
 R3
 R0
 w1761429666
@@ -143,7 +143,7 @@ R2
 !i10b 1
 !s100 WV;HBIo?JFk^alSVoL0DC3
 !s11b jMYYHa0T<nVgfMGOzTgW22
-IO67`=j2FF4CHJJo9^>JSo0
+I3_bND]T>3EIK^4zTdU0Q@1
 R3
 R0
 R8
@@ -162,11 +162,11 @@ R5
 R6
 R1
 vleft_shift
-R2
+R7
 !i10b 1
 !s100 3KTH@2>BZ2^S=;j0ZN=QT1
 !s11b JJDb<g@k?^573YA?833nK0
-Il5eES3ez4G]UEac`6nYmT2
+I5N8<<foFlo`jj`6G==mPj0
 R3
 R0
 w1761431597
@@ -178,7 +178,7 @@ R4
 r1
 !s85 0
 31
-R5
+R9
 !s107 /home/u1425837/des-project/modelsim/left_shift.v|
 !s90 -reportprogress|300|-work|Control State Machine|-vopt|-stats=none|/home/u1425837/des-project/modelsim/left_shift.v|
 !i113 0
@@ -189,7 +189,7 @@ R7
 !i10b 1
 !s100 _^LRHf_^hPe4>UH9U@HkC2
 !s11b ZmkQkCao:k]P@6hKSYQTf2
-IWH^mVlZcYTo[S5S_6<7z>1
+IFdl^a^Ob3?d<oS1C^<a^e1
 R3
 R0
 R8
@@ -213,7 +213,7 @@ R7
 !i10b 1
 !s100 8`lKf[za31CDbj9U`nDce3
 !s11b >lEG@BcDMNJPhmf1_bm6?0
-IMgASC7OAbA>hG5@e1doPL2
+IX9HFjA>_21jbh0b>KZ[G:0
 R3
 R0
 R8
@@ -237,7 +237,7 @@ R7
 !i10b 1
 !s100 2A22QUPBJZ]aCd@5LXJ[e2
 !s11b N=JmlW45]lcm;BAMoi@m12
-I6]Nk5@TgA]UzeiIdaE0@R2
+I117<I[KQHEUYKUm[D;L;:2
 R3
 R0
 R8
@@ -261,7 +261,7 @@ R7
 !i10b 1
 !s100 WaIK`nIK3n2HGDI5ezbbN1
 !s11b GUI:4LmiB8l4CPhX`3WU82
-I7>M>9YCalEKdRAhneAd?n0
+I`n0f:X_Szl[SUbKbLOR]E0
 R3
 R0
 R8
@@ -285,7 +285,7 @@ R7
 !i10b 1
 !s100 3o`TWQSREW?88bI45Bg=52
 !s11b :1HinKC2F3_KY=JRzc[Ni1
-I8TDH3WFb_jOT<6`ibJY8f3
+I`63H>5Dz54?a]OUOeBfE>1
 R3
 R0
 R8
@@ -309,7 +309,7 @@ R2
 !i10b 1
 !s100 kO?kN9hAYA49mb2nzJoBj0
 !s11b :?9GbR;P8BKPa9R`k97kN3
-I^g[OY=BbIm`Z_:3hi__aY1
+IX>=S4BX2Nh]o6lNd_NJM93
 R3
 R0
 w1761436131

@@ -29,56 +29,270 @@ R2
 n@_opt1
 R3
 R0
-vFinal_Permutation
-Z4 !s110 1761112893
+vExpansion
+Z4 !s110 1761512657
 !i10b 1
-!s100 7kiHZ3<IZRN1ISzP[=Um03
-!s11b <Oh<^2IPbRBo`d`Nz7hgj1
-IO5M=E>8:niWf71mnXO7[;1
+!s100 ^L7ijo@=_JQ>;?WjfL@ie1
+!s11b m1U1=58e=PF@BG1@n90Tl3
+IGT]Ya42JN=W^>HDH]k9TP0
 Z5 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1761111225
+Z6 w1761431596
+8/home/u1425837/des-project/modelsim/RTL/expansion.v
+F/home/u1425837/des-project/modelsim/RTL/expansion.v
+!i122 -1
+L0 3
+Z7 OL;L;2019.4;69
+r1
+!s85 0
+31
+Z8 !s108 1761512656.000000
+!s107 /home/u1425837/des-project/modelsim/RTL/expansion.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/expansion.v|
+!i113 0
+Z9 o-work work
+R2
+n@expansion
+vFeistel_Function
+R4
+!i10b 1
+!s100 mHb`mJ9CHRXSB8[Td72TB2
+!s11b lAnI4oJEGYE=IkEAAENJP3
+I?z^MW92h`0WUOfEe>z3PS2
+R5
+R0
+R6
+8/home/u1425837/des-project/modelsim/RTL/f_func.v
+F/home/u1425837/des-project/modelsim/RTL/f_func.v
+!i122 -1
+L0 3
+R7
+r1
+!s85 0
+31
+Z10 !s108 1761512657.000000
+!s107 /home/u1425837/des-project/modelsim/RTL/f_func.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/f_func.v|
+!i113 0
+R9
+R2
+n@feistel_@function
+vFinal_Permutation
+R4
+!i10b 1
+!s100 ;>JGzO?]Hc3b<<>h8GI7;2
+!s11b j3lAJh`dUzSX<7fL5T][51
+I8ANN]P;iT]CBJENi60MQ]1
+R5
+R0
+w1761430127
 8/home/u1425837/des-project/modelsim/RTL/Final_Permutation.v
 F/home/u1425837/des-project/modelsim/RTL/Final_Permutation.v
 !i122 -1
 L0 1
-Z6 OL;L;2019.4;69
+R7
 r1
 !s85 0
 31
-Z7 !s108 1761112893.000000
+R10
 !s107 /home/u1425837/des-project/modelsim/RTL/Final_Permutation.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/Final_Permutation.v|
 !i113 0
-Z8 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R9
 R2
 n@final_@permutation
 vInitial_Permutation
 R4
 !i10b 1
-!s100 DDFmz4zk@IaaNDFc6VnmJ2
-!s11b ]47<PH77NKe]ZiGb6^Y[b1
-IBXibWWBmO0m6khbdkLRR72
+!s100 8i9:SSWlV_YJ;FV6_jG`92
+!s11b T23UNk[e03OZ]9;gaCF6e2
+I;h1mJK_=OKjnVbg0XlMTn3
 R5
 R0
-w1761112291
+w1761429666
 8/home/u1425837/des-project/modelsim/RTL/Initial_Permutation.v
 F/home/u1425837/des-project/modelsim/RTL/Initial_Permutation.v
 !i122 -1
 L0 1
-R6
+R7
 r1
 !s85 0
 31
-R7
+R10
 !s107 /home/u1425837/des-project/modelsim/RTL/Initial_Permutation.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/Initial_Permutation.v|
 !i113 0
-R8
+R9
 R2
 n@initial_@permutation
-vtb_Control_State_Machine
+vkey_schedule
+!s110 1761512656
+!i10b 1
+!s100 WV;HBIo?JFk^alSVoL0DC3
+!s11b jMYYHa0T<nVgfMGOzTgW22
+IT[Q2d=]Ufba8Pk487?l`33
+R5
+R0
+R6
+8/home/u1425837/des-project/modelsim/key_schedule.v
+F/home/u1425837/des-project/modelsim/key_schedule.v
+!i122 -1
+L0 7
+R7
+r1
+!s85 0
+31
+R8
+!s107 /home/u1425837/des-project/modelsim/key_schedule.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/u1425837/des-project/modelsim/key_schedule.v|
+!i113 0
+R9
+R2
+vleft_shift
 R4
+!i10b 1
+!s100 3KTH@2>BZ2^S=;j0ZN=QT1
+!s11b JJDb<g@k?^573YA?833nK0
+IJTI3oEWeReXT:M1gFQ>GN2
+R5
+R0
+w1761431597
+8/home/u1425837/des-project/modelsim/left_shift.v
+F/home/u1425837/des-project/modelsim/left_shift.v
+!i122 -1
+L0 6
+R7
+r1
+!s85 0
+31
+R10
+!s107 /home/u1425837/des-project/modelsim/left_shift.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/u1425837/des-project/modelsim/left_shift.v|
+!i113 0
+R9
+R2
+vPBox
+R4
+!i10b 1
+!s100 _^LRHf_^hPe4>UH9U@HkC2
+!s11b ZmkQkCao:k]P@6hKSYQTf2
+IZQONldo=2oTn[N8KDbO7Q1
+R5
+R0
+R6
+8/home/u1425837/des-project/modelsim/RTL/pbox.v
+F/home/u1425837/des-project/modelsim/RTL/pbox.v
+!i122 -1
+L0 4
+R7
+r1
+!s85 0
+31
+R10
+!s107 /home/u1425837/des-project/modelsim/RTL/pbox.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/pbox.v|
+!i113 0
+R9
+R2
+n@p@box
+vPC1
+R4
+!i10b 1
+!s100 8`lKf[za31CDbj9U`nDce3
+!s11b >lEG@BcDMNJPhmf1_bm6?0
+I2Fk_A7iOGPjL1HN0J6d0_2
+R5
+R0
+R6
+8/home/u1425837/des-project/modelsim/PC1.v
+F/home/u1425837/des-project/modelsim/PC1.v
+!i122 -1
+L0 1
+R7
+r1
+!s85 0
+31
+R10
+!s107 /home/u1425837/des-project/modelsim/PC1.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/u1425837/des-project/modelsim/PC1.v|
+!i113 0
+R9
+R2
+n@p@c1
+vPC2
+!s110 1761512658
+!i10b 1
+!s100 2A22QUPBJZ]aCd@5LXJ[e2
+!s11b N=JmlW45]lcm;BAMoi@m12
+IWJjQZF<ec]XiB?H?1S?WS2
+R5
+R0
+R6
+8/home/u1425837/des-project/modelsim/PC2.v
+F/home/u1425837/des-project/modelsim/PC2.v
+!i122 -1
+L0 1
+R7
+r1
+!s85 0
+31
+!s108 1761512658.000000
+!s107 /home/u1425837/des-project/modelsim/PC2.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/u1425837/des-project/modelsim/PC2.v|
+!i113 0
+R9
+R2
+n@p@c2
+vSBox
+R4
+!i10b 1
+!s100 WaIK`nIK3n2HGDI5ezbbN1
+!s11b GUI:4LmiB8l4CPhX`3WU82
+IRMg7KR1jT`R=08:WHWZ^o3
+R5
+R0
+R6
+8/home/u1425837/des-project/modelsim/RTL/sbox.v
+F/home/u1425837/des-project/modelsim/RTL/sbox.v
+!i122 -1
+L0 3
+R7
+r1
+!s85 0
+31
+R10
+!s107 /home/u1425837/des-project/modelsim/RTL/sbox.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/sbox.v|
+!i113 0
+R9
+R2
+n@s@box
+vSBoxArray
+R4
+!i10b 1
+!s100 3o`TWQSREW?88bI45Bg=52
+!s11b :1HinKC2F3_KY=JRzc[Ni1
+Ii2@IRQd=RXJ]XN?DYA<HJ3
+R5
+R0
+R6
+8/home/u1425837/des-project/modelsim/RTL/sbox_array.v
+F/home/u1425837/des-project/modelsim/RTL/sbox_array.v
+!i122 -1
+L0 3
+R7
+r1
+!s85 0
+31
+R10
+!s107 /home/u1425837/des-project/modelsim/RTL/sbox_array.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/sbox_array.v|
+!i113 0
+R9
+R2
+n@s@box@array
+vtb_Control_State_Machine
+!s110 1761112893
 !i10b 1
 !s100 2<WKeJLYi:NbW`MjX68o;2
 !s11b lN>a9:mL2@2h45PVWbHA@3
@@ -90,15 +304,15 @@ w1761108964
 F/home/u1425837/des-project/modelsim/RTL/tb_Control_State_Machine.v
 !i122 -1
 L0 3
-R6
+R7
 r1
 !s85 0
 31
-R7
+!s108 1761112893.000000
 !s107 /home/u1425837/des-project/modelsim/RTL/tb_Control_State_Machine.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/tb_Control_State_Machine.v|
 !i113 0
-R8
+Z11 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R2
 ntb_@control_@state_@machine
 vtb_Final_Permutation
@@ -114,7 +328,7 @@ w1761108893
 F/home/u1425837/des-project/modelsim/RTL/tb_Final_Permutation.v
 !i122 -1
 L0 3
-R6
+R7
 r1
 !s85 0
 31
@@ -122,7 +336,7 @@ r1
 !s107 /home/u1425837/des-project/modelsim/RTL/tb_Final_Permutation.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/tb_Final_Permutation.v|
 !i113 0
-R8
+R11
 R2
 ntb_@final_@permutation
 vtb_Initial_Permutation
@@ -134,19 +348,19 @@ IEOc=;Bod@RQN3VED@d:;Z2
 R5
 R0
 w1761112419
-Z9 8/home/u1425837/des-project/modelsim/RTL/tb_Initial_Permutation.v
-Z10 F/home/u1425837/des-project/modelsim/RTL/tb_Initial_Permutation.v
+Z12 8/home/u1425837/des-project/modelsim/RTL/tb_Initial_Permutation.v
+Z13 F/home/u1425837/des-project/modelsim/RTL/tb_Initial_Permutation.v
 !i122 -1
 L0 3
-R6
+R7
 r1
 !s85 0
 31
 !s108 1761112432.000000
-!s107 /home/u1425837/des-project/modelsim/RTL/tb_Initial_Permutation.v|
-Z11 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/tb_Initial_Permutation.v|
+Z14 !s107 /home/u1425837/des-project/modelsim/RTL/tb_Initial_Permutation.v|
+Z15 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/tb_Initial_Permutation.v|
 !i113 0
-R8
+R11
 R2
 ntb_@initial_@permutation
 vtb_Initial_Permutation_debug
@@ -158,18 +372,18 @@ IodkeL[FiG5jU>;Fd6]DV20
 R5
 R0
 w1761112810
-R9
-R10
+R12
+R13
 !i122 -1
 L0 4
-R6
+R7
 r1
 !s85 0
 31
 !s108 1761112894.000000
-Z12 !s107 /home/u1425837/des-project/modelsim/RTL/tb_Initial_Permutation.v|
-R11
+R14
+R15
 !i113 0
-R8
+R11
 R2
 ntb_@initial_@permutation_debug

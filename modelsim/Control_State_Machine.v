@@ -22,7 +22,6 @@ module Control_State_Machine (
     reg [3:0] round_counter;
     reg mode;  // 0=encrypt, 1=decrypt
     
-    // Registers
     reg [31:0] left_reg, right_reg;
     reg [31:0] temp_reg;  // For swapping
     
