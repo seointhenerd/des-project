@@ -125,7 +125,6 @@ module Control_State_Machine (
                 end
                 
                 ROUND_PROCESS: begin
-<<<<<<< HEAD
                     temp_reg <= right_reg;
                     left_reg <= right_reg;
                     right_reg <= left_reg ^ f_output;
@@ -133,21 +132,13 @@ module Control_State_Machine (
                     round_counter <= round_counter + 4'd1;
                     
                     // final permutation
-=======
-                    left_reg <= right_reg;
-                    right_reg <= left_reg ^ f_output;
-                    
->>>>>>> 6aec7a211d1be6290087643cc218ce7793ab3b99
                     if (round_counter == 4'd15) begin
                         state <= FINAL_PERM;
                     end
                 end
                 
                 FINAL_PERM: begin
-<<<<<<< HEAD
                     // FP output
-=======
->>>>>>> 6aec7a211d1be6290087643cc218ce7793ab3b99
                     output_text <= fp_output;
                     state <= DONE;
                 end
@@ -170,3 +161,4 @@ module Control_State_Machine (
     end
 
 endmodule
+

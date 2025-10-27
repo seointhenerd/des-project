@@ -12,94 +12,6 @@
 # //  is prohibited from disclosure under the Trade Secrets Act,
 # //  18 U.S.C. Section 1905.
 # //
-# Loading project Control State Machine
-# Compile of Control_State_Machine.v was successful.
-# Compile of expansion.v was successful.
-# Compile of f_func.v was successful.
-# Compile of Final_Permutation.v was successful.
-# Compile of Initial_Permutation.v was successful.
-# Compile of key_schedule.v was successful.
-# Compile of left_shift.v was successful.
-# Compile of pbox.v was successful.
-# Compile of PC1.v was successful.
-# Compile of PC2.v was successful.
-# Compile of sbox.v was successful.
-# Compile of sbox_array.v was successful.
-# Compile of SPI.v was successful.
-# Compile of tb_Control_State_Machine.v was successful.
-# 14 compiles, 0 failed with no errors.
-vsim {Control State Machine.tb_Control_State_Machine} -voptargs=+acc
-# vsim Control State Machine.tb_Control_State_Machine -voptargs="+acc" 
-# Start time: 20:30:25 on Oct 26,2025
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Note: (vopt-143) Recognized 1 FSM in module "Control_State_Machine(fast)".
-# Loading work.tb_Control_State_Machine(fast)
-# Loading work.Control_State_Machine(fast)
-# Loading work.Initial_Permutation(fast)
-# Loading work.key_schedule(fast)
-# Loading work.PC1(fast)
-# Loading work.left_shift(fast)
-# Loading work.PC2(fast)
-# Loading work.Feistel_Function(fast)
-# Loading work.Expansion(fast)
-# Loading work.SBoxArray(fast)
-# Loading work.SBox(fast)
-# Loading work.PBox(fast)
-# Loading work.Final_Permutation(fast)
-run -all
-# Reset behavior
-#   PASSED: Reset works correctly
-#   State = IDLE, done signals = 0
-# 
-# Encryption sequence
-#   Input:  0123456789abcdef
-#   Key:    133457799bbcdff1
-#   [Cycle  1] State: ROUND_PROCESS, Round:  0
-#   [Cycle  6] State: ROUND_PROCESS, Round:  5
-#   [Cycle 11] State: ROUND_PROCESS, Round: 10
-#   [Cycle 16] State: ROUND_PROCESS, Round: 15
-#   [Cycle 17] State: FINAL_PERM
-#   [Cycle 18] State: DONE
-#   Encryption completed
-#   Total cycles:          19
-#   Output: 85e813540f0ab405
-#   Cycle count reasonable
-# 
-# Different test vector
-#   Input:  1122334455667788
-#   Key:    0e329232ea6d0d73
-#   Encryption completed
-#   Output: 80a43903bfaa2e7c
-# 
-# Round counter verification
-#   PASSED: Round counter reached          15
-# 
-# Back-to-back operations
-#   First encryption:  08024fcf811da672
-#   Second encryption: df801b5b86d24f71
-#   PASSED: Back-to-back operations work
-# 
-# Decryption sequence
-#   Input (ciphertext): 85e813540f0ab405
-#   Key:                133457799bbcdff1
-#   Decryption completed
-#   Total cycles:          19
-#   Output: 0123456789abcdef
-#   PASSED: Decrypt(Encrypt(x)) = x
-#   Original:  0123456789abcdef
-#   Decrypted: 0123456789abcdef
-# 
-# ========================================
-# ALL TESTS PASSED! 
-# ========================================
-# 
-# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_Control_State_Machine.v(248)
-#    Time: 1345 ns  Iteration: 0  Instance: /tb_Control_State_Machine
-# Break in Module tb_Control_State_Machine at /home/u1425837/des-project/modelsim/RTL/tb_Control_State_Machine.v line 248
-quit -sim
-# End time: 20:30:40 on Oct 26,2025, Elapsed time: 0:00:15
-# Errors: 14, Warnings: 0
-# reading /uusoc/facility/cad_tools/Mentor/modelsim2019.4/questasim/linux_x86_64/../modelsim.ini
 # Loading project Top Module
 # Compile of Control_State_Machine.v was successful.
 # Compile of expansion.v was successful.
@@ -120,10 +32,8 @@ quit -sim
 # 16 compiles, 0 failed with no errors.
 vsim {Top Module.tb_TopModule} -voptargs=+acc
 # vsim Top Module.tb_TopModule -voptargs="+acc" 
-# Start time: 20:32:27 on Oct 26,2025
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Note: (vopt-143) Recognized 1 FSM in module "Control_State_Machine(fast)".
-# ** Note: (vopt-143) Recognized 1 FSM in module "TopModule(fast)".
+# Start time: 20:39:29 on Oct 26,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt
 # Loading work.tb_TopModule(fast)
 # Loading work.TopModule(fast)
 # Loading work.SPI(fast)
@@ -167,5 +77,5 @@ run -all
 #    Time: 58905 ns  Iteration: 0  Instance: /tb_TopModule
 # Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 186
 quit -sim
-# End time: 20:32:43 on Oct 26,2025, Elapsed time: 0:00:16
-# Errors: 19, Warnings: 0
+# End time: 20:39:41 on Oct 26,2025, Elapsed time: 0:00:12
+# Errors: 2, Warnings: 0
