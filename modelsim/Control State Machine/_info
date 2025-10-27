@@ -10,195 +10,194 @@ z2
 cModel Technology
 Z0 d/home/u1425837/des-project/modelsim
 T_opt
-!s110 1761516450
-V<E^AOnDC3h;j4PCSMQm4S3
+!s110 1761532226
+VE_6^=hSeHFXoHMX>WE[`@1
 04 24 4 work tb_Control_State_Machine fast 0
-=1-18c04d8e309a-68fe9ba2-33fc3-32db7d
+=1-18c04d8e309a-68fed941-b79a4-3357cf
 o-quiet -auto_acc_if_foreign -work {Control State Machine} +acc
 Z1 tCvgOpt 0
 n@_opt
 OL;O;2019.4;69
-R0
 vControl_State_Machine
-!s110 1761516511
+Z2 !s110 1761532195
 !i10b 1
-!s100 G6ZGX9oURF35]2YM=fbm33
-!s11b I`I9UaNZMDSLjz<fL:OA_2
-IoSh6keDViQXg7VJW[98Sc0
-Z2 VDg1SIo80bB@j0V0VzS_@n1
+!s100 @JAQ2269ObMX:SnkOz5`L0
+!s11b =z2mJ7M2f33Q<JSJ5Ed4T1
+I1ICGSnPO85CNKFh[hGN5[0
+Z3 VDg1SIo80bB@j0V0VzS_@n1
 R0
-w1761516308
+w1761529718
 8/home/u1425837/des-project/modelsim/RTL/Control_State_Machine.v
 F/home/u1425837/des-project/modelsim/RTL/Control_State_Machine.v
 !i122 -1
 L0 1
-Z3 OL;L;2019.4;69
+Z4 OL;L;2019.4;69
 r1
 !s85 0
 31
-!s108 1761516511.000000
+!s108 1761532194.000000
 !s107 /home/u1425837/des-project/modelsim/RTL/Control_State_Machine.v|
 !s90 -reportprogress|300|-work|Control State Machine|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/Control_State_Machine.v|
 !i113 0
-Z4 o-work {Control State Machine}
+Z5 o-work {Control State Machine} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R1
 n@control_@state_@machine
 vExpansion
-Z5 !s110 1761516513
+R2
 !i10b 1
 !s100 ^L7ijo@=_JQ>;?WjfL@ie1
 !s11b m1U1=58e=PF@BG1@n90Tl3
-IELPf0@FI=2>?DQ4]e7VOz3
-R2
+I;4dlDLK8QMbe;ccTQhCog1
+R3
 R0
 Z6 w1761431596
 8/home/u1425837/des-project/modelsim/RTL/expansion.v
 F/home/u1425837/des-project/modelsim/RTL/expansion.v
 !i122 -1
 L0 3
-R3
+R4
 r1
 !s85 0
 31
-Z7 !s108 1761516513.000000
+Z7 !s108 1761532195.000000
 !s107 /home/u1425837/des-project/modelsim/RTL/expansion.v|
 !s90 -reportprogress|300|-work|Control State Machine|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/expansion.v|
 !i113 0
-R4
+R5
 R1
 n@expansion
 vFeistel_Function
-Z8 !s110 1761516512
+R2
 !i10b 1
 !s100 mHb`mJ9CHRXSB8[Td72TB2
 !s11b lAnI4oJEGYE=IkEAAENJP3
-IDeAS4:G5CDE@9?@Z89odg0
-R2
+I<;a8GMB2:_h_ZVR6SZi3W1
+R3
 R0
 R6
 8/home/u1425837/des-project/modelsim/RTL/f_func.v
 F/home/u1425837/des-project/modelsim/RTL/f_func.v
 !i122 -1
 L0 3
-R3
+R4
 r1
 !s85 0
 31
-Z9 !s108 1761516512.000000
+R7
 !s107 /home/u1425837/des-project/modelsim/RTL/f_func.v|
 !s90 -reportprogress|300|-work|Control State Machine|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/f_func.v|
 !i113 0
-R4
+R5
 R1
 n@feistel_@function
 vFinal_Permutation
-R8
+R2
 !i10b 1
 !s100 ;>JGzO?]Hc3b<<>h8GI7;2
 !s11b j3lAJh`dUzSX<7fL5T][51
-IM^4?[3oRe[VWizXYzf>IB2
-R2
+I0nDClf6bQniE]nF^=_mk13
+R3
 R0
 w1761430127
 8/home/u1425837/des-project/modelsim/RTL/Final_Permutation.v
 F/home/u1425837/des-project/modelsim/RTL/Final_Permutation.v
 !i122 -1
 L0 1
-R3
+R4
 r1
 !s85 0
 31
-R9
+R7
 !s107 /home/u1425837/des-project/modelsim/RTL/Final_Permutation.v|
 !s90 -reportprogress|300|-work|Control State Machine|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/Final_Permutation.v|
 !i113 0
-R4
+R5
 R1
 n@final_@permutation
 vInitial_Permutation
-R8
+R2
 !i10b 1
 !s100 8i9:SSWlV_YJ;FV6_jG`92
 !s11b T23UNk[e03OZ]9;gaCF6e2
-ITG15>RJ?OI1Q[24az;?BX3
-R2
+IldGf2AD;5Hd47faocJ<jM3
+R3
 R0
 w1761429666
 8/home/u1425837/des-project/modelsim/RTL/Initial_Permutation.v
 F/home/u1425837/des-project/modelsim/RTL/Initial_Permutation.v
 !i122 -1
 L0 1
-R3
+R4
 r1
 !s85 0
 31
-R9
+R7
 !s107 /home/u1425837/des-project/modelsim/RTL/Initial_Permutation.v|
 !s90 -reportprogress|300|-work|Control State Machine|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/Initial_Permutation.v|
 !i113 0
-R4
+R5
 R1
 n@initial_@permutation
 vkey_schedule
-R8
+R2
 !i10b 1
 !s100 WV;HBIo?JFk^alSVoL0DC3
 !s11b jMYYHa0T<nVgfMGOzTgW22
-I3_bND]T>3EIK^4zTdU0Q@1
-R2
+Ie1Vk>_f23A=c<8AeS?i1l1
+R3
 R0
 R6
-8/home/u1425837/des-project/modelsim/key_schedule.v
-F/home/u1425837/des-project/modelsim/key_schedule.v
+8/home/u1425837/des-project/modelsim/RTL/key_schedule.v
+F/home/u1425837/des-project/modelsim/RTL/key_schedule.v
 !i122 -1
 L0 7
-R3
+R4
 r1
 !s85 0
 31
-R9
-!s107 /home/u1425837/des-project/modelsim/key_schedule.v|
-!s90 -reportprogress|300|-work|Control State Machine|-vopt|-stats=none|/home/u1425837/des-project/modelsim/key_schedule.v|
+R7
+!s107 /home/u1425837/des-project/modelsim/RTL/key_schedule.v|
+!s90 -reportprogress|300|-work|Control State Machine|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/key_schedule.v|
 !i113 0
-R4
+R5
 R1
 vleft_shift
-R8
+R2
 !i10b 1
 !s100 3KTH@2>BZ2^S=;j0ZN=QT1
 !s11b JJDb<g@k?^573YA?833nK0
-I5N8<<foFlo`jj`6G==mPj0
-R2
+IgfOYa:IFL^a]gI_=^>EQP3
+R3
 R0
 w1761431597
-8/home/u1425837/des-project/modelsim/left_shift.v
-F/home/u1425837/des-project/modelsim/left_shift.v
+8/home/u1425837/des-project/modelsim/RTL/left_shift.v
+F/home/u1425837/des-project/modelsim/RTL/left_shift.v
 !i122 -1
 L0 6
-R3
+R4
 r1
 !s85 0
 31
-R9
-!s107 /home/u1425837/des-project/modelsim/left_shift.v|
-!s90 -reportprogress|300|-work|Control State Machine|-vopt|-stats=none|/home/u1425837/des-project/modelsim/left_shift.v|
+R7
+!s107 /home/u1425837/des-project/modelsim/RTL/left_shift.v|
+!s90 -reportprogress|300|-work|Control State Machine|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/left_shift.v|
 !i113 0
-R4
+R5
 R1
 vPBox
-R5
+R2
 !i10b 1
 !s100 _^LRHf_^hPe4>UH9U@HkC2
 !s11b ZmkQkCao:k]P@6hKSYQTf2
-IFdl^a^Ob3?d<oS1C^<a^e1
-R2
+IWH^mVlZcYTo[S5S_6<7z>1
+R3
 R0
 R6
 8/home/u1425837/des-project/modelsim/RTL/pbox.v
 F/home/u1425837/des-project/modelsim/RTL/pbox.v
 !i122 -1
 L0 4
-R3
+R4
 r1
 !s85 0
 31
@@ -206,119 +205,143 @@ R7
 !s107 /home/u1425837/des-project/modelsim/RTL/pbox.v|
 !s90 -reportprogress|300|-work|Control State Machine|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/pbox.v|
 !i113 0
-R4
+R5
 R1
 n@p@box
 vPC1
-R5
+R2
 !i10b 1
 !s100 8`lKf[za31CDbj9U`nDce3
 !s11b >lEG@BcDMNJPhmf1_bm6?0
-IX9HFjA>_21jbh0b>KZ[G:0
-R2
+IM545;WezL=I1ABCRmJ?AE0
+R3
 R0
 R6
-8/home/u1425837/des-project/modelsim/PC1.v
-F/home/u1425837/des-project/modelsim/PC1.v
+8/home/u1425837/des-project/modelsim/RTL/PC1.v
+F/home/u1425837/des-project/modelsim/RTL/PC1.v
 !i122 -1
 L0 1
-R3
-r1
-!s85 0
-31
-R9
-!s107 /home/u1425837/des-project/modelsim/PC1.v|
-!s90 -reportprogress|300|-work|Control State Machine|-vopt|-stats=none|/home/u1425837/des-project/modelsim/PC1.v|
-!i113 0
 R4
-R1
-n@p@c1
-vPC2
-R5
-!i10b 1
-!s100 2A22QUPBJZ]aCd@5LXJ[e2
-!s11b N=JmlW45]lcm;BAMoi@m12
-I117<I[KQHEUYKUm[D;L;:2
-R2
-R0
-R6
-8/home/u1425837/des-project/modelsim/PC2.v
-F/home/u1425837/des-project/modelsim/PC2.v
-!i122 -1
-L0 1
-R3
 r1
 !s85 0
 31
 R7
-!s107 /home/u1425837/des-project/modelsim/PC2.v|
-!s90 -reportprogress|300|-work|Control State Machine|-vopt|-stats=none|/home/u1425837/des-project/modelsim/PC2.v|
+!s107 /home/u1425837/des-project/modelsim/RTL/PC1.v|
+!s90 -reportprogress|300|-work|Control State Machine|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/PC1.v|
 !i113 0
+R5
+R1
+n@p@c1
+vPC2
+Z8 !s110 1761532196
+!i10b 1
+!s100 2A22QUPBJZ]aCd@5LXJ[e2
+!s11b N=JmlW45]lcm;BAMoi@m12
+IjQGKo75bIBM?N9ha1;@>i2
+R3
+R0
+R6
+8/home/u1425837/des-project/modelsim/RTL/PC2.v
+F/home/u1425837/des-project/modelsim/RTL/PC2.v
+!i122 -1
+L0 1
 R4
+r1
+!s85 0
+31
+R7
+!s107 /home/u1425837/des-project/modelsim/RTL/PC2.v|
+!s90 -reportprogress|300|-work|Control State Machine|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/PC2.v|
+!i113 0
+R5
 R1
 n@p@c2
 vSBox
-R5
+R8
 !i10b 1
 !s100 WaIK`nIK3n2HGDI5ezbbN1
 !s11b GUI:4LmiB8l4CPhX`3WU82
-I`n0f:X_Szl[SUbKbLOR]E0
-R2
+I7>M>9YCalEKdRAhneAd?n0
+R3
 R0
 R6
 8/home/u1425837/des-project/modelsim/RTL/sbox.v
 F/home/u1425837/des-project/modelsim/RTL/sbox.v
 !i122 -1
 L0 3
-R3
+R4
 r1
 !s85 0
 31
-R7
+Z9 !s108 1761532196.000000
 !s107 /home/u1425837/des-project/modelsim/RTL/sbox.v|
 !s90 -reportprogress|300|-work|Control State Machine|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/sbox.v|
 !i113 0
-R4
+R5
 R1
 n@s@box
 vSBoxArray
-R5
+R8
 !i10b 1
 !s100 3o`TWQSREW?88bI45Bg=52
 !s11b :1HinKC2F3_KY=JRzc[Ni1
-I`63H>5Dz54?a]OUOeBfE>1
-R2
+I8TDH3WFb_jOT<6`ibJY8f3
+R3
 R0
 R6
 8/home/u1425837/des-project/modelsim/RTL/sbox_array.v
 F/home/u1425837/des-project/modelsim/RTL/sbox_array.v
 !i122 -1
 L0 3
-R3
+R4
 r1
 !s85 0
 31
-R7
+R9
 !s107 /home/u1425837/des-project/modelsim/RTL/sbox_array.v|
 !s90 -reportprogress|300|-work|Control State Machine|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/sbox_array.v|
 !i113 0
-R4
+R5
 R1
 n@s@box@array
+vSPI
+R8
+!i10b 1
+!s100 FhOTaGD]8Dc70I[;K7SMW2
+!s11b g:ABV=:XWU`>XDG@QBSko0
+IGLn3CITZYm@_[GfW;kdXG1
+R3
+R0
+w1761518869
+8/home/u1425837/des-project/modelsim/RTL/SPI.v
+F/home/u1425837/des-project/modelsim/RTL/SPI.v
+!i122 -1
+L0 8
+R4
+r1
+!s85 0
+31
+R9
+!s107 /home/u1425837/des-project/modelsim/RTL/SPI.v|
+!s90 -reportprogress|300|-work|Control State Machine|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/SPI.v|
+!i113 0
+R5
+R1
+n@s@p@i
 vtb_Control_State_Machine
 R8
 !i10b 1
 !s100 JOa@RF^cGLDJ7P`2oUA>f3
 !s11b mm?fYQhEdi39C1UV7i0gI1
-IK]h<:XN16k^IDS^g;OhJ>2
-R2
+Ig2RzR3zSO;hS7CCJc2;<a2
+R3
 R0
 w1761516507
 8/home/u1425837/des-project/modelsim/RTL/tb_Control_State_Machine.v
 F/home/u1425837/des-project/modelsim/RTL/tb_Control_State_Machine.v
 !i122 -1
 L0 3
-R3
+R4
 r1
 !s85 0
 31
@@ -326,6 +349,6 @@ R9
 !s107 /home/u1425837/des-project/modelsim/RTL/tb_Control_State_Machine.v|
 !s90 -reportprogress|300|-work|Control State Machine|-vopt|-stats=none|/home/u1425837/des-project/modelsim/RTL/tb_Control_State_Machine.v|
 !i113 0
-R4
+R5
 R1
 ntb_@control_@state_@machine

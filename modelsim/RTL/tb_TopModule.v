@@ -1,62 +1,81 @@
 `timescale 1ns/1ps
-module tb_TopModule();
+
+module tb_TopModule;
     reg clk, rst, sclk, cs_n, mosi;
     wire miso;
-    reg [63:0] plaintext;
-    reg [63:0] ciphertext;
+    reg [63:0] key, plaintext, ciphertext, decrypted;
+    integer timeout_counter;
     
     TopModule dut (
-        .clk  (clk),
-        .rst  (rst),
-        .sclk (sclk),
-        .cs_n (cs_n),
-        .mosi (mosi),
-        .miso (miso)
+        .clk(clk),
+        .rst(rst),
+        .sclk(sclk),
+        .cs_n(cs_n),
+        .mosi(mosi),
+        .miso(miso)
     );
     
-    initial clk = 0;
+    // Clock
+    initial clk = 0; 
     always #5 clk = ~clk;
     
-    initial sclk = 0;
+    initial sclk = 0; 
     always #50 sclk = ~sclk;
-    
+
+    //SPI write
     task spi_write_64(input [63:0] data);
         integer i;
         begin
+            cs_n = 1;
+            mosi = 0;
+            #200;
+            
             @(negedge sclk);
+            #10;
             mosi = data[63];
-            #20;
+            #10;
             cs_n = 0;
             
-            for (i=63; i>=0; i=i-1) begin
+            for (i = 62; i >= 0; i = i - 1) begin
                 @(posedge sclk);
                 #10;
-                if (i > 0) begin
-                    @(negedge sclk);
-                    mosi = data[i-1];
-                end
+                @(negedge sclk);
+                mosi = data[i];
+                #10;
             end
             
+            @(posedge sclk);
+            #10;
             @(negedge sclk);
             #10;
             cs_n = 1;
             mosi = 0;
+            
+            repeat(20) @(posedge clk);
             #200;
         end
     endtask
     
+    // SPI read
     task spi_read_64(output [63:0] data);
         integer i;
         reg [63:0] tmp;
         begin
-            tmp = 64'd0;
+            tmp = 64'h0;
+            cs_n = 1;
             mosi = 0;
+            #200;
             
             @(negedge sclk);
-            #20;
+            #10;
             cs_n = 0;
+            #10;
             
-            for (i=63; i>=0; i=i-1) begin
+            @(posedge sclk);
+            #10;
+            tmp[63] = miso;
+            
+            for (i = 62; i >= 0; i = i - 1) begin
                 @(posedge sclk);
                 #10;
                 tmp[i] = miso;
@@ -66,92 +85,111 @@ module tb_TopModule();
             #10;
             cs_n = 1;
             data = tmp;
+            
+            repeat(20) @(posedge clk);
             #200;
         end
     endtask
     
-    // ?? ????
     initial begin
-        $monitor("[%0t] state=%b, round=%2d, L=%h, R=%h, f_out=%h, subkey=%h", 
-                 $time, dut.csm_inst.state, dut.csm_inst.round_counter,
-                 dut.csm_inst.left_reg, dut.csm_inst.right_reg,
-                 dut.csm_inst.f_output, dut.csm_inst.current_subkey);
-    end
-    
-    initial begin
-        $dumpfile("tb_TopModule.vcd");
-        $dumpvars(0, tb_TopModule);
         
+        // Initialize
         rst = 1;
         cs_n = 1;
         mosi = 0;
-        plaintext = 64'hFEDCBA9876543210;
+        #100;
+        rst = 0;
+        #100;
         
-        #100 rst = 0;
-        #200;
+        key       = 64'h752878397493CB70;
+        plaintext = 64'h1122334455667788;
         
-        $display("\n========================================");
-        $display("    DES Encryption Debug Test");
-        $display("========================================");
-        $display("Plaintext = 0x%h", plaintext);
-        $display("Key       = 0x%h", dut.key);
+        $display("=== ENCRYPTION TEST ===");
+        $display("Key:       %h", key);
+        $display("Plaintext: %h", plaintext);
+        $display("Expected:  b5219ee81aa7499d");
         
-        $display("\n[%0t] Writing plaintext...", $time);
+        // send KEY, DATA, CONTROL
+        spi_write_64(key);
         spi_write_64(plaintext);
-        $display("[%0t] SPI RX: 0x%h %s", $time, dut.spi_rx_data,
-                 (dut.spi_rx_data === plaintext) ? "?" : "?");
+        spi_write_64(64'h0000000000000000);  // encrypt
         
-        // IP ?? ??
-        #200;
-        $display("\n[%0t] After INIT_PERM:", $time);
-        $display("  IP left  = 0x%h %s", dut.csm_inst.ip_left, 
-                 (dut.csm_inst.ip_left === 32'hX) ? "? UNKNOWN" : "?");
-        $display("  IP right = 0x%h %s", dut.csm_inst.ip_right,
-                 (dut.csm_inst.ip_right === 32'hX) ? "? UNKNOWN" : "?");
+        // encryption progress
+        $display("\n encryption progress");
+        timeout_counter = 0;
+        while (!dut.done_encrypt_latched && timeout_counter < 5000) begin
+            @(posedge clk);
+            timeout_counter = timeout_counter + 1;
+        end
+        if (timeout_counter >= 5000) begin
+            $display("timeout");
+            $stop;
+        end
         
-        // Subkey ??
-        $display("\n[%0t] Subkeys:", $time);
-        $display("  k1  = %h %s", dut.csm_inst.k1, (dut.csm_inst.k1 === 48'hX) ? "?" : "?");
-        $display("  k2  = %h %s", dut.csm_inst.k2, (dut.csm_inst.k2 === 48'hX) ? "?" : "?");
+        // Read result
+        spi_read_64(ciphertext);
         
-        $display("\n[%0t] Waiting for encryption...", $time);
-        wait(dut.done_encrypt == 1'b1);
+        $display("\n--- ENCRYPTION RESULT ---");
+        $display("Ciphertext: %h", ciphertext);
+        $display("Expected:   b5219ee81aa7499d");
         
-        $display("\n[%0t] Encryption complete:", $time);
-        $display("  Final L  = 0x%h", dut.csm_inst.left_reg);
-        $display("  Final R  = 0x%h", dut.csm_inst.right_reg);
-        $display("  FP out   = 0x%h %s", dut.csm_inst.fp_output,
-                 (dut.csm_inst.fp_output === 64'hX) ? "? UNKNOWN" : "?");
-        $display("  CSM out  = 0x%h %s", dut.spi_tx_data,
-                 (dut.spi_tx_data === 64'hX) ? "? UNKNOWN" : "?");
+        if (ciphertext == 64'hB5219EE81AA7499D) begin
+            $display("PASS");
+        end else begin
+            $display("FAIL");
+        end
         
         #1000;
         
-        $display("\n[%0t] Reading ciphertext...", $time);
-        spi_read_64(ciphertext);
+        $display("=== DECRYPTION TEST ===");
+        $display("Key:        %h", key);
+        $display("Ciphertext: %h", ciphertext);
         
-        $display("\n========================================");
-        $display("           Results");
-        $display("========================================");
-        $display("Plaintext  = 0x%h", plaintext);
-        $display("Ciphertext = 0x%h", ciphertext);
+        // send KEY, DATA, CONTROL
+        spi_write_64(key);
+        spi_write_64(ciphertext);
+        spi_write_64(64'h0000000000000001);  // decrypt
         
-        // ??
-        if (dut.csm_inst.ip_left === 32'hX || dut.csm_inst.ip_right === 32'hX) begin
-            $display("\n? Initial_Permutation module is missing or broken!");
-        end else if (dut.csm_inst.k1 === 48'hX) begin
-            $display("\n? key_schedule module is missing or broken!");
-        end else if (dut.csm_inst.f_output === 32'hX) begin
-            $display("\n? Feistel_Function module is missing or broken!");
-        end else if (dut.csm_inst.fp_output === 64'hX) begin
-            $display("\n? Final_Permutation module is missing or broken!");
-        end else if (ciphertext != plaintext && ciphertext != 64'h0) begin
-            $display("\n? All modules working - Encryption successful!");
-        end else begin
-            $display("\n? Encryption ran but result may be incorrect");
+        // decryption progress
+        $display("\n decryption progress");
+        timeout_counter = 0;
+        while (!dut.done_decrypt_latched && timeout_counter < 5000) begin
+            @(posedge clk);
+            timeout_counter = timeout_counter + 1;
         end
-        $display("========================================\n");
+        if (timeout_counter >= 5000) begin
+            $display("timeout");
+            $stop;
+        end
         
-        #1000 $finish;
+        // Read result
+        spi_read_64(decrypted);
+        
+        $display("\n--- DECRYPTION RESULT ---");
+        $display("Decrypted:  %h", decrypted);
+        $display("Expected:   %h", plaintext);
+        
+        if (decrypted == plaintext) begin
+            $display("PASS");
+        end else begin
+            $display("FAIL");
+        end
+
+        $display("============");
+        
+        if (ciphertext == 64'hB5219EE81AA7499D && decrypted == plaintext) begin
+            $display("ALL TESTS PASSED");
+        end else begin
+            $display("SOME TESTS FAILED");
+        end
+        #1000;
+        $stop;
     end
+    
+    initial begin
+        #200000;
+        $display("\nERROR: Global timeout");
+        $stop;
+    end
+    
 endmodule
