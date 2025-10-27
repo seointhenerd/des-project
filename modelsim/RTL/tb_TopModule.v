@@ -70,7 +70,6 @@ module tb_TopModule();
         end
     endtask
     
-    // ?? ????
     initial begin
         $monitor("[%0t] state=%b, round=%2d, L=%h, R=%h, f_out=%h, subkey=%h", 
                  $time, dut.csm_inst.state, dut.csm_inst.round_counter,
@@ -90,18 +89,13 @@ module tb_TopModule();
         #100 rst = 0;
         #200;
         
-        $display("\n========================================");
-        $display("    DES Encryption Debug Test");
-        $display("========================================");
         $display("Plaintext = 0x%h", plaintext);
         $display("Key       = 0x%h", dut.key);
         
-        $display("\n[%0t] Writing plaintext...", $time);
         spi_write_64(plaintext);
         $display("[%0t] SPI RX: 0x%h %s", $time, dut.spi_rx_data,
                  (dut.spi_rx_data === plaintext) ? "?" : "?");
         
-        // IP ?? ??
         #200;
         $display("\n[%0t] After INIT_PERM:", $time);
         $display("  IP left  = 0x%h %s", dut.csm_inst.ip_left, 
@@ -109,7 +103,6 @@ module tb_TopModule();
         $display("  IP right = 0x%h %s", dut.csm_inst.ip_right,
                  (dut.csm_inst.ip_right === 32'hX) ? "? UNKNOWN" : "?");
         
-        // Subkey ??
         $display("\n[%0t] Subkeys:", $time);
         $display("  k1  = %h %s", dut.csm_inst.k1, (dut.csm_inst.k1 === 48'hX) ? "?" : "?");
         $display("  k2  = %h %s", dut.csm_inst.k2, (dut.csm_inst.k2 === 48'hX) ? "?" : "?");
@@ -131,12 +124,9 @@ module tb_TopModule();
         spi_read_64(ciphertext);
         
         $display("\n========================================");
-        $display("           Results");
-        $display("========================================");
         $display("Plaintext  = 0x%h", plaintext);
         $display("Ciphertext = 0x%h", ciphertext);
         
-        // ??
         if (dut.csm_inst.ip_left === 32'hX || dut.csm_inst.ip_right === 32'hX) begin
             $display("\n? Initial_Permutation module is missing or broken!");
         end else if (dut.csm_inst.k1 === 48'hX) begin
@@ -150,8 +140,7 @@ module tb_TopModule();
         end else begin
             $display("\n? Encryption ran but result may be incorrect");
         end
-        $display("========================================\n");
         
-        #1000 $finish;
+        #1000 $stop;
     end
 endmodule
