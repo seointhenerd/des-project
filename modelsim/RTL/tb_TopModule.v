@@ -104,6 +104,7 @@ module tb_TopModule;
         key       = 64'h752878397493CB70;
         plaintext = 64'h1122334455667788;
         
+<<<<<<< HEAD
         $display("=== ENCRYPTION TEST ===");
         $display("Key:       %h", key);
         $display("Plaintext: %h", plaintext);
@@ -111,9 +112,15 @@ module tb_TopModule;
         
         // send KEY, DATA, CONTROL
         spi_write_64(key);
+=======
+        $display("Plaintext = 0x%h", plaintext);
+        $display("Key       = 0x%h", dut.key);
+        
+>>>>>>> 6aec7a211d1be6290087643cc218ce7793ab3b99
         spi_write_64(plaintext);
         spi_write_64(64'h0000000000000000);  // encrypt
         
+<<<<<<< HEAD
         // encryption progress
         $display("\n encryption progress");
         timeout_counter = 0;
@@ -128,6 +135,18 @@ module tb_TopModule;
         
         // Read result
         spi_read_64(ciphertext);
+=======
+        #200;
+        $display("\n[%0t] After INIT_PERM:", $time);
+        $display("  IP left  = 0x%h %s", dut.csm_inst.ip_left, 
+                 (dut.csm_inst.ip_left === 32'hX) ? "? UNKNOWN" : "?");
+        $display("  IP right = 0x%h %s", dut.csm_inst.ip_right,
+                 (dut.csm_inst.ip_right === 32'hX) ? "? UNKNOWN" : "?");
+        
+        $display("\n[%0t] Subkeys:", $time);
+        $display("  k1  = %h %s", dut.csm_inst.k1, (dut.csm_inst.k1 === 48'hX) ? "?" : "?");
+        $display("  k2  = %h %s", dut.csm_inst.k2, (dut.csm_inst.k2 === 48'hX) ? "?" : "?");
+>>>>>>> 6aec7a211d1be6290087643cc218ce7793ab3b99
         
         $display("\n--- ENCRYPTION RESULT ---");
         $display("Ciphertext: %h", ciphertext);
@@ -145,6 +164,7 @@ module tb_TopModule;
         $display("Key:        %h", key);
         $display("Ciphertext: %h", ciphertext);
         
+<<<<<<< HEAD
         // send KEY, DATA, CONTROL
         spi_write_64(key);
         spi_write_64(ciphertext);
@@ -192,4 +212,26 @@ module tb_TopModule;
         $stop;
     end
     
+=======
+        $display("\n========================================");
+        $display("Plaintext  = 0x%h", plaintext);
+        $display("Ciphertext = 0x%h", ciphertext);
+        
+        if (dut.csm_inst.ip_left === 32'hX || dut.csm_inst.ip_right === 32'hX) begin
+            $display("\n? Initial_Permutation module is missing or broken!");
+        end else if (dut.csm_inst.k1 === 48'hX) begin
+            $display("\n? key_schedule module is missing or broken!");
+        end else if (dut.csm_inst.f_output === 32'hX) begin
+            $display("\n? Feistel_Function module is missing or broken!");
+        end else if (dut.csm_inst.fp_output === 64'hX) begin
+            $display("\n? Final_Permutation module is missing or broken!");
+        end else if (ciphertext != plaintext && ciphertext != 64'h0) begin
+            $display("\n? All modules working - Encryption successful!");
+        end else begin
+            $display("\n? Encryption ran but result may be incorrect");
+        end
+        
+        #1000 $stop;
+    end
+>>>>>>> 6aec7a211d1be6290087643cc218ce7793ab3b99
 endmodule

@@ -6,6 +6,7 @@ module TopModule (
     input  wire mosi,
     output wire miso
 );
+<<<<<<< HEAD
     // SPI signals
     wire [63:0] spi_rx_data;
     wire [63:0] spi_tx_data;
@@ -32,6 +33,18 @@ module TopModule (
     // Delayed trigger flag
     reg trigger_operation;
 
+=======
+    wire [63:0] spi_rx_data;
+    wire [63:0] spi_tx_data;
+    wire [63:0] key = 64'h0123456789ABCDEF;
+    wire done_encrypt;
+    reg  start_encrypt;
+    reg  active;
+    reg cs_n_meta, cs_n_sync, cs_n_prev;
+    wire cs_rise;
+    wire valid_data;
+    
+>>>>>>> 6aec7a211d1be6290087643cc218ce7793ab3b99
     SPI spi_inst (
         .rst        (~rst),
         .sclk       (sclk),
@@ -46,12 +59,21 @@ module TopModule (
         .clk          (clk),
         .rst          (rst),
         .start_encrypt(start_encrypt),
+<<<<<<< HEAD
         .start_decrypt(start_decrypt),
         .key          (key_reg),
         .input_text   (data_reg),
         .done_encrypt (done_encrypt),
         .done_decrypt (done_decrypt),
         .output_text  (spi_tx_data)
+=======
+        .start_decrypt(1'b0),
+        .key          (key),
+        .input_text   (spi_rx_data),
+        .done_encrypt (done_encrypt),
+        .done_decrypt (),
+        .output_text  (spi_tx_data) 
+>>>>>>> 6aec7a211d1be6290087643cc218ce7793ab3b99
     );
     
     always @(posedge clk or posedge rst) begin
@@ -135,6 +157,7 @@ module TopModule (
             active <= 1'b0;
         end
     end
+<<<<<<< HEAD
     
     always @(posedge clk or posedge rst) begin
         if (rst) begin
@@ -155,4 +178,6 @@ module TopModule (
         end
     end
     
+=======
+>>>>>>> 6aec7a211d1be6290087643cc218ce7793ab3b99
 endmodule
