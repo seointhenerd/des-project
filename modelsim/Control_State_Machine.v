@@ -52,22 +52,22 @@ module Control_State_Machine (
         .k13(k13), .k14(k14), .k15(k15), .k16(k16)
     );
     
-    // F-function (Expansion + S-boxes + P-box)
+    // F-function
     Feistel_Function f_inst (
         .R_in(right_reg),
         .subkey(current_subkey),
         .f_out(f_output)
     );
     
-    // Final Permutation
+
     Final_Permutation fp_inst (
-        .left_half(left_reg),
-        .right_half(right_reg),
+        .left_half(right_reg),
+        .right_half(left_reg),
         .output_text(fp_output)
     );
     
-    // Subkey selection -combinational
-    always @(round_counter, mode) begin
+    // Subkey selection - combinational
+    always @(round_counter, mode, k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11, k12, k13, k14, k15, k16) begin
         case (round_counter)
             4'd0:  current_subkey = mode ? k16 : k1;
             4'd1:  current_subkey = mode ? k15 : k2;
@@ -89,7 +89,7 @@ module Control_State_Machine (
         endcase
     end
     
-    // FSM -sequential
+    // FSM - sequential
     always @(posedge clk or posedge rst) begin
         if (rst) begin
             state <= IDLE;
@@ -125,13 +125,13 @@ module Control_State_Machine (
                 end
                 
                 ROUND_PROCESS: begin
-                    // Feistel structure
                     temp_reg <= right_reg;
                     left_reg <= right_reg;
                     right_reg <= left_reg ^ f_output;
                     
                     round_counter <= round_counter + 4'd1;
                     
+                    // final permutation
                     if (round_counter == 4'd15) begin
                         state <= FINAL_PERM;
                     end
