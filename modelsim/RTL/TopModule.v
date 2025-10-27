@@ -7,8 +7,8 @@ module TopModule (
     input  wire mosi,
     output wire miso
 );
-    wire [63:0] spi_rx_data;      // SPI? ??? ??? (MOSI)
-    wire [63:0] spi_tx_data;      // SPI? ??? ??? (MISO)
+    wire [63:0] spi_rx_data;
+    wire [63:0] spi_tx_data;
     wire [63:0] key = 64'h0123456789ABCDEF;
     wire done_encrypt;
     reg  start_encrypt;
@@ -17,28 +17,26 @@ module TopModule (
     wire cs_rise;
     wire valid_data;
     
-    // SPI ?? - ??? ??
     SPI spi_inst (
         .rst        (~rst),
         .sclk       (sclk),
         .cs_n       (cs_n),
         .mosi       (mosi),
         .miso       (miso),
-        .output_text(spi_tx_data),    // SPI ?? ??? ?? ? CSM ?? ??
-        .input_text (spi_rx_data)     // SPI ?? ??? ??
+        .output_text(spi_tx_data),
+        .input_text (spi_rx_data)
     );
     
-    // CSM ??
     Control_State_Machine csm_inst (
         .clk          (clk),
         .rst          (rst),
         .start_encrypt(start_encrypt),
         .start_decrypt(1'b0),
         .key          (key),
-        .input_text   (spi_rx_data),  // ? SPI ?? ???? CSM ????
+        .input_text   (spi_rx_data),
         .done_encrypt (done_encrypt),
         .done_decrypt (),
-        .output_text  (spi_tx_data)   // ? CSM ??? SPI ?? ????
+        .output_text  (spi_tx_data) 
     );
     
     // CS synchronizer
