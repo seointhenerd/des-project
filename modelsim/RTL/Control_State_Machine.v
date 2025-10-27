@@ -60,8 +60,8 @@ module Control_State_Machine (
     
     // Final Permutation - ??: 32-bit swap ??
     Final_Permutation fp_inst (
-        .left_half(right_reg),   // ? L? R ??!
-        .right_half(left_reg),   // ? L? R ??!
+        .left_half(right_reg),
+        .right_half(left_reg),
         .output_text(fp_output)
     );
     
@@ -124,11 +124,9 @@ module Control_State_Machine (
                 end
                 
                 ROUND_PROCESS: begin
-                    // Feistel structure: (L, R) ? (R, L?f(R,K))
                     left_reg <= right_reg;
                     right_reg <= left_reg ^ f_output;
                     
-                    // ??? ??? ??? ??
                     if (round_counter == 4'd15) begin
                         state <= FINAL_PERM;
                     end else begin
@@ -137,8 +135,6 @@ module Control_State_Machine (
                 end
                 
                 FINAL_PERM: begin
-                    // FP output
-                    // fp_inst? ?? (right_reg, left_reg)? ??? (32-bit swap)
                     output_text <= fp_output;
                     state <= DONE;
                 end
