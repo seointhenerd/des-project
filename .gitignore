@@ -27,6 +27,7 @@ work/
 *.cmp
 *.bak
 _info
+transcript
 **/transcript
 vsim.dbg
 vsim.history
