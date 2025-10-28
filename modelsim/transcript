@@ -15,387 +15,7 @@
 # Loading project Top Module
 vsim {Top Module.tb_TopModule} -voptargs=+acc
 # vsim Top Module.tb_TopModule -voptargs="+acc" 
-# Start time: 21:07:24 on Oct 27,2025
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading work.tb_TopModule(fast)
-# Loading work.TopModule(fast)
-# Loading work.SPI(fast)
-# Loading work.Control_State_Machine(fast)
-# Loading work.Initial_Permutation(fast)
-# Loading work.key_schedule(fast)
-# Loading work.PC1(fast)
-# Loading work.left_shift(fast)
-# Loading work.PC2(fast)
-# Loading work.Feistel_Function(fast)
-# Loading work.Expansion(fast)
-# Loading work.SBoxArray(fast)
-# Loading work.SBox(fast)
-# Loading work.PBox(fast)
-# Loading work.Final_Permutation(fast)
-run -all
-# === ENCRYPTION TEST ===
-# Key:       752878397493cb70
-# Plaintext: 1122334455667788
-# Expected:  b5219ee81aa7499d
-# 
-#  encryption progress
-# 
-# --- ENCRYPTION RESULT ---
-# Ciphertext: b5219ee81aa7499d
-# Expected:   b5219ee81aa7499d
-# PASS
-# === DECRYPTION TEST ===
-# Key:        752878397493cb70
-# Ciphertext: b5219ee81aa7499d
-# 
-#  decryption progress
-# 
-# --- DECRYPTION RESULT ---
-# Decrypted:  1122334455667788
-# Expected:   1122334455667788
-# PASS
-# ============
-# ALL TESTS PASSED
-# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(186)
-#    Time: 58905 ns  Iteration: 0  Instance: /tb_TopModule
-# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 186
-# A time value could not be extracted from the current line
-# A time value could not be extracted from the current line
-quit -sim
-# End time: 21:10:26 on Oct 27,2025, Elapsed time: 0:03:02
-# Errors: 1548, Warnings: 0
-vsim {Top Module.tb_TopModule} -voptargs=+acc
-# vsim Top Module.tb_TopModule -voptargs="+acc" 
-# Start time: 21:11:40 on Oct 27,2025
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading work.tb_TopModule(fast)
-# Loading work.TopModule(fast)
-# Loading work.SPI(fast)
-# Loading work.Control_State_Machine(fast)
-# Loading work.Initial_Permutation(fast)
-# Loading work.key_schedule(fast)
-# Loading work.PC1(fast)
-# Loading work.left_shift(fast)
-# Loading work.PC2(fast)
-# Loading work.Feistel_Function(fast)
-# Loading work.Expansion(fast)
-# Loading work.SBoxArray(fast)
-# Loading work.SBox(fast)
-# Loading work.PBox(fast)
-# Loading work.Final_Permutation(fast)
-add wave -position insertpoint  \
-sim:/tb_TopModule/clk \
-sim:/tb_TopModule/key \
-sim:/tb_TopModule/plaintext \
-sim:/tb_TopModule/ciphertext \
-sim:/tb_TopModule/decrypted
-add wave -position insertpoint  \
-sim:/tb_TopModule/mosi \
-sim:/tb_TopModule/miso
-add wave -position insertpoint  \
-sim:/tb_TopModule/sclk
-run -all
-# === ENCRYPTION TEST ===
-# Key:       752878397493cb70
-# Plaintext: 1122334455667788
-# Expected:  b5219ee81aa7499d
-# 
-#  encryption progress
-# 
-# --- ENCRYPTION RESULT ---
-# Ciphertext: b5219ee81aa7499d
-# Expected:   b5219ee81aa7499d
-# PASS
-# === DECRYPTION TEST ===
-# Key:        752878397493cb70
-# Ciphertext: b5219ee81aa7499d
-# 
-#  decryption progress
-# 
-# --- DECRYPTION RESULT ---
-# Decrypted:  1122334455667788
-# Expected:   1122334455667788
-# PASS
-# ============
-# ALL TESTS PASSED
-# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(186)
-#    Time: 58905 ns  Iteration: 0  Instance: /tb_TopModule
-# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 186
-# Causality operation skipped due to absence of debug database file
-quit -sim
-# End time: 21:55:28 on Oct 27,2025, Elapsed time: 0:43:48
-# Errors: 915, Warnings: 1
-vsim {Top Module.tb_TopModule} -voptargs=+acc
-# vsim Top Module.tb_TopModule -voptargs="+acc" 
-# Start time: 11:56:55 on Oct 28,2025
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading work.tb_TopModule(fast)
-# Loading work.TopModule(fast)
-# Loading work.SPI(fast)
-# Loading work.Control_State_Machine(fast)
-# Loading work.Initial_Permutation(fast)
-# Loading work.key_schedule(fast)
-# Loading work.PC1(fast)
-# Loading work.left_shift(fast)
-# Loading work.PC2(fast)
-# Loading work.Feistel_Function(fast)
-# Loading work.Expansion(fast)
-# Loading work.SBoxArray(fast)
-# Loading work.SBox(fast)
-# Loading work.PBox(fast)
-# Loading work.Final_Permutation(fast)
-add wave -position insertpoint  \
-sim:/tb_TopModule/mosi \
-sim:/tb_TopModule/miso \
-sim:/tb_TopModule/key \
-sim:/tb_TopModule/plaintext \
-sim:/tb_TopModule/ciphertext \
-sim:/tb_TopModule/decrypted
-run -all
-# === ENCRYPTION TEST ===
-# Key:       752878397493cb70
-# Plaintext: 1122334455667788
-# Expected:  b5219ee81aa7499d
-# 
-#  encryption progress
-# 
-# --- ENCRYPTION RESULT ---
-# Ciphertext: b5219ee81aa7499d
-# Expected:   b5219ee81aa7499d
-# PASS
-# === DECRYPTION TEST ===
-# Key:        752878397493cb70
-# Ciphertext: b5219ee81aa7499d
-# 
-#  decryption progress
-# 
-# --- DECRYPTION RESULT ---
-# Decrypted:  1122334455667788
-# Expected:   1122334455667788
-# PASS
-# ============
-# ALL TESTS PASSED
-# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(186)
-#    Time: 58905 ns  Iteration: 0  Instance: /tb_TopModule
-# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 186
-add wave -position insertpoint  \
-sim:/tb_TopModule/mosi \
-sim:/tb_TopModule/miso \
-sim:/tb_TopModule/key \
-sim:/tb_TopModule/plaintext \
-sim:/tb_TopModule/ciphertext \
-sim:/tb_TopModule/decrypted
-restart
-# ** Note: (vsim-8009) Loading existing optimized design _opt
-# Loading work.tb_TopModule(fast)
-# Loading work.TopModule(fast)
-# Loading work.SPI(fast)
-# Loading work.Control_State_Machine(fast)
-# Loading work.Initial_Permutation(fast)
-# Loading work.key_schedule(fast)
-# Loading work.PC1(fast)
-# Loading work.left_shift(fast)
-# Loading work.PC2(fast)
-# Loading work.Feistel_Function(fast)
-# Loading work.Expansion(fast)
-# Loading work.SBoxArray(fast)
-# Loading work.SBox(fast)
-# Loading work.PBox(fast)
-# Loading work.Final_Permutation(fast)
-run -all
-# === ENCRYPTION TEST ===
-# Key:       752878397493cb70
-# Plaintext: 1122334455667788
-# Expected:  b5219ee81aa7499d
-# 
-#  encryption progress
-# 
-# --- ENCRYPTION RESULT ---
-# Ciphertext: b5219ee81aa7499d
-# Expected:   b5219ee81aa7499d
-# PASS
-# === DECRYPTION TEST ===
-# Key:        752878397493cb70
-# Ciphertext: b5219ee81aa7499d
-# 
-#  decryption progress
-# 
-# --- DECRYPTION RESULT ---
-# Decrypted:  1122334455667788
-# Expected:   1122334455667788
-# PASS
-# ============
-# ALL TESTS PASSED
-# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(186)
-#    Time: 58905 ns  Iteration: 0  Instance: /tb_TopModule
-# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 186
-quit -sim
-# End time: 12:04:42 on Oct 28,2025, Elapsed time: 0:07:47
-# Errors: 842, Warnings: 0
-# Compile of Control_State_Machine.v was successful.
-# Compile of expansion.v was successful.
-# Compile of f_func.v was successful.
-# Compile of f_func_tb.v was successful.
-# Compile of Final_Permutation.v was successful.
-# Compile of Initial_Permutation.v was successful.
-# Compile of key_schedule.v was successful.
-# Compile of left_shift.v was successful.
-# Compile of pbox.v was successful.
-# Compile of PC1.v was successful.
-# Compile of PC2.v was successful.
-# Compile of sbox.v was successful.
-# Compile of sbox_array.v was successful.
-# Compile of SPI.v was successful.
-# Compile of tb_TopModule.v was successful.
-# Compile of TopModule.v was successful.
-# 16 compiles, 0 failed with no errors.
-vsim {Top Module.tb_TopModule} -voptargs=+acc
-# vsim Top Module.tb_TopModule -voptargs="+acc" 
-# Start time: 12:05:19 on Oct 28,2025
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Note: (vopt-143) Recognized 1 FSM in module "Control_State_Machine(fast)".
-# Loading work.tb_TopModule(fast)
-# Loading work.TopModule(fast)
-# Loading work.SPI(fast)
-# Loading work.Control_State_Machine(fast)
-# Loading work.Initial_Permutation(fast)
-# Loading work.key_schedule(fast)
-# Loading work.PC1(fast)
-# Loading work.left_shift(fast)
-# Loading work.PC2(fast)
-# Loading work.Feistel_Function(fast)
-# Loading work.Expansion(fast)
-# Loading work.SBoxArray(fast)
-# Loading work.SBox(fast)
-# Loading work.PBox(fast)
-# Loading work.Final_Permutation(fast)
-add wave -position insertpoint  \
-sim:/tb_TopModule/mosi \
-sim:/tb_TopModule/miso \
-sim:/tb_TopModule/key \
-sim:/tb_TopModule/plaintext \
-sim:/tb_TopModule/ciphertext \
-sim:/tb_TopModule/decrypted
-run -all
-# === ENCRYPTION TEST ===
-# Key:       752878397493cb70
-# Plaintext: 1122334455667788
-# Expected:  b5219ee81aa7499d
-# 
-#  encryption progress
-# 
-# --- ENCRYPTION RESULT ---
-# Ciphertext: 0000000000000000
-# Expected:   b5219ee81aa7499d
-# FAIL
-# === DECRYPTION TEST ===
-# Key:        752878397493cb70
-# Ciphertext: 0000000000000000
-# 
-#  decryption progress
-# timeout
-# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(162)
-#    Time: 100795 ns  Iteration: 1  Instance: /tb_TopModule
-# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 162
-quit -sim
-# End time: 12:06:52 on Oct 28,2025, Elapsed time: 0:01:33
-# Errors: 843, Warnings: 0
-# Compile of Control_State_Machine.v was successful.
-# Compile of expansion.v was successful.
-# Compile of f_func.v was successful.
-# Compile of f_func_tb.v was successful.
-# Compile of Final_Permutation.v was successful.
-# Compile of Initial_Permutation.v was successful.
-# Compile of key_schedule.v was successful.
-# Compile of left_shift.v was successful.
-# Compile of pbox.v was successful.
-# Compile of PC1.v was successful.
-# Compile of PC2.v was successful.
-# Compile of sbox.v was successful.
-# Compile of sbox_array.v was successful.
-# Compile of SPI.v was successful.
-# Compile of tb_TopModule.v was successful.
-# Compile of TopModule.v was successful.
-# 16 compiles, 0 failed with no errors.
-vsim {Top Module.tb_TopModule} -voptargs=+acc
-# vsim Top Module.tb_TopModule -voptargs="+acc" 
-# Start time: 12:08:20 on Oct 28,2025
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# ** Note: (vopt-143) Recognized 1 FSM in module "Control_State_Machine(fast)".
-# Loading work.tb_TopModule(fast)
-# Loading work.TopModule(fast)
-# Loading work.SPI(fast)
-# Loading work.Control_State_Machine(fast)
-# Loading work.Initial_Permutation(fast)
-# Loading work.key_schedule(fast)
-# Loading work.PC1(fast)
-# Loading work.left_shift(fast)
-# Loading work.PC2(fast)
-# Loading work.Feistel_Function(fast)
-# Loading work.Expansion(fast)
-# Loading work.SBoxArray(fast)
-# Loading work.SBox(fast)
-# Loading work.PBox(fast)
-# Loading work.Final_Permutation(fast)
-add wave -position insertpoint  \
-sim:/tb_TopModule/mosi \
-sim:/tb_TopModule/miso \
-sim:/tb_TopModule/key \
-sim:/tb_TopModule/plaintext \
-sim:/tb_TopModule/ciphertext \
-sim:/tb_TopModule/decrypted
-RUN -ALL
-# invalid command name "RUN"
-run -all
-# === ENCRYPTION TEST ===
-# Key:       752878397493cb70
-# Plaintext: 1122334455667788
-# Expected:  b5219ee81aa7499d
-# 
-#  encryption progress
-# 
-# --- ENCRYPTION RESULT ---
-# Ciphertext: b5219ee81aa7499d
-# Expected:   b5219ee81aa7499d
-# PASS
-# === DECRYPTION TEST ===
-# Key:        752878397493cb70
-# Ciphertext: b5219ee81aa7499d
-# 
-#  decryption progress
-# 
-# --- DECRYPTION RESULT ---
-# Decrypted:  1122334455667788
-# Expected:   1122334455667788
-# PASS
-# ============
-# ALL TESTS PASSED
-# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(186)
-#    Time: 58905 ns  Iteration: 0  Instance: /tb_TopModule
-# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 186
-quit -sim
-# End time: 12:10:07 on Oct 28,2025, Elapsed time: 0:01:47
-# Errors: 855, Warnings: 0
-# Compile of Control_State_Machine.v was successful.
-# Compile of expansion.v was successful.
-# Compile of f_func.v was successful.
-# Compile of f_func_tb.v was successful.
-# Compile of Final_Permutation.v was successful.
-# Compile of Initial_Permutation.v was successful.
-# Compile of key_schedule.v was successful.
-# Compile of left_shift.v was successful.
-# Compile of pbox.v was successful.
-# Compile of PC1.v was successful.
-# Compile of PC2.v was successful.
-# Compile of sbox.v was successful.
-# Compile of sbox_array.v was successful.
-# Compile of SPI.v was successful.
-# Compile of tb_TopModule.v was successful.
-# Compile of TopModule.v was successful.
-# 16 compiles, 0 failed with no errors.
-vsim {Top Module.tb_TopModule} -voptargs=+acc
-# vsim Top Module.tb_TopModule -voptargs="+acc" 
-# Start time: 12:12:34 on Oct 28,2025
+# Start time: 15:26:14 on Oct 28,2025
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # ** Note: (vopt-143) Recognized 1 FSM in module "TopModule(fast)".
 # Loading work.tb_TopModule(fast)
@@ -448,7 +68,6 @@ sim:/tb_TopModule/plaintext \
 sim:/tb_TopModule/ciphertext \
 sim:/tb_TopModule/decrypted
 restart
-# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
 # ** Note: (vsim-8009) Loading existing optimized design _opt
 # Loading work.tb_TopModule(fast)
 # Loading work.TopModule(fast)
@@ -492,9 +111,10 @@ run -all
 # ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(186)
 #    Time: 58905 ns  Iteration: 0  Instance: /tb_TopModule
 # Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 186
+# Causality operation skipped due to absence of debug database file
 quit -sim
-# End time: 12:14:25 on Oct 28,2025, Elapsed time: 0:01:51
-# Errors: 853, Warnings: 0
+# End time: 15:44:47 on Oct 28,2025, Elapsed time: 0:18:33
+# Errors: 25, Warnings: 1
 # Compile of Control_State_Machine.v was successful.
 # Compile of expansion.v was successful.
 # Compile of f_func.v was successful.
@@ -512,3 +132,2453 @@ quit -sim
 # Compile of tb_TopModule.v was successful.
 # Compile of TopModule.v was successful.
 # 16 compiles, 0 failed with no errors.
+vsim {Top Module.tb_TopModule} -voptargs=+acc
+# vsim Top Module.tb_TopModule -voptargs="+acc" 
+# Start time: 15:44:59 on Oct 28,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.tb_TopModule(fast)
+# Loading work.TopModule(fast)
+# Loading work.SPI(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+add wave -position insertpoint  \
+sim:/tb_TopModule/mosi \
+sim:/tb_TopModule/miso \
+sim:/tb_TopModule/key \
+sim:/tb_TopModule/plaintext \
+sim:/tb_TopModule/ciphertext \
+sim:/tb_TopModule/decrypted
+run -all
+# === ENCRYPTION TEST ===
+# Key:       752878397493cb70
+# Plaintext: 1122334455667788
+# Expected:  b5219ee81aa7499d
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: b5219ee81aa7499d
+# Expected:   b5219ee81aa7499d
+# PASS
+# === DECRYPTION TEST ===
+# Key:        752878397493cb70
+# Ciphertext: b5219ee81aa7499d
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  1122334455667788
+# Expected:   1122334455667788
+# PASS
+# ============
+# ALL TESTS PASSED
+# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(186)
+#    Time: 58905 ns  Iteration: 0  Instance: /tb_TopModule
+# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 186
+quit -sim
+# End time: 15:45:40 on Oct 28,2025, Elapsed time: 0:00:41
+# Errors: 15, Warnings: 0
+# Compile of Control_State_Machine.v was successful.
+# Compile of expansion.v was successful.
+# Compile of f_func.v was successful.
+# Compile of f_func_tb.v was successful.
+# Compile of Final_Permutation.v was successful.
+# Compile of Initial_Permutation.v was successful.
+# Compile of key_schedule.v was successful.
+# Compile of left_shift.v was successful.
+# Compile of pbox.v was successful.
+# Compile of PC1.v was successful.
+# Compile of PC2.v was successful.
+# Compile of sbox.v was successful.
+# Compile of sbox_array.v was successful.
+# Compile of SPI.v was successful.
+# Compile of tb_TopModule.v was successful.
+# Compile of TopModule.v was successful.
+# 16 compiles, 0 failed with no errors.
+vsim {Top Module.tb_TopModule} -voptargs=+acc
+# vsim Top Module.tb_TopModule -voptargs="+acc" 
+# Start time: 15:57:46 on Oct 28,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.tb_TopModule(fast)
+# Loading work.TopModule(fast)
+# Loading work.SPI(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+# Compile of tb_TopModule.v was successful.
+vsim {Top Module.tb_TopModule} -voptargs=+acc
+# End time: 15:58:05 on Oct 28,2025, Elapsed time: 0:00:19
+# Errors: 58, Warnings: 0
+# vsim Top Module.tb_TopModule -voptargs="+acc" 
+# Start time: 15:58:05 on Oct 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_TopModule(fast)
+# Loading work.TopModule(fast)
+# Loading work.SPI(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+add wave -position insertpoint  \
+sim:/tb_TopModule/clk \
+sim:/tb_TopModule/rst \
+sim:/tb_TopModule/sclk \
+sim:/tb_TopModule/cs_n \
+sim:/tb_TopModule/mosi \
+sim:/tb_TopModule/miso \
+sim:/tb_TopModule/key \
+sim:/tb_TopModule/plaintext \
+sim:/tb_TopModule/ciphertext \
+sim:/tb_TopModule/decrypted \
+sim:/tb_TopModule/timeout_counter
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.tb_TopModule(fast)
+# Loading work.TopModule(fast)
+# Loading work.SPI(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+run
+run -all
+# === ENCRYPTION TEST ===
+# Key:       752878397493cb70
+# Plaintext: 1122334455667788
+# Expected:  b5219ee81aa7499d
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: b5219ee81aa7499d
+# Expected:   b5219ee81aa7499d
+# PASS
+# === DECRYPTION TEST ===
+# Key:        752878397493cb70
+# Ciphertext: b5219ee81aa7499d
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  1122334455667788
+# Expected:   1122334455667788
+# PASS
+# === ENCRYPTION TEST ===
+# Key:       123456abcd132536
+# Plaintext: aabb09182736ccdd
+# Expected:  b5219ee81aa7499d
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: ac85a39bab193fd5
+# Expected:   c0b7a8d05f3a829c
+# FAIL
+# === DECRYPTION TEST ===
+# Key:        123456abcd132536
+# Ciphertext: ac85a39bab193fd5
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  aabb09182736ccdd
+# Expected:   aabb09182736ccdd
+# PASS
+# ============
+# 
+# ERROR: Global timeout
+# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(268)
+#    Time: 200 us  Iteration: 0  Instance: /tb_TopModule
+# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 268
+# A time value could not be extracted from the current line
+quit -sim
+# End time: 16:07:28 on Oct 28,2025, Elapsed time: 0:09:23
+# Errors: 94, Warnings: 0
+# Compile of Control_State_Machine.v was successful.
+# Compile of expansion.v was successful.
+# Compile of f_func.v was successful.
+# Compile of f_func_tb.v was successful.
+# Compile of Final_Permutation.v was successful.
+# Compile of Initial_Permutation.v was successful.
+# Compile of key_schedule.v was successful.
+# Compile of left_shift.v was successful.
+# Compile of pbox.v was successful.
+# Compile of PC1.v was successful.
+# Compile of PC2.v was successful.
+# Compile of sbox.v was successful.
+# Compile of sbox_array.v was successful.
+# Compile of SPI.v was successful.
+# Compile of tb_TopModule.v was successful.
+# Compile of TopModule.v was successful.
+# 16 compiles, 0 failed with no errors.
+vsim {Top Module.tb_TopModule} -voptargs=+acc
+# vsim Top Module.tb_TopModule -voptargs="+acc" 
+# Start time: 16:07:37 on Oct 28,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.tb_TopModule(fast)
+# Loading work.TopModule(fast)
+# Loading work.SPI(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+add wave -position insertpoint  \
+sim:/tb_TopModule/mosi \
+sim:/tb_TopModule/miso \
+sim:/tb_TopModule/key \
+sim:/tb_TopModule/plaintext \
+sim:/tb_TopModule/ciphertext \
+sim:/tb_TopModule/decrypted
+run -all
+# === ENCRYPTION TEST ===
+# Key:       752878397493cb70
+# Plaintext: 1122334455667788
+# Expected:  b5219ee81aa7499d
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: b5219ee81aa7499d
+# Expected:   b5219ee81aa7499d
+# PASS
+# === DECRYPTION TEST ===
+# Key:        752878397493cb70
+# Ciphertext: b5219ee81aa7499d
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  1122334455667788
+# Expected:   1122334455667788
+# PASS
+# === ENCRYPTION TEST ===
+# Key:       123456abcd132536
+# Plaintext: aabb09182736ccdd
+# Expected:  b5219ee81aa7499d
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: ac85a39bab193fd5
+# Expected:   c0b7a8d05f3a829c
+# FAIL
+# === DECRYPTION TEST ===
+# Key:        123456abcd132536
+# Ciphertext: ac85a39bab193fd5
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  aabb09182736ccdd
+# Expected:   aabb09182736ccdd
+# PASS
+# ============
+# 
+# ERROR: Global timeout
+# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(268)
+#    Time: 200 us  Iteration: 0  Instance: /tb_TopModule
+# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 268
+vsim {Top Module.tb_TopModule} -voptargs=+acc
+# End time: 16:09:19 on Oct 28,2025, Elapsed time: 0:01:42
+# Errors: 92, Warnings: 0
+# vsim Top Module.tb_TopModule -voptargs="+acc" 
+# Start time: 16:09:19 on Oct 28,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.tb_TopModule(fast)
+# Loading work.TopModule(fast)
+# Loading work.SPI(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+quit -sim
+# End time: 16:09:26 on Oct 28,2025, Elapsed time: 0:00:07
+# Errors: 93, Warnings: 0
+vsim {Top Module.tb_TopModule} -voptargs=+acc
+# vsim Top Module.tb_TopModule -voptargs="+acc" 
+# Start time: 16:10:00 on Oct 28,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.tb_TopModule(fast)
+# Loading work.TopModule(fast)
+# Loading work.SPI(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+add wave -position insertpoint  \
+sim:/tb_TopModule/mosi \
+sim:/tb_TopModule/miso \
+sim:/tb_TopModule/key \
+sim:/tb_TopModule/plaintext \
+sim:/tb_TopModule/ciphertext \
+sim:/tb_TopModule/decrypted
+run
+run -all
+# === ENCRYPTION TEST ===
+# Key:       752878397493cb70
+# Plaintext: 1122334455667788
+# Expected:  b5219ee81aa7499d
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: b5219ee81aa7499d
+# Expected:   b5219ee81aa7499d
+# PASS
+# === DECRYPTION TEST ===
+# Key:        752878397493cb70
+# Ciphertext: b5219ee81aa7499d
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  1122334455667788
+# Expected:   1122334455667788
+# PASS
+# === ENCRYPTION TEST ===
+# Key:       123456abcd132536
+# Plaintext: aabb09182736ccdd
+# Expected:  b5219ee81aa7499d
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: ac85a39bab193fd5
+# Expected:   c0b7a8d05f3a829c
+# FAIL
+# === DECRYPTION TEST ===
+# Key:        123456abcd132536
+# Ciphertext: ac85a39bab193fd5
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  aabb09182736ccdd
+# Expected:   aabb09182736ccdd
+# PASS
+# ============
+# 
+# ERROR: Global timeout
+# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(268)
+#    Time: 200 us  Iteration: 0  Instance: /tb_TopModule
+# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 268
+quit -sim
+# End time: 16:10:41 on Oct 28,2025, Elapsed time: 0:00:41
+# Errors: 93, Warnings: 0
+vsim {Top Module.tb_TopModule} -voptargs=+acc
+# vsim Top Module.tb_TopModule -voptargs="+acc" 
+# Start time: 16:11:24 on Oct 28,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.tb_TopModule(fast)
+# Loading work.TopModule(fast)
+# Loading work.SPI(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+run -all
+# === ENCRYPTION TEST ===
+# Key:       752878397493cb70
+# Plaintext: 1122334455667788
+# Expected:  b5219ee81aa7499d
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: b5219ee81aa7499d
+# Expected:   b5219ee81aa7499d
+# PASS
+# === DECRYPTION TEST ===
+# Key:        752878397493cb70
+# Ciphertext: b5219ee81aa7499d
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  1122334455667788
+# Expected:   1122334455667788
+# PASS
+# === ENCRYPTION TEST ===
+# Key:       123456abcd132536
+# Plaintext: aabb09182736ccdd
+# Expected:  b5219ee81aa7499d
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: ac85a39bab193fd5
+# Expected:   c0b7a8d05f3a829c
+# FAIL
+# === DECRYPTION TEST ===
+# Key:        123456abcd132536
+# Ciphertext: ac85a39bab193fd5
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  aabb09182736ccdd
+# Expected:   aabb09182736ccdd
+# PASS
+# ============
+# 
+# ERROR: Global timeout
+# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(268)
+#    Time: 200 us  Iteration: 0  Instance: /tb_TopModule
+# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 268
+quit -sim
+# End time: 16:12:38 on Oct 28,2025, Elapsed time: 0:01:14
+# Errors: 102, Warnings: 0
+# Compile of Control_State_Machine.v was successful.
+# Compile of expansion.v was successful.
+# Compile of f_func.v was successful.
+# Compile of f_func_tb.v was successful.
+# Compile of Final_Permutation.v was successful.
+# Compile of Initial_Permutation.v was successful.
+# Compile of key_schedule.v was successful.
+# Compile of left_shift.v was successful.
+# Compile of pbox.v was successful.
+# Compile of PC1.v was successful.
+# Compile of PC2.v was successful.
+# Compile of sbox.v was successful.
+# Compile of sbox_array.v was successful.
+# Compile of SPI.v was successful.
+# Compile of tb_TopModule.v was successful.
+# Compile of TopModule.v was successful.
+# 16 compiles, 0 failed with no errors.
+vsim {Top Module.tb_TopModule} -voptargs=+acc
+# vsim Top Module.tb_TopModule -voptargs="+acc" 
+# Start time: 16:14:16 on Oct 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_TopModule(fast)
+# Loading work.TopModule(fast)
+# Loading work.SPI(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+run -all
+# 
+# === ENCRYPTION TEST 1 ===
+# Key:       752878397493cb70
+# Plaintext: 1122334455667788
+# Expected:  b5219ee81aa7499d
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: b5219ee81aa7499d
+# Expected:   b5219ee81aa7499d
+# PASS
+# === DECRYPTION TEST ===
+# Key:        752878397493cb70
+# Ciphertext: b5219ee81aa7499d
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  1122334455667788
+# Expected:   1122334455667788
+# PASS
+# === ENCRYPTION TEST 2===
+# Key:       123456abcd132536
+# Plaintext: aabb09182736ccdd
+# Expected:  c0b7a8d05f3a829c
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: ac85a39bab193fd5
+# Expected:   c0b7a8d05f3a829c
+# FAIL
+# === DECRYPTION TEST ===
+# Key:        123456abcd132536
+# Ciphertext: ac85a39bab193fd5
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  aabb09182736ccdd
+# Expected:   aabb09182736ccdd
+# PASS
+# ============
+# 
+# ERROR: Global timeout
+# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(268)
+#    Time: 200 us  Iteration: 0  Instance: /tb_TopModule
+# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 268
+# Compile of tb_TopModule.v was successful.
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_TopModule(fast)
+# Loading work.TopModule(fast)
+# Loading work.SPI(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+run -all
+# 
+# === ENCRYPTION TEST 1 ===
+# Key:       752878397493cb70
+# Plaintext: 1122334455667788
+# Expected:  b5219ee81aa7499d
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: b5219ee81aa7499d
+# Expected:   b5219ee81aa7499d
+# PASS
+# === DECRYPTION TEST ===
+# Key:        752878397493cb70
+# Ciphertext: b5219ee81aa7499d
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  1122334455667788
+# Expected:   1122334455667788
+# PASS
+# === ENCRYPTION TEST 2===
+# Key:       123456abcd132536
+# Plaintext: aabb09182736ccdd
+# Expected:  c0b7a8d05f3a829c
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: ac85a39bab193fd5
+# Expected:   ac85a39bab193fd5
+# PASS
+# === DECRYPTION TEST ===
+# Key:        123456abcd132536
+# Ciphertext: ac85a39bab193fd5
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  aabb09182736ccdd
+# Expected:   aabb09182736ccdd
+# PASS
+# ============
+# 
+# ERROR: Global timeout
+# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(268)
+#    Time: 200 us  Iteration: 0  Instance: /tb_TopModule
+# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 268
+add wave -position insertpoint  \
+sim:/tb_TopModule/mosi \
+sim:/tb_TopModule/miso \
+sim:/tb_TopModule/key \
+sim:/tb_TopModule/plaintext \
+sim:/tb_TopModule/ciphertext \
+sim:/tb_TopModule/decrypted
+run -all
+
+
+
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.tb_TopModule(fast)
+# Loading work.TopModule(fast)
+# Loading work.SPI(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+run -all
+# 
+# === ENCRYPTION TEST 1 ===
+# Key:       752878397493cb70
+# Plaintext: 1122334455667788
+# Expected:  b5219ee81aa7499d
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: b5219ee81aa7499d
+# Expected:   b5219ee81aa7499d
+# PASS
+# === DECRYPTION TEST ===
+# Key:        752878397493cb70
+# Ciphertext: b5219ee81aa7499d
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  1122334455667788
+# Expected:   1122334455667788
+# PASS
+# === ENCRYPTION TEST 2===
+# Key:       123456abcd132536
+# Plaintext: aabb09182736ccdd
+# Expected:  c0b7a8d05f3a829c
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: ac85a39bab193fd5
+# Expected:   ac85a39bab193fd5
+# PASS
+# === DECRYPTION TEST ===
+# Key:        123456abcd132536
+# Ciphertext: ac85a39bab193fd5
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  aabb09182736ccdd
+# Expected:   aabb09182736ccdd
+# PASS
+# ============
+# 
+# ERROR: Global timeout
+# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(268)
+#    Time: 200 us  Iteration: 0  Instance: /tb_TopModule
+# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 268
+quit -sim
+# End time: 16:21:24 on Oct 28,2025, Elapsed time: 0:07:08
+# Errors: 103, Warnings: 0
+# Compile of tb_TopModule.v failed with 5 errors.
+# Compile of tb_TopModule.v was successful.
+vsim {Top Module.tb_TopModule} -voptargs=+acc
+# vsim Top Module.tb_TopModule -voptargs="+acc" 
+# Start time: 16:24:26 on Oct 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_TopModule(fast)
+# Loading work.TopModule(fast)
+# Loading work.SPI(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+add wave -position insertpoint  \
+sim:/tb_TopModule/clk \
+sim:/tb_TopModule/rst \
+sim:/tb_TopModule/sclk \
+sim:/tb_TopModule/cs_n \
+sim:/tb_TopModule/mosi \
+sim:/tb_TopModule/miso \
+sim:/tb_TopModule/key \
+sim:/tb_TopModule/plaintext \
+sim:/tb_TopModule/ciphertext \
+sim:/tb_TopModule/decrypted \
+sim:/tb_TopModule/timeout_counter
+run -all
+# 
+# === ENCRYPTION TEST 1 ===
+# Key:       752878397493cb70
+# Plaintext: 1122334455667788
+# Expected:  b5219ee81aa7499d
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: b5219ee81aa7499d
+# Expected:   b5219ee81aa7499d
+# PASS
+# === DECRYPTION TEST ===
+# Key:        752878397493cb70
+# Ciphertext: b5219ee81aa7499d
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  1122334455667788
+# Expected:   1122334455667788
+# PASS
+# === ENCRYPTION TEST 2===
+# Key:       123456abcd132536
+# Plaintext: aabb09182736ccdd
+# Expected:  c0b7a8d05f3a829c
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: ac85a39bab193fd5
+# Expected:   ac85a39bab193fd5
+# PASS
+# === DECRYPTION TEST ===
+# Key:        123456abcd132536
+# Ciphertext: ac85a39bab193fd5
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  aabb09182736ccdd
+# Expected:   aabb09182736ccdd
+# PASS
+# === ENCRYPTION TEST 2===
+# Key:       0000000000000000
+# Plaintext: 0000000000000000
+# Expected:  8ca64de9c1b123a7
+# 
+#  encryption progress
+# timeout
+# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(293)
+#    Time: 187395 ns  Iteration: 1  Instance: /tb_TopModule
+# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 293
+# Compile of tb_TopModule.v was successful.
+vsim {Top Module.tb_TopModule} -voptargs=+acc
+# End time: 16:26:09 on Oct 28,2025, Elapsed time: 0:01:43
+# Errors: 127, Warnings: 0
+# vsim Top Module.tb_TopModule -voptargs="+acc" 
+# Start time: 16:26:09 on Oct 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_TopModule(fast)
+# Loading work.TopModule(fast)
+# Loading work.SPI(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+add wave -position insertpoint  \
+sim:/tb_TopModule/clk \
+sim:/tb_TopModule/rst \
+sim:/tb_TopModule/sclk \
+sim:/tb_TopModule/cs_n \
+sim:/tb_TopModule/mosi \
+sim:/tb_TopModule/miso \
+sim:/tb_TopModule/key \
+sim:/tb_TopModule/plaintext \
+sim:/tb_TopModule/ciphertext \
+sim:/tb_TopModule/decrypted \
+sim:/tb_TopModule/timeout_counter
+run
+# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(357)
+#    Time: 0 ps  Iteration: 0  Instance: /tb_TopModule
+# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 357
+run -all
+# 
+# === ENCRYPTION TEST 1 ===
+# Key:       752878397493cb70
+# Plaintext: 1122334455667788
+# Expected:  b5219ee81aa7499d
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: b5219ee81aa7499d
+# Expected:   b5219ee81aa7499d
+# PASS
+# === DECRYPTION TEST ===
+# Key:        752878397493cb70
+# Ciphertext: b5219ee81aa7499d
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  1122334455667788
+# Expected:   1122334455667788
+# PASS
+# === ENCRYPTION TEST 2===
+# Key:       123456abcd132536
+# Plaintext: aabb09182736ccdd
+# Expected:  c0b7a8d05f3a829c
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: ac85a39bab193fd5
+# Expected:   ac85a39bab193fd5
+# PASS
+# === DECRYPTION TEST ===
+# Key:        123456abcd132536
+# Ciphertext: ac85a39bab193fd5
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  aabb09182736ccdd
+# Expected:   aabb09182736ccdd
+# PASS
+# === ENCRYPTION TEST 3===
+# Key:       0000000000000000
+# Plaintext: 0000000000000000
+# Expected:  8ca64de9c1b123a7
+# 
+#  encryption progress
+# timeout
+# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(293)
+#    Time: 187395 ns  Iteration: 1  Instance: /tb_TopModule
+# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 293
+run -all
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: 0000000000000000
+# Expected:   8ca64de9c1b123a7
+# FAIL
+# === DECRYPTION TEST ===
+# Key:        0000000000000000
+# Ciphertext: 0000000000000000
+# 
+#  decryption progress
+# timeout
+# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(329)
+#    Time: 266695 ns  Iteration: 1  Instance: /tb_TopModule
+# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 329
+# A time value could not be extracted from the current line
+# Break key hit
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.tb_TopModule(fast)
+# Loading work.TopModule(fast)
+# Loading work.SPI(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+run -all
+# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(357)
+#    Time: 0 ps  Iteration: 0  Instance: /tb_TopModule
+# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 357
+# Compile of tb_TopModule.v was successful.
+vsim {Top Module.tb_TopModule} -voptargs=+acc
+# End time: 16:27:48 on Oct 28,2025, Elapsed time: 0:01:39
+# Errors: 125, Warnings: 0
+# vsim Top Module.tb_TopModule -voptargs="+acc" 
+# Start time: 16:27:48 on Oct 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_TopModule(fast)
+# Loading work.TopModule(fast)
+# Loading work.SPI(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+run -all
+# 
+# === ENCRYPTION TEST 1 ===
+# Key:       752878397493cb70
+# Plaintext: 1122334455667788
+# Expected:  b5219ee81aa7499d
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: b5219ee81aa7499d
+# Expected:   b5219ee81aa7499d
+# PASS
+# === DECRYPTION TEST ===
+# Key:        752878397493cb70
+# Ciphertext: b5219ee81aa7499d
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  1122334455667788
+# Expected:   1122334455667788
+# PASS
+# === ENCRYPTION TEST 2===
+# Key:       123456abcd132536
+# Plaintext: aabb09182736ccdd
+# Expected:  c0b7a8d05f3a829c
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: ac85a39bab193fd5
+# Expected:   ac85a39bab193fd5
+# PASS
+# === DECRYPTION TEST ===
+# Key:        123456abcd132536
+# Ciphertext: ac85a39bab193fd5
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  aabb09182736ccdd
+# Expected:   aabb09182736ccdd
+# PASS
+# === ENCRYPTION TEST 3===
+# Key:       0000000000000000
+# Plaintext: 0000000000000000
+# Expected:  8ca64de9c1b123a7
+# 
+#  encryption progress
+# timeout
+# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(293)
+#    Time: 187395 ns  Iteration: 1  Instance: /tb_TopModule
+# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 293
+# Compile of tb_TopModule.v was successful.
+vsim {Top Module.tb_TopModule} -voptargs=+acc
+# End time: 16:28:40 on Oct 28,2025, Elapsed time: 0:00:52
+# Errors: 250, Warnings: 0
+# vsim Top Module.tb_TopModule -voptargs="+acc" 
+# Start time: 16:28:40 on Oct 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_TopModule(fast)
+# Loading work.TopModule(fast)
+# Loading work.SPI(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+clear
+# [3J[H[2J
+run -all
+# 
+# === ENCRYPTION TEST 1 ===
+# Key:       752878397493cb70
+# Plaintext: 1122334455667788
+# Expected:  b5219ee81aa7499d
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: b5219ee81aa7499d
+# Expected:   b5219ee81aa7499d
+# PASS
+# === DECRYPTION TEST ===
+# Key:        752878397493cb70
+# Ciphertext: b5219ee81aa7499d
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  1122334455667788
+# Expected:   1122334455667788
+# PASS
+# === ENCRYPTION TEST 2===
+# Key:       123456abcd132536
+# Plaintext: aabb09182736ccdd
+# Expected:  c0b7a8d05f3a829c
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: ac85a39bab193fd5
+# Expected:   ac85a39bab193fd5
+# PASS
+# === DECRYPTION TEST ===
+# Key:        123456abcd132536
+# Ciphertext: ac85a39bab193fd5
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  aabb09182736ccdd
+# Expected:   aabb09182736ccdd
+# PASS
+# === ENCRYPTION TEST 3===
+# Key:       0000000000000000
+# Plaintext: 0000000000000000
+# Expected:  8ca64de9c1b123a7
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: 0000000000000000
+# Expected:   8ca64de9c1b123a7
+# FAIL
+# === DECRYPTION TEST ===
+# Key:        0000000000000000
+# Ciphertext: 0000000000000000
+# 
+#  decryption progress
+# timeout
+# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(329)
+#    Time: 216795 ns  Iteration: 1  Instance: /tb_TopModule
+# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 329
+# Compile of tb_TopModule.v was successful.
+vsim {Top Module.tb_TopModule} -voptargs=+acc
+# End time: 16:30:21 on Oct 28,2025, Elapsed time: 0:01:41
+# Errors: 197, Warnings: 0
+# vsim Top Module.tb_TopModule -voptargs="+acc" 
+# Start time: 16:30:21 on Oct 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_TopModule(fast)
+# Loading work.TopModule(fast)
+# Loading work.SPI(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+run -all
+# 
+# === ENCRYPTION TEST 1 ===
+# Key:       752878397493cb70
+# Plaintext: 1122334455667788
+# Expected:  b5219ee81aa7499d
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: b5219ee81aa7499d
+# Expected:   b5219ee81aa7499d
+# PASS
+# === DECRYPTION TEST ===
+# Key:        752878397493cb70
+# Ciphertext: b5219ee81aa7499d
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  1122334455667788
+# Expected:   1122334455667788
+# PASS
+# === ENCRYPTION TEST 2===
+# Key:       123456abcd132536
+# Plaintext: aabb09182736ccdd
+# Expected:  c0b7a8d05f3a829c
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: ac85a39bab193fd5
+# Expected:   ac85a39bab193fd5
+# PASS
+# === DECRYPTION TEST ===
+# Key:        123456abcd132536
+# Ciphertext: ac85a39bab193fd5
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  aabb09182736ccdd
+# Expected:   aabb09182736ccdd
+# PASS
+# === ENCRYPTION TEST 3===
+# Key:       0000000000000000
+# Plaintext: 0000000000000000
+# Expected:  8ca64de9c1b123a7
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: 0000000000000000
+# Expected:   8ca64de9c1b123a7
+# FAIL
+# === DECRYPTION TEST ===
+# Key:        0000000000000000
+# Ciphertext: 0000000000000000
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  0000000000000000
+# Expected:   0000000000000000
+# PASS
+# ============
+add wave -position insertpoint  \
+sim:/tb_TopModule/clk \
+sim:/tb_TopModule/rst \
+sim:/tb_TopModule/sclk \
+sim:/tb_TopModule/cs_n \
+sim:/tb_TopModule/mosi \
+sim:/tb_TopModule/miso \
+sim:/tb_TopModule/key \
+sim:/tb_TopModule/plaintext \
+sim:/tb_TopModule/ciphertext \
+sim:/tb_TopModule/decrypted \
+sim:/tb_TopModule/timeout_counter
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.tb_TopModule(fast)
+# Loading work.TopModule(fast)
+# Loading work.SPI(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+run -all
+# 
+# === ENCRYPTION TEST 1 ===
+# Key:       752878397493cb70
+# Plaintext: 1122334455667788
+# Expected:  b5219ee81aa7499d
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: b5219ee81aa7499d
+# Expected:   b5219ee81aa7499d
+# PASS
+# === DECRYPTION TEST ===
+# Key:        752878397493cb70
+# Ciphertext: b5219ee81aa7499d
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  1122334455667788
+# Expected:   1122334455667788
+# PASS
+# === ENCRYPTION TEST 2===
+# Key:       123456abcd132536
+# Plaintext: aabb09182736ccdd
+# Expected:  c0b7a8d05f3a829c
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: ac85a39bab193fd5
+# Expected:   ac85a39bab193fd5
+# PASS
+# === DECRYPTION TEST ===
+# Key:        123456abcd132536
+# Ciphertext: ac85a39bab193fd5
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  aabb09182736ccdd
+# Expected:   aabb09182736ccdd
+# PASS
+# === ENCRYPTION TEST 3===
+# Key:       0000000000000000
+# Plaintext: 0000000000000000
+# Expected:  8ca64de9c1b123a7
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: 0000000000000000
+# Expected:   8ca64de9c1b123a7
+# FAIL
+# === DECRYPTION TEST ===
+# Key:        0000000000000000
+# Ciphertext: 0000000000000000
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  0000000000000000
+# Expected:   0000000000000000
+# PASS
+# ============
+# Break key hit
+# Simulation stop requested.
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.tb_TopModule(fast)
+# Loading work.TopModule(fast)
+# Loading work.SPI(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+run -all
+# 
+# === ENCRYPTION TEST 1 ===
+# Key:       752878397493cb70
+# Plaintext: 1122334455667788
+# Expected:  b5219ee81aa7499d
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: b5219ee81aa7499d
+# Expected:   b5219ee81aa7499d
+# PASS
+# === DECRYPTION TEST ===
+# Key:        752878397493cb70
+# Ciphertext: b5219ee81aa7499d
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  1122334455667788
+# Expected:   1122334455667788
+# PASS
+# === ENCRYPTION TEST 2===
+# Key:       123456abcd132536
+# Plaintext: aabb09182736ccdd
+# Expected:  c0b7a8d05f3a829c
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: ac85a39bab193fd5
+# Expected:   ac85a39bab193fd5
+# PASS
+# === DECRYPTION TEST ===
+# Key:        123456abcd132536
+# Ciphertext: ac85a39bab193fd5
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  aabb09182736ccdd
+# Expected:   aabb09182736ccdd
+# PASS
+# === ENCRYPTION TEST 3===
+# Key:       0000000000000000
+# Plaintext: 0000000000000000
+# Expected:  8ca64de9c1b123a7
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: 0000000000000000
+# Expected:   8ca64de9c1b123a7
+# FAIL
+# === DECRYPTION TEST ===
+# Key:        0000000000000000
+# Ciphertext: 0000000000000000
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  0000000000000000
+# Expected:   0000000000000000
+# PASS
+# ============
+# Compile of tb_TopModule.v was successful.
+vsim {Top Module.tb_TopModule} -voptargs=+acc
+# End time: 16:35:13 on Oct 28,2025, Elapsed time: 0:04:52
+# Errors: 2007, Warnings: 0
+# vsim Top Module.tb_TopModule -voptargs="+acc" 
+# Start time: 16:35:13 on Oct 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_TopModule(fast)
+# Loading work.TopModule(fast)
+# Loading work.SPI(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+run -all
+# === ENCRYPTION TEST 3===
+# Key:       0000000000000000
+# Plaintext: 0000000000000000
+# Expected:  8ca64de9c1b123a7
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: 0000000000000000
+# Expected:   8ca64de9c1b123a7
+# FAIL
+# === DECRYPTION TEST ===
+# Key:        0000000000000000
+# Ciphertext: 0000000000000000
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  0000000000000000
+# Expected:   0000000000000000
+# PASS
+# 
+# === ENCRYPTION TEST 1 ===
+# Key:       752878397493cb70
+# Plaintext: 1122334455667788
+# Expected:  b5219ee81aa7499d
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: b5219ee81aa7499d
+# Expected:   b5219ee81aa7499d
+# PASS
+# === DECRYPTION TEST ===
+# Key:        752878397493cb70
+# Ciphertext: b5219ee81aa7499d
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  1122334455667788
+# Expected:   1122334455667788
+# PASS
+# === ENCRYPTION TEST 2===
+# Key:       123456abcd132536
+# Plaintext: aabb09182736ccdd
+# Expected:  c0b7a8d05f3a829c
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: ac85a39bab193fd5
+# Expected:   ac85a39bab193fd5
+# PASS
+# === DECRYPTION TEST ===
+# Key:        123456abcd132536
+# Ciphertext: ac85a39bab193fd5
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  aabb09182736ccdd
+# Expected:   aabb09182736ccdd
+# PASS
+# ============
+# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(351)
+#    Time: 173905 ns  Iteration: 0  Instance: /tb_TopModule
+# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 351
+quit -sim
+# End time: 16:38:20 on Oct 28,2025, Elapsed time: 0:03:07
+# Errors: 1106, Warnings: 0
+# Compile of Control_State_Machine.v was successful.
+# Compile of expansion.v was successful.
+# Compile of f_func.v was successful.
+# Compile of f_func_tb.v was successful.
+# Compile of Final_Permutation.v was successful.
+# Compile of Initial_Permutation.v was successful.
+# Compile of key_schedule.v was successful.
+# Compile of left_shift.v was successful.
+# Compile of pbox.v was successful.
+# Compile of PC1.v was successful.
+# Compile of PC2.v was successful.
+# Compile of sbox.v was successful.
+# Compile of sbox_array.v was successful.
+# Compile of SPI.v was successful.
+# Compile of tb_TopModule.v was successful.
+# Compile of TopModule.v was successful.
+# 16 compiles, 0 failed with no errors.
+vsim {Top Module.tb_TopModule} -voptargs=+acc
+# vsim Top Module.tb_TopModule -voptargs="+acc" 
+# Start time: 16:39:19 on Oct 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "Control_State_Machine(fast)".
+# Loading work.tb_TopModule(fast)
+# Loading work.TopModule(fast)
+# Loading work.SPI(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+run -all
+# === ENCRYPTION TEST 3===
+# Key:       0000000000000000
+# Plaintext: 0000000000000000
+# Expected:  8ca64de9c1b123a7
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: 0000000000000000
+# Expected:   8ca64de9c1b123a7
+# FAIL
+# === DECRYPTION TEST ===
+# Key:        0000000000000000
+# Ciphertext: 0000000000000000
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  0000000000000000
+# Expected:   0000000000000000
+# PASS
+# 
+# === ENCRYPTION TEST 1 ===
+# Key:       752878397493cb70
+# Plaintext: 1122334455667788
+# Expected:  b5219ee81aa7499d
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: b5219ee81aa7499d
+# Expected:   b5219ee81aa7499d
+# PASS
+# === DECRYPTION TEST ===
+# Key:        752878397493cb70
+# Ciphertext: b5219ee81aa7499d
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  1122334455667788
+# Expected:   1122334455667788
+# PASS
+# === ENCRYPTION TEST 2===
+# Key:       123456abcd132536
+# Plaintext: aabb09182736ccdd
+# Expected:  c0b7a8d05f3a829c
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: ac85a39bab193fd5
+# Expected:   ac85a39bab193fd5
+# PASS
+# === DECRYPTION TEST ===
+# Key:        123456abcd132536
+# Ciphertext: ac85a39bab193fd5
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  aabb09182736ccdd
+# Expected:   aabb09182736ccdd
+# PASS
+# ============
+# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(351)
+#    Time: 173905 ns  Iteration: 0  Instance: /tb_TopModule
+# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 351
+view -new wave
+# .main_pane.wave1.interior.cs.body.pw.wf
+add wave -position insertpoint  \
+sim:/tb_TopModule/mosi \
+sim:/tb_TopModule/miso \
+sim:/tb_TopModule/key \
+sim:/tb_TopModule/plaintext \
+sim:/tb_TopModule/ciphertext \
+sim:/tb_TopModule/decrypted
+add wave -position insertpoint  \
+sim:/tb_TopModule/mosi \
+sim:/tb_TopModule/miso \
+sim:/tb_TopModule/key \
+sim:/tb_TopModule/plaintext \
+sim:/tb_TopModule/ciphertext \
+sim:/tb_TopModule/decrypted
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.tb_TopModule(fast)
+# Loading work.TopModule(fast)
+# Loading work.SPI(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+run -all
+# === ENCRYPTION TEST 3===
+# Key:       0000000000000000
+# Plaintext: 0000000000000000
+# Expected:  8ca64de9c1b123a7
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: 0000000000000000
+# Expected:   8ca64de9c1b123a7
+# FAIL
+# === DECRYPTION TEST ===
+# Key:        0000000000000000
+# Ciphertext: 0000000000000000
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  0000000000000000
+# Expected:   0000000000000000
+# PASS
+# 
+# === ENCRYPTION TEST 1 ===
+# Key:       752878397493cb70
+# Plaintext: 1122334455667788
+# Expected:  b5219ee81aa7499d
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: b5219ee81aa7499d
+# Expected:   b5219ee81aa7499d
+# PASS
+# === DECRYPTION TEST ===
+# Key:        752878397493cb70
+# Ciphertext: b5219ee81aa7499d
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  1122334455667788
+# Expected:   1122334455667788
+# PASS
+# === ENCRYPTION TEST 2===
+# Key:       123456abcd132536
+# Plaintext: aabb09182736ccdd
+# Expected:  c0b7a8d05f3a829c
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: ac85a39bab193fd5
+# Expected:   ac85a39bab193fd5
+# PASS
+# === DECRYPTION TEST ===
+# Key:        123456abcd132536
+# Ciphertext: ac85a39bab193fd5
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  aabb09182736ccdd
+# Expected:   aabb09182736ccdd
+# PASS
+# ============
+# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(351)
+#    Time: 173905 ns  Iteration: 0  Instance: /tb_TopModule
+# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 351
+quit -sim
+# End time: 16:45:30 on Oct 28,2025, Elapsed time: 0:06:11
+# Errors: 1119, Warnings: 0
+# Compile of Control_State_Machine.v was successful.
+# Compile of expansion.v was successful.
+# Compile of f_func.v was successful.
+# Compile of f_func_tb.v was successful.
+# Compile of Final_Permutation.v was successful.
+# Compile of Initial_Permutation.v was successful.
+# Compile of key_schedule.v was successful.
+# Compile of left_shift.v was successful.
+# Compile of pbox.v was successful.
+# Compile of PC1.v was successful.
+# Compile of PC2.v was successful.
+# Compile of sbox.v was successful.
+# Compile of sbox_array.v was successful.
+# Compile of SPI.v was successful.
+# Compile of tb_TopModule.v failed with 3 errors.
+# Compile of TopModule.v was successful.
+# 16 compiles, 1 failed with 3 errors.
+# Compile of Control_State_Machine.v was successful.
+# Compile of expansion.v was successful.
+# Compile of f_func.v was successful.
+# Compile of f_func_tb.v was successful.
+# Compile of Final_Permutation.v was successful.
+# Compile of Initial_Permutation.v was successful.
+# Compile of key_schedule.v was successful.
+# Compile of left_shift.v was successful.
+# Compile of pbox.v was successful.
+# Compile of PC1.v was successful.
+# Compile of PC2.v was successful.
+# Compile of sbox.v was successful.
+# Compile of sbox_array.v was successful.
+# Compile of SPI.v was successful.
+# Compile of tb_TopModule.v failed with 3 errors.
+# Compile of TopModule.v was successful.
+# 16 compiles, 1 failed with 3 errors.
+# Compile of Control_State_Machine.v was successful.
+# Compile of expansion.v was successful.
+# Compile of f_func.v was successful.
+# Compile of f_func_tb.v was successful.
+# Compile of Final_Permutation.v was successful.
+# Compile of Initial_Permutation.v was successful.
+# Compile of key_schedule.v was successful.
+# Compile of left_shift.v was successful.
+# Compile of pbox.v was successful.
+# Compile of PC1.v was successful.
+# Compile of PC2.v was successful.
+# Compile of sbox.v was successful.
+# Compile of sbox_array.v was successful.
+# Compile of SPI.v was successful.
+# Compile of tb_TopModule.v was successful.
+# Compile of TopModule.v was successful.
+# 16 compiles, 0 failed with no errors.
+vsim {Top Module.tb_TopModule} -voptargs=+acc
+# vsim Top Module.tb_TopModule -voptargs="+acc" 
+# Start time: 16:50:44 on Oct 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_TopModule(fast)
+# Loading work.TopModule(fast)
+# Loading work.SPI(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+run -all
+# 
+# === ENCRYPTION TEST 1 ===
+# Key:       752878397493cb70
+# Plaintext: 1122334455667788
+# Expected:  b5219ee81aa7499d
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: b5219ee81aa7499d
+# Expected:   b5219ee81aa7499d
+# PASS
+# === DECRYPTION TEST ===
+# Key:        752878397493cb70
+# Ciphertext: b5219ee81aa7499d
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  1122334455667788
+# Expected:   1122334455667788
+# PASS
+# === ENCRYPTION TEST 2===
+# Key:       123456abcd132536
+# Plaintext: aabb09182736ccdd
+# Expected:  c0b7a8d05f3a829c
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: ac85a39bab193fd5
+# Expected:   ac85a39bab193fd5
+# PASS
+# === DECRYPTION TEST ===
+# Key:        123456abcd132536
+# Ciphertext: ac85a39bab193fd5
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  aabb09182736ccdd
+# Expected:   aabb09182736ccdd
+# PASS
+# === ENCRYPTION TEST 3===
+# Key:       0000000000000000
+# Plaintext: 0000000000000000
+# Expected:  8ca64de9c1b123a7
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: 0000000000000000
+# Expected:   8ca64de9c1b123a7
+# FAIL
+# === DECRYPTION TEST ===
+# Key:        0000000000000000
+# Ciphertext: 0000000000000000
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  0000000000000000
+# Expected:   0000000000000000
+# PASS
+# === ENCRYPTION TEST 4===
+# Key:       ffffffffffffffff
+# Plaintext: ffffffffffffffff
+# Expected:  7359b2163e4edc58
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: 7359b2163e4edc58
+# Expected:   7359b2163e4edc58
+# PASS
+# === DECRYPTION TEST ===
+# Key:        ffffffffffffffff
+# Ciphertext: 7359b2163e4edc58
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  ffffffffffffffff
+# Expected:   ffffffffffffffff
+# PASS
+# ============
+# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(408)
+#    Time: 231905 ns  Iteration: 0  Instance: /tb_TopModule
+# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 408
+# Compile of tb_TopModule.v was successful.
+vsim {Top Module.tb_TopModule} -voptargs=+acc
+# End time: 16:52:13 on Oct 28,2025, Elapsed time: 0:01:29
+# Errors: 1136, Warnings: 0
+# vsim Top Module.tb_TopModule -voptargs="+acc" 
+# Start time: 16:52:13 on Oct 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_TopModule(fast)
+# Loading work.TopModule(fast)
+# Loading work.SPI(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+run -all
+# === ENCRYPTION TEST 1 ===
+# Key:       752878397493cb70
+# Plaintext: 1122334455667788
+# Expected:  b5219ee81aa7499d
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: b5219ee81aa7499d
+# Expected:   b5219ee81aa7499d
+# PASS
+# 
+# === DECRYPTION TEST ===
+# Key:        752878397493cb70
+# Ciphertext: b5219ee81aa7499d
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  1122334455667788
+# Expected:   1122334455667788
+# PASS
+# 
+# === ENCRYPTION TEST 2===
+# Key:       123456abcd132536
+# Plaintext: aabb09182736ccdd
+# Expected:  c0b7a8d05f3a829c
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: ac85a39bab193fd5
+# Expected:   ac85a39bab193fd5
+# PASS
+# 
+# === DECRYPTION TEST ===
+# Key:        123456abcd132536
+# Ciphertext: ac85a39bab193fd5
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  aabb09182736ccdd
+# Expected:   aabb09182736ccdd
+# PASS
+# 
+# === ENCRYPTION TEST 3===
+# Key:       0000000000000000
+# Plaintext: 0000000000000000
+# Expected:  8ca64de9c1b123a7
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: 0000000000000000
+# Expected:   8ca64de9c1b123a7
+# FAIL
+# 
+# === DECRYPTION TEST ===
+# Key:        0000000000000000
+# Ciphertext: 0000000000000000
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  0000000000000000
+# Expected:   0000000000000000
+# PASS
+# 
+# === ENCRYPTION TEST 4===
+# Key:       ffffffffffffffff
+# Plaintext: ffffffffffffffff
+# Expected:  7359b2163e4edc58
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: 7359b2163e4edc58
+# Expected:   7359b2163e4edc58
+# PASS
+# === DECRYPTION TEST ===
+# Key:        ffffffffffffffff
+# Ciphertext: 7359b2163e4edc58
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  ffffffffffffffff
+# Expected:   ffffffffffffffff
+# PASS
+# ============
+# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(408)
+#    Time: 231905 ns  Iteration: 0  Instance: /tb_TopModule
+# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 408
+# Compile of tb_TopModule.v was successful.
+vsim {Top Module.tb_TopModule} -voptargs=+acc
+# End time: 16:54:13 on Oct 28,2025, Elapsed time: 0:02:00
+# Errors: 1137, Warnings: 0
+# vsim Top Module.tb_TopModule -voptargs="+acc" 
+# Start time: 16:54:13 on Oct 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_TopModule(fast)
+# Loading work.TopModule(fast)
+# Loading work.SPI(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+run -all
+# === ENCRYPTION TEST 1 : Default test vector ===
+# Key:       752878397493cb70
+# Plaintext: 1122334455667788
+# Expected:  b5219ee81aa7499d
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: b5219ee81aa7499d
+# Expected:   b5219ee81aa7499d
+# PASS
+# 
+# === DECRYPTION TEST ===
+# Key:        752878397493cb70
+# Ciphertext: b5219ee81aa7499d
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  1122334455667788
+# Expected:   1122334455667788
+# PASS
+# 
+# === ENCRYPTION TEST 2 : Default test vector ===
+# Key:       123456abcd132536
+# Plaintext: aabb09182736ccdd
+# Expected:  c0b7a8d05f3a829c
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: ac85a39bab193fd5
+# Expected:   ac85a39bab193fd5
+# PASS
+# 
+# === DECRYPTION TEST ===
+# Key:        123456abcd132536
+# Ciphertext: ac85a39bab193fd5
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  aabb09182736ccdd
+# Expected:   aabb09182736ccdd
+# PASS
+# 
+# === ENCRYPTION TEST 3 : All zeors ===
+# Key:       0000000000000000
+# Plaintext: 0000000000000000
+# Expected:  8ca64de9c1b123a7
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: 0000000000000000
+# Expected:   8ca64de9c1b123a7
+# FAIL
+# 
+# === DECRYPTION TEST ===
+# Key:        0000000000000000
+# Ciphertext: 0000000000000000
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  0000000000000000
+# Expected:   0000000000000000
+# PASS
+# 
+# === ENCRYPTION TEST 4 : All fs ===
+# Key:       ffffffffffffffff
+# Plaintext: ffffffffffffffff
+# Expected:  7359b2163e4edc58
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: 7359b2163e4edc58
+# Expected:   7359b2163e4edc58
+# PASS
+# === DECRYPTION TEST ===
+# Key:        ffffffffffffffff
+# Ciphertext: 7359b2163e4edc58
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  ffffffffffffffff
+# Expected:   ffffffffffffffff
+# PASS
+# ============
+# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(408)
+#    Time: 231905 ns  Iteration: 0  Instance: /tb_TopModule
+# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 408
+quit -sim
+# End time: 16:54:52 on Oct 28,2025, Elapsed time: 0:00:39
+# Errors: 1143, Warnings: 0
+# Compile of tb_TopModule.v was successful.
+# Compile of TopModule.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim {Top Module.tb_TopModule} -voptargs=+acc
+# vsim Top Module.tb_TopModule -voptargs="+acc" 
+# Start time: 16:55:42 on Oct 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Note: (vopt-143) Recognized 1 FSM in module "TopModule(fast)".
+# Loading work.tb_TopModule(fast)
+# Loading work.TopModule(fast)
+# Loading work.SPI(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+add wave -position insertpoint  \
+sim:/tb_TopModule/clk \
+sim:/tb_TopModule/rst \
+sim:/tb_TopModule/sclk \
+sim:/tb_TopModule/cs_n \
+sim:/tb_TopModule/mosi \
+sim:/tb_TopModule/miso \
+sim:/tb_TopModule/key \
+sim:/tb_TopModule/plaintext \
+sim:/tb_TopModule/ciphertext \
+sim:/tb_TopModule/decrypted \
+sim:/tb_TopModule/timeout_counter
+run -all
+# === ENCRYPTION TEST 1 : Default test vector ===
+# Key:       752878397493cb70
+# Plaintext: 1122334455667788
+# Expected:  b5219ee81aa7499d
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: b5219ee81aa7499d
+# Expected:   b5219ee81aa7499d
+# PASS
+# 
+# === DECRYPTION TEST ===
+# Key:        752878397493cb70
+# Ciphertext: b5219ee81aa7499d
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  1122334455667788
+# Expected:   1122334455667788
+# PASS
+# 
+# === ENCRYPTION TEST 2 : Default test vector ===
+# Key:       123456abcd132536
+# Plaintext: aabb09182736ccdd
+# Expected:  c0b7a8d05f3a829c
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: ac85a39bab193fd5
+# Expected:   ac85a39bab193fd5
+# PASS
+# 
+# === DECRYPTION TEST ===
+# Key:        123456abcd132536
+# Ciphertext: ac85a39bab193fd5
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  aabb09182736ccdd
+# Expected:   aabb09182736ccdd
+# PASS
+# 
+# === ENCRYPTION TEST 3 : All zeros ===
+# Key:       0000000000000000
+# Plaintext: 0000000000000000
+# Expected:  8ca64de9c1b123a7
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: 8ca64de9c1b123a7
+# Expected:   8ca64de9c1b123a7
+# PASS
+# 
+# === DECRYPTION TEST ===
+# Key:        0000000000000000
+# Ciphertext: 8ca64de9c1b123a7
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  0000000000000000
+# Expected:   0000000000000000
+# PASS
+# 
+# === ENCRYPTION TEST 4 : All fs ===
+# Key:       ffffffffffffffff
+# Plaintext: ffffffffffffffff
+# Expected:  7359b2163e4edc58
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: 7359b2163e4edc58
+# Expected:   7359b2163e4edc58
+# PASS
+# === DECRYPTION TEST ===
+# Key:        ffffffffffffffff
+# Ciphertext: 7359b2163e4edc58
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  ffffffffffffffff
+# Expected:   ffffffffffffffff
+# PASS
+# ============
+# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(408)
+#    Time: 231905 ns  Iteration: 0  Instance: /tb_TopModule
+# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 408
+# Compile of tb_TopModule.v was successful.
+vsim {Top Module.tb_TopModule} -voptargs=+acc
+# End time: 16:59:01 on Oct 28,2025, Elapsed time: 0:03:19
+# Errors: 1166, Warnings: 0
+# vsim Top Module.tb_TopModule -voptargs="+acc" 
+# Start time: 16:59:01 on Oct 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_TopModule(fast)
+# Loading work.TopModule(fast)
+# Loading work.SPI(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+run -all
+# === ENCRYPTION TEST 1 : Default test vector ===
+# Key:       752878397493cb70
+# Plaintext: 1122334455667788
+# Expected:  b5219ee81aa7499d
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: b5219ee81aa7499d
+# Expected:   b5219ee81aa7499d
+# PASS
+# 
+# === DECRYPTION TEST ===
+# Key:        752878397493cb70
+# Ciphertext: b5219ee81aa7499d
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  1122334455667788
+# Expected:   1122334455667788
+# PASS
+# 
+# === ENCRYPTION TEST 2 : Default test vector ===
+# Key:       123456abcd132536
+# Plaintext: aabb09182736ccdd
+# Expected:  c0b7a8d05f3a829c
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: ac85a39bab193fd5
+# Expected:   ac85a39bab193fd5
+# PASS
+# 
+# === DECRYPTION TEST ===
+# Key:        123456abcd132536
+# Ciphertext: ac85a39bab193fd5
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  aabb09182736ccdd
+# Expected:   aabb09182736ccdd
+# PASS
+# 
+# === ENCRYPTION TEST 3 : All zeros ===
+# Key:       0000000000000000
+# Plaintext: 0000000000000000
+# Expected:  8ca64de9c1b123a7
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: 8ca64de9c1b123a7
+# Expected:   8ca64de9c1b123a7
+# PASS
+# 
+# === DECRYPTION TEST ===
+# Key:        0000000000000000
+# Ciphertext: 8ca64de9c1b123a7
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  0000000000000000
+# Expected:   0000000000000000
+# PASS
+# 
+# === ENCRYPTION TEST 4 : All fs ===
+# Key:       ffffffffffffffff
+# Plaintext: ffffffffffffffff
+# Expected:  7359b2163e4edc58
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: 7359b2163e4edc58
+# Expected:   7359b2163e4edc58
+# PASS
+# === DECRYPTION TEST ===
+# Key:        ffffffffffffffff
+# Ciphertext: 7359b2163e4edc58
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  ffffffffffffffff
+# Expected:   ffffffffffffffff
+# PASS
+# ============
+# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(415)
+#    Time: 233905 ns  Iteration: 0  Instance: /tb_TopModule
+# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 415
+add wave -position insertpoint  \
+sim:/tb_TopModule/clk \
+sim:/tb_TopModule/rst \
+sim:/tb_TopModule/sclk \
+sim:/tb_TopModule/cs_n \
+sim:/tb_TopModule/mosi \
+sim:/tb_TopModule/miso \
+sim:/tb_TopModule/key \
+sim:/tb_TopModule/plaintext \
+sim:/tb_TopModule/ciphertext \
+sim:/tb_TopModule/decrypted \
+sim:/tb_TopModule/timeout_counter
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.tb_TopModule(fast)
+# Loading work.TopModule(fast)
+# Loading work.SPI(fast)
+# Loading work.Control_State_Machine(fast)
+# Loading work.Initial_Permutation(fast)
+# Loading work.key_schedule(fast)
+# Loading work.PC1(fast)
+# Loading work.left_shift(fast)
+# Loading work.PC2(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+# Loading work.Final_Permutation(fast)
+run -all
+# === ENCRYPTION TEST 1 : Default test vector ===
+# Key:       752878397493cb70
+# Plaintext: 1122334455667788
+# Expected:  b5219ee81aa7499d
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: b5219ee81aa7499d
+# Expected:   b5219ee81aa7499d
+# PASS
+# 
+# === DECRYPTION TEST ===
+# Key:        752878397493cb70
+# Ciphertext: b5219ee81aa7499d
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  1122334455667788
+# Expected:   1122334455667788
+# PASS
+# 
+# === ENCRYPTION TEST 2 : Default test vector ===
+# Key:       123456abcd132536
+# Plaintext: aabb09182736ccdd
+# Expected:  c0b7a8d05f3a829c
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: ac85a39bab193fd5
+# Expected:   ac85a39bab193fd5
+# PASS
+# 
+# === DECRYPTION TEST ===
+# Key:        123456abcd132536
+# Ciphertext: ac85a39bab193fd5
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  aabb09182736ccdd
+# Expected:   aabb09182736ccdd
+# PASS
+# 
+# === ENCRYPTION TEST 3 : All zeros ===
+# Key:       0000000000000000
+# Plaintext: 0000000000000000
+# Expected:  8ca64de9c1b123a7
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: 8ca64de9c1b123a7
+# Expected:   8ca64de9c1b123a7
+# PASS
+# 
+# === DECRYPTION TEST ===
+# Key:        0000000000000000
+# Ciphertext: 8ca64de9c1b123a7
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  0000000000000000
+# Expected:   0000000000000000
+# PASS
+# 
+# === ENCRYPTION TEST 4 : All fs ===
+# Key:       ffffffffffffffff
+# Plaintext: ffffffffffffffff
+# Expected:  7359b2163e4edc58
+# 
+#  encryption progress
+# 
+# --- ENCRYPTION RESULT ---
+# Ciphertext: 7359b2163e4edc58
+# Expected:   7359b2163e4edc58
+# PASS
+# === DECRYPTION TEST ===
+# Key:        ffffffffffffffff
+# Ciphertext: 7359b2163e4edc58
+# 
+#  decryption progress
+# 
+# --- DECRYPTION RESULT ---
+# Decrypted:  ffffffffffffffff
+# Expected:   ffffffffffffffff
+# PASS
+# ============
+# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v(415)
+#    Time: 233905 ns  Iteration: 0  Instance: /tb_TopModule
+# Break in Module tb_TopModule at /home/u1425837/des-project/modelsim/RTL/tb_TopModule.v line 415
+# Compile of Control_State_Machine.v was successful.
+# Compile of expansion.v was successful.
+# Compile of f_func.v was successful.
+# Compile of f_func_tb.v was successful.
+# Compile of Final_Permutation.v was successful.
+# Compile of Initial_Permutation.v was successful.
+# Compile of key_schedule.v was successful.
+# Compile of left_shift.v was successful.
+# Compile of pbox.v was successful.
+# Compile of PC1.v was successful.
+# Compile of PC2.v was successful.
+# Compile of sbox.v was successful.
+# Compile of sbox_array.v was successful.
+# Compile of SPI.v was successful.
+# Compile of tb_TopModule.v was successful.
+# Compile of TopModule.v was successful.
+# 16 compiles, 0 failed with no errors.
+# End time: 17:11:15 on Oct 28,2025, Elapsed time: 0:12:14
+# Errors: 3220, Warnings: 0
+# Closing project /home/u1425837/des-project/modelsim/Top Module.mpf
+# reading /uusoc/facility/cad_tools/Mentor/modelsim2019.4/questasim/linux_x86_64/../modelsim.ini
+# Loading project Control State Machine
+# Compile of Control_State_Machine.v was successful.
+project open {/home/u1425837/des-project/modelsim/Top Module}
+# reading /uusoc/facility/cad_tools/Mentor/modelsim2019.4/questasim/linux_x86_64/../modelsim.ini
+# Loading project Top Module

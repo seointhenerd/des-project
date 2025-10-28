@@ -75,12 +75,12 @@ QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
 Top level modules:
 	left_shift
 
-} {} {}} /home/u1425837/des-project/modelsim/RTL/f_func.v {1 {vlog -work {Control State Machine} -vopt -stats=none /home/u1425837/des-project/modelsim/RTL/f_func.v
+} {} {}} /home/u1425837/des-project/modelsim/RTL/pbox.v {1 {vlog -work {Control State Machine} -vopt -stats=none /home/u1425837/des-project/modelsim/RTL/pbox.v
 QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
--- Compiling module Feistel_Function
+-- Compiling module PBox
 
 Top level modules:
-	Feistel_Function
+	PBox
 
 } {} {}} /home/u1425837/des-project/modelsim/RTL/Final_Permutation.v {1 {vlog -work {Control State Machine} -vopt -stats=none /home/u1425837/des-project/modelsim/RTL/Final_Permutation.v
 QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
@@ -89,11 +89,11 @@ QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
 Top level modules:
 	Final_Permutation
 
-} {} {}} /home/u1425837/des-project/modelsim/RTL/pbox.v {1 {vlog -work {Control State Machine} -vopt -stats=none /home/u1425837/des-project/modelsim/RTL/pbox.v
+} {} {}} /home/u1425837/des-project/modelsim/RTL/f_func.v {1 {vlog -work {Control State Machine} -vopt -stats=none /home/u1425837/des-project/modelsim/RTL/f_func.v
 QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
--- Compiling module PBox
+-- Compiling module Feistel_Function
 
 Top level modules:
-	PBox
+	Feistel_Function
 
 } {} {}}

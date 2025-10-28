@@ -95,16 +95,16 @@ module TopModule (
             if (cs_rise_delayed) begin
                 case (transaction_state)
                     2'd0: begin  // KEY state
-                        if (spi_rx_data != 64'h0) begin
+                        //if (spi_rx_data != 64'h0) begin
                             key_reg <= spi_rx_data;
                             transaction_state <= 2'd1;
-                        end
+                        //end
                     end
                     2'd1: begin  // DATA state
-                        if (spi_rx_data != 64'h0) begin
+                        //if (spi_rx_data != 64'h0) begin
                             data_reg <= spi_rx_data;
                             transaction_state <= 2'd2;
-                        end
+                        //end
                     end
                     2'd2: begin  // CONTROL state
                         crypt <= spi_rx_data[0]; // 0=encrypt, 1=decrypt
