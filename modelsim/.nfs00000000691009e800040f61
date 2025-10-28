@@ -1,0 +1,63 @@
+# //  Questa Sim-64
+# //  Version 2019.4 linux_x86_64 Oct 15 2019
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading project f_function
+# Compile of f_func.v was successful.
+# Compile of expansion.v was successful.
+# Compile of sbox.v was successful.
+# Compile of pbox.v was successful.
+# Compile of sbox_array.v was successful.
+# Compile of f_func_tb.v was successful with warnings.
+# 6 compiles, 0 failed with no errors.
+vsim work.tb_Feistel_Simple -voptargs=+acc
+# vsim work.tb_Feistel_Simple -voptargs="+acc" 
+# Start time: 17:46:57 on Oct 28,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.tb_Feistel_Simple(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+run
+# 
+# ========================================
+# Test Case: DES Round 0
+# ========================================
+# 
+# PASS: f_out = 4b7dd382
+# 
+# ========================================
+# Test Case: DES Round 1
+# ========================================
+# 
+# PASS: f_out = d3fca973
+# 
+# ========================================
+# Test Case: DES Round 2
+# ========================================
+# 
+# PASS: f_out = 3bb7b4ef
+# 
+# ========================================
+# Test Case: DES Round 3
+# ========================================
+# 
+# PASS: f_out = c84ffffc
+# 
+# ========================================
+# Test Case: DES Round 4
+# ========================================
+# 
+# PASS: f_out = d8d8dbbc
