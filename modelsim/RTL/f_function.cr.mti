@@ -5,6 +5,13 @@ QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
 Top level modules:
 	Feistel_Function
 
+} {} {}} /home/u1419358/des-project/modelsim/RTL/feistel_tb.v {1 {vlog -work work -vopt -stats=none /home/u1419358/des-project/modelsim/RTL/feistel_tb.v
+QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
+-- Compiling module tb_Feistel_Internal
+
+Top level modules:
+	tb_Feistel_Internal
+
 } {} {}} /home/u1419358/des-project/modelsim/RTL/sbox_tb.v {1 {vlog -work work -vopt -stats=none /home/u1419358/des-project/modelsim/RTL/sbox_tb.v
 QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
 -- Compiling module tb_sbox
@@ -25,13 +32,6 @@ QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
 
 Top level modules:
 	PBox
-
-} {} {}} /home/u1419358/des-project/modelsim/RTL/f_func_tb.v {1 {vlog -work f_function -vopt -stats=none /home/u1419358/des-project/modelsim/RTL/f_func_tb.v
-QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
--- Compiling module tb_Feistel_Diagnostic
-
-Top level modules:
-	tb_Feistel_Diagnostic
 
 } {} {}} /home/u1419358/des-project/modelsim/RTL/sbox_array.v {1 {vlog -work f_function -vopt -stats=none /home/u1419358/des-project/modelsim/RTL/sbox_array.v
 QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019

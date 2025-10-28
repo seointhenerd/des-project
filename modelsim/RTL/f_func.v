@@ -29,7 +29,7 @@ module Feistel_Function (
       	// Stage 4: P-box permutation (32 bits to 32 bits)
       	PBox pbox_inst (
           .p_in(sbox_result),
-          .p_out(pbox_result)
+          .p_out(f_out)
       	);
 
 
