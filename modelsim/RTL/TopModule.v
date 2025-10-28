@@ -8,7 +8,8 @@ module TopModule (
 );
     // SPI signals
     wire [63:0] spi_rx_data;
-    wire [63:0] spi_tx_data;
+    reg [63:0] spi_tx_data;
+    wire [63:0] des_output;
     
     // DES control registers
     reg [63:0] key_reg;
@@ -24,14 +25,14 @@ module TopModule (
     // CS synchronizer
     reg cs_meta, cs_sync, cs_prev;
     wire cs_rise;
-    reg cs_rise_delayed;  // delayed by 1 cycle - safe data capture
+    reg cs_rise_delayed;
     
-    // Transaction state: 0=KEY, 1=DATA, 2=CONTROL, 3=WAIT
+    // 0=KEY, 1=DATA, 2=CONTROL, 3=WAIT
     reg [1:0] transaction_state;
     
     // Delayed trigger flag
     reg trigger_operation;
-
+    
     SPI spi_inst (
         .rst        (~rst),
         .sclk       (sclk),
@@ -51,8 +52,20 @@ module TopModule (
         .input_text   (data_reg),
         .done_encrypt (done_encrypt),
         .done_decrypt (done_decrypt),
-        .output_text  (spi_tx_data)
+        .output_text  (des_output)
     );
+    
+    always @(posedge clk or posedge rst) begin
+        if (rst) begin
+            spi_tx_data <= 64'h0;
+        end else begin
+            if (transaction_state == 2'd3 && (done_encrypt_latched || done_decrypt_latched)) begin
+                spi_tx_data <= des_output;
+            end else begin
+                spi_tx_data <= 64'h0;
+            end
+        end
+    end
     
     always @(posedge clk or posedge rst) begin
         if (rst) begin
@@ -68,7 +81,7 @@ module TopModule (
         end
     end
     assign cs_rise = (cs_prev == 1'b0) && (cs_sync == 1'b1);
-
+    
     always @(posedge clk or posedge rst) begin
         if (rst) begin
             transaction_state <= 2'd0;
@@ -77,7 +90,7 @@ module TopModule (
             crypt <= 1'b0;
             trigger_operation <= 1'b0;
         end else begin
-            trigger_operation <= 1'b0;  // clear trigger
+            trigger_operation <= 1'b0;  // clear
             
             if (cs_rise_delayed) begin
                 case (transaction_state)
@@ -124,8 +137,7 @@ module TopModule (
             start_decrypt <= 1'b0;
         end
     end
-
-    // active
+    
     always @(posedge clk or posedge rst) begin
         if (rst) begin
             active <= 1'b0;
@@ -141,6 +153,7 @@ module TopModule (
             done_encrypt_latched <= 1'b0;
             done_decrypt_latched <= 1'b0;
         end else begin
+            // Latch done signals
             if (done_encrypt) begin
                 done_encrypt_latched <= 1'b1;
             end
@@ -148,6 +161,7 @@ module TopModule (
                 done_decrypt_latched <= 1'b1;
             end
             
+            // Clear - starting new transaction
             if (cs_rise_delayed && transaction_state == 2'd0) begin
                 done_encrypt_latched <= 1'b0;
                 done_decrypt_latched <= 1'b0;
