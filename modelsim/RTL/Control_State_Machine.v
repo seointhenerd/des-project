@@ -109,11 +109,9 @@ module Control_State_Machine (
                     
                     if (start_encrypt) begin
                         mode <= 1'b0;  // Encrypt
-                        //output_text <= 64'h0;
                         state <= INIT_PERM;
                     end else if (start_decrypt) begin
                         mode <= 1'b1;  // Decrypt
-                        //output_text <= 64'h0;
                         state <= INIT_PERM;
                     end
                 end

@@ -486,11 +486,5 @@ module tb_TopModule;
         $display("============");
 	$stop;
     end
-    
-    //initial begin
-        //#200000;
-        //$display("\nERROR: Global timeout");
-     
-    //end
-    
+
 endmodule
