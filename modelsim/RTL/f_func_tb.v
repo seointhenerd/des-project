@@ -19,7 +19,7 @@
       	end
   endmodule */
 
-/*
+
  module tb_Feistel_Diagnostic;
 
       // Test inputs
@@ -166,7 +166,7 @@
 
       end
 
-  endmodule  */
+  endmodule  
 
 /*
  module tb_SBox_Verify;
@@ -264,7 +264,7 @@
   endmodule */
 
 
-
+/*
  module tb_Feistel_Zero_Test;
 
       reg  [31:0] R_in;
@@ -342,4 +342,4 @@
 
       end
 
-  endmodule
+  endmodule */

@@ -32,9 +32,6 @@ module Feistel_Function (
           .p_out(pbox_result)
       	);
 
-	//xor final result with subkey
-	assign f_our = pbox_result ^ subkey;
-	
 
 
   endmodule

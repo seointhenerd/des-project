@@ -9,6 +9,7 @@ module Feistel_Function (
      	wire [47:0] expansion_result; 
       	wire [47:0] xor_result;    
       	wire [31:0] sbox_result;  
+	wire [31:0] pbox_result;
 
       	// Stage 1: Expansion (32 bits to 48 bits)
       	Expansion exp_inst (
@@ -28,8 +29,12 @@ module Feistel_Function (
       	// Stage 4: P-box permutation (32 bits to 32 bits)
       	PBox pbox_inst (
           .p_in(sbox_result),
-          .p_out(f_out)
+          .p_out(pbox_result)
       	);
 
-//only output sbox
+	//xor final result with subkey
+	assign f_outs = pbox_result ^ subkey;
+	
+
+
   endmodule
