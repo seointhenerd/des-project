@@ -231,3 +231,15 @@ run -all
 # PASS: Test 4 out = 11000001010100101111110101010110
 # PASS: Test 5 out = 01100100111110111101100000111100
 # PASS: Test 6 out = 11011001110011100011110111001011
+vsim f_function.tb_Feistel_SimpleCase -voptargs=+acc
+# End time: 11:06:04 on Oct 28,2025, Elapsed time: 0:01:00
+# Errors: 2799, Warnings: 0
+# vsim f_function.tb_Feistel_SimpleCase -voptargs="+acc" 
+# Start time: 11:06:04 on Oct 28,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.tb_Feistel_SimpleCase(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)

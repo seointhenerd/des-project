@@ -1,9 +1,9 @@
-/home/u1419358/des-project/modelsim/RTL/feistel_tb.v {1 {vlog -work work -vopt -stats=none /home/u1419358/des-project/modelsim/RTL/feistel_tb.v
+/home/u1419358/des-project/modelsim/RTL/sbox_tb.v {1 {vlog -work work -vopt -stats=none /home/u1419358/des-project/modelsim/RTL/sbox_tb.v
 QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019
--- Compiling module tb_Feistel_SimpleCase
+-- Compiling module tb_sbox
 
 Top level modules:
-	tb_Feistel_SimpleCase
+	tb_sbox
 
 } {} {}} /home/u1419358/des-project/modelsim/RTL/f_func.v {1 {vlog -work f_function -vopt -stats=none /home/u1419358/des-project/modelsim/RTL/f_func.v
 QuestaSim-64 vlog 2019.4 Compiler 2019.10 Oct 15 2019

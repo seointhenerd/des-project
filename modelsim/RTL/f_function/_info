@@ -28,16 +28,16 @@ o-quiet -auto_acc_if_foreign -work f_function
 R2
 n@_opt1
 R3
+R0
 T_opt2
-!s110 1761669004
-VVhO>R^PZG3cidE2IAjf_91
-04 21 4 work tb_Feistel_Diagnostic fast 0
-=1-18c04d8cebf4-6900ef8b-b6ae4-1cafc1
+!s110 1761671165
+VBRbVEIYCg4KCzLYloX8681
+04 21 4 work tb_Feistel_SimpleCase fast 0
+=1-18c04d8cebf4-6900f7fd-3b250-1cbae6
 R1
 R2
 n@_opt2
 R3
-R0
 vExpansion
 Z4 !s110 1761671088
 !i10b 1
