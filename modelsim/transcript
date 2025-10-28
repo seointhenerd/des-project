@@ -126,3 +126,108 @@ run -all
 # Compile of feistel_tb.v was successful.
 # Compile of sbox_tb.v failed with 1 errors.
 # 8 compiles, 1 failed with 1 error.
+# Compile of f_func.v was successful.
+# Compile of expansion.v was successful.
+# Compile of sbox.v was successful.
+# Compile of pbox.v was successful.
+# Compile of sbox_array.v was successful.
+# Compile of f_func_tb.v was successful.
+# Compile of feistel_tb.v was successful.
+# Compile of sbox_tb.v failed with 1 errors.
+# 8 compiles, 1 failed with 1 error.
+# Compile of f_func.v was successful.
+# Compile of expansion.v was successful.
+# Compile of sbox.v was successful.
+# Compile of pbox.v was successful.
+# Compile of sbox_array.v was successful.
+# Compile of f_func_tb.v was successful.
+# Compile of feistel_tb.v was successful.
+# Compile of sbox_tb.v was successful.
+# 8 compiles, 0 failed with no errors.
+vsim f_function.tb_sbox
+# End time: 11:00:04 on Oct 28,2025, Elapsed time: 0:21:13
+# Errors: 3229, Warnings: 0
+# vsim f_function.tb_sbox 
+# Start time: 11:00:04 on Oct 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_sbox(fast)
+run -all
+# PASS: out = 11101111101001110010110001001101
+# PASS: Test 1 out = 11101111101001110010110001000001
+# PASS: Test 2 out = 01000001000011011100000110110010
+# PASS: Test 3 out = 01000111100101011100001001111000
+# PASS: Test 4 out = 11000001010100101111110101010110
+# PASS: Test 5 out = 01100100111110111101100000111100
+# FAIL: Test 6 out = 11011001110011100011110111001011 (expected 11011001111011001110001111011011)
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb_sbox(fast)
+run -all
+# PASS: out = 11101111101001110010110001001101
+# PASS: Test 1 out = 11101111101001110010110001000001
+# PASS: Test 2 out = 01000001000011011100000110110010
+# PASS: Test 3 out = 01000111100101011100001001111000
+# PASS: Test 4 out = 11000001010100101111110101010110
+# PASS: Test 5 out = 01100100111110111101100000111100
+# FAIL: Test 6 out = 11011001110011100011110111001011 (expected 11011001111011001110001111011011)
+# Compile of f_func.v was successful.
+# Compile of expansion.v was successful.
+# Compile of sbox.v was successful.
+# Compile of pbox.v was successful.
+# Compile of sbox_array.v was successful.
+# Compile of f_func_tb.v was successful.
+# Compile of feistel_tb.v was successful.
+# Compile of sbox_tb.v was successful.
+# 8 compiles, 0 failed with no errors.
+vsim f_function.tb_sbox
+# End time: 11:01:43 on Oct 28,2025, Elapsed time: 0:01:39
+# Errors: 2185, Warnings: 0
+# vsim f_function.tb_sbox 
+# Start time: 11:01:43 on Oct 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_sbox(fast)
+run -all
+# PASS: out = 11101111101001110010110001001101
+# PASS: Test 1 out = 11101111101001110010110001000001
+# PASS: Test 2 out = 01000001000011011100000110110010
+# PASS: Test 3 out = 01000111100101011100001001111000
+# PASS: Test 4 out = 11000001010100101111110101010110
+# PASS: Test 5 out = 01100100111110111101100000111100
+# FAIL: Test 6 out = 11011001110011100011110111001011 (expected 1101_1001_1110_1100_1110_0011_1101_1011)
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb_sbox(fast)
+# Compile of f_func.v was successful.
+# Compile of expansion.v was successful.
+# Compile of sbox.v was successful.
+# Compile of pbox.v was successful.
+# Compile of sbox_array.v was successful.
+# Compile of f_func_tb.v was successful.
+# Compile of feistel_tb.v was successful.
+# Compile of sbox_tb.v was successful.
+# 8 compiles, 0 failed with no errors.
+run -all
+# PASS: out = 11101111101001110010110001001101
+# PASS: Test 1 out = 11101111101001110010110001000001
+# PASS: Test 2 out = 01000001000011011100000110110010
+# PASS: Test 3 out = 01000111100101011100001001111000
+# PASS: Test 4 out = 11000001010100101111110101010110
+# PASS: Test 5 out = 01100100111110111101100000111100
+# FAIL: Test 6 out = 11011001110011100011110111001011 (expected 1101_1001_1110_1100_1110_0011_1101_1011)
+vsim f_function.tb_sbox
+# End time: 11:05:04 on Oct 28,2025, Elapsed time: 0:03:21
+# Errors: 2803, Warnings: 0
+# vsim f_function.tb_sbox 
+# Start time: 11:05:04 on Oct 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_sbox(fast)
+run -all
+# PASS: out = 11101111101001110010110001001101
+# PASS: Test 1 out = 11101111101001110010110001000001
+# PASS: Test 2 out = 01000001000011011100000110110010
+# PASS: Test 3 out = 01000111100101011100001001111000
+# PASS: Test 4 out = 11000001010100101111110101010110
+# PASS: Test 5 out = 01100100111110111101100000111100
+# PASS: Test 6 out = 11011001110011100011110111001011
