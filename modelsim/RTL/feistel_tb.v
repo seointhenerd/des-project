@@ -42,107 +42,71 @@ module tb_Feistel_Internal;
           $display("Feistel Function Diagnostic Test");
           $display("========================================\n");
 
-          // Test case: DES Round 1
-          R_in   = 32'hF0AAF0AA;
-          subkey = 48'h1B02EFFC7072;
 
-          // Expected values (calculated from DES specification)
-          // E(R0) with R0 = 0xF0AAF0AA
-          expected_expansion = 48'h7A15557A1555;
-          // E(R0) XOR K1
-          expected_xor = 48'h6117ba866527;
-          // After S-boxes (need to calculate)
-          expected_sbox = 32'h234AA9BB;
-          // After P-box
-          expected_final = 32'h00EF5700;
+ 	// Test case: DES Round 2
+ 	$display("\n========================================");
+  	$display("Test Case: DES Round 2");
+ 	$display("========================================\n");
 
-          #10; // Wait for combinational logic to settle
+ 	R_in   = 32'b0101_0011_1001_1010_0010_1001_0001_0101;
+  	subkey = 48'b0101_0100_0111_1110_1110_1110_0100_1101_0100_0100_0011_1100;
 
-          $display("Input Values:");
-          $display("  R_in   = %h", R_in);
-          $display("  subkey = %h\n", subkey);
+  	// Expected values from CSV Round 2
+ 	expected_expansion = 48'b1111_1110_0000_0010_0001_1010_0101_1000_0110_1100_1001_0110;
+ 	expected_xor = 48'b1111_1110_0000_0010_0001_1010_0101_1000_0110_1100_1001_0110;
+  	expected_sbox = 32'b1101_0000_0110_1100_1111_1111_1111_1110;
+  	expected_final = 32'b0011_1011_1011_0111_1011_0100_1110_1111;
 
-          // ================================================================
-          // Stage 1: Test Expansion
-          // ================================================================
-          $display("Stage 1: Expansion (32 -> 48 bits)");
-          $display("  Input:    R_in = %h", R_in);
-          $display("  Output:   E(R) = %h", expanded);
-          $display("  Expected: E(R) = %h", expected_expansion);
+  #10; // Wait for combinational logic to settle
 
-          if (expanded == expected_expansion) begin
-              $display("  PASS: Expansion correct\n");
-          end else begin
-              $display("  FAIL: Expansion incorrect!");
-              $display("  Let's check bit-by-bit:");
-              $display("  R_in bits: %b", R_in);
-              $display("  E(R) got:  %b", expanded);
-              $display("  E(R) exp:  %b\n", expected_expansion);
-          end
+  $display("Input Values:");
+  $display("  R_in   = %b", R_in);
+  $display("  subkey = %b\n", subkey);
 
-          // ================================================================
-          // Stage 2: Test XOR
-          // ================================================================
-          $display("Stage 2: XOR with subkey");
-          $display("  E(R)      = %h", expanded);
-          $display("  subkey    = %h", subkey);
-          $display("  XOR result= %h", xor_result);
-          $display("  Expected  = %h", expected_xor);
+  // Stage 1: Expansion
+  $display("Stage 1: Expansion");
+  $display("  Output:   E(R) = %b", expanded);
+  $display("  Expected: E(R) = %b", expected_expansion);
+  if (expanded == expected_expansion)
+      $display("  PASS: Expansion correct\n");
+  else
+      $display("  FAIL: Expansion incorrect\n");
 
-          if (xor_result == expected_xor) begin
-              $display("  PASS: XOR correct\n");
-          end else begin
-              $display("  FAIL: XOR incorrect!");
-              $display("  Manual check: %h XOR %h = %h\n",
-                       expanded, subkey, expanded ^ subkey);
-          end
+  // Stage 2: XOR
+  $display("Stage 2: XOR with subkey");
+  $display("  XOR result= %b", xor_result);
+  $display("  Expected  = %b", expected_xor);
+  if (xor_result == expected_xor)
+      $display("  PASS: XOR correct\n");
+  else
+      $display("  FAIL: XOR incorrect\n");
 
-          // ================================================================
-          // Stage 3: Test S-box Array
-          // ================================================================
-          $display("Stage 3: S-box Array (48 -> 32 bits)");
-          $display("  Input:  xor_result = %h", xor_result);
-          $display("  Output: sbox_out   = %h", sbox_result);
-          $display("  Expected (verify): = %h\n", expected_sbox);
+  // Stage 3: S-box
+  $display("Stage 3: S-box Array");
+  $display("  Output: sbox_out = %b", sbox_result);
+  $display("  Expected:        = %b", expected_sbox);
+  if (sbox_result == expected_sbox)
+      $display("  PASS: S-box correct\n");
+  else
+      $display("  FAIL: S-box incorrect\n");
 
-          // Break down by individual S-boxes
-          $display("  Individual S-box inputs and outputs:");
-          $display("    S1: input=%b (%h), output=?", xor_result[47:42], xor_result[47:42]);
-          $display("    S2: input=%b (%h), output=?", xor_result[41:36], xor_result[41:36]);
-          $display("    S3: input=%b (%h), output=?", xor_result[35:30], xor_result[35:30]);
-          $display("    S4: input=%b (%h), output=?", xor_result[29:24], xor_result[29:24]);
-          $display("    S5: input=%b (%h), output=?", xor_result[23:18], xor_result[23:18]);
-          $display("    S6: input=%b (%h), output=?", xor_result[17:12], xor_result[17:12]);
-          $display("    S7: input=%b (%h), output=?", xor_result[11:6],  xor_result[11:6]);
-          $display("    S8: input=%b (%h), output=?", xor_result[5:0],   xor_result[5:0]);
-          $display("    Combined sbox_out = %h\n", sbox_result);
+  // Stage 4: P-box
+  $display("Stage 4: P-box");
+  $display("  Output:   pbox_out = %b", pbox_result);
+  $display("  Expected: final   = %b", expected_final);
+  if (pbox_result == expected_final)
+      $display("  PASS: P-box correct\n");
+  else
+      $display("  FAIL: P-box incorrect\n");
 
-          // ================================================================
-          // Stage 4: Test P-box
-          // ================================================================
-          $display("Stage 4: P-box (32 -> 32 bits permutation)");
-          $display("  Input:  sbox_result = %h", sbox_result);
-          $display("  Output: pbox_out    = %h", pbox_result);
-          $display("  Expected final      = %h", expected_final);
+  $display("Final Result for Round 2:");
+  if (pbox_result == expected_final)
+      $display("  OVERALL PASS\n");
+  else
+      $display("  OVERALL FAIL\n");
+                
 
-          if (pbox_result == expected_final) begin
-              $display("  PASS: P-box and overall function correct\n");
-          end else begin
-              $display("  FAIL: P-box output incorrect!\n");
-          end
 
-          // ================================================================
-          // Summary
-          // ================================================================
-          $display("========================================");
-          $display("Final Result:");
-          $display("  Got:      %h", pbox_result);
-          $display("  Expected: %h", expected_final);
-          if (pbox_result == expected_final)
-              $display("  OVERALL PASS");
-          else
-              $display("  OVERALL FAIL");
-          $display("========================================\n");
-
-      end
+end
+endmodule
 

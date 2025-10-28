@@ -243,3 +243,161 @@ vsim f_function.tb_Feistel_SimpleCase -voptargs=+acc
 # Loading work.SBoxArray(fast)
 # Loading work.SBox(fast)
 # Loading work.PBox(fast)
+# Compile of feistel_tb.v failed with 1 errors.
+# Compile of feistel_tb.v was successful with warnings.
+vsim f_function.tb_Feistel_Internal
+# End time: 11:18:23 on Oct 28,2025, Elapsed time: 0:12:19
+# Errors: 4543, Warnings: 0
+# vsim f_function.tb_Feistel_Internal 
+# Start time: 11:18:23 on Oct 28,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.tb_Feistel_Internal(fast)
+vsim f_function.tb_Feistel_Internal
+# End time: 11:20:56 on Oct 28,2025, Elapsed time: 0:02:33
+# Errors: 3677, Warnings: 0
+# vsim f_function.tb_Feistel_Internal 
+# Start time: 11:20:56 on Oct 28,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb_Feistel_Internal(fast)
+vsim f_function.tb_Feistel_Internal
+# End time: 11:21:30 on Oct 28,2025, Elapsed time: 0:00:34
+# Errors: 3679, Warnings: 0
+# vsim f_function.tb_Feistel_Internal 
+# Start time: 11:21:30 on Oct 28,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb_Feistel_Internal(fast)
+run -all
+# ========================================
+# Feistel Function Diagnostic Test
+# ========================================
+# 
+# 
+# ========================================
+# Test Case: DES Round 2
+# ========================================
+# 
+# Input Values:
+#   R_in   = 00606466
+#   subkey = 121efbb4e767
+# 
+# Stage 1: Expansion
+#   Output:   E(R) = 00030030830c
+#   Expected: E(R) = a00cc18cc8cc
+#   FAIL: Expansion incorrect
+# 
+# Stage 2: XOR with subkey
+#   XOR result= 121dfb84646b
+#   Expected  = fe17373ce8ab
+#   FAIL: XOR incorrect
+# 
+# Stage 3: S-box Array
+#   Output: sbox_out = dd37bfea
+#   Expected:        = 00c6cfce
+#   FAIL: S-box incorrect
+# 
+# Stage 4: P-box
+#   Output:   pbox_out = bdfaf49f
+#   Expected: final   = 3bdfd7bf
+#   FAIL: P-box incorrect
+# 
+# Final Result for Round 2:
+#   OVERALL FAIL
+# 
+# Compile of f_func.v was successful.
+# Compile of expansion.v was successful.
+# Compile of sbox.v was successful.
+# Compile of pbox.v was successful.
+# Compile of sbox_array.v was successful.
+# Compile of f_func_tb.v was successful.
+# Compile of feistel_tb.v was successful.
+# Compile of sbox_tb.v was successful.
+# 8 compiles, 0 failed with no errors.
+vsim f_function.tb_Feistel_Internal
+# End time: 14:13:00 on Oct 28,2025, Elapsed time: 2:51:30
+# Errors: 5323, Warnings: 0
+# vsim f_function.tb_Feistel_Internal 
+# Start time: 14:13:00 on Oct 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_Feistel_Internal(fast)
+run -all
+# ========================================
+# Feistel Function Diagnostic Test
+# ========================================
+# 
+# 
+# ========================================
+# Test Case: DES Round 2
+# ========================================
+# 
+# Input Values:
+#   R_in   = 539a2915
+#   subkey = 547eee4d443c
+# 
+# Stage 1: Expansion
+#   Output:   E(R) = aa7cf41528aa
+#   Expected: E(R) = fe021a586c96
+#   FAIL: Expansion incorrect
+# 
+# Stage 2: XOR with subkey
+#   XOR result= fe021a586c96
+#   Expected  = fe021a586c96
+#   PASS: XOR correct
+# 
+# Stage 3: S-box Array
+#   Output: sbox_out = d06cfffe
+#   Expected:        = d06cfffe
+#   PASS: S-box correct
+# 
+# Stage 4: P-box
+#   Output:   pbox_out = 3bb7b4ef
+#   Expected: final   = 3bb7b4ef
+#   PASS: P-box correct
+# 
+# Final Result for Round 2:
+#   OVERALL PASS
+# 
+# Compile of feistel_tb.v was successful.
+vsim f_function.tb_Feistel_Internal
+# End time: 14:14:50 on Oct 28,2025, Elapsed time: 0:01:50
+# Errors: 4600, Warnings: 0
+# vsim f_function.tb_Feistel_Internal 
+# Start time: 14:14:50 on Oct 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_Feistel_Internal(fast)
+run -all
+# ========================================
+# Feistel Function Diagnostic Test
+# ========================================
+# 
+# 
+# ========================================
+# Test Case: DES Round 2
+# ========================================
+# 
+# Input Values:
+#   R_in   = 01010011100110100010100100010101
+#   subkey = 010101000111111011101110010011010100010000111100
+# 
+# Stage 1: Expansion
+#   Output:   E(R) = 101010100111110011110100000101010010100010101010
+#   Expected: E(R) = 111111100000001000011010010110000110110010010110
+#   FAIL: Expansion incorrect
+# 
+# Stage 2: XOR with subkey
+#   XOR result= 111111100000001000011010010110000110110010010110
+#   Expected  = 111111100000001000011010010110000110110010010110
+#   PASS: XOR correct
+# 
+# Stage 3: S-box Array
+#   Output: sbox_out = 11010000011011001111111111111110
+#   Expected:        = 11010000011011001111111111111110
+#   PASS: S-box correct
+# 
+# Stage 4: P-box
+#   Output:   pbox_out = 00111011101101111011010011101111
+#   Expected: final   = 00111011101101111011010011101111
+#   PASS: P-box correct
+# 
+# Final Result for Round 2:
+#   OVERALL PASS
+# 
