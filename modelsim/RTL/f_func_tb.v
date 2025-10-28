@@ -53,6 +53,21 @@ module tb_Feistel_Simple;
               	$display("FAIL: f_out = %h", f_out);
 
 
+		  #10
+  		// DES Round 3 test
+   		$display("\n========================================");
+    		$display("Test Case: DES Round 3");
+   		$display("========================================\n");
+  		R_in = 32'b0000_1000_1001_1111_0001_1111_0011_1000;
+  		subkey = 48'b1111_0010_1111_0101_0110_0000_0100_1001_0101_1000_1100_1000;
+  		expected_out = 32'b1100_1000_0100_1111_1111_1111_1111_1100;
+            	#10;
+            	if (f_out == expected_out)
+                	$display("PASS: f_out = %h", f_out);
+            	else
+                	$display("FAIL: f_out = %h", f_out);
+
+
       	end
   endmodule
 
