@@ -10,6 +10,8 @@ module tb_Feistel_Simple;
       	Feistel_Function DUT (.R_in(R_in), .subkey(subkey), .f_out(f_out));
 
       	initial begin
+		#5
+
 		// DES Round 0 test
  		$display("\n========================================");
   		$display("Test Case: DES Round 0");
@@ -66,6 +68,69 @@ module tb_Feistel_Simple;
                 	$display("PASS: f_out = %h", f_out);
             	else
                 	$display("FAIL: f_out = %h", f_out);
+
+
+  		#10
+  		// DES Round 4 test
+   		$display("\n========================================");
+    		$display("Test Case: DES Round 4");
+   		$display("========================================\n");
+  		R_in = 32'b0;
+  		subkey = 48'b0;
+  		expected_out = 32'b1101_1000_1101_1000_1101_1011_1011_1100;
+            	#10;
+            	if (f_out == expected_out)
+                	$display("PASS: f_out = %h", f_out);
+            	else
+                	$display("FAIL: f_out = %h", f_out);
+
+		#10
+  		// DES Round 5 test
+   		$display("\n========================================");
+    		$display("Test Case: DES Round 5");
+   		$display("========================================\n");
+  		R_in = 32'hffff_ffff_ffff_ffff;
+  		subkey = 48'b1111_1111_1111_1111_1111_1111_1111_1111_1111_1111_1111_1111;
+  		expected_out = 32'b11011000110110001101101110111100;
+            	#10;
+            	if (f_out == expected_out)
+                	$display("PASS: f_out = %h", f_out);
+            	else
+                	$display("FAIL: f_out = %h", f_out);
+
+
+		#10
+  		// DES Round 6 test
+   		$display("\n========================================");
+    		$display("Test Case: DES Round 6");
+   		$display("========================================\n");
+  		R_in = 32'b00000000000000010000000000000000;
+  		subkey = 48'b0;
+  		expected_out = 32'b11011000100111001101101101111100;
+            	#10;
+            	if (f_out == expected_out)
+                	$display("PASS: f_out = %h", f_out);
+            	else
+                	$display("FAIL: f_out = %h", f_out);
+
+
+		#10
+  		// DES Round 7 test
+   		$display("\n========================================");
+    		$display("Test Case: DES Round 7");
+   		$display("========================================\n");
+  		R_in = 32'b01011100110100111001100001110100;
+  		subkey = 48'b111010101011110111000010110110001100111011111011;
+  		expected_out = 32'b01010000001000001110100110110010;
+            	#10;
+            	if (f_out == expected_out)
+                	$display("PASS: f_out = %h", f_out);
+            	else
+                	$display("FAIL: f_out = %h", f_out);
+
+		
+	$stop;
+
 
 
       	end

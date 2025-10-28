@@ -745,3 +745,705 @@ run
 # ========================================
 # 
 # PASS: f_out = c84ffffc
+add wave -position insertpoint  \
+sim:/tb_Feistel_Simple/R_in \
+sim:/tb_Feistel_Simple/subkey \
+sim:/tb_Feistel_Simple/f_out \
+sim:/tb_Feistel_Simple/expected_out
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading work.tb_Feistel_Simple(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+run
+# 
+# ========================================
+# Test Case: DES Round 0
+# ========================================
+# 
+# PASS: f_out = 4b7dd382
+# 
+# ========================================
+# Test Case: DES Round 1
+# ========================================
+# 
+# PASS: f_out = d3fca973
+# 
+# ========================================
+# Test Case: DES Round 2
+# ========================================
+# 
+# PASS: f_out = 3bb7b4ef
+# 
+# ========================================
+# Test Case: DES Round 3
+# ========================================
+# 
+# PASS: f_out = c84ffffc
+run
+vsim f_function.tb_sbox
+# End time: 15:28:46 on Oct 28,2025, Elapsed time: 0:30:57
+# Errors: 6985, Warnings: 0
+# vsim f_function.tb_sbox 
+# Start time: 15:28:46 on Oct 28,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.tb_sbox(fast)
+vsim f_function.tb_Feistel_Internal
+# End time: 15:28:55 on Oct 28,2025, Elapsed time: 0:00:09
+# Errors: 7001, Warnings: 0
+# vsim f_function.tb_Feistel_Internal 
+# Start time: 15:28:55 on Oct 28,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.tb_Feistel_Internal(fast)
+vsim f_function.tb_Feistel_Simple -voptargs=+acc
+# End time: 15:29:58 on Oct 28,2025, Elapsed time: 0:01:03
+# Errors: 7015, Warnings: 0
+# vsim f_function.tb_Feistel_Simple -voptargs="+acc" 
+# Start time: 15:29:58 on Oct 28,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.tb_Feistel_Simple(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+add wave -position insertpoint  \
+sim:/tb_Feistel_Simple/R_in \
+sim:/tb_Feistel_Simple/subkey \
+sim:/tb_Feistel_Simple/f_out \
+sim:/tb_Feistel_Simple/expected_out
+run -all
+# 
+# ========================================
+# Test Case: DES Round 0
+# ========================================
+# 
+# PASS: f_out = 4b7dd382
+# 
+# ========================================
+# Test Case: DES Round 1
+# ========================================
+# 
+# PASS: f_out = d3fca973
+# 
+# ========================================
+# Test Case: DES Round 2
+# ========================================
+# 
+# PASS: f_out = 3bb7b4ef
+# 
+# ========================================
+# Test Case: DES Round 3
+# ========================================
+# 
+# PASS: f_out = c84ffffc
+# Compile of f_func_tb.v was successful.
+vsim f_function.tb_Feistel_Simple -voptargs=+acc
+# End time: 15:32:50 on Oct 28,2025, Elapsed time: 0:02:52
+# Errors: 7041, Warnings: 0
+# vsim f_function.tb_Feistel_Simple -voptargs="+acc" 
+# Start time: 15:32:50 on Oct 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_Feistel_Simple(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+add wave -position insertpoint  \
+sim:/tb_Feistel_Simple/R_in \
+sim:/tb_Feistel_Simple/subkey \
+sim:/tb_Feistel_Simple/f_out \
+sim:/tb_Feistel_Simple/expected_out
+run
+# 
+# ========================================
+# Test Case: DES Round 0
+# ========================================
+# 
+# PASS: f_out = 4b7dd382
+# 
+# ========================================
+# Test Case: DES Round 1
+# ========================================
+# 
+# PASS: f_out = d3fca973
+# 
+# ========================================
+# Test Case: DES Round 2
+# ========================================
+# 
+# PASS: f_out = 3bb7b4ef
+# 
+# ========================================
+# Test Case: DES Round 3
+# ========================================
+# 
+# PASS: f_out = c84ffffc
+vsim f_function.tb_Feistel_Internal
+# End time: 15:35:38 on Oct 28,2025, Elapsed time: 0:02:48
+# Errors: 7041, Warnings: 0
+# vsim f_function.tb_Feistel_Internal 
+# Start time: 15:35:38 on Oct 28,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading work.tb_Feistel_Internal(fast)
+vsim f_function.tb_Feistel_Internal -voptargs=+acc
+# End time: 15:35:54 on Oct 28,2025, Elapsed time: 0:00:16
+# Errors: 7038, Warnings: 0
+# vsim f_function.tb_Feistel_Internal -voptargs="+acc" 
+# Start time: 15:35:54 on Oct 28,2025
+# ** Note: (vsim-3812) Design is being optimized...
+# Loading work.tb_Feistel_Internal(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+add wave -position insertpoint  \
+sim:/tb_Feistel_Internal/R_in \
+sim:/tb_Feistel_Internal/subkey \
+sim:/tb_Feistel_Internal/expanded \
+sim:/tb_Feistel_Internal/xor_result \
+sim:/tb_Feistel_Internal/sbox_result \
+sim:/tb_Feistel_Internal/pbox_result \
+sim:/tb_Feistel_Internal/expected_expansion \
+sim:/tb_Feistel_Internal/expected_xor \
+sim:/tb_Feistel_Internal/expected_sbox \
+sim:/tb_Feistel_Internal/expected_final
+run
+# ========================================
+# Feistel Function Diagnostic Test
+# ========================================
+# 
+# 
+# ========================================
+# Test Case: DES Round 2
+# ========================================
+# 
+# Input Values:
+#   R_in   = 01010011100110100010100100010101
+#   subkey = 010101000111111011101110010011010100010000111100
+# 
+# Stage 1: Expansion
+#   Output:   E(R) = 101010100111110011110100000101010010100010101010
+#   Expected: E(R) = 111111100000001000011010010110000110110010010110
+#   FAIL: Expansion incorrect
+# 
+# Stage 2: XOR with subkey
+#   XOR result= 111111100000001000011010010110000110110010010110
+#   Expected  = 111111100000001000011010010110000110110010010110
+#   PASS: XOR correct
+# 
+# Stage 3: S-box Array
+#   Output: sbox_out = 11010000011011001111111111111110
+#   Expected:        = 11010000011011001111111111111110
+#   PASS: S-box correct
+# 
+# Stage 4: P-box
+#   Output:   pbox_out = 00111011101101111011010011101111
+#   Expected: final   = 00111011101101111011010011101111
+#   PASS: P-box correct
+# 
+# Final Result for Round 2:
+#   OVERALL PASS
+# 
+# Compile of f_func_tb.v was successful.
+vsim f_function.tb_Feistel_Simple -voptargs=+acc
+# End time: 16:41:10 on Oct 28,2025, Elapsed time: 1:05:16
+# Errors: 9169, Warnings: 0
+# vsim f_function.tb_Feistel_Simple -voptargs="+acc" 
+# Start time: 16:41:10 on Oct 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_Feistel_Simple(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+run -all
+# 
+# ========================================
+# Test Case: DES Round 0
+# ========================================
+# 
+# PASS: f_out = 4b7dd382
+# 
+# ========================================
+# Test Case: DES Round 1
+# ========================================
+# 
+# PASS: f_out = d3fca973
+# 
+# ========================================
+# Test Case: DES Round 2
+# ========================================
+# 
+# PASS: f_out = 3bb7b4ef
+# 
+# ========================================
+# Test Case: DES Round 3
+# ========================================
+# 
+# PASS: f_out = c84ffffc
+# 
+# ========================================
+# Test Case: DES Round 4
+# ========================================
+# 
+# PASS: f_out = d8d8dbbc
+# Compile of f_func_tb.v was successful with warnings.
+vsim f_function.tb_Feistel_Simple -voptargs=+acc
+# End time: 16:44:40 on Oct 28,2025, Elapsed time: 0:03:30
+# Errors: 8235, Warnings: 0
+# vsim f_function.tb_Feistel_Simple -voptargs="+acc" 
+# Start time: 16:44:40 on Oct 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_Feistel_Simple(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+run -all
+# 
+# ========================================
+# Test Case: DES Round 0
+# ========================================
+# 
+# PASS: f_out = 4b7dd382
+# 
+# ========================================
+# Test Case: DES Round 1
+# ========================================
+# 
+# PASS: f_out = d3fca973
+# 
+# ========================================
+# Test Case: DES Round 2
+# ========================================
+# 
+# PASS: f_out = 3bb7b4ef
+# 
+# ========================================
+# Test Case: DES Round 3
+# ========================================
+# 
+# PASS: f_out = c84ffffc
+# 
+# ========================================
+# Test Case: DES Round 4
+# ========================================
+# 
+# PASS: f_out = d8d8dbbc
+# 
+# ========================================
+# Test Case: DES Round 5
+# ========================================
+# 
+# PASS: f_out = d8d8dbbc
+# Compile of f_func_tb.v failed with 2 errors.
+# Compile of f_func_tb.v was successful with warnings.
+vsim f_function.tb_Feistel_Simple -voptargs=+acc
+# End time: 16:51:19 on Oct 28,2025, Elapsed time: 0:06:39
+# Errors: 8330, Warnings: 0
+# vsim f_function.tb_Feistel_Simple -voptargs="+acc" 
+# Start time: 16:51:19 on Oct 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_Feistel_Simple(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+run -all
+# 
+# ========================================
+# Test Case: DES Round 0
+# ========================================
+# 
+# PASS: f_out = 4b7dd382
+# 
+# ========================================
+# Test Case: DES Round 1
+# ========================================
+# 
+# PASS: f_out = d3fca973
+# 
+# ========================================
+# Test Case: DES Round 2
+# ========================================
+# 
+# PASS: f_out = 3bb7b4ef
+# 
+# ========================================
+# Test Case: DES Round 3
+# ========================================
+# 
+# PASS: f_out = c84ffffc
+# 
+# ========================================
+# Test Case: DES Round 4
+# ========================================
+# 
+# PASS: f_out = d8d8dbbc
+# 
+# ========================================
+# Test Case: DES Round 5
+# ========================================
+# 
+# PASS: f_out = d8d8dbbc
+# 
+# ========================================
+# Test Case: DES Round 6
+# ========================================
+# 
+# FAIL: f_out = d9dcdbbc
+# Break key hit
+# Compile of f_func_tb.v was successful with warnings.
+vsim f_function.tb_Feistel_Simple -voptargs=+acc
+# End time: 16:53:20 on Oct 28,2025, Elapsed time: 0:02:01
+# Errors: 8300, Warnings: 0
+# vsim f_function.tb_Feistel_Simple -voptargs="+acc" 
+# Start time: 16:53:20 on Oct 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_Feistel_Simple(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+run -all
+# 
+# ========================================
+# Test Case: DES Round 0
+# ========================================
+# 
+# PASS: f_out = 4b7dd382
+# 
+# ========================================
+# Test Case: DES Round 1
+# ========================================
+# 
+# PASS: f_out = d3fca973
+# 
+# ========================================
+# Test Case: DES Round 2
+# ========================================
+# 
+# PASS: f_out = 3bb7b4ef
+# 
+# ========================================
+# Test Case: DES Round 3
+# ========================================
+# 
+# PASS: f_out = c84ffffc
+# 
+# ========================================
+# Test Case: DES Round 4
+# ========================================
+# 
+# PASS: f_out = d8d8dbbc
+# 
+# ========================================
+# Test Case: DES Round 5
+# ========================================
+# 
+# PASS: f_out = d8d8dbbc
+# 
+# ========================================
+# Test Case: DES Round 6
+# ========================================
+# 
+# FAIL: f_out = d8d8dbbc
+add wave -position insertpoint  \
+sim:/tb_Feistel_Simple/R_in \
+sim:/tb_Feistel_Simple/subkey \
+sim:/tb_Feistel_Simple/f_out \
+sim:/tb_Feistel_Simple/expected_out
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb_Feistel_Simple(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+run -all
+# 
+# ========================================
+# Test Case: DES Round 0
+# ========================================
+# 
+# PASS: f_out = 4b7dd382
+# 
+# ========================================
+# Test Case: DES Round 1
+# ========================================
+# 
+# PASS: f_out = d3fca973
+# 
+# ========================================
+# Test Case: DES Round 2
+# ========================================
+# 
+# PASS: f_out = 3bb7b4ef
+# 
+# ========================================
+# Test Case: DES Round 3
+# ========================================
+# 
+# PASS: f_out = c84ffffc
+# 
+# ========================================
+# Test Case: DES Round 4
+# ========================================
+# 
+# PASS: f_out = d8d8dbbc
+# 
+# ========================================
+# Test Case: DES Round 5
+# ========================================
+# 
+# PASS: f_out = d8d8dbbc
+# 
+# ========================================
+# Test Case: DES Round 6
+# ========================================
+# 
+# FAIL: f_out = d8d8dbbc
+# Break key hit
+# Compile of f_func_tb.v was successful with warnings.
+vsim f_function.tb_Feistel_Simple -voptargs=+acc
+# End time: 16:57:54 on Oct 28,2025, Elapsed time: 0:04:34
+# Errors: 8315, Warnings: 0
+# vsim f_function.tb_Feistel_Simple -voptargs="+acc" 
+# Start time: 16:57:54 on Oct 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_Feistel_Simple(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+run -all
+# 
+# ========================================
+# Test Case: DES Round 0
+# ========================================
+# 
+# PASS: f_out = 4b7dd382
+# 
+# ========================================
+# Test Case: DES Round 1
+# ========================================
+# 
+# PASS: f_out = d3fca973
+# 
+# ========================================
+# Test Case: DES Round 2
+# ========================================
+# 
+# PASS: f_out = 3bb7b4ef
+# 
+# ========================================
+# Test Case: DES Round 3
+# ========================================
+# 
+# PASS: f_out = c84ffffc
+# 
+# ========================================
+# Test Case: DES Round 4
+# ========================================
+# 
+# PASS: f_out = d8d8dbbc
+# 
+# ========================================
+# Test Case: DES Round 5
+# ========================================
+# 
+# PASS: f_out = d8d8dbbc
+# 
+# ========================================
+# Test Case: DES Round 6
+# ========================================
+# 
+# PASS: f_out = d89cdb7c
+# Break key hit
+add wave -position insertpoint  \
+sim:/tb_Feistel_Simple/R_in \
+sim:/tb_Feistel_Simple/subkey \
+sim:/tb_Feistel_Simple/f_out \
+sim:/tb_Feistel_Simple/expected_out
+restart
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb_Feistel_Simple(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+run -all
+# 
+# ========================================
+# Test Case: DES Round 0
+# ========================================
+# 
+# PASS: f_out = 4b7dd382
+# 
+# ========================================
+# Test Case: DES Round 1
+# ========================================
+# 
+# PASS: f_out = d3fca973
+# 
+# ========================================
+# Test Case: DES Round 2
+# ========================================
+# 
+# PASS: f_out = 3bb7b4ef
+# 
+# ========================================
+# Test Case: DES Round 3
+# ========================================
+# 
+# PASS: f_out = c84ffffc
+# 
+# ========================================
+# Test Case: DES Round 4
+# ========================================
+# 
+# PASS: f_out = d8d8dbbc
+# 
+# ========================================
+# Test Case: DES Round 5
+# ========================================
+# 
+# PASS: f_out = d8d8dbbc
+# 
+# ========================================
+# Test Case: DES Round 6
+# ========================================
+# 
+# PASS: f_out = d89cdb7c
+restart
+# ** Note: (vsim-8009) Loading existing optimized design _opt1
+# Loading work.tb_Feistel_Simple(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+run -all
+# 
+# ========================================
+# Test Case: DES Round 0
+# ========================================
+# 
+# PASS: f_out = 4b7dd382
+# 
+# ========================================
+# Test Case: DES Round 1
+# ========================================
+# 
+# PASS: f_out = d3fca973
+# 
+# ========================================
+# Test Case: DES Round 2
+# ========================================
+# 
+# PASS: f_out = 3bb7b4ef
+# 
+# ========================================
+# Test Case: DES Round 3
+# ========================================
+# 
+# PASS: f_out = c84ffffc
+# 
+# ========================================
+# Test Case: DES Round 4
+# ========================================
+# 
+# PASS: f_out = d8d8dbbc
+# 
+# ========================================
+# Test Case: DES Round 5
+# ========================================
+# 
+# PASS: f_out = d8d8dbbc
+# 
+# ========================================
+# Test Case: DES Round 6
+# ========================================
+# 
+# PASS: f_out = d89cdb7c
+# Compile of f_func_tb.v failed with 1 errors.
+# Compile of f_func_tb.v was successful with warnings.
+vsim f_function.tb_Feistel_Simple -voptargs=+acc
+# End time: 17:05:17 on Oct 28,2025, Elapsed time: 0:07:23
+# Errors: 8435, Warnings: 0
+# vsim f_function.tb_Feistel_Simple -voptargs="+acc" 
+# Start time: 17:05:17 on Oct 28,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_Feistel_Simple(fast)
+# Loading work.Feistel_Function(fast)
+# Loading work.Expansion(fast)
+# Loading work.SBoxArray(fast)
+# Loading work.SBox(fast)
+# Loading work.PBox(fast)
+run -all
+# 
+# ========================================
+# Test Case: DES Round 0
+# ========================================
+# 
+# PASS: f_out = 4b7dd382
+# 
+# ========================================
+# Test Case: DES Round 1
+# ========================================
+# 
+# PASS: f_out = d3fca973
+# 
+# ========================================
+# Test Case: DES Round 2
+# ========================================
+# 
+# PASS: f_out = 3bb7b4ef
+# 
+# ========================================
+# Test Case: DES Round 3
+# ========================================
+# 
+# PASS: f_out = c84ffffc
+# 
+# ========================================
+# Test Case: DES Round 4
+# ========================================
+# 
+# PASS: f_out = d8d8dbbc
+# 
+# ========================================
+# Test Case: DES Round 5
+# ========================================
+# 
+# PASS: f_out = d8d8dbbc
+# 
+# ========================================
+# Test Case: DES Round 6
+# ========================================
+# 
+# PASS: f_out = d89cdb7c
+# 
+# ========================================
+# Test Case: DES Round 7
+# ========================================
+# 
+# PASS: f_out = 5020e9b2
+# ** Note: $stop    : /home/u1419358/des-project/modelsim/RTL/f_func_tb.v(132)
+#    Time: 155 ns  Iteration: 0  Instance: /tb_Feistel_Simple
+# Break in Module tb_Feistel_Simple at /home/u1419358/des-project/modelsim/RTL/f_func_tb.v line 132
