@@ -1,0 +1,16 @@
+# Cadence Genus(TM) Synthesis Solution, Version 21.15-s080_1, built Sep 23 2022 12:57:55
+
+# Date: Wed Oct 29 12:58:44 2025
+# Host: lab1-22.eng.utah.edu (x86_64 w/Linux 4.18.0-553.78.1.el8_10.x86_64) (8cores*16cpus*1physical cpu*Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz 16384KB)
+# OS:   Red Hat Enterprise Linux release 8.10 (Ootpa)
+
+read_libs {
+  /research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/lib/sclib_tsmc180_ss_nldm.lib \
+  /research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/lib/sclib_tsmc180_tt_nldm.lib \
+  /research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/lib/sclib_tsmc180_ff_nldm.lib
+}
+read_physical /research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/lef/tech.lef
+read_physical [/research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/lef/tech.lef]
+clear
+nano synthesis.tcl
+vim synthesis.tcl

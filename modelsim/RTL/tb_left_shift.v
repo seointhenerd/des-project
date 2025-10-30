@@ -37,6 +37,6 @@ module tb_left_shift;
     check(5'd12, 28'hC300000, 28'h30C0000, "misc r=12");
 
     $display("left_shift TB: all tests passed.");
-    #20; $stop;
+    $stop;
   end
 endmodule
