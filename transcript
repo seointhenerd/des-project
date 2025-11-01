@@ -1,0 +1,139 @@
+# //  Questa Sim-64
+# //  Version 2019.4 linux_x86_64 Oct 15 2019
+# //
+# //  Copyright 1991-2019 Mentor Graphics Corporation
+# //  All Rights Reserved.
+# //
+# //  QuestaSim and its associated documentation contain trade
+# //  secrets and commercial or financial information that are the property of
+# //  Mentor Graphics Corporation and are privileged, confidential,
+# //  and exempt from disclosure under the Freedom of Information Act,
+# //  5 U.S.C. Section 552. Furthermore, this information
+# //  is prohibited from disclosure under the Trade Secrets Act,
+# //  18 U.S.C. Section 1905.
+# //
+# Loading project Post Synthesis
+project open /home/u1425837/des-project/modelsim/IP
+# reading /uusoc/facility/cad_tools/Mentor/modelsim2019.4/questasim/linux_x86_64/../modelsim.ini
+# Loading project IP
+vsim IP.tb_Initial_Permutation -voptargs=+acc
+# vsim IP.tb_Initial_Permutation -voptargs="+acc" 
+# Start time: 12:08:29 on Nov 01,2025
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.tb_Initial_Permutation(fast)
+# Loading work.Initial_Permutation(fast)
+quit -sim
+# End time: 12:08:36 on Nov 01,2025, Elapsed time: 0:00:07
+# Errors: 0, Warnings: 0
+# Compile of Initial_Permutation.v was successful.
+# Compile of tb_Initial_Permutation.v was successful.
+# 2 compiles, 0 failed with no errors.
+vsim IP.tb_Initial_Permutation -voptargs=+acc
+# vsim IP.tb_Initial_Permutation -voptargs="+acc" 
+# Start time: 12:08:41 on Nov 01,2025
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.tb_Initial_Permutation(fast)
+# Loading work.Initial_Permutation(fast)
+run -all
+# Testing IP_table initialization:
+# IP_table[24] = 64 (expected 64)
+# IP_table[39] = 1 (expected 1)
+# IP_table[63] = 7 (expected 7)
+# IP_table[0]  = 58 (expected 58)
+# 
+# Testing all-one input (check X/Z):
+# Output bit  0 (right_half[ 0]) = 1
+# Output bit  1 (right_half[ 1]) = 1
+# Output bit  2 (right_half[ 2]) = 1
+# Output bit  3 (right_half[ 3]) = 1
+# Output bit  4 (right_half[ 4]) = 1
+# Output bit  5 (right_half[ 5]) = 1
+# Output bit  6 (right_half[ 6]) = 1
+# Output bit  7 (right_half[ 7]) = 1
+# Output bit  8 (right_half[ 8]) = 1
+# Output bit  9 (right_half[ 9]) = 1
+# Output bit 10 (right_half[10]) = 1
+# Output bit 11 (right_half[11]) = 1
+# Output bit 12 (right_half[12]) = 1
+# Output bit 13 (right_half[13]) = 1
+# Output bit 14 (right_half[14]) = 1
+# Output bit 15 (right_half[15]) = 1
+# Output bit 16 (right_half[16]) = 1
+# Output bit 17 (right_half[17]) = 1
+# Output bit 18 (right_half[18]) = 1
+# Output bit 19 (right_half[19]) = 1
+# Output bit 20 (right_half[20]) = 1
+# Output bit 21 (right_half[21]) = 1
+# Output bit 22 (right_half[22]) = 1
+# Output bit 23 (right_half[23]) = 1
+# Output bit 24 (right_half[24]) = 1
+# Output bit 25 (right_half[25]) = 1
+# Output bit 26 (right_half[26]) = 1
+# Output bit 27 (right_half[27]) = 1
+# Output bit 28 (right_half[28]) = 1
+# Output bit 29 (right_half[29]) = 1
+# Output bit 30 (right_half[30]) = 1
+# Output bit 31 (right_half[31]) = 1
+# Output bit 32 (left_half[ 0]) = 1
+# Output bit 33 (left_half[ 1]) = 1
+# Output bit 34 (left_half[ 2]) = 1
+# Output bit 35 (left_half[ 3]) = 1
+# Output bit 36 (left_half[ 4]) = 1
+# Output bit 37 (left_half[ 5]) = 1
+# Output bit 38 (left_half[ 6]) = 1
+# Output bit 39 (left_half[ 7]) = 1
+# Output bit 40 (left_half[ 8]) = 1
+# Output bit 41 (left_half[ 9]) = 1
+# Output bit 42 (left_half[10]) = 1
+# Output bit 43 (left_half[11]) = 1
+# Output bit 44 (left_half[12]) = 1
+# Output bit 45 (left_half[13]) = 1
+# Output bit 46 (left_half[14]) = 1
+# Output bit 47 (left_half[15]) = 1
+# Output bit 48 (left_half[16]) = 1
+# Output bit 49 (left_half[17]) = 1
+# Output bit 50 (left_half[18]) = 1
+# Output bit 51 (left_half[19]) = 1
+# Output bit 52 (left_half[20]) = 1
+# Output bit 53 (left_half[21]) = 1
+# Output bit 54 (left_half[22]) = 1
+# Output bit 55 (left_half[23]) = 1
+# Output bit 56 (left_half[24]) = 1
+# Output bit 57 (left_half[25]) = 1
+# Output bit 58 (left_half[26]) = 1
+# Output bit 59 (left_half[27]) = 1
+# Output bit 60 (left_half[28]) = 1
+# Output bit 61 (left_half[29]) = 1
+# Output bit 62 (left_half[30]) = 1
+# Output bit 63 (left_half[31]) = 1
+# 
+# Testing simple input (only bit 0 = 1):
+# Input    = 0000000000000001
+# Left     = 00000080
+# Right    = 00000000
+# Combined = 0000008000000000
+# 
+# Testing all-zero input:
+# PASSED: All zeros test
+# 
+# Testing DES standard input vector:
+# Input    = 0123456789abcdef
+# Left     = cc00ccff (expected: cc00ccff)
+# Right    = f0aaf0aa (expected: f0aaf0aa)
+# PASSED: DES test vector
+# 
+# Testing input 1122334455667788 :
+# Input    = 1122334455667788
+# Left     = 78557855 (expected: 78557855)
+# Right    = 80668066 (expected: 80668066)
+# PASSED: DES test vector
+# 
+# ========================================
+# ALL TESTS PASSED!
+# ========================================
+# 
+# ** Note: $stop    : /home/u1425837/des-project/modelsim/RTL/tb_Initial_Permutation.v(114)
+#    Time: 51 ns  Iteration: 0  Instance: /tb_Initial_Permutation
+# Break in Module tb_Initial_Permutation at /home/u1425837/des-project/modelsim/RTL/tb_Initial_Permutation.v line 114
+# End time: 12:08:53 on Nov 01,2025, Elapsed time: 0:00:12
+# Errors: 0, Warnings: 0
