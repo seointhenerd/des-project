@@ -1,16 +1,9 @@
-// -----------------------------------------------------------------------------
-// Simple SPI interface for 64-bit transfer (Mode 0)
-// [28]=MSB, [1]=LSB convention not relevant here ? pure serial link.
-// - Receives 64 bits on MOSI (sampled on rising edge of SCLK when CS=0)
-// - Shifts out 64 bits on MISO (MSB first, updated on falling edge)
-// - Latches input_text after 64 bits received
-// -----------------------------------------------------------------------------
 module SPI (
   input  wire        rst,         // active-low asynchronous reset
   input  wire        sclk,        // SPI clock from master (CPOL=0, CPHA=0)
   input  wire        cs_n,        // chip select, active low
   input  wire        mosi,        // master out
-  output wire        miso,        // master in (tri-stated when CS_n=1)
+  output wire        miso,        // master in (drives 0 when CS_n=1)
   input  wire [63:0] output_text, // 64-bit word to transmit
   output reg  [63:0] input_text   // 64-bit word received
 );
@@ -20,7 +13,8 @@ module SPI (
   reg [6:0]  bit_cnt;
   reg        miso_q;
 
-  assign miso = (cs_n == 1'b0) ? miso_q : 1'bz;
+  // Removed 'bz; mask with ~cs_n instead
+  assign miso = miso_q & ~cs_n;
 
   // Prime MISO when chip select goes low (first bit ready before 1st clock)
   always @(negedge cs_n or negedge rst) begin
@@ -55,7 +49,7 @@ module SPI (
       miso_q    <= 1'b0;
       shreg_out <= 64'd0;
     end else if (cs_n) begin
-      miso_q <= 1'b0;
+      miso_q <= 1'b0;  // safe value while deselected (masked off anyway)
     end else begin
       miso_q    <= shreg_out[63];
       shreg_out <= {shreg_out[62:0], 1'b0};
