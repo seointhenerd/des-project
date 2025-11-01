@@ -12,7 +12,7 @@ puts "Hostname : [info hostname]"
 ##############################################################################
 
 
-set DESIGN <design name>
+set DESIGN TopModule
 set GEN_EFF medium
 set MAP_OPT_EFF high
 set DATE [clock format [clock seconds] -format "%b%d-%T"] 
@@ -59,7 +59,22 @@ set_db / .lp_insert_clock_gating false
 ####################################################################
 
 
-read_hdl <hdl file name(s)>
+read_hdl {
+  /home/u1324614/ece6710/des-project/modelsim/RTL/PC1.v \
+  /home/u1324614/ece6710/des-project/modelsim/RTL/PC2.v \
+  /home/u1324614/ece6710/des-project/modelsim/RTL/left_shift.v \
+  /home/u1324614/ece6710/des-project/modelsim/RTL/expansion.v \
+  /home/u1324614/ece6710/des-project/modelsim/RTL/f_func.v \
+  /home/u1324614/ece6710/des-project/modelsim/RTL/Initial_Permutation.v \
+  /home/u1324614/ece6710/des-project/modelsim/RTL/Final_Permutation.v \
+  /home/u1324614/ece6710/des-project/modelsim/RTL/pbox.v \
+  /home/u1324614/ece6710/des-project/modelsim/RTL/sbox.v \
+  /home/u1324614/ece6710/des-project/modelsim/RTL/sbox_array.v \
+  /home/u1324614/ece6710/des-project/modelsim/RTL/SPI.v \
+  /home/u1324614/ece6710/des-project/modelsim/RTL/key_schedule.v \
+  /home/u1324614/ece6710/des-project/modelsim/RTL/Control_State_Machine.v \
+  /home/u1324614/ece6710/des-project/modelsim/RTL/TopModule.v 
+}
 elaborate $DESIGN
 puts "Runtime & Memory after 'read_hdl'"
 time_info Elaboration
@@ -72,7 +87,7 @@ check_design -unresolved
 ## Constraints Setup
 ####################################################################
 
-read_sdc <file_name>
+read_sdc /home/u1324614/ece6710/des-project/genus/SDC/des.sdc
 puts "The number of exceptions is [llength [vfind "design:$DESIGN" -exception *]]"
 
 
@@ -197,9 +212,10 @@ report_dp > $_REPORTS_PATH/${DESIGN}_datapath_incr.rpt
 report_messages > $_REPORTS_PATH/${DESIGN}_messages.rpt
 write_snapshot -outdir $_REPORTS_PATH -tag final
 report_summary -directory $_REPORTS_PATH
-## write_hdl  > ${_OUTPUTS_PATH}/${DESIGN}_m.v
+write_hdl  > ${_OUTPUTS_PATH}/${DESIGN}_m.v
 ## write_script > ${_OUTPUTS_PATH}/${DESIGN}_m.script
 write_sdc > ${_OUTPUTS_PATH}/${DESIGN}_m.sdc
+report_power > $_REPORTS_PATH/${DESIGN}_power.rpt
 
 
 #################################
