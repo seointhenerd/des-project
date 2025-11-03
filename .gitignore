@@ -57,7 +57,7 @@ cov*/
 *.lst
 
 # --- Project/session files (often machine-specific; keep if your team wants them) ---
-**/*.mpf
+
 **/*.cr.mti
 
 modelsim/.nfs000000004fc61b410002dbf2
