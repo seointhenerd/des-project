@@ -1,0 +1,519 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[12:21:36.041338] Configured Lic search path (21.01-s002): /uusoc/facility/cad_tools/Cadence/common_license:/uusoc/facility/cad_tools/Mentor/common_license
+
+Version: 21.15-s080_1, built Fri Sep 23 11:57:55 PDT 2022
+Options: -files synthesis.tcl 
+Date:    Tue Nov 04 12:21:36 2025
+Host:    lab1-20.eng.utah.edu (x86_64 w/Linux 4.18.0-553.78.1.el8_10.x86_64) (8cores*16cpus*1physical cpu*Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz 16384KB) (65789896KB)
+PID:     2975613
+OS:      Red Hat Enterprise Linux release 8.10 (Ootpa)
+
+
+[12:21:36.254659] Periodic Lic check successful
+[12:21:36.254664] Feature usage summary:
+[12:21:36.254665] Genus_Synthesis
+Checking out license: Genus_Synthesis
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Loading tool scripts...Using chipware dir from user defined $CW_DIR environment variable set to /uusoc/facility/cad_tools/Cadence/GENUS211/tools.lnx86/lib/chipware
+Using chipware simulation model dir from user defined $CW_DIR_SIM environment variable set to /uusoc/facility/cad_tools/Cadence/GENUS211/tools.lnx86/lib/chipware/sim
+
+Finished loading tool scripts (7 seconds elapsed).
+
+#@ Processing -files option
+@genus 1> source synthesis.tcl
+#@ Begin verbose source ./synthesis.tcl
+@file(synthesis.tcl) 3: if {[file exists /proc/cpuinfo]} {
+  sh grep "model name" /proc/cpuinfo
+  sh grep "cpu MHz"    /proc/cpuinfo
+}
+model name	: Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz
+model name	: Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz
+model name	: Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz
+model name	: Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz
+model name	: Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz
+model name	: Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz
+model name	: Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz
+model name	: Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz
+model name	: Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz
+model name	: Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz
+model name	: Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz
+model name	: Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz
+model name	: Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz
+model name	: Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz
+model name	: Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz
+model name	: Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz
+cpu MHz		: 2900.000
+cpu MHz		: 2900.000
+cpu MHz		: 2900.000
+cpu MHz		: 4600.049
+cpu MHz		: 2900.000
+cpu MHz		: 2900.000
+cpu MHz		: 2900.000
+cpu MHz		: 4355.291
+cpu MHz		: 2900.000
+cpu MHz		: 2900.000
+cpu MHz		: 2900.000
+cpu MHz		: 2900.000
+cpu MHz		: 2900.000
+cpu MHz		: 2900.000
+cpu MHz		: 2900.000
+cpu MHz		: 2900.000
+@file(synthesis.tcl) 8: puts "Hostname : [info hostname]"
+Hostname : lab1-20.eng.utah.edu
+@file(synthesis.tcl) 15: set DESIGN TopModule
+@file(synthesis.tcl) 16: set GEN_EFF medium
+@file(synthesis.tcl) 17: set MAP_OPT_EFF high
+@file(synthesis.tcl) 18: set DATE [clock format [clock seconds] -format "%b%d-%T"] 
+@file(synthesis.tcl) 19: set _OUTPUTS_PATH outputs_${DATE}
+@file(synthesis.tcl) 20: set _REPORTS_PATH reports_${DATE}
+@file(synthesis.tcl) 21: set _LOG_PATH logs_${DATE}
+@file(synthesis.tcl) 23: set_db / .init_lib_search_path {. ./lib} 
+  Setting attribute of root '/': 'init_lib_search_path' = . ./lib
+@file(synthesis.tcl) 24: set_db / .script_search_path {. <path>} 
+  Setting attribute of root '/': 'script_search_path' = . <path>
+@file(synthesis.tcl) 25: set_db / .init_hdl_search_path {. ./rtl} 
+  Setting attribute of root '/': 'init_hdl_search_path' = . ./rtl
+@file(synthesis.tcl) 34: set_db / .information_level 7 
+  Setting attribute of root '/': 'information_level' = 7
+@file(synthesis.tcl) 41: read_libs {
+  /research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/lib/sclib_tsmc180_ss_nldm.lib \
+  /research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/lib/sclib_tsmc180_tt_nldm.lib \
+  /research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/lib/sclib_tsmc180_ff_nldm.lib
+}
+
+Threads Configured:8
+            Reading file '/research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/lib/sclib_tsmc180_ss_nldm.lib'
+            Reading file '/research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/lib/sclib_tsmc180_tt_nldm.lib'
+Warning : Libraries have inconsistent nominal operating conditions. In the Liberty library, there are attributes called nom_voltage, nom_process and nom_temperature. Genus reports the message, if the respective values of the 2 given .libs differ. [LBR-38]
+        : The libraries are 'sclib_tsmc180_ss' and 'sclib_tsmc180_tt'.
+        : This is a common source of delay calculation confusion and should be avoided.
+            Reading file '/research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/lib/sclib_tsmc180_ff_nldm.lib'
+Warning : Libraries have inconsistent nominal operating conditions. In the Liberty library, there are attributes called nom_voltage, nom_process and nom_temperature. Genus reports the message, if the respective values of the 2 given .libs differ. [LBR-38]
+        : The libraries are 'sclib_tsmc180_ss' and 'sclib_tsmc180_ff'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.620000, 125.000000) in library 'sclib_tsmc180_ss_nldm.lib'.
+        : The nominal operating condition is represented, either by the nominal PVT values specified in the library source (via nom_process,nom_voltage and nom_temperature respectively), or by the default PVT values (1.0,1.0,1.0).
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.800000, 25.000000) in library 'sclib_tsmc180_tt_nldm.lib'.
+Info    : Created nominal operating condition. [LBR-412]
+        : Operating condition '_nominal_' was created for the PVT values (1.000000, 1.980000, -40.000000) in library 'sclib_tsmc180_ff_nldm.lib'.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+        : Add the missing output pin(s), then reload the library. Else the library cell will be marked as timing model i.e. unusable. Timing_model means that the cell does not have any defined function. If there is no output pin, Genus will mark library cell as unusable i.e. the attribute 'usable' will be marked to 'false' on the libcell. Therefore, the cell is not used for mapping and it will not be picked up from the library for synthesis. If you query the attribute 'unusable_reason' on the libcell; result will be: 'Library cell has no output pins.'Note: The message LBR-9 is only for the logical pins and not for the power_ground pins. Genus will depend upon the output function defined in the pin group (output pin) of the cell, to use it for mapping. The pg_pin will not have any function defined.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+Warning : Library cell has no output pins defined. [LBR-9]
+        : Library cell 'ANTENNA' must have an output pin.
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (sclib_tsmc180_ss/AND2X1 and sclib_tsmc180_tt/AND2X1).  Deleting (sclib_tsmc180_tt/AND2X1).
+        : Library cell names must be unique.  Any duplicates will be deleted.  Only the first (as determined by the order of libraries) will be retained.
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (sclib_tsmc180_ss/ANTENNA and sclib_tsmc180_tt/ANTENNA).  Deleting (sclib_tsmc180_tt/ANTENNA).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (sclib_tsmc180_ss/BUFX1 and sclib_tsmc180_tt/BUFX1).  Deleting (sclib_tsmc180_tt/BUFX1).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (sclib_tsmc180_ss/DFFQBX1 and sclib_tsmc180_tt/DFFQBX1).  Deleting (sclib_tsmc180_tt/DFFQBX1).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (sclib_tsmc180_ss/DFFQQBX1 and sclib_tsmc180_tt/DFFQQBX1).  Deleting (sclib_tsmc180_tt/DFFQQBX1).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (sclib_tsmc180_ss/DFFQSRX1 and sclib_tsmc180_tt/DFFQSRX1).  Deleting (sclib_tsmc180_tt/DFFQSRX1).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (sclib_tsmc180_ss/DFFQX1 and sclib_tsmc180_tt/DFFQX1).  Deleting (sclib_tsmc180_tt/DFFQX1).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (sclib_tsmc180_ss/INVX1 and sclib_tsmc180_tt/INVX1).  Deleting (sclib_tsmc180_tt/INVX1).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (sclib_tsmc180_ss/INVX16 and sclib_tsmc180_tt/INVX16).  Deleting (sclib_tsmc180_tt/INVX16).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (sclib_tsmc180_ss/INVX2 and sclib_tsmc180_tt/INVX2).  Deleting (sclib_tsmc180_tt/INVX2).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (sclib_tsmc180_ss/INVX32 and sclib_tsmc180_tt/INVX32).  Deleting (sclib_tsmc180_tt/INVX32).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (sclib_tsmc180_ss/INVX4 and sclib_tsmc180_tt/INVX4).  Deleting (sclib_tsmc180_tt/INVX4).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (sclib_tsmc180_ss/INVX8 and sclib_tsmc180_tt/INVX8).  Deleting (sclib_tsmc180_tt/INVX8).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (sclib_tsmc180_ss/MUX2X1 and sclib_tsmc180_tt/MUX2X1).  Deleting (sclib_tsmc180_tt/MUX2X1).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (sclib_tsmc180_ss/NAND2X1 and sclib_tsmc180_tt/NAND2X1).  Deleting (sclib_tsmc180_tt/NAND2X1).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (sclib_tsmc180_ss/NAND3X1 and sclib_tsmc180_tt/NAND3X1).  Deleting (sclib_tsmc180_tt/NAND3X1).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (sclib_tsmc180_ss/NOR2X1 and sclib_tsmc180_tt/NOR2X1).  Deleting (sclib_tsmc180_tt/NOR2X1).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (sclib_tsmc180_ss/OR2X1 and sclib_tsmc180_tt/OR2X1).  Deleting (sclib_tsmc180_tt/OR2X1).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (sclib_tsmc180_ss/TIE0 and sclib_tsmc180_tt/TIE0).  Deleting (sclib_tsmc180_tt/TIE0).
+Warning : Multiply-defined library cell. [LBR-22]
+        : Library-cell name collision (sclib_tsmc180_ss/TIE1 and sclib_tsmc180_tt/TIE1).  Deleting (sclib_tsmc180_tt/TIE1).
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'LBR-22'.
+@file(synthesis.tcl) 46: read_physical -lef /research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/lef/tech.lef
+
+  According to lef_library, there are total 6 routing layers [ V(3) / H(3) ]
+
+Warning : None of the loaded LEF files have MACRO statements. [PHYS-20]
+        : Make sure the LEF file containing MACRO statement was not missed.
+        : The LEF file containing the cell specific information was not loaded. The LEF MACRO construct is used to set the physical data on cells in the timing library. It is likely that only the technology LEF file was loaded. Load all the associated LEF files.
+@file(synthesis.tcl) 48: set_db / .cap_table_file /research/ece/lnis-teaching/Designkits/tsmc180nm/pdk/captable/t018lo_1p6m_typical.captable 
+
+  According to cap_table_file, there are total 6 routing layers [ V(3) / H(3) ]
+
+  Setting attribute of root '/': 'cap_table_file' = /research/ece/lnis-teaching/Designkits/tsmc180nm/pdk/captable/t018lo_1p6m_typical.captable
+@file(synthesis.tcl) 55: set_db / .lp_insert_clock_gating false
+  Setting attribute of root '/': 'lp_insert_clock_gating' = false
+@file(synthesis.tcl) 62: read_hdl {
+  /home/u1419358/des-project/modelsim/RTL/PC1.v \
+  /home/u1419358/des-project/modelsim/RTL/PC2.v \
+  /home/u1419358/des-project/modelsim/RTL/left_shift.v \
+  /home/u1419358/des-project/modelsim/RTL/expansion.v \
+  /home/u1419358/des-project/modelsim/RTL/f_func.v \
+  /home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v \
+  /home/u1419358/des-project/modelsim/RTL/Final_Permutation.v \
+  /home/u1419358/des-project/modelsim/RTL/pbox.v \
+  /home/u1419358/des-project/modelsim/RTL/sbox.v \
+  /home/u1419358/des-project/modelsim/RTL/sbox_array.v \
+  /home/u1419358/des-project/modelsim/RTL/SPI.v \
+  /home/u1419358/des-project/modelsim/RTL/key_schedule.v \
+  /home/u1419358/des-project/modelsim/RTL/Control_State_Machine.v \
+  /home/u1419358/des-project/modelsim/RTL/TopModule.v 
+}
+            Reading Verilog file '/home/u1419358/des-project/modelsim/RTL/PC1.v'
+            Reading Verilog file '/home/u1419358/des-project/modelsim/RTL/PC2.v'
+            Reading Verilog file '/home/u1419358/des-project/modelsim/RTL/left_shift.v'
+            Reading Verilog file '/home/u1419358/des-project/modelsim/RTL/expansion.v'
+            Reading Verilog file '/home/u1419358/des-project/modelsim/RTL/f_func.v'
+            Reading Verilog file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v'
+    initial begin
+          |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Initial in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 11, column 11.
+        : For example, the following constructs will be ignored:
+    - initial block
+    - final block
+    - program block
+    - property block
+    - sequence block
+    - covergroup
+    - checker block
+    - gate drive strength
+    - system task enable
+    - reg declaration with initial value
+    - specify block.
+            Reading Verilog file '/home/u1419358/des-project/modelsim/RTL/Final_Permutation.v'
+    initial begin
+          |
+Warning : Ignoring unsynthesizable construct. [VLOGPT-37]
+        : Initial in file '/home/u1419358/des-project/modelsim/RTL/Final_Permutation.v' on line 12, column 11.
+            Reading Verilog file '/home/u1419358/des-project/modelsim/RTL/pbox.v'
+            Reading Verilog file '/home/u1419358/des-project/modelsim/RTL/sbox.v'
+            Reading Verilog file '/home/u1419358/des-project/modelsim/RTL/sbox_array.v'
+            Reading Verilog file '/home/u1419358/des-project/modelsim/RTL/SPI.v'
+            Reading Verilog file '/home/u1419358/des-project/modelsim/RTL/key_schedule.v'
+            Reading Verilog file '/home/u1419358/des-project/modelsim/RTL/Control_State_Machine.v'
+            Reading Verilog file '/home/u1419358/des-project/modelsim/RTL/TopModule.v'
+@file(synthesis.tcl) 78: elaborate $DESIGN
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'S' and 'Z' in libcell 'MUX2X1'.
+        : Setting the 'timing_sense' to non_unate.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'B' and 'Z' in libcell 'XOR2X1'.
+Info    : Both 'pos_unate' and 'neg_unate' timing_sense arcs have been processed. [LBR-162]
+        : Non_unate 'timing_sense' inferred between pin 'A' and 'Z' in libcell 'XOR2X1'.
+  Libraries have 14 usable logic and 4 usable sequential lib-cells.
+Info    : Elaborating Design. [ELAB-1]
+        : Elaborating top-level block 'TopModule' from file '/home/u1419358/des-project/modelsim/RTL/TopModule.v'.
+Info    : Elaborating Subdesign. [ELAB-2]
+        : Elaborating block 'SPI' from file '/home/u1419358/des-project/modelsim/RTL/SPI.v'.
+Info    : Clock signal is not used as a clock in this process or block. [CDFG-365]
+        : Signal 'cs_n' in file '/home/u1419358/des-project/modelsim/RTL/SPI.v' on line 47.
+Info    : Clock signal is not used as a clock in this process or block. [CDFG-365]
+        : Signal 'cs_n' in file '/home/u1419358/des-project/modelsim/RTL/SPI.v' on line 59.
+Info    : Common subexpression eliminated. [CDFG-738]
+        : Eliminated '%bit-concat%' in file '/home/u1419358/des-project/modelsim/RTL/SPI.v' on line 42.
+Info    : Common subexpression kept. [CDFG-739]
+        : Kept '%bit-concat%' in file '/home/u1419358/des-project/modelsim/RTL/SPI.v' on line 39.
+Info    : Elaborating Subdesign. [ELAB-2]
+        : Elaborating block 'Control_State_Machine' from file '/home/u1419358/des-project/modelsim/RTL/Control_State_Machine.v'.
+Info    : Elaborating Subdesign. [ELAB-2]
+        : Elaborating block 'Initial_Permutation' from file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v'.
+Info    : Processing multi-dimensional arrays. [CDFG-250]
+        : Variable 'IP_table' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 7.
+Warning : Referenced signals are not added in sensitivity list. This may cause simulation mismatches between the original and the synthesized design. [CDFG-360]
+        : Signal 'IP_table' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 30.
+        : Add missing reference signals in the sensitivity list or use '*' to add all the signals in the sensitivity list. Example : always @(a or b) (OR) always (*))
+Info    : Variable indexed array read/write found inside for loop. [CDFG2G-628]
+        : Variable 'stgrp_1__stgrp_0__N664' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 32.
+Info    : Variable indexed array read/write found inside for loop. [CDFG2G-628]
+        : Variable 'stgrp_1__stgrp_0__N684' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 32.
+Info    : Variable indexed array read/write found inside for loop. [CDFG2G-628]
+        : Variable 'stgrp_1__stgrp_0__N707' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 32.
+Info    : Variable indexed array read/write found inside for loop. [CDFG2G-628]
+        : Variable 'stgrp_1__stgrp_0__N727' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 32.
+Info    : Variable indexed array read/write found inside for loop. [CDFG2G-628]
+        : Variable 'stgrp_1__stgrp_0__N747' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 32.
+Info    : Variable indexed array read/write found inside for loop. [CDFG2G-628]
+        : Variable 'stgrp_1__stgrp_0__N767' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 32.
+Info    : Variable indexed array read/write found inside for loop. [CDFG2G-628]
+        : Variable 'stgrp_1__stgrp_0__N787' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 32.
+Info    : Variable indexed array read/write found inside for loop. [CDFG2G-628]
+        : Variable 'stgrp_1__stgrp_0__N807' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 32.
+Info    : Variable indexed array read/write found inside for loop. [CDFG2G-628]
+        : Variable 'stgrp_1__stgrp_0__N827' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 32.
+Info    : Variable indexed array read/write found inside for loop. [CDFG2G-628]
+        : Variable 'stgrp_1__stgrp_0__N847' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 32.
+Info    : Variable indexed array read/write found inside for loop. [CDFG2G-628]
+        : Variable 'stgrp_1__stgrp_0__N867' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 32.
+Info    : Variable indexed array read/write found inside for loop. [CDFG2G-628]
+        : Variable 'stgrp_1__stgrp_0__N887' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 32.
+Info    : Variable indexed array read/write found inside for loop. [CDFG2G-628]
+        : Variable 'stgrp_1__stgrp_0__N907' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 32.
+Info    : Variable indexed array read/write found inside for loop. [CDFG2G-628]
+        : Variable 'stgrp_1__stgrp_0__N927' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 32.
+Info    : Variable indexed array read/write found inside for loop. [CDFG2G-628]
+        : Variable 'stgrp_1__stgrp_0__N947' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 32.
+Info    : Variable indexed array read/write found inside for loop. [CDFG2G-628]
+        : Variable 'stgrp_1__stgrp_0__N967' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 32.
+Info    : Variable indexed array read/write found inside for loop. [CDFG2G-628]
+        : Variable 'stgrp_1__stgrp_0__N987' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 32.
+Info    : Variable indexed array read/write found inside for loop. [CDFG2G-628]
+        : Variable 'stgrp_1__stgrp_0__N1007' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 32.
+Info    : Variable indexed array read/write found inside for loop. [CDFG2G-628]
+        : Variable 'stgrp_1__stgrp_0__N1027' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 32.
+Info    : Variable indexed array read/write found inside for loop. [CDFG2G-628]
+        : Variable 'stgrp_1__stgrp_0__N1047' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 32.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'CDFG2G-628'.
+Info    : Elaborating Subdesign. [ELAB-2]
+        : Elaborating block 'key_schedule' from file '/home/u1419358/des-project/modelsim/RTL/key_schedule.v'.
+Info    : Elaborating Subdesign. [ELAB-2]
+        : Elaborating block 'PC1' from file '/home/u1419358/des-project/modelsim/RTL/PC1.v'.
+Info    : Elaborating Subdesign. [ELAB-2]
+        : Elaborating block 'left_shift' from file '/home/u1419358/des-project/modelsim/RTL/left_shift.v'.
+Info    : Elaborating Subdesign. [ELAB-2]
+        : Elaborating block 'PC2' from file '/home/u1419358/des-project/modelsim/RTL/PC2.v'.
+Info    : Elaborating Subdesign. [ELAB-2]
+        : Elaborating block 'Feistel_Function' from file '/home/u1419358/des-project/modelsim/RTL/f_func.v'.
+Info    : Elaborating Subdesign. [ELAB-2]
+        : Elaborating block 'Expansion' from file '/home/u1419358/des-project/modelsim/RTL/expansion.v'.
+Info    : Elaborating Subdesign. [ELAB-2]
+        : Elaborating block 'SBoxArray' from file '/home/u1419358/des-project/modelsim/RTL/sbox_array.v'.
+Info    : Elaborating Subdesign. [ELAB-2]
+        : Elaborating block 'SBox' from file '/home/u1419358/des-project/modelsim/RTL/sbox.v'.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'SBox' in file '/home/u1419358/des-project/modelsim/RTL/sbox.v' on line 173.
+Info    : Optimized the MUX created for array read / write or variable shifter. [CDFG-893]
+        : Optimized mux for Array Read for variable 'N18824' at line 174 col 29, in Module 'SBox' in file '/home/u1419358/des-project/modelsim/RTL/sbox.v' on line 174.
+Info    : Optimized the MUX created for array read / write or variable shifter. [CDFG-893]
+        : Optimized mux for Array Read for variable 'N18851' at line 175 col 29, in Module 'SBox' in file '/home/u1419358/des-project/modelsim/RTL/sbox.v' on line 175.
+Info    : Optimized the MUX created for array read / write or variable shifter. [CDFG-893]
+        : Optimized mux for Array Read for variable 'N18872' at line 176 col 29, in Module 'SBox' in file '/home/u1419358/des-project/modelsim/RTL/sbox.v' on line 176.
+Info    : Optimized the MUX created for array read / write or variable shifter. [CDFG-893]
+        : Optimized mux for Array Read for variable 'N18893' at line 177 col 29, in Module 'SBox' in file '/home/u1419358/des-project/modelsim/RTL/sbox.v' on line 177.
+Info    : Optimized the MUX created for array read / write or variable shifter. [CDFG-893]
+        : Optimized mux for Array Read for variable 'N18914' at line 178 col 29, in Module 'SBox' in file '/home/u1419358/des-project/modelsim/RTL/sbox.v' on line 178.
+Info    : Optimized the MUX created for array read / write or variable shifter. [CDFG-893]
+        : Optimized mux for Array Read for variable 'N18935' at line 179 col 29, in Module 'SBox' in file '/home/u1419358/des-project/modelsim/RTL/sbox.v' on line 179.
+Info    : Optimized the MUX created for array read / write or variable shifter. [CDFG-893]
+        : Optimized mux for Array Read for variable 'N18956' at line 180 col 29, in Module 'SBox' in file '/home/u1419358/des-project/modelsim/RTL/sbox.v' on line 180.
+Info    : Optimized the MUX created for array read / write or variable shifter. [CDFG-893]
+        : Optimized mux for Array Read for variable 'N18977' at line 181 col 29, in Module 'SBox' in file '/home/u1419358/des-project/modelsim/RTL/sbox.v' on line 181.
+Info    : Replaced logic with a constant value. [CDFG-771]
+        : Constant Replacement in Module 'SBox' in file '/home/u1419358/des-project/modelsim/RTL/sbox.v' on line 174.
+Info    : Replaced logic with a constant value. [CDFG-771]
+        : Constant Replacement in Module 'SBox' in file '/home/u1419358/des-project/modelsim/RTL/sbox.v' on line 175.
+Info    : Replaced logic with a constant value. [CDFG-771]
+        : Constant Replacement in Module 'SBox' in file '/home/u1419358/des-project/modelsim/RTL/sbox.v' on line 176.
+Info    : Replaced logic with a constant value. [CDFG-771]
+        : Constant Replacement in Module 'SBox' in file '/home/u1419358/des-project/modelsim/RTL/sbox.v' on line 177.
+Info    : Replaced logic with a constant value. [CDFG-771]
+        : Constant Replacement in Module 'SBox' in file '/home/u1419358/des-project/modelsim/RTL/sbox.v' on line 178.
+Info    : Replaced logic with a constant value. [CDFG-771]
+        : Constant Replacement in Module 'SBox' in file '/home/u1419358/des-project/modelsim/RTL/sbox.v' on line 179.
+Info    : Replaced logic with a constant value. [CDFG-771]
+        : Constant Replacement in Module 'SBox' in file '/home/u1419358/des-project/modelsim/RTL/sbox.v' on line 180.
+Info    : Replaced logic with a constant value. [CDFG-771]
+        : Constant Replacement in Module 'SBox' in file '/home/u1419358/des-project/modelsim/RTL/sbox.v' on line 181.
+Info    : Identified sum-of-products logic to be optimized during syn_generic. [CDFG-769]
+        : Sum-of-products logic in module 'SBox' in file '/home/u1419358/des-project/modelsim/RTL/sbox.v' on line 4.
+Info    : Elaborating Subdesign. [ELAB-2]
+        : Elaborating block 'PBox' from file '/home/u1419358/des-project/modelsim/RTL/pbox.v'.
+Info    : Elaborating Subdesign. [ELAB-2]
+        : Elaborating block 'Final_Permutation' from file '/home/u1419358/des-project/modelsim/RTL/Final_Permutation.v'.
+Info    : Processing multi-dimensional arrays. [CDFG-250]
+        : Variable 'FP_table' in module 'Final_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Final_Permutation.v' on line 8.
+Warning : Referenced signals are not added in sensitivity list. This may cause simulation mismatches between the original and the synthesized design. [CDFG-360]
+        : Signal 'FP_table' in module 'Final_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Final_Permutation.v' on line 31.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'Control_State_Machine' in file '/home/u1419358/des-project/modelsim/RTL/Control_State_Machine.v' on line 71.
+Warning : Removing unused register. [CDFG-508]
+        : Removing unused flip-flop register 'temp_reg' in module 'Control_State_Machine' in file '/home/u1419358/des-project/modelsim/RTL/Control_State_Machine.v' on line 26.
+        : Genus removes the flip-flop or latch inferred for an unused signal or variable. To preserve the flip-flop or latch, set the hdl_preserve_unused_registers attribute to true or use a pragma in the RTL.
+Warning : Unreachable statements for case item. [CDFG-472]
+        : Case item 'default' in module 'TopModule' in file '/home/u1419358/des-project/modelsim/RTL/TopModule.v' on line 96.
+Info    : Identified sum-of-products logic to be optimized during syn_generic. [CDFG-769]
+        : Sum-of-products logic in module 'TopModule' in file '/home/u1419358/des-project/modelsim/RTL/TopModule.v' on line 96.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'IP_table[0]' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 55, hid = 0.
+        : The undriven signal handling can be controlled by setting the attribute 'hdl_unconnected_value' before syn_generic command.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'IP_table[1]' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 55, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'IP_table[2]' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 55, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'IP_table[3]' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 55, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'IP_table[4]' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 55, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'IP_table[5]' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 55, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'IP_table[6]' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 55, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'IP_table[7]' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 55, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'IP_table[8]' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 55, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'IP_table[9]' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 55, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'IP_table[10]' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 55, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'IP_table[11]' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 55, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'IP_table[12]' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 55, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'IP_table[13]' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 55, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'IP_table[14]' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 55, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'IP_table[15]' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 55, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'IP_table[16]' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 55, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'IP_table[17]' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 55, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'IP_table[18]' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 55, hid = 0.
+Warning : Undriven signal detected. [ELABUTL-125]
+        : Undriven bits of signal 'IP_table[19]' in module 'Initial_Permutation' in file '/home/u1419358/des-project/modelsim/RTL/Initial_Permutation.v' on line 32, column 55, hid = 0.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'ELABUTL-125'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'shreg_out[0]' in module 'SPI'.
+        : This may cause simulation mismatches between the original and synthesized designs.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'shreg_out[1]' in module 'SPI'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'shreg_out[2]' in module 'SPI'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'shreg_out[3]' in module 'SPI'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'shreg_out[4]' in module 'SPI'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'shreg_out[5]' in module 'SPI'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'shreg_out[6]' in module 'SPI'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'shreg_out[7]' in module 'SPI'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'shreg_out[8]' in module 'SPI'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'shreg_out[9]' in module 'SPI'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'shreg_out[10]' in module 'SPI'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'shreg_out[11]' in module 'SPI'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'shreg_out[12]' in module 'SPI'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'shreg_out[13]' in module 'SPI'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'shreg_out[14]' in module 'SPI'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'shreg_out[15]' in module 'SPI'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'shreg_out[16]' in module 'SPI'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'shreg_out[17]' in module 'SPI'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'shreg_out[18]' in module 'SPI'.
+Warning : Signal or variable has multiple drivers. [CDFG2G-622]
+        : 'shreg_out[19]' in module 'SPI'.
+Warning : Maximum message print count reached. [MESG-11]
+        : Maximum print count of '20' reached for message 'CDFG2G-622'.
+Info    : Done Elaborating Design. [ELAB-3]
+        : Done elaborating 'TopModule'.
+Checking for analog nets...
+Check completed for analog nets.
+Checking for source RTL...
+Check completed for source RTL.
+Running Unified Mux Engine Tricks...
+Completed Unified Mux Engine Tricks
+
+Stage: post_elab
+--------------------------------------------------------
+| Trick             | Accepts | Rejects | Runtime (ms) | 
+--------------------------------------------------------
+| ume_constant_bmux |       0 |       0 |         0.00 | 
+--------------------------------------------------------
+Starting clip mux common data inputs [v1.0] (stage: post_elab, startdef: TopModule, recur: true)
+Completed clip mux common data inputs (accepts: 0, rejects: 0, runtime: 0.001s)
+Starting clip the non-user hierarchies [v2.0] (stage: post_elab, startdef: TopModule, recur: true)
+Completed clip the non-user hierarchies (accepts: 0, rejects: 0, runtime: 0.000s)
+
+Stage: post_elab
+---------------------------------------------------------
+| Transform          | Accepts | Rejects | Runtime (ms) | 
+---------------------------------------------------------
+| hlo_clip_mux_input |       0 |       0 |         1.00 | 
+| hlo_clip           |       0 |       0 |         0.00 | 
+---------------------------------------------------------
+        Computing net loads.
+UM:   flow.cputime  flow.realtime  timing.setup.tns  timing.setup.wns  snapshot
+UM:*                                                                   elaborate
+@file(synthesis.tcl) 79: puts "Runtime & Memory after 'read_hdl'"
+Runtime & Memory after 'read_hdl'
+@file(synthesis.tcl) 80: time_info Elaboration
+stamp 'Elaboration' being created for table 'default'
+
+  Total Time (Wall) |  Stage Time (Wall)  |   % (Wall)   |    Date - Time     |  Memory   | Stage
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:03(00:00:00) |  00:00:00(00:00:00) |   0.0(  0.0) |   12:21:40 (Nov04) |  177.6 MB | init
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+ 00:00:07(00:00:05) |  00:00:04(00:00:05) | 100.0(100.0) |   12:21:45 (Nov04) |  401.0 MB | Elaboration
+--------------------+---------------------+--------------+--------------------+-----------+----------------------
+Number of threads: 8 * 1   (id: default, time_info v1.57)
+Info: (*N*) indicates data that was populated from previously saved time_info database
+Info: CPU time includes time of parent + longest thread
+@file(synthesis.tcl) 84: check_design -unresolved
+
+
+ 	 Check Design Report (c)
+	 ------------------- 
+
+  Unresolved References & Empty Modules
+  ------------------------------------- 
+No unresolved references in design 'TopModule'
+
+No empty modules in design 'TopModule'
+
+  Done Checking the design.
+@file(synthesis.tcl) 90: read_sdc /home/u1419358/des-project/genus/SDC/des.sdc
+Error: Unable to find /home/u1419358/des-project/genus/SDC/des.sdc
+#@ End verbose source ./synthesis.tcl
+Failed on read_sdc
+Encountered problems processing file: synthesis.tcl
+WARNING: This version of the tool is 1138 days old.
