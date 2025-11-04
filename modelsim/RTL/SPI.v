@@ -16,16 +16,8 @@ module SPI (
   // Removed 'bz; mask with ~cs_n instead
   assign miso = miso_q & ~cs_n;
 
-  // Prime MISO when chip select goes low (first bit ready before 1st clock)
-  always @(negedge cs_n or negedge rst) begin
-    if (!rst) begin
-      shreg_out <= 64'd0;
-      miso_q    <= 1'b0;
-    end else begin
-      miso_q    <= output_text[63];             // MSB first
-      shreg_out <= {output_text[62:0], 1'b0};   // preload remaining bits
-    end
-  end
+  // Track CS state for edge detection
+  reg cs_n_prev;
 
   // Shift in MOSI data on rising SCLK
   always @(posedge sclk or posedge cs_n or negedge rst) begin
@@ -43,17 +35,30 @@ module SPI (
     end
   end
 
-  // Shift out next MISO bit on falling SCLK
-  always @(negedge sclk or posedge cs_n or negedge rst) begin
+  // Combined block: handles CS edge detection and SCLK shifting
+  // This eliminates multiple drivers on shreg_out and miso_q
+  always @(negedge sclk or negedge cs_n or posedge cs_n or negedge rst) begin
     if (!rst) begin
-      miso_q    <= 1'b0;
-      shreg_out <= 64'd0;
-    end else if (cs_n) begin
-      miso_q <= 1'b0;  // safe value while deselected (masked off anyway)
+      miso_q     <= 1'b0;
+      shreg_out  <= 64'd0;
+      cs_n_prev  <= 1'b1;
     end else begin
-      miso_q    <= shreg_out[63];
-      shreg_out <= {shreg_out[62:0], 1'b0};
+      cs_n_prev <= cs_n;
+
+      if (!cs_n_prev && cs_n) begin
+        // Rising edge of CS (deselection) - reset outputs
+        miso_q <= 1'b0;
+      end else if (cs_n_prev && !cs_n) begin
+        // Falling edge of CS (selection) - prime MISO with first bit
+        miso_q    <= output_text[63];             // MSB first
+        shreg_out <= {output_text[62:0], 1'b0};   // preload remaining bits
+      end else if (!cs_n) begin
+        // CS is low and stable - shift on falling SCLK edge
+        miso_q    <= shreg_out[63];
+        shreg_out <= {shreg_out[62:0], 1'b0};
+      end
     end
   end
 
 endmodule
+
