@@ -5,7 +5,8 @@ module Initial_Permutation (
 );
 
     // DES IP (Initial Permutation) table as synthesizable constant
-    localparam [6:0] IP_table [0:63] = '{
+    // Packed as a single 448-bit vector (64 entries * 7 bits each)
+    localparam [447:0] IP_table = {
         7'd58, 7'd50, 7'd42, 7'd34, 7'd26, 7'd18, 7'd10, 7'd2,
         7'd60, 7'd52, 7'd44, 7'd36, 7'd28, 7'd20, 7'd12, 7'd4,
         7'd62, 7'd54, 7'd46, 7'd38, 7'd30, 7'd22, 7'd14, 7'd6,
@@ -17,15 +18,21 @@ module Initial_Permutation (
     };
 
     reg [63:0] permuted_data;
+    reg [6:0] table_value;
     integer i;
 
     always @(*) begin
         for (i = 0; i < 64; i = i + 1) begin
-            permuted_data[i] = input_text[IP_table[i] - 1];
+            // Extract 7-bit value from packed array
+            // Index from MSB: table is stored MSB first, so entry 0 is at top
+            table_value = IP_table[(63-i)*7 +: 7];
+            permuted_data[i] = input_text[table_value - 1];
         end
         left_half  = permuted_data[63:32];
         right_half = permuted_data[31:0];
     end
 
 endmodule
+
+
 

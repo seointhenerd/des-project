@@ -5,7 +5,8 @@ module Final_Permutation (
 );
 
     // DES IP^-1 (Inverse Initial Permutation) table as synthesizable constant
-    localparam [6:0] FP_table [0:63] = '{
+    // Packed as a single 448-bit vector (64 entries * 7 bits each)
+    localparam [447:0] FP_table = {
         7'd40, 7'd8,  7'd48, 7'd16, 7'd56, 7'd24, 7'd64, 7'd32,
         7'd39, 7'd7,  7'd47, 7'd15, 7'd55, 7'd23, 7'd63, 7'd31,
         7'd38, 7'd6,  7'd46, 7'd14, 7'd54, 7'd22, 7'd62, 7'd30,
@@ -17,13 +18,17 @@ module Final_Permutation (
     };
 
     reg [63:0] combined;
+    reg [6:0] table_value;
     integer i;
 
-    always @(*) begin
+      always @(*) begin
         combined[63:32] = left_half;
         combined[31:0]  = right_half;
         for (i = 0; i < 64; i = i + 1) begin
-            output_text[i] = combined[FP_table[i] - 1];
+            // Extract 7-bit value from packed array
+            // Index from MSB: table is stored MSB first, so entry 0 is at top
+            table_value = FP_table[(63-i)*7 +: 7];
+            output_text[i] = combined[table_value - 1];
         end
     end
 
