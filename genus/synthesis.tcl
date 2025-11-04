@@ -60,20 +60,20 @@ set_db / .lp_insert_clock_gating false
 
 
 read_hdl {
-  /home/u1324614/ece6710/des-project/modelsim/RTL/PC1.v \
-  /home/u1324614/ece6710/des-project/modelsim/RTL/PC2.v \
-  /home/u1324614/ece6710/des-project/modelsim/RTL/left_shift.v \
-  /home/u1324614/ece6710/des-project/modelsim/RTL/expansion.v \
-  /home/u1324614/ece6710/des-project/modelsim/RTL/f_func.v \
-  /home/u1324614/ece6710/des-project/modelsim/RTL/Initial_Permutation.v \
-  /home/u1324614/ece6710/des-project/modelsim/RTL/Final_Permutation.v \
-  /home/u1324614/ece6710/des-project/modelsim/RTL/pbox.v \
-  /home/u1324614/ece6710/des-project/modelsim/RTL/sbox.v \
-  /home/u1324614/ece6710/des-project/modelsim/RTL/sbox_array.v \
-  /home/u1324614/ece6710/des-project/modelsim/RTL/SPI.v \
-  /home/u1324614/ece6710/des-project/modelsim/RTL/key_schedule.v \
-  /home/u1324614/ece6710/des-project/modelsim/RTL/Control_State_Machine.v \
-  /home/u1324614/ece6710/des-project/modelsim/RTL/TopModule.v 
+/home/u1425837/des-project/modelsim/RTL/PC1.v \
+/home/u1425837/des-project/modelsim/RTL/PC2.v \
+/home/u1425837/des-project/modelsim/RTL/left_shift.v \
+/home/u1425837/des-project/modelsim/RTL/expansion.v \
+/home/u1425837/des-project/modelsim/RTL/f_func.v \
+/home/u1425837/des-project/modelsim/RTL/Initial_Permutation.v \
+/home/u1425837/des-project/modelsim/RTL/Final_Permutation.v \
+/home/u1425837/des-project/modelsim/RTL/pbox.v \
+/home/u1425837/des-project/modelsim/RTL/sbox.v \
+/home/u1425837/des-project/modelsim/RTL/sbox_array.v \
+/home/u1425837/des-project/modelsim/RTL/SPI.v \
+/home/u1425837/des-project/modelsim/RTL/key_schedule.v \
+/home/u1425837/des-project/modelsim/RTL/Control_State_Machine.v \
+/home/u1425837/des-project/modelsim/RTL/TopModule.v 
 }
 elaborate $DESIGN
 puts "Runtime & Memory after 'read_hdl'"
@@ -87,7 +87,7 @@ check_design -unresolved
 ## Constraints Setup
 ####################################################################
 
-read_sdc /home/u1324614/ece6710/des-project/genus/SDC/des.sdc
+read_sdc /home/u1425837/des-project/genus/SDC/des.sdc
 puts "The number of exceptions is [llength [vfind "design:$DESIGN" -exception *]]"
 
 
