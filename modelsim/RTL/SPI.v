@@ -13,11 +13,15 @@ module SPI (
   reg [6:0]  bit_cnt;
   reg        miso_q;
 
-  // Removed 'bz; mask with ~cs_n instead
-  assign miso = miso_q & ~cs_n;
+  // Combinationally output first bit when CS goes low, then use registered value
+  wire first_bit_mux;
+  reg cs_n_d1;
 
-  // Track CS state for edge detection
-  reg cs_n_prev;
+  // Detect if this is the very first bit (CS just went low, before any SCLK)
+  assign first_bit_mux = cs_n_d1 & ~cs_n;
+
+  // Mux between first bit (direct from output_text) and shifted bits (from miso_q)
+  assign miso = (first_bit_mux ? output_text[63] : miso_q) & ~cs_n;
 
   // Shift in MOSI data on rising SCLK
   always @(posedge sclk or posedge cs_n or negedge rst) begin
@@ -35,28 +39,37 @@ module SPI (
     end
   end
 
-  // Combined block: handles CS edge detection and SCLK shifting
-  // This eliminates multiple drivers on shreg_out and miso_q
-  always @(negedge sclk or negedge cs_n or posedge cs_n or negedge rst) begin
+  // Track CS state (delayed version for edge detection)
+  // Sample CS on every SCLK negedge, and also respond to CS going high
+  always @(negedge sclk or posedge cs_n or negedge rst) begin
     if (!rst) begin
-      miso_q     <= 1'b0;
-      shreg_out  <= 64'd0;
-      cs_n_prev  <= 1'b1;
+      cs_n_d1 <= 1'b1;
+    end else if (cs_n) begin
+      // CS went high - reset to prepare for next transaction
+      cs_n_d1 <= 1'b1;
     end else begin
-      cs_n_prev <= cs_n;
+      cs_n_d1 <= cs_n;
+    end
+  end
 
-      if (!cs_n_prev && cs_n) begin
-        // Rising edge of CS (deselection) - reset outputs
-        miso_q <= 1'b0;
-      end else if (cs_n_prev && !cs_n) begin
-        // Falling edge of CS (selection) - prime MISO with first bit
-        miso_q    <= output_text[63];             // MSB first
-        shreg_out <= {output_text[62:0], 1'b0};   // preload remaining bits
-      end else if (!cs_n) begin
-        // CS is low and stable - shift on falling SCLK edge
-        miso_q    <= shreg_out[63];
-        shreg_out <= {shreg_out[62:0], 1'b0};
-      end
+  // Handle MISO shifting on falling SCLK edge
+  // Load on first negedge after CS falls, then shift normally
+  always @(negedge sclk or negedge rst) begin
+    if (!rst) begin
+      miso_q    <= 1'b0;
+      shreg_out <= 64'd0;
+    end else if (cs_n) begin
+      // CS high - reset
+      miso_q    <= 1'b0;
+      shreg_out <= 64'd0;
+    end else if (cs_n_d1 && !cs_n) begin
+      // First SCLK negedge after CS went low - load data for bits 62:0
+      miso_q    <= output_text[62];             // Second bit (bit 63 is muxed directly)
+      shreg_out <= {output_text[61:0], 2'b0};   // Remaining bits
+    end else begin
+      // Normal shifting
+      miso_q    <= shreg_out[63];
+      shreg_out <= {shreg_out[62:0], 1'b0};
     end
   end
 
