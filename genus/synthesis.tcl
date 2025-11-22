@@ -12,7 +12,7 @@ puts "Hostname : [info hostname]"
 ##############################################################################
 
 
-set DESIGN TopModule
+set DESIGN top_pad
 set GEN_EFF medium
 set MAP_OPT_EFF high
 set DATE [clock format [clock seconds] -format "%b%d-%T"] 
@@ -38,42 +38,42 @@ set_db / .information_level 7
 ###############################################################
 
 
-read_libs {
-  /research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/lib/sclib_tsmc180_ss_nldm.lib \
-  /research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/lib/sclib_tsmc180_tt_nldm.lib \
-  /research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/lib/sclib_tsmc180_ff_nldm.lib
-}
-read_physical -lef /research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/lef/tech.lef
+read_libs { /research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/lib/sclib_tsmc180_tt_nldm.lib \
+            /research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/lib/sclib_tsmc180_ss_nldm.lib \
+            /research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/lib/sclib_tsmc180_ff_nldm.lib }
+
+read_physical -lefs /research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/lef/tech.lef
 ## Provide either cap_table_file or the qrc_tech_file
-set_db / .cap_table_file /research/ece/lnis-teaching/Designkits/tsmc180nm/pdk/captable/t018lo_1p6m_typical.captable 
+#set_db / .cap_table_file <file> 
 #read_qrc <qrcTechFile name>
 ##generates <signal>_reg[<bit_width>] format
 #set_db / .hdl_array_naming_style %s\[%d\] 
 ## 
 
 
-set_db / .lp_insert_clock_gating false
+set_db / .lp_insert_clock_gating false 
 
 ####################################################################
 ## Load Design
 ####################################################################
+#        /home/u1425837/des-project/modelsim/RTL/f_func.v \
+#        /home/u1425837/des-project/modelsim/RTL/key_schedule.v \
+#        /home/u1425837/des-project/modelsim/RTL/Initial_Permutation.v \
+#        /home/u1425837/des-project/modelsim/RTL/Final_Permutation.v \
+#        /home/u1425837/des-project/modelsim/RTL/PC1.v \
+#        /home/u1425837/des-project/modelsim/RTL/PC2.v \
+#        /home/u1425837/des-project/modelsim/RTL/left_shift.v \
+#        /home/u1425837/des-project/modelsim/RTL/expansion.v \
+#        /home/u1425837/des-project/modelsim/RTL/pbox.v \
+#        /home/u1425837/des-project/modelsim/RTL/sbox.v \
+#        /home/u1425837/des-project/modelsim/RTL/sbox_array.v \
+#        /home/u1425837/des-project/modelsim/RTL/SPI.v \
+#        /home/u1425837/des-project/modelsim/RTL/Control_State_Machine.v \
 
 
 read_hdl {
-/home/u1425837/des-project/modelsim/RTL/PC1.v \
-/home/u1425837/des-project/modelsim/RTL/PC2.v \
-/home/u1425837/des-project/modelsim/RTL/left_shift.v \
-/home/u1425837/des-project/modelsim/RTL/expansion.v \
-/home/u1425837/des-project/modelsim/RTL/f_func.v \
-/home/u1425837/des-project/modelsim/RTL/Initial_Permutation.v \
-/home/u1425837/des-project/modelsim/RTL/Final_Permutation.v \
-/home/u1425837/des-project/modelsim/RTL/pbox.v \
-/home/u1425837/des-project/modelsim/RTL/sbox.v \
-/home/u1425837/des-project/modelsim/RTL/sbox_array.v \
-/home/u1425837/des-project/modelsim/RTL/SPI.v \
-/home/u1425837/des-project/modelsim/RTL/key_schedule.v \
-/home/u1425837/des-project/modelsim/RTL/Control_State_Machine.v \
-/home/u1425837/des-project/modelsim/RTL/TopModule.v 
+	/home/u1425837/des-project/genus/HDL/RTL/TopModule_m.v \
+	/home/u1425837/des-project/genus/HDL/RTL/top_pad.v \
 }
 elaborate $DESIGN
 puts "Runtime & Memory after 'read_hdl'"
@@ -212,11 +212,10 @@ report_dp > $_REPORTS_PATH/${DESIGN}_datapath_incr.rpt
 report_messages > $_REPORTS_PATH/${DESIGN}_messages.rpt
 write_snapshot -outdir $_REPORTS_PATH -tag final
 report_summary -directory $_REPORTS_PATH
-write_hdl  > ${_OUTPUTS_PATH}/${DESIGN}_m.v
+ write_hdl  > ${_OUTPUTS_PATH}/${DESIGN}_m.v
 ## write_script > ${_OUTPUTS_PATH}/${DESIGN}_m.script
 write_sdc > ${_OUTPUTS_PATH}/${DESIGN}_m.sdc
 report_power > $_REPORTS_PATH/${DESIGN}_power.rpt
-
 
 #################################
 ### write_do_lec
