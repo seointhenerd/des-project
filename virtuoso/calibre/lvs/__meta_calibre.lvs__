@@ -1,0 +1,9 @@
+DRC ICSTATION YES
+
+SOURCE CASE YES
+LAYOUT CASE YES
+LVS POWER NAME VDD
+LVS GROUND NAME VSS
+ABORT ON SUPPLY ERROR NO
+
+INCLUDE "/research/ece/lnis-teaching/Designkits/tsmc180nm/pdk/Calibre/lvs/calibre.lvs"

@@ -18,10 +18,10 @@ set init_lef_file { /research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom
                     /research/ece/lnis-teaching/Designkits/tsmc180nm/arm_ip/RF2SH/RF2SH.vclef \
                     /research/ece/lnis-teaching/Designkits/tsmc180nm/arm_ip/RF2SH/RF2SH_ant.lef }
 
-set init_mmmc_file {}
+set init_mmmc_file { CONF/picosoc.view }
 
 set designnetlisttype verilog
-set init_verilog {}
-set init_io_file {}
-set init_pwr_net {}
-set init_gnd_net {}
+set init_verilog { HDL/GATE/top_pad_m.v }
+set init_io_file { SCRIPTS/place_io_pad.io }
+set init_pwr_net { VDD }
+set init_gnd_net { VSS }

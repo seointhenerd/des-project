@@ -248,7 +248,7 @@ proc place_io_add_io_filler {} {
    -start_offset 25 \
    -stop_offset 30 \
    -switch_layer_over_obs false \
-   -max_same_layer_jog_length 2 \
+   -max_same_layer_jog_length 2.5 \
    -padcore_ring_top_layer_limit METAL6 \
    -padcore_ring_bottom_layer_limit METAL1 \
    -block_ring_top_layer_limit METAL6 \
@@ -265,7 +265,7 @@ proc place_io_add_io_filler {} {
    -direction horizontal \
    -width 5 \
    -spacing 5 \
-   -number_of_sets 10 \
+   -number_of_sets 9 \
    -start_from left \
    -start_offset 30 \
    -stop_offset 30 \

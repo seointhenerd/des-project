@@ -1,0 +1,31 @@
+FORMATVERSION 1
+ADDINST ANTENNA core/DIODE_1 1 addPortAsNeeded
+INSTTERM A core/n_3864 -
+ADDINST ANTENNA core/DIODE_2 1 addPortAsNeeded
+INSTTERM A core/n_3450 -
+ADDINST ANTENNA core/DIODE_3 1 addPortAsNeeded
+INSTTERM A core/n_4003 -
+ADDINST ANTENNA core/DIODE_4 1 addPortAsNeeded
+INSTTERM A core/n_4045 -
+ADDINST ANTENNA core/DIODE_5 1 addPortAsNeeded
+INSTTERM A core/n_3954 -
+ADDINST ANTENNA core/DIODE_6 1 addPortAsNeeded
+INSTTERM A core/csm_inst_right_reg[19] -
+ADDINST ANTENNA core/DIODE_7 1 addPortAsNeeded
+INSTTERM A core/csm_inst_right_reg[19] -
+ADDINST ANTENNA core/DIODE_8 1 addPortAsNeeded
+INSTTERM A clk_PAD -
+ADDINST ANTENNA core/DIODE_9 1 addPortAsNeeded
+INSTTERM A clk_PAD -
+ADDINST ANTENNA core/DIODE_10 1 addPortAsNeeded
+INSTTERM A core/n_415 -
+ADDINST ANTENNA core/DIODE_11 1 addPortAsNeeded
+INSTTERM A core/n_415 -
+ADDINST ANTENNA core/DIODE_12 1 addPortAsNeeded
+INSTTERM A core/csm_inst_round_counter[0] -
+ADDINST ANTENNA core/DIODE_13 1 addPortAsNeeded
+INSTTERM A core/csm_inst_round_counter[0] -
+ADDINST ANTENNA core/DIODE_14 1 addPortAsNeeded
+INSTTERM A sclk_PAD -
+ADDINST ANTENNA core/DIODE_15 1 addPortAsNeeded
+INSTTERM A sclk_PAD -

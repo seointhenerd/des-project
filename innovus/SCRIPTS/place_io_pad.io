@@ -23,25 +23,23 @@
 
     (left
     (inst name="cs_n_pad" place_status=placed)
-    (inst name="mosi_pad"    place_status=placed)
     (inst name="vss0"       place_status=fixed)    
-    )
-
+)
     (top
     (inst name="vdd0"       place_status=fixed)
-    (inst name="clk_pad" place_status=fixed)
-    (inst name="sclk_pad" place_status=fixed)
     (inst name="rst_pad" place_status=fixed)
     )
 
     (right
-
+    (inst name="mosi_pad"    place_status=placed)
     (inst name="miso_pad" place_status=placed)
     )
 
 
-    (bottom
-    )
+    (bottom 
+    (inst name="clk_pad" place_status=fixed)
+    (inst name="sclk_pad" place_status=fixed)
+ )
 
 
 )
