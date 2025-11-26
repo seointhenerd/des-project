@@ -22,35 +22,25 @@
   	  )
 
     (left
-    (inst name="ser_tx_pad" place_status=fixed)
-    (inst name="ser_rx_pad" place_status=fixed)
-    (inst name="clk_pad"    place_status=fixed)
+    (inst name="cs_n_pad" place_status=placed)
+    (inst name="mosi_pad"    place_status=placed)
     (inst name="vss0"       place_status=fixed)    
     )
 
     (top
     (inst name="vdd0"       place_status=fixed)
-    (inst name="ledr_n_pad" place_status=placed)
-    (inst name="ledg_n_pad" place_status=placed)
-    (inst name="flash_csb_pad" place_status=fixed)
-    (inst name="flash_clk_pad" place_status=fixed)
+    (inst name="clk_pad" place_status=fixed)
+    (inst name="sclk_pad" place_status=fixed)
+    (inst name="rst_pad" place_status=fixed)
     )
 
     (right
 
-    (inst name="flash_io0_pad" place_status=placed)
-    (inst name="flash_io1_pad" place_status=placed)
-    (inst name="flash_io2_pad" place_status=placed)
-    (inst name="flash_io3_pad" place_status=placed)
+    (inst name="miso_pad" place_status=placed)
     )
 
 
     (bottom
-    (inst name="led1_pad" place_status=fixed)
-    (inst name="led2_pad" place_status=placed)
-    (inst name="led3_pad" place_status=placed)
-    (inst name="led4_pad" place_status=placed)
-    (inst name="led5_pad" place_status=placed)
     )
 
 
