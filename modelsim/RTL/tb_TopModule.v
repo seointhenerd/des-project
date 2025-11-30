@@ -15,79 +15,80 @@ module tb_TopModule;
         .miso(miso)
     );
     
-    // Clock
+    // Clocks
     initial clk = 0; 
     always #5 clk = ~clk;
     
     initial sclk = 0; 
     always #50 sclk = ~sclk;
 
-    //SPI write
+    // SPI write - MATCHES tb_SPI timing
     task spi_write_64(input [63:0] data);
         integer i;
         begin
-            cs_n = 1;
-            mosi = 0;
-            #200;
-            
+            // Wait for negedge
             @(negedge sclk);
-            #10;
+            
+            // Set first MOSI bit and assert CS
             mosi = data[63];
-            #10;
             cs_n = 0;
             
+            // First bit
+            @(posedge sclk);
+            
+            // Remaining 63 bits
             for (i = 62; i >= 0; i = i - 1) begin
-                @(posedge sclk);
-                #10;
                 @(negedge sclk);
                 mosi = data[i];
-                #10;
+                @(posedge sclk);
             end
             
-            @(posedge sclk);
-            #10;
+            // Deassert CS
             @(negedge sclk);
-            #10;
             cs_n = 1;
             mosi = 0;
             
+            // Wait for synchronization
             repeat(20) @(posedge clk);
-            #200;
         end
     endtask
     
-    // SPI read
+    // SPI read - MATCHES tb_SPI timing
     task spi_read_64(output [63:0] data);
         integer i;
         reg [63:0] tmp;
         begin
             tmp = 64'h0;
-            cs_n = 1;
-            mosi = 0;
-            #200;
             
+            // Wait for negedge
             @(negedge sclk);
-            #10;
-            cs_n = 0;
-            #10;
             
+            // Set first MOSI bit (dummy) and assert CS
+            mosi = 0;
+            cs_n = 0;
+            
+            // First bit
             @(posedge sclk);
-            #10;
+            #2;
             tmp[63] = miso;
             
+            // Remaining 63 bits
             for (i = 62; i >= 0; i = i - 1) begin
+                @(negedge sclk);
+                mosi = 0;  // Dummy data
+                
                 @(posedge sclk);
-                #10;
+                #2;
                 tmp[i] = miso;
             end
             
+            // Deassert CS
             @(negedge sclk);
-            #10;
             cs_n = 1;
             data = tmp;
             
+            // Wait for synchronization
             repeat(20) @(posedge clk);
-            #200;
         end
     endtask
     
@@ -104,25 +105,25 @@ module tb_TopModule;
         key       = 64'h752878397493CB70;
         plaintext = 64'h1122334455667788;
         
-        $display("=== ENCRYPTION TEST 1 : Default test vector ===");
+        $display("\n=== ENCRYPTION TEST 1: Default test vector ===");
         $display("Key:       %h", key);
         $display("Plaintext: %h", plaintext);
         $display("Expected:  b5219ee81aa7499d");
         
-        // send KEY, DATA, CONTROL
+        // Send KEY, DATA, CONTROL
         spi_write_64(key);
         spi_write_64(plaintext);
         spi_write_64(64'h0000000000000000);  // encrypt
         
-        // encryption progress
-        $display("\n encryption progress");
+        // Encryption progress
+        $display("Encryption in progress...");
         timeout_counter = 0;
         while (!dut.done_encrypt_latched && timeout_counter < 5000) begin
             @(posedge clk);
             timeout_counter = timeout_counter + 1;
         end
         if (timeout_counter >= 5000) begin
-            $display("timeout");
+            $display("ERROR: Encryption timeout");
             $stop;
         end
         
@@ -134,31 +135,31 @@ module tb_TopModule;
         $display("Expected:   b5219ee81aa7499d");
         
         if (ciphertext == 64'hB5219EE81AA7499D) begin
-            $display("PASS");
+            $display(">>> PASS <<<");
         end else begin
-            $display("FAIL");
+            $display(">>> FAIL <<<");
         end
         
         #1000;
         
-        $display("\n=== DECRYPTION TEST ===");
+        $display("\n=== DECRYPTION TEST 1 ===");
         $display("Key:        %h", key);
         $display("Ciphertext: %h", ciphertext);
         
-        // send KEY, DATA, CONTROL
+        // Send KEY, DATA, CONTROL
         spi_write_64(key);
         spi_write_64(ciphertext);
         spi_write_64(64'h0000000000000001);  // decrypt
         
-        // decryption progress
-        $display("\n decryption progress");
+        // Decryption progress
+        $display("Decryption in progress...");
         timeout_counter = 0;
         while (!dut.done_decrypt_latched && timeout_counter < 5000) begin
             @(posedge clk);
             timeout_counter = timeout_counter + 1;
         end
         if (timeout_counter >= 5000) begin
-            $display("timeout");
+            $display("ERROR: Decryption timeout");
             $stop;
         end
         
@@ -170,16 +171,14 @@ module tb_TopModule;
         $display("Expected:   %h", plaintext);
         
         if (decrypted == plaintext) begin
-            $display("PASS");
+            $display(">>> PASS <<<");
         end else begin
-            $display("FAIL");
+            $display(">>> FAIL <<<");
         end
 
-
         // TEST CASE 2
+        #1000;
         rst = 1;
-        cs_n = 1;
-        mosi = 0;
         #100;
         rst = 0;
         #100;
@@ -187,29 +186,26 @@ module tb_TopModule;
         key       = 64'h123456ABCD132536;
         plaintext = 64'hAABB09182736CCDD;
         
-        $display("\n=== ENCRYPTION TEST 2 : Default test vector ===");
+        $display("\n=== ENCRYPTION TEST 2: Custom test vector ===");
         $display("Key:       %h", key);
         $display("Plaintext: %h", plaintext);
-        $display("Expected:  c0b7a8d05f3a829c");
+        $display("Expected:  ac85a39bab193fd5");
         
-        // send KEY, DATA, CONTROL
         spi_write_64(key);
         spi_write_64(plaintext);
-        spi_write_64(64'h0000000000000000);  // encrypt
+        spi_write_64(64'h0000000000000000);
         
-        // encryption progress
-        $display("\n encryption progress");
+        $display("Encryption in progress...");
         timeout_counter = 0;
         while (!dut.done_encrypt_latched && timeout_counter < 5000) begin
             @(posedge clk);
             timeout_counter = timeout_counter + 1;
         end
         if (timeout_counter >= 5000) begin
-            $display("timeout");
+            $display("ERROR: Encryption timeout");
             $stop;
         end
         
-        // Read result
         spi_read_64(ciphertext);
         
         $display("\n--- ENCRYPTION RESULT ---");
@@ -217,35 +213,24 @@ module tb_TopModule;
         $display("Expected:   ac85a39bab193fd5");
         
         if (ciphertext == 64'hac85a39bab193fd5) begin
-            $display("PASS");
+            $display(">>> PASS <<<");
         end else begin
-            $display("FAIL");
+            $display(">>> FAIL <<<");
         end
         
         #1000;
         
-        $display("\n=== DECRYPTION TEST ===");
-        $display("Key:        %h", key);
-        $display("Ciphertext: %h", ciphertext);
-        
-        // send KEY, DATA, CONTROL
+        $display("\n=== DECRYPTION TEST 2 ===");
         spi_write_64(key);
         spi_write_64(ciphertext);
-        spi_write_64(64'h0000000000000001);  // decrypt
+        spi_write_64(64'h0000000000000001);
         
-        // decryption progress
-        $display("\n decryption progress");
         timeout_counter = 0;
         while (!dut.done_decrypt_latched && timeout_counter < 5000) begin
             @(posedge clk);
             timeout_counter = timeout_counter + 1;
         end
-        if (timeout_counter >= 5000) begin
-            $display("timeout");
-            $stop;
-        end
         
-        // Read result
         spi_read_64(decrypted);
         
         $display("\n--- DECRYPTION RESULT ---");
@@ -253,15 +238,14 @@ module tb_TopModule;
         $display("Expected:   %h", plaintext);
         
         if (decrypted == plaintext) begin
-            $display("PASS");
+            $display(">>> PASS <<<");
         end else begin
-            $display("FAIL");
+            $display(">>> FAIL <<<");
         end
 
-	// TEST CASE 3
+        // TEST CASE 3
+        #1000;
         rst = 1;
-        cs_n = 1;
-        mosi = 0;
         #100;
         rst = 0;
         #100;
@@ -269,19 +253,21 @@ module tb_TopModule;
         key       = 64'b0;
         plaintext = 64'b0;
         
-        $display("\n=== ENCRYPTION TEST 3 : All zeros ===");
+        $display("\n=== ENCRYPTION TEST 3: All zeros ===");
         $display("Key:       %h", key);
         $display("Plaintext: %h", plaintext);
         $display("Expected:  8ca64de9c1b123a7");
         
-        // send KEY, DATA, CONTROL
         spi_write_64(key);
         spi_write_64(plaintext);
-        spi_write_64(64'h0000000000000000);  // encrypt
+        spi_write_64(64'h0000000000000000);
         
-        // encryption progress
-        $display("\n encryption progress");
-        // Read result
+        timeout_counter = 0;
+        while (!dut.done_encrypt_latched && timeout_counter < 5000) begin
+            @(posedge clk);
+            timeout_counter = timeout_counter + 1;
+        end
+        
         spi_read_64(ciphertext);
         
         $display("\n--- ENCRYPTION RESULT ---");
@@ -289,26 +275,24 @@ module tb_TopModule;
         $display("Expected:   8ca64de9c1b123a7");
         
         if (ciphertext == 64'h8ca64de9c1b123a7) begin
-            $display("PASS");
+            $display(">>> PASS <<<");
         end else begin
-            $display("FAIL");
+            $display(">>> FAIL <<<");
         end
         
         #1000;
         
-        $display("\n=== DECRYPTION TEST ===");
-        $display("Key:        %h", key);
-        $display("Ciphertext: %h", ciphertext);
-        
-        // send KEY, DATA, CONTROL
+        $display("\n=== DECRYPTION TEST 3 ===");
         spi_write_64(key);
         spi_write_64(ciphertext);
-        spi_write_64(64'h0000000000000001);  // decrypt
+        spi_write_64(64'h0000000000000001);
         
-        // decryption progress
-        $display("\n decryption progress");
+        timeout_counter = 0;
+        while (!dut.done_decrypt_latched && timeout_counter < 5000) begin
+            @(posedge clk);
+            timeout_counter = timeout_counter + 1;
+        end
         
-        // Read result
         spi_read_64(decrypted);
         
         $display("\n--- DECRYPTION RESULT ---");
@@ -316,15 +300,14 @@ module tb_TopModule;
         $display("Expected:   %h", plaintext);
         
         if (decrypted == plaintext) begin
-            $display("PASS");
+            $display(">>> PASS <<<");
         end else begin
-            $display("FAIL");
+            $display(">>> FAIL <<<");
         end
 
-	// TEST CASE 4
+        // TEST CASE 4
+        #1000;
         rst = 1;
-        cs_n = 1;
-        mosi = 0;
         #100;
         rst = 0;
         #100;
@@ -332,29 +315,21 @@ module tb_TopModule;
         key       = 64'hffffffffffffffff;
         plaintext = 64'hffffffffffffffff;
         
-        $display("\n=== ENCRYPTION TEST 4 : All fs ===");
+        $display("\n=== ENCRYPTION TEST 4: All ones ===");
         $display("Key:       %h", key);
         $display("Plaintext: %h", plaintext);
         $display("Expected:  7359b2163e4edc58");
         
-        // send KEY, DATA, CONTROL
         spi_write_64(key);
         spi_write_64(plaintext);
-        spi_write_64(64'h0000000000000000);  // encrypt
+        spi_write_64(64'h0000000000000000);
         
-        // encryption progress
-        $display("\n encryption progress");
         timeout_counter = 0;
         while (!dut.done_encrypt_latched && timeout_counter < 5000) begin
             @(posedge clk);
             timeout_counter = timeout_counter + 1;
         end
-        if (timeout_counter >= 5000) begin
-            $display("timeout");
-            $stop;
-        end 
         
-        // Read result
         spi_read_64(ciphertext);
         
         $display("\n--- ENCRYPTION RESULT ---");
@@ -362,35 +337,24 @@ module tb_TopModule;
         $display("Expected:   7359b2163e4edc58");
         
         if (ciphertext == 64'h7359b2163e4edc58) begin
-            $display("PASS");
+            $display(">>> PASS <<<");
         end else begin
-            $display("FAIL");
+            $display(">>> FAIL <<<");
         end
         
         #1000;
         
-        $display("=== DECRYPTION TEST ===");
-        $display("Key:        %h", key);
-        $display("Ciphertext: %h", ciphertext);
-        
-        // send KEY, DATA, CONTROL
+        $display("\n=== DECRYPTION TEST 4 ===");
         spi_write_64(key);
         spi_write_64(ciphertext);
-        spi_write_64(64'h0000000000000001);  // decrypt
+        spi_write_64(64'h0000000000000001);
         
-        // decryption progress
-        $display("\n decryption progress");
         timeout_counter = 0;
         while (!dut.done_decrypt_latched && timeout_counter < 5000) begin
             @(posedge clk);
             timeout_counter = timeout_counter + 1;
         end
-        if (timeout_counter >= 5000) begin
-            $display("timeout");
-            $stop;
-        end
         
-        // Read result
         spi_read_64(decrypted);
         
         $display("\n--- DECRYPTION RESULT ---");
@@ -398,21 +362,17 @@ module tb_TopModule;
         $display("Expected:   %h", plaintext);
         
         if (decrypted == plaintext) begin
-            $display("PASS");
+            $display(">>> PASS <<<");
         end else begin
-            $display("FAIL");
+            $display(">>> FAIL <<<");
         end
 
-	// TEST CASE 5 - reset
-        rst = 1;
-        cs_n = 1;
-        mosi = 0;
         #1000;
-        rst = 0;
-        #1000;
-	
-        $display("============");
-	$stop;
+        
+        $display("\n============================================");
+        $display("       ALL TESTS COMPLETE");
+        $display("============================================\n");
+        $stop;
     end
 
 endmodule

@@ -30,7 +30,7 @@ module Control_State_Machine (
     wire [63:0] fp_output;
     wire [31:0] f_output;
     
-    // Subkey wires
+    // Subkey wires (now [47:0] format from updated key_schedule)
     wire [47:0] k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11, k12, k13, k14, k15, k16;
     
     // Current round subkey
@@ -43,7 +43,7 @@ module Control_State_Machine (
         .right_half(ip_right)
     );
     
-    // Subkey Generator
+    // Subkey Generator (now uses [63:0] key and outputs [47:0] subkeys)
     key_schedule keygen_inst (
         .key(key),
         .k1(k1), .k2(k2), .k3(k3), .k4(k4),
@@ -67,7 +67,7 @@ module Control_State_Machine (
     );
     
     // Subkey selection - combinational
-    always @(round_counter, mode, k1, k2, k3, k4, k5, k6, k7, k8, k9, k10, k11, k12, k13, k14, k15, k16) begin
+    always @(*) begin
         case (round_counter)
             4'd0:  current_subkey = mode ? k16 : k1;
             4'd1:  current_subkey = mode ? k15 : k2;
@@ -161,4 +161,3 @@ module Control_State_Machine (
     end
 
 endmodule
-

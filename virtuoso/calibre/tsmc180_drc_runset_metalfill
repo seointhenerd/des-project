@@ -1,0 +1,35 @@
+*drcRulesFile: $pdk_dir/Calibre/drc/Dummy_Metal_Calibre_0.18um.215a/Dummy_Metal_Calibre_0.18um.215a
+*drcRulesFileLastLoad: 1528903825
+*drcRunDir: $PWD/calibre/drcmetalfill
+*drcLayoutPaths: sealring.calibre.db
+*drcLayoutPrimary: sealring
+*drcLayoutLibrary: top_pad
+*drcLayoutView: layout
+*drcLayoutGetFromViewer: 1
+*drcResultsFile: design_metalfill.gds
+*drcResultsFormat: GDSII
+*drcResultsCellSuffix: _metalfill
+*drcResultsCheckText: 1
+*drcResultsCheckTextValue: ALL
+*drcRHDBFile: sealring.rhdb
+*drcCellName: 0
+*drcDRCMaxResultsAll: 1
+*drcSummaryFile: sealring.drc.summary
+*drcActiveRecipe: Checks selected in the rules file (Modified)
+*drcUserRecipes: {{Checks selected in the rules file (Modified)} {{group_unselect[1]} all {group_select[1]} rule_file {check_unselect[1]} DRM.R.1}}
+*drcIncrDRCSlaveHosts: {use {}} {hostName {}} {cpuCount {}} {a32a64 {}} {rsh {}} {maxMem {}} {workingDir {}} {layerDir {}} {mgcLibPath {}} {launchName {}}
+*drcIncrDRCLSFSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*drcIncrDRCGridSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*drcDFMDefaultsResultsFile: sealring.dfmDefaults.db
+*cmnWarnLayoutOverwrite: 0
+*cmnShowOptions: 1
+*cmnResolution: 5
+*cmnNumTurbo: 15
+*cmnRunMT: 1
+*cmnRunHyper: 1
+*cmnSlaveHosts: {use {}} {hostName {}} {cpuCount {}} {a32a64 {}} {rsh {}} {maxMem {}} {workingDir {}} {layerDir {}} {mgcLibPath {}} {launchName {}}
+*cmnLSFSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*cmnGridSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
+*cmnFDILayoutLibrary: top_pad
+*cmnFDILayoutView: layout
+*cmnFDIDEFLayoutPath: sealring.def

@@ -1,3 +1,4 @@
+
 // Module to perform S-box substitution (6 bits to 4 bits)
 
 module SBox (
@@ -184,4 +185,3 @@ module SBox (
       end
 
   endmodule
-

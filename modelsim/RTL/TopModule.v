@@ -33,8 +33,9 @@ module TopModule (
     // Delayed trigger flag
     reg trigger_operation;
     
+    // SPI instance - CRITICAL: SPI uses active-LOW reset!
     SPI spi_inst (
-        .rst        (~rst),
+        .rst        (~rst),      // Invert: TopModule rst=1 means active, SPI needs rst=1 for active
         .sclk       (sclk),
         .cs_n       (cs_n),
         .mosi       (mosi),
@@ -59,9 +60,12 @@ module TopModule (
         if (rst) begin
             spi_tx_data <= 64'h0;
         end else begin
-            if (transaction_state == 2'd3 && (done_encrypt_latched || done_decrypt_latched)) begin
+            // Latch output when done
+            if ((done_encrypt_latched || done_decrypt_latched) && transaction_state == 2'd3) begin
                 spi_tx_data <= des_output;
-            end else begin
+            end
+            // Clear when starting new transaction
+            if (cs_rise_delayed && transaction_state == 2'd0) begin
                 spi_tx_data <= 64'h0;
             end
         end
@@ -77,7 +81,7 @@ module TopModule (
             cs_meta <= cs_n;
             cs_sync <= cs_meta;
             cs_prev <= cs_sync;
-            cs_rise_delayed <= cs_rise;  // Delay by 1 cycle
+            cs_rise_delayed <= cs_rise;
         end
     end
     assign cs_rise = (cs_prev == 1'b0) && (cs_sync == 1'b1);
@@ -90,22 +94,22 @@ module TopModule (
             crypt <= 1'b0;
             trigger_operation <= 1'b0;
         end else begin
-            trigger_operation <= 1'b0;  // clear
+            trigger_operation <= 1'b0;
             
             if (cs_rise_delayed) begin
                 case (transaction_state)
                     2'd0: begin  // KEY state
-                            key_reg <= spi_rx_data;
-                            transaction_state <= 2'd1;
+                        key_reg <= spi_rx_data;
+                        transaction_state <= 2'd1;
                     end
                     2'd1: begin  // DATA state
-                            data_reg <= spi_rx_data;
-                            transaction_state <= 2'd2;
+                        data_reg <= spi_rx_data;
+                        transaction_state <= 2'd2;
                     end
                     2'd2: begin  // CONTROL state
-                        crypt <= spi_rx_data[0]; // 0=encrypt, 1=decrypt
+                        crypt <= spi_rx_data[0];
                         transaction_state <= 2'd3;
-                        trigger_operation <= 1'b1;  // Trigger on next cycle
+                        trigger_operation <= 1'b1;
                     end
                     2'd3: begin  // WAIT state
                         if (!active) begin
@@ -149,7 +153,6 @@ module TopModule (
             done_encrypt_latched <= 1'b0;
             done_decrypt_latched <= 1'b0;
         end else begin
-            // Latch done signals
             if (done_encrypt) begin
                 done_encrypt_latched <= 1'b1;
             end
@@ -157,7 +160,6 @@ module TopModule (
                 done_decrypt_latched <= 1'b1;
             end
             
-            // Clear - starting new transaction
             if (cs_rise_delayed && transaction_state == 2'd0) begin
                 done_encrypt_latched <= 1'b0;
                 done_decrypt_latched <= 1'b0;

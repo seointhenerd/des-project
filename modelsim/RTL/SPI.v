@@ -1,55 +1,77 @@
 module SPI (
-  input  wire        rst,         
-  input  wire        sclk,        
-  input  wire        cs_n,        
-  input  wire        mosi,        
-  output reg         miso,
-  input  wire [63:0] output_text, 
-  output reg  [63:0] input_text   
+  input  wire        rst,
+  input  wire        sclk,
+  input  wire        cs_n,
+  input  wire        mosi,
+  output wire        miso,
+  input  wire [63:0] output_text,
+  output reg  [63:0] input_text
 );
 
-  reg [63:0] shreg_in;
-  reg [63:0] shreg_out;
-  reg [6:0]  bit_cnt;
-  reg        cs_n_prev;
+  // Input shift register
+  reg [63:0] shift_in;
+  reg [6:0]  in_count;
+  
+  // Output shift register
+  reg [63:0] shift_out;
+  reg [6:0]  out_count;
+  reg        miso_reg;
+  reg        cs_prev;
+  
+  assign miso = miso_reg;
 
-  always @(posedge sclk or posedge cs_n or negedge rst) begin
+  // MOSI Input: Sample on posedge sclk
+  always @(posedge sclk or negedge rst) begin
     if (!rst) begin
-      shreg_in   <= 64'd0;
-      bit_cnt    <= 7'd0;
-      input_text <= 64'd0;
-    end else if (cs_n) begin
-      bit_cnt <= 7'd0;
+      shift_in   <= 64'h0;
+      in_count   <= 7'd0;
+      input_text <= 64'h0;
+      cs_prev    <= 1'b1;
     end else begin
-      shreg_in <= {shreg_in[62:0], mosi};
-      bit_cnt  <= bit_cnt + 7'd1;
-      if (bit_cnt == 7'd63)
-        input_text <= {shreg_in[62:0], mosi};
+      cs_prev <= cs_n;
+      
+      if (!cs_n) begin
+        // Shift in MOSI
+        shift_in <= {shift_in[62:0], mosi};
+        in_count <= in_count + 7'd1;
+        
+        // Capture after 64 bits
+        if (in_count == 7'd63) begin
+          input_text <= {shift_in[62:0], mosi};
+          in_count   <= 7'd0;
+        end
+      end else begin
+        in_count <= 7'd0;
+      end
+      
+      // Detect CS falling edge and preload MISO immediately
+      if (cs_prev && !cs_n) begin
+        miso_reg  <= output_text[63];
+        shift_out <= {output_text[62:0], 1'b0};
+        out_count <= 7'd1;
+      end
     end
   end
 
-  always @(negedge sclk or posedge cs_n or negedge rst) begin
+  // MISO Output: Shift on negedge sclk
+  always @(negedge sclk or negedge rst) begin
     if (!rst) begin
-      miso       <= 1'b0;
-      shreg_out  <= 64'd0;
-      cs_n_prev  <= 1'b1;
+      shift_out <= 64'h0;
+      out_count <= 7'd0;
     end else begin
-      cs_n_prev <= cs_n;
-
-      if (cs_n_prev && !cs_n) begin
-        // Falling edge of CS_n — activate chip, preload
-        miso       <= output_text[63];
-        shreg_out  <= {output_text[62:0], 1'b0};
-      end else if (!cs_n) begin
-        // CS active, shift bits
-        miso       <= shreg_out[63];
-        shreg_out  <= {shreg_out[62:0], 1'b0};
-      end else begin
-        // CS high — idle state
-        miso <= 1'b0;
+      if (!cs_n && out_count != 7'd0) begin
+        // Shift out subsequent bits
+        miso_reg  <= shift_out[63];
+        shift_out <= {shift_out[62:0], 1'b0};
+        out_count <= out_count + 7'd1;
+        
+        if (out_count == 7'd63) begin
+          out_count <= 7'd0;
+        end
+      end else if (cs_n) begin
+        out_count <= 7'd0;
       end
     end
   end
 
 endmodule
-

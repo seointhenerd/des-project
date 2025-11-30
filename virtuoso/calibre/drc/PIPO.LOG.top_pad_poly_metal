@@ -1,0 +1,171 @@
+********************************************************************************
+Product   : Virtuoso(R) XStream Out
+Program   : @(#)$CDS: strmout version 6.1.8-64b 06/22/2022 16:16 (sjfhw317) $
+          : sub-version  IC6.1.8-64b.500.26 
+Started at: 26-Nov-2025  13:39:54
+User Name : u1425837
+Host Name : lab1-30.eng.utah.edu
+Directory : /home/u1425837/des-project/virtuoso
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+WARNING (XSTRM-20): Output Stream file '/home/u1425837/des-project/virtuoso/calibre/drc/top_pad_poly_metal.calibre.db' already exists. It will be overwritten.
+INFO (XSTRM-217): Reading the layer map file, /research/ece/lnis-teaching/Designkits/tsmc180nm/pdk/tsmc18/tsmc18.layermap
+INFO (XSTRM-162): You have not used the '-viaMap' option. If the OpenAccess design has native oaVia instances, use the '-viaMap' option for preserving oaVia instances in a XStream Out - XStream In round trip. Using the '-viaMap' option improves performance and VM usage of applications using the Streamed-In design.
+
+Summary of Options :
+library                                 top_pad
+strmFile                                /home/u1425837/des-project/virtuoso/calibre/drc/top_pad_poly_metal.calibre.db
+topCell                                 top_pad_poly_metal
+view                                    layout
+runDir                                  /home/u1425837/des-project/virtuoso/calibre/drc/
+logFile                                 PIPO.LOG.top_pad_poly_metal
+summaryFile                             PIPO.SUM.top_pad_poly_metal
+layerMap                                /research/ece/lnis-teaching/Designkits/tsmc180nm/pdk/tsmc18/tsmc18.layermap
+case                                    Preserve
+convertDot                              node
+convertPcellPin                         geometry
+
+INFO (XSTRM-223): 1. Translating cellView sealring/tsmc_c018_seal_ring_edge_1p6m/layout as STRUCTURE tsmc_c018_seal_ring_edge_1p6m.
+INFO (XSTRM-223): 2. Translating cellView sealring/tsmc_c018_sealring_corner_1p6m/layout as STRUCTURE tsmc_c018_sealring_corner_1p6m.
+INFO (XSTRM-223): 3. Translating cellView sealring/tsmc_c018_sealring_1p6m/layout as STRUCTURE tsmc_c018_sealring_1p6m.
+INFO (XSTRM-223): 4. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_764189594040.
+INFO (XSTRM-223): 5. Translating stdVia tsmc18/M3_M2/layout as STRUCTURE M3_M2_CDNS_764189594041.
+INFO (XSTRM-223): 6. Translating stdVia tsmc18/M4_M3/layout as STRUCTURE M4_M3_CDNS_764189594042.
+INFO (XSTRM-223): 7. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_764189594043.
+INFO (XSTRM-223): 8. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_764189594044.
+INFO (XSTRM-223): 9. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_764189594045.
+INFO (XSTRM-223): 10. Translating cellView PADS_LIB/pad_corner/layout as STRUCTURE pad_corner.
+INFO (XSTRM-180): You have not used the '-objectMap' option. The design has instance(s) of at least one of following OpenAccess objects: oaBlockage, oaBoundary, oaRow, and oaMarker. Any information about these objects will not be translated into the generated stream file. Use the '-objectMap' option to translate/preserve these objects using XStream.
+INFO (XSTRM-223): 11. Translating stdVia tsmc18/M3_M2/layout as STRUCTURE M3_M2_CDNS_764189594046.
+INFO (XSTRM-223): 12. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_764189594047.
+INFO (XSTRM-223): 13. Translating stdVia tsmc18/M3_M2/layout as STRUCTURE M3_M2_CDNS_764189594048.
+INFO (XSTRM-223): 14. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_764189594049.
+INFO (XSTRM-223): 15. Translating cellView PADS_LIB/padboxx/layout as STRUCTURE padboxx.
+INFO (XSTRM-223): 16. Translating cellView PADS_LIB/padbox/layout as STRUCTURE padbox.
+INFO (XSTRM-223): 17. Translating cellView PADS_LIB/pad_vdd/layout as STRUCTURE pad_vdd.
+INFO (XSTRM-223): 18. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_7641895940410.
+INFO (XSTRM-223): 19. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_7641895940411.
+INFO (XSTRM-223): 20. Translating stdVia tsmc18/M4_M3/layout as STRUCTURE M4_M3_CDNS_7641895940412.
+INFO (XSTRM-223): 21. Translating stdVia tsmc18/M3_M2/layout as STRUCTURE M3_M2_CDNS_7641895940413.
+INFO (XSTRM-223): 22. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_7641895940414.
+INFO (XSTRM-223): 23. Translating cellView PADS_LIB/met14/layout as STRUCTURE met14.
+INFO (XSTRM-223): 24. Translating cellView tsmc18/pdio_m/layout as STRUCTURE pdio_m_CDNS_764189594040.
+INFO (XSTRM-223): 25. Translating cellView PADS_LIB/pad_gnd/layout as STRUCTURE pad_gnd.
+INFO (XSTRM-223): 26. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_7641895940415.
+INFO (XSTRM-223): 27. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_7641895940416.
+INFO (XSTRM-223): 28. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_7641895940417.
+INFO (XSTRM-223): 29. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_7641895940418.
+INFO (XSTRM-223): 30. Translating stdVia tsmc18/M3_M2/layout as STRUCTURE M3_M2_CDNS_7641895940419.
+INFO (XSTRM-223): 31. Translating stdVia tsmc18/M4_M3/layout as STRUCTURE M4_M3_CDNS_7641895940420.
+INFO (XSTRM-223): 32. Translating cellView PADS_LIB/met14_hor/layout as STRUCTURE met14_hor.
+INFO (XSTRM-223): 33. Translating cellView PADS_LIB/pad_in/layout as STRUCTURE pad_in.
+INFO (XSTRM-223): 34. Translating cellView SC_LIB/ANTENNA/layout as STRUCTURE ANTENNA.
+INFO (XSTRM-223): 35. Translating cellView SC_LIB/BUFX1/layout as STRUCTURE BUFX1.
+WARNING (XSTRM-35): The objects in the layer-purpose pair 'text:drawing' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
+INFO (XSTRM-223): 36. Translating cellView SC_LIB/DFFQSRX1/layout as STRUCTURE DFFQSRX1.
+INFO (XSTRM-223): 37. Translating cellView SC_LIB/AND2X1/layout as STRUCTURE AND2X1.
+INFO (XSTRM-223): 38. Translating cellView SC_LIB/MUX2X1/layout as STRUCTURE MUX2X1.
+INFO (XSTRM-223): 39. Translating cellView SC_LIB/NOR2X1/layout as STRUCTURE NOR2X1.
+INFO (XSTRM-223): 40. Translating cellView SC_LIB/NAND2X1/layout as STRUCTURE NAND2X1.
+INFO (XSTRM-223): 41. Translating cellView SC_LIB/INVX2/layout as STRUCTURE INVX2.
+INFO (XSTRM-223): 42. Translating cellView SC_LIB/OR2X1/layout as STRUCTURE OR2X1.
+INFO (XSTRM-223): 43. Translating cellView SC_LIB/NAND3X1/layout as STRUCTURE NAND3X1.
+INFO (XSTRM-223): 44. Translating cellView SC_LIB/XOR2X1/layout as STRUCTURE XOR2X1.
+INFO (XSTRM-223): 45. Translating cellView SC_LIB/INVX4/layout as STRUCTURE INVX4.
+INFO (XSTRM-223): 46. Translating cellView PADS_LIB/pad_out/layout as STRUCTURE pad_out.
+INFO (XSTRM-223): 47. Translating cellView PADS_LIB/pad_fill_32/layout as STRUCTURE pad_fill_32.
+INFO (XSTRM-223): 48. Translating cellView PADS_LIB/pad_fill_16/layout as STRUCTURE pad_fill_16.
+INFO (XSTRM-223): 49. Translating cellView PADS_LIB/pad_fill_8/layout as STRUCTURE pad_fill_8.
+INFO (XSTRM-223): 50. Translating cellView PADS_LIB/pad_fill_4/layout as STRUCTURE pad_fill_4.
+INFO (XSTRM-223): 51. Translating cellView PADS_LIB/pad_fill_2/layout as STRUCTURE pad_fill_2.
+INFO (XSTRM-223): 52. Translating cellView PADS_LIB/pad_fill_01/layout as STRUCTURE pad_fill_01.
+INFO (XSTRM-223): 53. Translating cellView PADS_LIB/pad_fill_005/layout as STRUCTURE pad_fill_005.
+INFO (XSTRM-223): 54. Translating cellView SC_LIB/FILL32/layout as STRUCTURE FILL32.
+INFO (XSTRM-223): 55. Translating cellView SC_LIB/FILL8/layout as STRUCTURE FILL8.
+INFO (XSTRM-223): 56. Translating cellView SC_LIB/FILL4/layout as STRUCTURE FILL4.
+INFO (XSTRM-223): 57. Translating cellView SC_LIB/FILL1/layout as STRUCTURE FILL1.
+INFO (XSTRM-223): 58. Translating cellView SC_LIB/FILL2/layout as STRUCTURE FILL2.
+INFO (XSTRM-223): 59. Translating cellView SC_LIB/FILL16/layout as STRUCTURE FILL16.
+INFO (XSTRM-223): 60. Translating cellView top_pad/VIA2NORTH/layout as STRUCTURE VIA2NORTH.
+INFO (XSTRM-223): 61. Translating cellView top_pad/VIA2SOUTH/layout as STRUCTURE VIA2SOUTH.
+INFO (XSTRM-223): 62. Translating cellView top_pad/VIA3EAST/layout as STRUCTURE VIA3EAST.
+INFO (XSTRM-223): 63. Translating cellView top_pad/top_pad_VIA0/layout as STRUCTURE top_pad_VIA0.
+INFO (XSTRM-223): 64. Translating cellView top_pad/top_pad_VIA1/layout as STRUCTURE top_pad_VIA1.
+INFO (XSTRM-223): 65. Translating cellView top_pad/top_pad_VIA2/layout as STRUCTURE top_pad_VIA2.
+INFO (XSTRM-223): 66. Translating cellView top_pad/top_pad_VIA3/layout as STRUCTURE top_pad_VIA3.
+INFO (XSTRM-223): 67. Translating cellView top_pad/top_pad_VIA4/layout as STRUCTURE top_pad_VIA4.
+INFO (XSTRM-223): 68. Translating cellView top_pad/top_pad_VIA5/layout as STRUCTURE top_pad_VIA5.
+INFO (XSTRM-223): 69. Translating cellView top_pad/top_pad_VIA6/layout as STRUCTURE top_pad_VIA6.
+INFO (XSTRM-223): 70. Translating cellView top_pad/top_pad_VIA7/layout as STRUCTURE top_pad_VIA7.
+INFO (XSTRM-223): 71. Translating cellView top_pad/top_pad_VIA8/layout as STRUCTURE top_pad_VIA8.
+INFO (XSTRM-223): 72. Translating cellView top_pad/top_pad_VIA9/layout as STRUCTURE top_pad_VIA9.
+INFO (XSTRM-223): 73. Translating cellView top_pad/top_pad_VIA10/layout as STRUCTURE top_pad_VIA10.
+INFO (XSTRM-223): 74. Translating cellView top_pad/top_pad_VIA11/layout as STRUCTURE top_pad_VIA11.
+INFO (XSTRM-223): 75. Translating cellView top_pad/top_pad_VIA12/layout as STRUCTURE top_pad_VIA12.
+INFO (XSTRM-223): 76. Translating cellView top_pad/top_pad_VIA13/layout as STRUCTURE top_pad_VIA13.
+INFO (XSTRM-223): 77. Translating cellView top_pad/top_pad_VIA14/layout as STRUCTURE top_pad_VIA14.
+INFO (XSTRM-223): 78. Translating cellView top_pad/top_pad_VIA15/layout as STRUCTURE top_pad_VIA15.
+INFO (XSTRM-223): 79. Translating cellView top_pad/top_pad_VIA16/layout as STRUCTURE top_pad_VIA16.
+INFO (XSTRM-223): 80. Translating cellView top_pad/top_pad_VIA17/layout as STRUCTURE top_pad_VIA17.
+INFO (XSTRM-223): 81. Translating cellView top_pad/top_pad_VIA18/layout as STRUCTURE top_pad_VIA18.
+INFO (XSTRM-223): 82. Translating cellView top_pad/top_pad_VIA19/layout as STRUCTURE top_pad_VIA19.
+INFO (XSTRM-223): 83. Translating cellView top_pad/top_pad_VIA20/layout as STRUCTURE top_pad_VIA20.
+INFO (XSTRM-223): 84. Translating cellView top_pad/top_pad_VIA21/layout as STRUCTURE top_pad_VIA21.
+INFO (XSTRM-223): 85. Translating cellView top_pad/top_pad_VIA22/layout as STRUCTURE top_pad_VIA22.
+INFO (XSTRM-223): 86. Translating cellView top_pad/top_pad_VIA23/layout as STRUCTURE top_pad_VIA23.
+INFO (XSTRM-223): 87. Translating cellView top_pad/top_pad_VIA24/layout as STRUCTURE top_pad_VIA24.
+INFO (XSTRM-223): 88. Translating cellView top_pad/top_pad_VIA25/layout as STRUCTURE top_pad_VIA25.
+INFO (XSTRM-223): 89. Translating cellView top_pad/top_pad_VIA26/layout as STRUCTURE top_pad_VIA26.
+INFO (XSTRM-223): 90. Translating cellView top_pad/top_pad_VIA27/layout as STRUCTURE top_pad_VIA27.
+INFO (XSTRM-223): 91. Translating cellView top_pad/top_pad_VIA28/layout as STRUCTURE top_pad_VIA28.
+INFO (XSTRM-223): 92. Translating cellView top_pad/top_pad_VIA29/layout as STRUCTURE top_pad_VIA29.
+INFO (XSTRM-223): 93. Translating cellView top_pad/top_pad/layout as STRUCTURE top_pad.
+INFO (XSTRM-223): 94. Translating cellView top_pad/sealring/layout as STRUCTURE sealring.
+INFO (XSTRM-223): 95. Translating cellView top_pad/pad_gnd_metalfill/layout as STRUCTURE pad_gnd_metalfill.
+INFO (XSTRM-223): 96. Translating cellView top_pad/pad_vdd_metalfill/layout as STRUCTURE pad_vdd_metalfill.
+INFO (XSTRM-223): 97. Translating cellView top_pad/pad_out_metalfill/layout as STRUCTURE pad_out_metalfill.
+INFO (XSTRM-223): 98. Translating cellView top_pad/DM1_S_metalfill/layout as STRUCTURE DM1_S_metalfill.
+INFO (XSTRM-223): 99. Translating cellView top_pad/DM6_L_metalfill/layout as STRUCTURE DM6_L_metalfill.
+INFO (XSTRM-223): 100. Translating cellView top_pad/DM5_S_metalfill/layout as STRUCTURE DM5_S_metalfill.
+INFO (XSTRM-223): 101. Translating cellView top_pad/DM5_M_metalfill/layout as STRUCTURE DM5_M_metalfill.
+INFO (XSTRM-223): 102. Translating cellView top_pad/DM5_L_metalfill/layout as STRUCTURE DM5_L_metalfill.
+INFO (XSTRM-223): 103. Translating cellView top_pad/top_pad_metalfill/layout as STRUCTURE top_pad_metalfill.
+INFO (XSTRM-223): 104. Translating cellView top_pad/DOD_1_polyfill/layout as STRUCTURE DOD_1_polyfill.
+INFO (XSTRM-223): 105. Translating cellView top_pad/DPO_1_polyfill/layout as STRUCTURE DPO_1_polyfill.
+INFO (XSTRM-223): 106. Translating cellView top_pad/pad_gnd_polyfill/layout as STRUCTURE pad_gnd_polyfill.
+INFO (XSTRM-223): 107. Translating cellView top_pad/pad_vdd_polyfill/layout as STRUCTURE pad_vdd_polyfill.
+INFO (XSTRM-223): 108. Translating cellView top_pad/pad_out_polyfill/layout as STRUCTURE pad_out_polyfill.
+INFO (XSTRM-223): 109. Translating cellView top_pad/DOD_2_polyfill/layout as STRUCTURE DOD_2_polyfill.
+INFO (XSTRM-223): 110. Translating cellView top_pad/DPO_2_polyfill/layout as STRUCTURE DPO_2_polyfill.
+INFO (XSTRM-223): 111. Translating cellView top_pad/top_pad_polyfill/layout as STRUCTURE top_pad_polyfill.
+INFO (XSTRM-223): 112. Translating cellView top_pad/top_pad_poly_metal/layout as STRUCTURE top_pad_poly_metal.
+
+Summary of Objects Translated:
+	Scalar Instances:                       48137
+	Array Instances:                        3576
+	Polygons:                               394
+	Paths:                                  51517
+	Rectangles:                             830753
+	Lines:                                  0
+	Arcs:                                   0
+	Donuts:                                 0
+	Dots:                                   0
+	Ellipses:                               0
+	Boundaries:                             0
+	Area Blockages:                         0
+	Layer Blockages:                        0
+	Area Halos:                             0
+	Markers:                                0
+	Rows:                                   0
+	Standard Vias                           31968
+	Custom Vias:                            0
+	CdsGen Vias:                            0
+	Pathsegs:                               0
+	Text:                                   24744
+	TextDisplay:                            2
+	Cells:                                  112
+
+Elapsed Time: 2.2s   User Time: 0.3s   CPU Time: 0.1s   Peak VM: 58828KB
+INFO (XSTRM-234): Translation completed. '0' error(s) and '2' warning(s) found.
