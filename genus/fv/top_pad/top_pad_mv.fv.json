@@ -2918,20 +2918,20 @@
 "object":"/designs/top_pad/instances_hier/core/instances_seq/transaction_state_reg[1]",
 "type":"instance"},
 {"index": "2", 
- "date": "Sat Nov 22 22:40:33 UTC 2025",
- "seconds": 1763851233.658329,
- "netlist": "outputs_Nov22-15:39:57/top_pad_m.v", 
+ "date": "Sat Nov 29 00:37:08 UTC 2025",
+ "seconds": 1764376628.758832,
+ "netlist": "outputs_Nov28-17:36:30/top_pad_m.v", 
  "netlist_exists": "1", 
- "netlist_normalize": "/home/u1425837/des-project/genus/outputs_Nov22-15:39:57/top_pad_m.v", 
- "netlist_mtime": "1763851232", 
- "netlist_timestamp": "Sat Nov 22 22:40:32 UTC 2025", 
+ "netlist_normalize": "/home/u1425837/des-project/genus/outputs_Nov28-17:36:30/top_pad_m.v", 
+ "netlist_mtime": "1764376627", 
+ "netlist_timestamp": "Sat Nov 29 00:37:07 UTC 2025", 
  "netlist_size": "327487", 
- "netlist_cksum": "1189060883", 
+ "netlist_cksum": "2232052137", 
  "design_name": "top_pad", 
  "synth_workdir": "/home/u1425837/des-project/genus", 
  "synthesis_command":"",
  "current_label": "top_pad_mv", 
  "previous_label": "fv_map", 
- "write_verif_file_runtime": 0.494037 
+ "write_verif_file_runtime": 0.488116 
  }
 ]

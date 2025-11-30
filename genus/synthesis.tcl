@@ -72,7 +72,20 @@ set_db / .lp_insert_clock_gating false
 
 
 read_hdl {
-	/home/u1425837/des-project/genus/HDL/RTL/TopModule_m.v \
+	/home/u1425837/des-project/modelsim/RTL/PC1.v \
+        /home/u1425837/des-project/modelsim/RTL/PC2.v \
+        /home/u1425837/des-project/modelsim/RTL/left_shift.v \
+        /home/u1425837/des-project/modelsim/RTL/expansion.v \
+        /home/u1425837/des-project/modelsim/RTL/f_func.v \
+        /home/u1425837/des-project/modelsim/RTL/Initial_Permutation.v \
+        /home/u1425837/des-project/modelsim/RTL/Final_Permutation.v \
+        /home/u1425837/des-project/modelsim/RTL/pbox.v \
+        /home/u1425837/des-project/modelsim/RTL/sbox.v \
+        /home/u1425837/des-project/modelsim/RTL/sbox_array.v \
+        /home/u1425837/des-project/modelsim/RTL/SPI.v \
+        /home/u1425837/des-project/modelsim/RTL/key_schedule.v \
+        /home/u1425837/des-project/modelsim/RTL/Control_State_Machine.v \
+        /home/u1425837/des-project/modelsim/RTL/TopModule.v
 	/home/u1425837/des-project/genus/HDL/RTL/top_pad.v \
 }
 elaborate $DESIGN
