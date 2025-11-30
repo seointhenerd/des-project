@@ -1,8 +1,8 @@
 # place_route.tcl
 #Change the design name as well as the required density
 #set design					topmodule_withpads
-set design					top_pad
-set density					0.30
+set design					soc_top
+set density					0.60
 set max_route_layer 4
 set min_route_layer 2
 
@@ -125,18 +125,18 @@ proc floorplan_design {} {
 
            
     ###### LEFT BOTTOM RIGHT TOP
-   # placeInstance soc/soc_memory_sram_2 318 315 R180
-   # addHaloToBlock 8 8 8 8 -fromInstBox -snapToSite soc/soc_memory_sram_2
+    placeInstance soc/soc_memory_sram_2 318 315 R180
+    addHaloToBlock 8 8 8 8 -fromInstBox -snapToSite soc/soc_memory_sram_2
 
-   # placeInstance soc/soc_memory_sram_1 318 1057 R0
-   # addHaloToBlock 8 8 8 8  -fromInstBox -snapToSite soc/soc_memory_sram_1
+    placeInstance soc/soc_memory_sram_1 318 1057 R0
+    addHaloToBlock 8 8 8 8  -fromInstBox -snapToSite soc/soc_memory_sram_1
  
-   # placeInstance soc/soc_cpu_cpuregs_reg_1 315 575 R0 
-   # addHaloToBlock 2 2 2 2 -fromInstBox -snapToSite soc/soc_cpu_cpuregs_reg_1
+    placeInstance soc/soc_cpu_cpuregs_reg_1 315 575 R0 
+    addHaloToBlock 2 2 2 2 -fromInstBox -snapToSite soc/soc_cpu_cpuregs_reg_1
     #addRoutingHalo -allBlocks -space 10 -bottom METAL1 -top METAL3
 
-   # placeInstance soc/soc_cpu_cpuregs_reg_2 315 805 R0
-   # addHaloToBlock 2 2 2 2  -fromInstBox -snapToSite soc/soc_cpu_cpuregs_reg_2
+    placeInstance soc/soc_cpu_cpuregs_reg_2 315 805 R0
+    addHaloToBlock 2 2 2 2  -fromInstBox -snapToSite soc/soc_cpu_cpuregs_reg_2
 
                 
     save_design fplan
@@ -248,7 +248,7 @@ proc place_io_add_io_filler {} {
    -start_offset 25 \
    -stop_offset 30 \
    -switch_layer_over_obs false \
-   -max_same_layer_jog_length 2.5 \
+   -max_same_layer_jog_length 2 \
    -padcore_ring_top_layer_limit METAL6 \
    -padcore_ring_bottom_layer_limit METAL1 \
    -block_ring_top_layer_limit METAL6 \
@@ -610,4 +610,3 @@ proc do_steps {start {end -1}} {
          "13"  { export_design }
       }
   }}
-

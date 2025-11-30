@@ -1,5 +1,0 @@
-FORMATVERSION 1
-ADDINST ANTENNA core/DIODE_10 1 addPortAsNeeded
-INSTTERM A core/csm_inst_left_reg[7] -
-ADDINST ANTENNA core/DIODE_11 1 addPortAsNeeded
-INSTTERM A core/csm_inst_left_reg[7] -
