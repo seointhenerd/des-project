@@ -1,0 +1,37 @@
+Cadence Genus(TM) Synthesis Solution.
+Copyright 2022 Cadence Design Systems, Inc. All rights reserved worldwide.
+Cadence and the Cadence logo are registered trademarks and Genus is a trademark
+of Cadence Design Systems, Inc. in the United States and other countries.
+
+[17:16:20.041354] Configured Lic search path (21.01-s002): /uusoc/facility/cad_tools/Cadence/common_license:/uusoc/facility/cad_tools/Mentor/common_license
+
+Version: 21.15-s080_1, built Fri Sep 23 11:57:55 PDT 2022
+Options: -files SCRIPS/synthesis.tcl 
+Date:    Sun Nov 30 17:16:20 2025
+Host:    lab1-30.eng.utah.edu (x86_64 w/Linux 4.18.0-553.78.1.el8_10.x86_64) (8cores*16cpus*1physical cpu*Intel(R) Core(TM) i7-10700 CPU @ 2.90GHz 16384KB) (65789912KB)
+PID:     262126
+OS:      Red Hat Enterprise Linux release 8.10 (Ootpa)
+
+
+[17:16:21.005001] Periodic Lic check successful
+[17:16:21.005003] Feature usage summary:
+[17:16:21.005003] Genus_Synthesis
+Checking out license: Genus_Synthesis
+
+
+***********************************************************************************************************
+***********************************************************************************************************
+
+
+
+Loading tool scripts...Using chipware dir from user defined $CW_DIR environment variable set to /uusoc/facility/cad_tools/Cadence/GENUS211/tools.lnx86/lib/chipware
+Using chipware simulation model dir from user defined $CW_DIR_SIM environment variable set to /uusoc/facility/cad_tools/Cadence/GENUS211/tools.lnx86/lib/chipware/sim
+
+Finished loading tool scripts (6 seconds elapsed).
+
+#@ Processing -files option
+@genus 1> source SCRIPS/synthesis.tcl
+File 'SCRIPS/synthesis.tcl' does not exist.
+Encountered problems processing file: SCRIPS/synthesis.tcl
+WARNING: This version of the tool is 1164 days old.
+@genus:root: 2> genus -f SCRIPTS/synthesis.tcl

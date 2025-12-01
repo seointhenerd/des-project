@@ -12,7 +12,7 @@ puts "Hostname : [info hostname]"
 ##############################################################################
 
 
-set DESIGN DESIGN_NAME<>
+set DESIGN TopModule
 set GEN_EFF medium
 set MAP_OPT_EFF high
 set DATE [clock format [clock seconds] -format "%b%d-%T"] 
@@ -59,7 +59,22 @@ set_db / .lp_insert_clock_gating false
 ####################################################################
 
 
-read_hdl { <HDL_FILES>} 
+read_hdl {
+	/home/u1425837/des-project/modelsim/PC1.v \
+        /home/u1425837/des-project/modelsim/PC2.v \
+        /home/u1425837/des-project/modelsim/left_shift.v \
+        /home/u1425837/des-project/modelsim/expansion.v \
+        /home/u1425837/des-project/modelsim/f_func.v \
+        /home/u1425837/des-project/modelsim/Initial_Permutation.v \
+        /home/u1425837/des-project/modelsim/Final_Permutation.v \
+        /home/u1425837/des-project/modelsim/pbox.v \
+        /home/u1425837/des-project/modelsim/sbox.v \
+        /home/u1425837/des-project/modelsim/sbox_array.v \
+        /home/u1425837/des-project/modelsim/SPI.v \
+        /home/u1425837/des-project/modelsim/key_schedule.v \
+        /home/u1425837/des-project/modelsim/Control_State_Machine.v \
+        /home/u1425837/des-project/modelsim/TopModule.v
+ } 
 
 elaborate $DESIGN
 puts "Runtime & Memory after 'read_hdl'"
@@ -73,7 +88,7 @@ check_design -unresolved
 ## Constraints Setup
 ####################################################################
 
-read_sdc ./SDC/soc_top.sdc
+read_sdc ./SDC/TopModule.sdc
 puts "The number of exceptions is [llength [vfind "design:$DESIGN" -exception *]]"
 
 
@@ -221,6 +236,6 @@ puts "============================"
 
 file copy [get_db / .stdout_log] ${_LOG_PATH}/.
 
-quit
+##quit
 
 
