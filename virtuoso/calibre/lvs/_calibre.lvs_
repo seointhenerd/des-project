@@ -1,0 +1,76 @@
+//
+//  Rule file generated on Mon Dec 01 12:25:43 MST 2025
+//     by Calibre Interactive - LVS (v2021.2_37.20)
+//
+//      *** PLEASE DO NOT MODIFY THIS FILE ***
+//
+//
+
+LAYOUT PATH  "top_pad_merged.calibre.db"
+LAYOUT PRIMARY "top_pad_merged"
+LAYOUT SYSTEM GDSII
+
+SOURCE PATH "/home/u1425837/des-project/virtuoso/calibre/lvs/top_pad_merged.sp"
+SOURCE PRIMARY "top_pad_merged"
+SOURCE SYSTEM SPICE
+
+MASK SVDB DIRECTORY "svdb" QUERY
+
+LVS REPORT "top_pad_merged.lvs.report"
+
+LVS REPORT OPTION NONE
+LVS FILTER UNUSED OPTION NONE SOURCE
+LVS FILTER UNUSED OPTION NONE LAYOUT
+LVS REPORT MAXIMUM 50
+LVS POWER NAME
+	"vdd"
+	"vdd!"
+	"vcc"
+	"vcc!"
+	"VCC"
+	"VCC!"
+	"VDD"
+	"VDD!"
+
+LVS GROUND NAME
+	"gnd"
+	"gnd!"
+	"vss"
+	"vss!"
+	"GND"
+	"GND!"
+	"VSS"
+	"VSS!"
+
+
+LVS RECOGNIZE GATES ALL
+
+
+LVS ABORT ON SOFTCHK NO
+LVS ABORT ON SUPPLY ERROR YES
+LVS IGNORE PORTS NO
+LVS SHOW SEED PROMOTIONS NO
+LVS SHOW SEED PROMOTIONS MAXIMUM 50
+
+LVS ISOLATE SHORTS NO
+
+
+VIRTUAL CONNECT COLON NO
+VIRTUAL CONNECT REPORT NO
+
+LVS EXECUTE ERC YES
+ERC RESULTS DATABASE "top_pad_merged.erc.results"
+ERC SUMMARY REPORT "top_pad_merged.erc.summary" REPLACE HIER
+ERC CELL NAME YES CELL SPACE XFORM
+ERC MAXIMUM RESULTS 1000
+ERC MAXIMUM VERTEX 4096
+
+DRC ICSTATION YES
+
+
+SOURCE CASE YES
+LAYOUT CASE YES
+
+
+INCLUDE "/research/ece/lnis-teaching/Designkits/tsmc180nm/pdk/Calibre/lvs/calibre.lvs"
+

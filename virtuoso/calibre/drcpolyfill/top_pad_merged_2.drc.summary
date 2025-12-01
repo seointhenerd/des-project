@@ -1,0 +1,475 @@
+
+
+==================================================================================
+=== CALIBRE::DRC-H SUMMARY REPORT
+===
+Execution Date/Time:       Mon Dec  1 10:48:09 2025
+Calibre Version:           v2021.2_37.20    Tue Jun 1 14:42:29 PDT 2021
+Rule File Pathname:        /home/u1425837/des-project/virtuoso/calibre/drcpolyfill/_Dummy_OD_PO_Calibre_0.18um.210a_
+Rule File Title:           
+Layout System:             GDS
+Layout Path(s):            top_pad_merged_2.calibre.db
+Layout Primary Cell:       top_pad_merged_2
+Current Directory:         /home/u1425837/des-project/virtuoso/calibre/drcpolyfill
+User Name:                 u1425837
+Maximum Results/RuleCheck: ALL
+Maximum Result Vertices:   4096
+DRC Results Database:      design_polyfill2.gds (GDS w/LIBNAME drc.db)
+Layout Depth:              ALL
+Text Depth:                PRIMARY
+Summary Report File:       top_pad_merged_2.drc.summary (REPLACE)
+Geometry Flagging:         ACUTE = NO  SKEW = NO  ANGLED = NO  OFFGRID = NO
+                           NONSIMPLE POLYGON = NO  NONSIMPLE PATH = NO
+Excluded Cells:           
+CheckText Mapping:         ALL TEXT
+Layers:                    MEMORY-BASED
+Keep Empty Checks:         NO
+----------------------------------------------------------------------------------
+--- RUNTIME WARNINGS
+---
+Layer 3 contains unmapped objects and is the source layer of LAYER MAP == 3 DATATYPE == 1.
+Layer 13 contains unmapped objects and is the source layer of LAYER MAP == 13 DATATYPE == 1.
+Layer 16 contains unmapped objects and is the source layer of LAYER MAP == 16 DATATYPE == 1.
+Layer 16 contains unmapped objects and is the source layer of LAYER MAP == 16 DATATYPE == 2.
+Layer 18 contains unmapped objects and is the source layer of LAYER MAP == 18 DATATYPE == 1.
+Layer 18 contains unmapped objects and is the source layer of LAYER MAP == 18 DATATYPE == 2.
+Layer 28 contains unmapped objects and is the source layer of LAYER MAP == 28 DATATYPE == 1.
+Layer 28 contains unmapped objects and is the source layer of LAYER MAP == 28 DATATYPE == 2.
+Layer 31 contains unmapped objects and is the source layer of LAYER MAP == 31 DATATYPE == 1.
+Layer 31 contains unmapped objects and is the source layer of LAYER MAP == 31 DATATYPE == 2.
+Layer 33 contains unmapped objects and is the source layer of LAYER MAP == 33 DATATYPE == 1.
+Layer 33 contains unmapped objects and is the source layer of LAYER MAP == 33 DATATYPE == 2.
+Layer 38 contains unmapped objects and is the source layer of LAYER MAP == 38 DATATYPE == 1.
+Layer 38 contains unmapped objects and is the source layer of LAYER MAP == 38 DATATYPE == 2.
+RuleCheck DummyRule.ChipWindow output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.NWELi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.DIFFi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.DOD output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.ODBLK output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.PDIFFi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.NDIFFi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.OD2i output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.POLYi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.DPO output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.POBLK output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.PPi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.NPi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.FLASH output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.HVNWi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.HVOXi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.HVDMYi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.NLVTi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.HV60DMY output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.CTMDMYUD output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.RFDUMMYUD output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.DTi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.DTBLK output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.NLD output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.SOILDi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.SOIBTi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.SOIDRNi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.SOILGi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.SOI1Gi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.CB2i output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.RVi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.APi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.PM1i output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.PM2i output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.Cu_PPIi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.BJTDUMMY output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.DIODUMMY output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.RPDUMMY output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.COi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.M1i output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.VIA1i output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.M2i output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.VIA2i output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.M3i output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.VIA3i output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.M4i output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.VIA4i output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.M5i output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.VIA5i output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.M6i output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.VIADi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.MDi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.CBi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.CBDi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.UBMi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.PPIi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.RPOi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.NTNi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.PLMIDEi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.DNWi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.VTMPi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.VTMNi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.PV_P output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.PV_N output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.HRIi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.M1DMY output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.M2DMY output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.M3DMY output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.M4DMY output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.M5DMY output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.M6DMY output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.MDDMY output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.M1SLOTi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.M2SLOTi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.M3SLOTi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.M4SLOTi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.M5SLOTi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.M6SLOTi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.MDSLOTi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.CTM2i output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.CTM3i output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.CTM4i output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.CTM5i output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.HOTWL output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.EXCLi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.DRCDMY output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.RWDMY output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.DPDMY output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.PLDMY output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.SDI output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.ESD1DMY output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.ESD2DMY output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.ESD3DMY output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.CTMDMY output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.RLPPDMY output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.DMN2V output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.DMP2V output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.VARDMY output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.PMDMY output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.FWi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.LMARK output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.LWI output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.WBDMY output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.ESDi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.ESDIMPi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.INDDMY output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.SEALRING output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.LOGO output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.LUPWDMY output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.VDDDMY output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.VSSDMY output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.TSVi output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.DM1EXCL output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.DM2EXCL output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.DM3EXCL output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.DM4EXCL output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.DM5EXCL output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.DM6EXCL output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+RuleCheck DummyRule.DMDEXCL output to GDSII results database design_polyfill2.gds with default layer 0, datatype 0.
+Layer frameL_DPO CREATED with an exclusive FLAT instantiation.
+Layer frameL_DOD CREATED with an exclusive FLAT instantiation.
+Layer frameS_DOD CREATED with an exclusive FLAT instantiation.
+Layer frameS_DPO CREATED with an exclusive FLAT instantiation.
+Structure names longer than 32 characters have been written to GDSII DRC Results Database design_polyfill2.gds.
+----------------------------------------------------------------------------------
+--- ORIGINAL LAYER STATISTICS
+---
+LAYER M1SLOTi ...... TOTAL Original Geometry Count = 0     (0)
+LAYER M1DMY ........ TOTAL Original Geometry Count = 0     (0)
+LAYER M1i .......... TOTAL Original Geometry Count = 19852 (105812)
+LAYER M2SLOTi ...... TOTAL Original Geometry Count = 0     (0)
+LAYER M2DMY ........ TOTAL Original Geometry Count = 0     (0)
+LAYER M2i .......... TOTAL Original Geometry Count = 59828 (74474)
+LAYER M3SLOTi ...... TOTAL Original Geometry Count = 0     (0)
+LAYER M3DMY ........ TOTAL Original Geometry Count = 0     (0)
+LAYER M3i .......... TOTAL Original Geometry Count = 46083 (53916)
+LAYER M4SLOTi ...... TOTAL Original Geometry Count = 0     (0)
+LAYER M4DMY ........ TOTAL Original Geometry Count = 0     (0)
+LAYER M4i .......... TOTAL Original Geometry Count = 20467 (28240)
+LAYER M5SLOTi ...... TOTAL Original Geometry Count = 0     (0)
+LAYER M5DMY ........ TOTAL Original Geometry Count = 0     (0)
+LAYER M5i .......... TOTAL Original Geometry Count = 6403  (14152)
+LAYER M6SLOTi ...... TOTAL Original Geometry Count = 0     (0)
+LAYER M6DMY ........ TOTAL Original Geometry Count = 0     (0)
+LAYER M6i .......... TOTAL Original Geometry Count = 3307  (11056)
+LAYER MDSLOTi ...... TOTAL Original Geometry Count = 0     (0)
+LAYER MDDMY ........ TOTAL Original Geometry Count = 0     (0)
+LAYER MDi .......... TOTAL Original Geometry Count = 0     (0)
+LAYER PDIFFi ....... TOTAL Original Geometry Count = 0     (0)
+LAYER NDIFFi ....... TOTAL Original Geometry Count = 0     (0)
+LAYER DIFFi ........ TOTAL Original Geometry Count = 195   (103711)
+LAYER POLYi ........ TOTAL Original Geometry Count = 122   (34979)
+LAYER ODBLK ........ TOTAL Original Geometry Count = 11    (232)
+LAYER POBLK ........ TOTAL Original Geometry Count = 11    (232)
+LAYER NWELi ........ TOTAL Original Geometry Count = 51    (23727)
+LAYER FWi .......... TOTAL Original Geometry Count = 0     (0)
+LAYER HVNWi ........ TOTAL Original Geometry Count = 0     (0)
+LAYER NLVTi ........ TOTAL Original Geometry Count = 0     (0)
+LAYER HV60DMY ...... TOTAL Original Geometry Count = 0     (0)
+LAYER HVDMYi ....... TOTAL Original Geometry Count = 0     (0)
+LAYER HVOXi ........ TOTAL Original Geometry Count = 0     (0)
+LAYER TSVi ......... TOTAL Original Geometry Count = 0     (0)
+LAYER DTi .......... TOTAL Original Geometry Count = 0     (0)
+LAYER LOGO ......... TOTAL Original Geometry Count = 0     (0)
+LAYER FLASH ........ TOTAL Original Geometry Count = 0     (0)
+LAYER BJTDUMMY ..... TOTAL Original Geometry Count = 0     (0)
+LAYER CTM2i ........ TOTAL Original Geometry Count = 0     (0)
+LAYER CTM3i ........ TOTAL Original Geometry Count = 0     (0)
+LAYER CTM4i ........ TOTAL Original Geometry Count = 0     (0)
+LAYER CTM5i ........ TOTAL Original Geometry Count = 0     (0)
+LAYER LMARK ........ TOTAL Original Geometry Count = 0     (0)
+LAYER RWDMY ........ TOTAL Original Geometry Count = 0     (0)
+LAYER INDDMY ....... TOTAL Original Geometry Count = 0     (0)
+LAYER DOD .......... TOTAL Original Geometry Count = 0     (0)
+LAYER DPO .......... TOTAL Original Geometry Count = 0     (0)
+LAYER ChipWindow ... TOTAL Original Geometry Count = 0     (0)
+LAYER OD2i ......... TOTAL Original Geometry Count = 0     (0)
+LAYER PPi .......... TOTAL Original Geometry Count = 70    (54948)
+LAYER NPi .......... TOTAL Original Geometry Count = 68    (47204)
+LAYER CTMDMYUD ..... TOTAL Original Geometry Count = 0     (0)
+LAYER RFDUMMYUD .... TOTAL Original Geometry Count = 0     (0)
+LAYER DTBLK ........ TOTAL Original Geometry Count = 0     (0)
+LAYER NLD .......... TOTAL Original Geometry Count = 0     (0)
+LAYER SOILDi ....... TOTAL Original Geometry Count = 0     (0)
+LAYER SOIBTi ....... TOTAL Original Geometry Count = 0     (0)
+LAYER SOIDRNi ...... TOTAL Original Geometry Count = 0     (0)
+LAYER SOILGi ....... TOTAL Original Geometry Count = 0     (0)
+LAYER SOI1Gi ....... TOTAL Original Geometry Count = 0     (0)
+LAYER CB2i ......... TOTAL Original Geometry Count = 0     (0)
+LAYER RVi .......... TOTAL Original Geometry Count = 0     (0)
+LAYER APi .......... TOTAL Original Geometry Count = 0     (0)
+LAYER PM1i ......... TOTAL Original Geometry Count = 0     (0)
+LAYER PM2i ......... TOTAL Original Geometry Count = 0     (0)
+LAYER Cu_PPIi ...... TOTAL Original Geometry Count = 0     (0)
+LAYER DIODUMMY ..... TOTAL Original Geometry Count = 3     (19)
+LAYER RPDUMMY ...... TOTAL Original Geometry Count = 0     (0)
+LAYER COi .......... TOTAL Original Geometry Count = 25761 (1322209)
+LAYER VIA1i ........ TOTAL Original Geometry Count = 66505 (193525)
+LAYER VIA2i ........ TOTAL Original Geometry Count = 74988 (157454)
+LAYER VIA3i ........ TOTAL Original Geometry Count = 56559 (119763)
+LAYER VIA4i ........ TOTAL Original Geometry Count = 49220 (118310)
+LAYER VIA5i ........ TOTAL Original Geometry Count = 54888 (116236)
+LAYER VIADi ........ TOTAL Original Geometry Count = 0     (0)
+LAYER CBi .......... TOTAL Original Geometry Count = 3     (7752)
+LAYER CBDi ......... TOTAL Original Geometry Count = 0     (0)
+LAYER UBMi ......... TOTAL Original Geometry Count = 0     (0)
+LAYER PPIi ......... TOTAL Original Geometry Count = 0     (0)
+LAYER RPOi ......... TOTAL Original Geometry Count = 82    (7984)
+LAYER NTNi ......... TOTAL Original Geometry Count = 0     (0)
+LAYER PLMIDEi ...... TOTAL Original Geometry Count = 0     (0)
+LAYER DNWi ......... TOTAL Original Geometry Count = 0     (0)
+LAYER VTMPi ........ TOTAL Original Geometry Count = 1     (1)
+LAYER VTMNi ........ TOTAL Original Geometry Count = 1     (1)
+LAYER PV_P ......... TOTAL Original Geometry Count = 0     (0)
+LAYER PV_N ......... TOTAL Original Geometry Count = 0     (0)
+LAYER HRIi ......... TOTAL Original Geometry Count = 0     (0)
+LAYER HOTWL ........ TOTAL Original Geometry Count = 0     (0)
+LAYER EXCLi ........ TOTAL Original Geometry Count = 0     (0)
+LAYER DRCDMY ....... TOTAL Original Geometry Count = 0     (0)
+LAYER DPDMY ........ TOTAL Original Geometry Count = 0     (0)
+LAYER PLDMY ........ TOTAL Original Geometry Count = 1     (4)
+LAYER SDI .......... TOTAL Original Geometry Count = 12    (28)
+LAYER ESD1DMY ...... TOTAL Original Geometry Count = 0     (0)
+LAYER ESD2DMY ...... TOTAL Original Geometry Count = 8     (24)
+LAYER ESD3DMY ...... TOTAL Original Geometry Count = 0     (0)
+LAYER CTMDMY ....... TOTAL Original Geometry Count = 0     (0)
+LAYER RLPPDMY ...... TOTAL Original Geometry Count = 0     (0)
+LAYER DMN2V ........ TOTAL Original Geometry Count = 0     (0)
+LAYER DMP2V ........ TOTAL Original Geometry Count = 0     (0)
+LAYER VARDMY ....... TOTAL Original Geometry Count = 0     (0)
+LAYER PMDMY ........ TOTAL Original Geometry Count = 0     (0)
+LAYER LWI .......... TOTAL Original Geometry Count = 0     (0)
+LAYER WBDMY ........ TOTAL Original Geometry Count = 0     (0)
+LAYER ESDi ......... TOTAL Original Geometry Count = 0     (0)
+LAYER ESDIMPi ...... TOTAL Original Geometry Count = 0     (0)
+LAYER SEALRING ..... TOTAL Original Geometry Count = 2     (7744)
+LAYER LUPWDMY ...... TOTAL Original Geometry Count = 0     (0)
+LAYER VDDDMY ....... TOTAL Original Geometry Count = 0     (0)
+LAYER VSSDMY ....... TOTAL Original Geometry Count = 0     (0)
+LAYER DM1EXCL ...... TOTAL Original Geometry Count = 0     (0)
+LAYER DM2EXCL ...... TOTAL Original Geometry Count = 0     (0)
+LAYER DM3EXCL ...... TOTAL Original Geometry Count = 0     (0)
+LAYER DM4EXCL ...... TOTAL Original Geometry Count = 0     (0)
+LAYER DM5EXCL ...... TOTAL Original Geometry Count = 0     (0)
+LAYER DM6EXCL ...... TOTAL Original Geometry Count = 0     (0)
+LAYER DMDEXCL ...... TOTAL Original Geometry Count = 0     (0)
+----------------------------------------------------------------------------------
+--- RULECHECK RESULTS STATISTICS
+---
+RULECHECK DummyRule.ChipWindow ... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.NWELi ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.DIFFi ........ TOTAL Result Count = 2     (7744)
+RULECHECK DummyRule.DOD .......... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.ODBLK ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.PDIFFi ....... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.NDIFFi ....... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.OD2i ......... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.POLYi ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.DPO .......... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.POBLK ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.PPi .......... TOTAL Result Count = 2     (7744)
+RULECHECK DummyRule.NPi .......... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.FLASH ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.HVNWi ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.HVOXi ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.HVDMYi ....... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.NLVTi ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.HV60DMY ...... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.CTMDMYUD ..... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.RFDUMMYUD .... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.DTi .......... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.DTBLK ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.NLD .......... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.SOILDi ....... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.SOIBTi ....... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.SOIDRNi ...... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.SOILGi ....... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.SOI1Gi ....... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.CB2i ......... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.RVi .......... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.APi .......... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.PM1i ......... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.PM2i ......... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.Cu_PPIi ...... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.BJTDUMMY ..... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.DIODUMMY ..... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.RPDUMMY ...... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.COi .......... TOTAL Result Count = 6     (23232)
+RULECHECK DummyRule.M1i .......... TOTAL Result Count = 2     (7744)
+RULECHECK DummyRule.VIA1i ........ TOTAL Result Count = 4     (15488)
+RULECHECK DummyRule.M2i .......... TOTAL Result Count = 2     (7744)
+RULECHECK DummyRule.VIA2i ........ TOTAL Result Count = 6     (23232)
+RULECHECK DummyRule.M3i .......... TOTAL Result Count = 2     (7744)
+RULECHECK DummyRule.VIA3i ........ TOTAL Result Count = 4     (15488)
+RULECHECK DummyRule.M4i .......... TOTAL Result Count = 2     (7744)
+RULECHECK DummyRule.VIA4i ........ TOTAL Result Count = 6     (23232)
+RULECHECK DummyRule.M5i .......... TOTAL Result Count = 2     (7744)
+RULECHECK DummyRule.VIA5i ........ TOTAL Result Count = 4     (15488)
+RULECHECK DummyRule.M6i .......... TOTAL Result Count = 2     (7744)
+RULECHECK DummyRule.VIADi ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.MDi .......... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.CBi .......... TOTAL Result Count = 2     (7744)
+RULECHECK DummyRule.CBDi ......... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.UBMi ......... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.PPIi ......... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.RPOi ......... TOTAL Result Count = 2     (7744)
+RULECHECK DummyRule.NTNi ......... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.PLMIDEi ...... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.DNWi ......... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.VTMPi ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.VTMNi ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.PV_P ......... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.PV_N ......... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.HRIi ......... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.M1DMY ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.M2DMY ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.M3DMY ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.M4DMY ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.M5DMY ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.M6DMY ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.MDDMY ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.M1SLOTi ...... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.M2SLOTi ...... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.M3SLOTi ...... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.M4SLOTi ...... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.M5SLOTi ...... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.M6SLOTi ...... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.MDSLOTi ...... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.CTM2i ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.CTM3i ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.CTM4i ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.CTM5i ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.HOTWL ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.EXCLi ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.DRCDMY ....... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.RWDMY ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.DPDMY ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.PLDMY ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.SDI .......... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.ESD1DMY ...... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.ESD2DMY ...... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.ESD3DMY ...... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.CTMDMY ....... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.RLPPDMY ...... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.DMN2V ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.DMP2V ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.VARDMY ....... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.PMDMY ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.FWi .......... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.LMARK ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.LWI .......... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.WBDMY ........ TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.ESDi ......... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.ESDIMPi ...... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.INDDMY ....... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.SEALRING ..... TOTAL Result Count = 2     (7744)
+RULECHECK DummyRule.LOGO ......... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.LUPWDMY ...... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.VDDDMY ....... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.VSSDMY ....... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.TSVi ......... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.DM1EXCL ...... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.DM2EXCL ...... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.DM3EXCL ...... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.DM4EXCL ...... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.DM5EXCL ...... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.DM6EXCL ...... TOTAL Result Count = 0     (0)
+RULECHECK DummyRule.DMDEXCL ...... TOTAL Result Count = 0     (0)
+RULECHECK GEN_DOD ................ TOTAL Result Count = 29008 (29008)
+RULECHECK GEN_DPO ................ TOTAL Result Count = 58093 (58093)
+----------------------------------------------------------------------------------
+--- RULECHECK RESULTS STATISTICS (BY CELL)
+---
+CELL tsmc_c018_sealring_corner_1p6m ... TOTAL Result Count = 26    (104)
+    RULECHECK DummyRule.PPi ........... TOTAL Result Count = 1     (4)
+    RULECHECK DummyRule.COi ........... TOTAL Result Count = 3     (12)
+    RULECHECK DummyRule.DIFFi ......... TOTAL Result Count = 1     (4)
+    RULECHECK DummyRule.VIA1i ......... TOTAL Result Count = 2     (8)
+    RULECHECK DummyRule.M2i ........... TOTAL Result Count = 1     (4)
+    RULECHECK DummyRule.M1i ........... TOTAL Result Count = 1     (4)
+    RULECHECK DummyRule.M3i ........... TOTAL Result Count = 1     (4)
+    RULECHECK DummyRule.M5i ........... TOTAL Result Count = 1     (4)
+    RULECHECK DummyRule.VIA4i ......... TOTAL Result Count = 3     (12)
+    RULECHECK DummyRule.M4i ........... TOTAL Result Count = 1     (4)
+    RULECHECK DummyRule.M6i ........... TOTAL Result Count = 1     (4)
+    RULECHECK DummyRule.CBi ........... TOTAL Result Count = 1     (4)
+    RULECHECK DummyRule.RPOi .......... TOTAL Result Count = 1     (4)
+    RULECHECK DummyRule.SEALRING ...... TOTAL Result Count = 1     (4)
+    RULECHECK DummyRule.VIA2i ......... TOTAL Result Count = 3     (12)
+    RULECHECK DummyRule.VIA3i ......... TOTAL Result Count = 2     (8)
+    RULECHECK DummyRule.VIA5i ......... TOTAL Result Count = 2     (8)
+CELL tsmc_c018_seal_ring_edge_1p6m .... TOTAL Result Count = 26    (201240)
+    RULECHECK DummyRule.PPi ........... TOTAL Result Count = 1     (7740)
+    RULECHECK DummyRule.COi ........... TOTAL Result Count = 3     (23220)
+    RULECHECK DummyRule.DIFFi ......... TOTAL Result Count = 1     (7740)
+    RULECHECK DummyRule.VIA1i ......... TOTAL Result Count = 2     (15480)
+    RULECHECK DummyRule.M2i ........... TOTAL Result Count = 1     (7740)
+    RULECHECK DummyRule.M1i ........... TOTAL Result Count = 1     (7740)
+    RULECHECK DummyRule.M3i ........... TOTAL Result Count = 1     (7740)
+    RULECHECK DummyRule.M5i ........... TOTAL Result Count = 1     (7740)
+    RULECHECK DummyRule.VIA4i ......... TOTAL Result Count = 3     (23220)
+    RULECHECK DummyRule.M4i ........... TOTAL Result Count = 1     (7740)
+    RULECHECK DummyRule.M6i ........... TOTAL Result Count = 1     (7740)
+    RULECHECK DummyRule.CBi ........... TOTAL Result Count = 1     (7740)
+    RULECHECK DummyRule.RPOi .......... TOTAL Result Count = 1     (7740)
+    RULECHECK DummyRule.SEALRING ...... TOTAL Result Count = 1     (7740)
+    RULECHECK DummyRule.VIA2i ......... TOTAL Result Count = 3     (23220)
+    RULECHECK DummyRule.VIA3i ......... TOTAL Result Count = 2     (15480)
+    RULECHECK DummyRule.VIA5i ......... TOTAL Result Count = 2     (15480)
+CELL pad_gnd .......................... TOTAL Result Count = 300   (300)
+    RULECHECK GEN_DOD ................. TOTAL Result Count = 100   (100)
+    RULECHECK GEN_DPO ................. TOTAL Result Count = 200   (200)
+CELL pad_vdd .......................... TOTAL Result Count = 270   (270)
+    RULECHECK GEN_DOD ................. TOTAL Result Count = 90    (90)
+    RULECHECK GEN_DPO ................. TOTAL Result Count = 180   (180)
+CELL pad_out .......................... TOTAL Result Count = 300   (300)
+    RULECHECK GEN_DOD ................. TOTAL Result Count = 100   (100)
+    RULECHECK GEN_DPO ................. TOTAL Result Count = 200   (200)
+CELL top_pad .......................... TOTAL Result Count = 19177 (19177)
+    RULECHECK GEN_DOD ................. TOTAL Result Count = 6392  (6392)
+    RULECHECK GEN_DPO ................. TOTAL Result Count = 12785 (12785)
+CELL top_pad_merged_2 ................. TOTAL Result Count = 67054 (67054)
+    RULECHECK GEN_DOD ................. TOTAL Result Count = 22326 (22326)
+    RULECHECK GEN_DPO ................. TOTAL Result Count = 44728 (44728)
+----------------------------------------------------------------------------------
+--- SUMMARY
+---
+TOTAL CPU Time:                  6
+TOTAL REAL Time:                 1
+TOTAL Original Layer Geometries: 484502 (2603737)
+TOTAL DRC RuleChecks Executed:   121
+TOTAL DRC Results Generated:     87153 (288445)

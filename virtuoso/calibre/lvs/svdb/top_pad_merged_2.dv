@@ -1,0 +1,8 @@
+# CALIBRE-LVS DISCREPANCY VIEWER TCL FILE 
+# FILE: svdb/top_pad_merged_2.dv
+dv_start notcompared                              
+dv_global
+dv_discrep 1 {Error: Subckt not found}
+dv_discrep_line {Subcircuit "top_pad_merged_2" not found}
+dv_discrep_line {}
+dv_end

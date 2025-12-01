@@ -1,0 +1,13 @@
+# Automagically generated file: Please do not edit!
+lvs_ExtfVersion 3
+lvs_ExtRunTimes 1764611090 1764611094
+lvs_ExtOutFile RUNDIR /home/u1425837/des-project/virtuoso/calibre/lvs
+lvs_ExtOutFile RULES_FILE /home/u1425837/des-project/virtuoso/calibre/lvs/_calibre.lvs_
+lvs_ExtInfoExtSummary {0 0 0 0 0 2 0 0 0 0 0}
+lvs_ExtInfoErcSummary {7 0 0 0 0 0 0 0 0 1 0}
+lvs_ExtInfoDfmSummary {0}
+lvs_ExtOutFile LAYOUT_NETLIST /home/u1425837/des-project/virtuoso/calibre/lvs/top_pad_merged_2.sp
+lvs_ExtOutFile EXTRACTION_REPORT top_pad_merged_2.lvs.report.ext
+lvs_ExtOutFile SOFTCHK_DATABASE svdb/top_pad_merged_2.softchk
+lvs_ExtOutFile ERC_DATABASE top_pad_merged_2.erc.results
+lvs_ExtOutFile ERC_SUMMARY top_pad_merged_2.erc.summary

@@ -1,6 +1,6 @@
 # ####################################################################
 
-#  Created by Genus(TM) Synthesis Solution 21.15-s080_1 on Sun Nov 30 17:45:19 MST 2025
+#  Created by Genus(TM) Synthesis Solution 21.15-s080_1 on Sun Nov 30 20:32:35 MST 2025
 
 # ####################################################################
 
@@ -12,7 +12,7 @@ set_units -time 1000ps
 # Set the current design
 current_design top_pad
 
-create_clock -name "clk" -period 10.0 -waveform {0.0 5.0} [get_ports clk]
+create_clock -name "clk" -period 30.0 -waveform {0.0 5.0} [get_ports clk]
 set_clock_transition -min 1.25 [get_clocks clk]
 set_clock_transition -max 2.0 [get_clocks clk]
 group_path -weight 1.000000 -name C2C -from [list \
@@ -224,8 +224,6 @@ group_path -weight 1.000000 -name C2C -from [list \
   [get_cells {core/data_reg_reg[61]}]  \
   [get_cells {core/data_reg_reg[62]}]  \
   [get_cells {core/data_reg_reg[63]}]  \
-  [get_cells core/done_decrypt_latched_reg]  \
-  [get_cells core/done_encrypt_latched_reg]  \
   [get_cells {core/key_reg_reg[1]}]  \
   [get_cells {core/key_reg_reg[2]}]  \
   [get_cells {core/key_reg_reg[3]}]  \
@@ -282,13 +280,14 @@ group_path -weight 1.000000 -name C2C -from [list \
   [get_cells {core/key_reg_reg[61]}]  \
   [get_cells {core/key_reg_reg[62]}]  \
   [get_cells {core/key_reg_reg[63]}]  \
-  [get_cells core/spi_inst_cs_prev_reg]  \
-  [get_cells {core/spi_inst_in_count_reg[0]}]  \
-  [get_cells {core/spi_inst_in_count_reg[1]}]  \
-  [get_cells {core/spi_inst_in_count_reg[2]}]  \
-  [get_cells {core/spi_inst_in_count_reg[3]}]  \
-  [get_cells {core/spi_inst_in_count_reg[4]}]  \
-  [get_cells {core/spi_inst_in_count_reg[5]}]  \
+  [get_cells core/spi_inst_active_reg]  \
+  [get_cells {core/spi_inst_bit_count_reg[0]}]  \
+  [get_cells {core/spi_inst_bit_count_reg[1]}]  \
+  [get_cells {core/spi_inst_bit_count_reg[2]}]  \
+  [get_cells {core/spi_inst_bit_count_reg[3]}]  \
+  [get_cells {core/spi_inst_bit_count_reg[4]}]  \
+  [get_cells {core/spi_inst_bit_count_reg[5]}]  \
+  [get_cells {core/spi_inst_bit_count_reg[6]}]  \
   [get_cells {core/spi_inst_input_text_reg[0]}]  \
   [get_cells {core/spi_inst_input_text_reg[1]}]  \
   [get_cells {core/spi_inst_input_text_reg[2]}]  \
@@ -354,14 +353,9 @@ group_path -weight 1.000000 -name C2C -from [list \
   [get_cells {core/spi_inst_input_text_reg[62]}]  \
   [get_cells {core/spi_inst_input_text_reg[63]}]  \
   [get_cells core/spi_inst_miso_reg_reg]  \
-  [get_cells core/spi_inst_miso_reg_reg368]  \
-  [get_cells {core/spi_inst_out_count_reg[0]354}]  \
-  [get_cells {core/spi_inst_out_count_reg[1]355}]  \
-  [get_cells {core/spi_inst_out_count_reg[2]356}]  \
-  [get_cells {core/spi_inst_out_count_reg[3]357}]  \
-  [get_cells {core/spi_inst_out_count_reg[4]358}]  \
-  [get_cells {core/spi_inst_out_count_reg[5]359}]  \
-  [get_cells {core/spi_inst_out_count_reg[6]360}]  \
+  [get_cells core/spi_inst_sclk_prev_reg]  \
+  [get_cells core/spi_inst_sclk_sync1_reg]  \
+  [get_cells core/spi_inst_sclk_sync2_reg]  \
   [get_cells {core/spi_inst_shift_in_reg[0]}]  \
   [get_cells {core/spi_inst_shift_in_reg[1]}]  \
   [get_cells {core/spi_inst_shift_in_reg[2]}]  \
@@ -425,131 +419,70 @@ group_path -weight 1.000000 -name C2C -from [list \
   [get_cells {core/spi_inst_shift_in_reg[60]}]  \
   [get_cells {core/spi_inst_shift_in_reg[61]}]  \
   [get_cells {core/spi_inst_shift_in_reg[62]}]  \
+  [get_cells {core/spi_inst_shift_in_reg[63]}]  \
+  [get_cells {core/spi_inst_shift_out_reg[0]}]  \
   [get_cells {core/spi_inst_shift_out_reg[1]}]  \
   [get_cells {core/spi_inst_shift_out_reg[2]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[2]233}]  \
   [get_cells {core/spi_inst_shift_out_reg[3]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[3]234}]  \
   [get_cells {core/spi_inst_shift_out_reg[4]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[4]235}]  \
   [get_cells {core/spi_inst_shift_out_reg[5]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[5]236}]  \
   [get_cells {core/spi_inst_shift_out_reg[6]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[6]237}]  \
   [get_cells {core/spi_inst_shift_out_reg[7]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[7]238}]  \
   [get_cells {core/spi_inst_shift_out_reg[8]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[8]239}]  \
   [get_cells {core/spi_inst_shift_out_reg[9]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[9]240}]  \
   [get_cells {core/spi_inst_shift_out_reg[10]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[10]241}]  \
   [get_cells {core/spi_inst_shift_out_reg[11]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[11]242}]  \
   [get_cells {core/spi_inst_shift_out_reg[12]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[12]243}]  \
   [get_cells {core/spi_inst_shift_out_reg[13]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[13]244}]  \
   [get_cells {core/spi_inst_shift_out_reg[14]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[14]245}]  \
   [get_cells {core/spi_inst_shift_out_reg[15]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[15]246}]  \
   [get_cells {core/spi_inst_shift_out_reg[16]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[16]247}]  \
   [get_cells {core/spi_inst_shift_out_reg[17]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[17]248}]  \
   [get_cells {core/spi_inst_shift_out_reg[18]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[18]249}]  \
   [get_cells {core/spi_inst_shift_out_reg[19]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[19]250}]  \
   [get_cells {core/spi_inst_shift_out_reg[20]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[20]251}]  \
   [get_cells {core/spi_inst_shift_out_reg[21]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[21]252}]  \
   [get_cells {core/spi_inst_shift_out_reg[22]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[22]253}]  \
   [get_cells {core/spi_inst_shift_out_reg[23]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[23]254}]  \
   [get_cells {core/spi_inst_shift_out_reg[24]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[24]255}]  \
   [get_cells {core/spi_inst_shift_out_reg[25]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[25]256}]  \
   [get_cells {core/spi_inst_shift_out_reg[26]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[26]257}]  \
   [get_cells {core/spi_inst_shift_out_reg[27]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[27]258}]  \
   [get_cells {core/spi_inst_shift_out_reg[28]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[28]259}]  \
   [get_cells {core/spi_inst_shift_out_reg[29]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[29]260}]  \
   [get_cells {core/spi_inst_shift_out_reg[30]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[30]261}]  \
   [get_cells {core/spi_inst_shift_out_reg[31]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[31]262}]  \
   [get_cells {core/spi_inst_shift_out_reg[32]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[32]263}]  \
   [get_cells {core/spi_inst_shift_out_reg[33]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[33]264}]  \
   [get_cells {core/spi_inst_shift_out_reg[34]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[34]265}]  \
   [get_cells {core/spi_inst_shift_out_reg[35]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[35]266}]  \
   [get_cells {core/spi_inst_shift_out_reg[36]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[36]267}]  \
   [get_cells {core/spi_inst_shift_out_reg[37]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[37]268}]  \
   [get_cells {core/spi_inst_shift_out_reg[38]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[38]269}]  \
   [get_cells {core/spi_inst_shift_out_reg[39]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[39]270}]  \
   [get_cells {core/spi_inst_shift_out_reg[40]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[40]271}]  \
   [get_cells {core/spi_inst_shift_out_reg[41]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[41]272}]  \
   [get_cells {core/spi_inst_shift_out_reg[42]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[42]273}]  \
   [get_cells {core/spi_inst_shift_out_reg[43]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[43]274}]  \
   [get_cells {core/spi_inst_shift_out_reg[44]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[44]275}]  \
   [get_cells {core/spi_inst_shift_out_reg[45]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[45]276}]  \
   [get_cells {core/spi_inst_shift_out_reg[46]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[46]277}]  \
   [get_cells {core/spi_inst_shift_out_reg[47]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[47]278}]  \
   [get_cells {core/spi_inst_shift_out_reg[48]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[48]279}]  \
   [get_cells {core/spi_inst_shift_out_reg[49]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[49]280}]  \
   [get_cells {core/spi_inst_shift_out_reg[50]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[50]281}]  \
   [get_cells {core/spi_inst_shift_out_reg[51]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[51]282}]  \
   [get_cells {core/spi_inst_shift_out_reg[52]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[52]283}]  \
   [get_cells {core/spi_inst_shift_out_reg[53]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[53]284}]  \
   [get_cells {core/spi_inst_shift_out_reg[54]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[54]285}]  \
   [get_cells {core/spi_inst_shift_out_reg[55]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[55]286}]  \
   [get_cells {core/spi_inst_shift_out_reg[56]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[56]287}]  \
   [get_cells {core/spi_inst_shift_out_reg[57]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[57]288}]  \
   [get_cells {core/spi_inst_shift_out_reg[58]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[58]289}]  \
   [get_cells {core/spi_inst_shift_out_reg[59]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[59]290}]  \
   [get_cells {core/spi_inst_shift_out_reg[60]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[60]291}]  \
   [get_cells {core/spi_inst_shift_out_reg[61]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[61]292}]  \
   [get_cells {core/spi_inst_shift_out_reg[62]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[62]293}]  \
-  [get_cells {core/spi_inst_shift_out_reg[63]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[63]294}]  \
   [get_cells {core/spi_tx_data_reg[0]}]  \
   [get_cells {core/spi_tx_data_reg[1]}]  \
   [get_cells {core/spi_tx_data_reg[2]}]  \
@@ -827,8 +760,6 @@ group_path -weight 1.000000 -name C2C -from [list \
   [get_cells {core/data_reg_reg[61]}]  \
   [get_cells {core/data_reg_reg[62]}]  \
   [get_cells {core/data_reg_reg[63]}]  \
-  [get_cells core/done_decrypt_latched_reg]  \
-  [get_cells core/done_encrypt_latched_reg]  \
   [get_cells {core/key_reg_reg[1]}]  \
   [get_cells {core/key_reg_reg[2]}]  \
   [get_cells {core/key_reg_reg[3]}]  \
@@ -885,13 +816,14 @@ group_path -weight 1.000000 -name C2C -from [list \
   [get_cells {core/key_reg_reg[61]}]  \
   [get_cells {core/key_reg_reg[62]}]  \
   [get_cells {core/key_reg_reg[63]}]  \
-  [get_cells core/spi_inst_cs_prev_reg]  \
-  [get_cells {core/spi_inst_in_count_reg[0]}]  \
-  [get_cells {core/spi_inst_in_count_reg[1]}]  \
-  [get_cells {core/spi_inst_in_count_reg[2]}]  \
-  [get_cells {core/spi_inst_in_count_reg[3]}]  \
-  [get_cells {core/spi_inst_in_count_reg[4]}]  \
-  [get_cells {core/spi_inst_in_count_reg[5]}]  \
+  [get_cells core/spi_inst_active_reg]  \
+  [get_cells {core/spi_inst_bit_count_reg[0]}]  \
+  [get_cells {core/spi_inst_bit_count_reg[1]}]  \
+  [get_cells {core/spi_inst_bit_count_reg[2]}]  \
+  [get_cells {core/spi_inst_bit_count_reg[3]}]  \
+  [get_cells {core/spi_inst_bit_count_reg[4]}]  \
+  [get_cells {core/spi_inst_bit_count_reg[5]}]  \
+  [get_cells {core/spi_inst_bit_count_reg[6]}]  \
   [get_cells {core/spi_inst_input_text_reg[0]}]  \
   [get_cells {core/spi_inst_input_text_reg[1]}]  \
   [get_cells {core/spi_inst_input_text_reg[2]}]  \
@@ -957,14 +889,9 @@ group_path -weight 1.000000 -name C2C -from [list \
   [get_cells {core/spi_inst_input_text_reg[62]}]  \
   [get_cells {core/spi_inst_input_text_reg[63]}]  \
   [get_cells core/spi_inst_miso_reg_reg]  \
-  [get_cells core/spi_inst_miso_reg_reg368]  \
-  [get_cells {core/spi_inst_out_count_reg[0]354}]  \
-  [get_cells {core/spi_inst_out_count_reg[1]355}]  \
-  [get_cells {core/spi_inst_out_count_reg[2]356}]  \
-  [get_cells {core/spi_inst_out_count_reg[3]357}]  \
-  [get_cells {core/spi_inst_out_count_reg[4]358}]  \
-  [get_cells {core/spi_inst_out_count_reg[5]359}]  \
-  [get_cells {core/spi_inst_out_count_reg[6]360}]  \
+  [get_cells core/spi_inst_sclk_prev_reg]  \
+  [get_cells core/spi_inst_sclk_sync1_reg]  \
+  [get_cells core/spi_inst_sclk_sync2_reg]  \
   [get_cells {core/spi_inst_shift_in_reg[0]}]  \
   [get_cells {core/spi_inst_shift_in_reg[1]}]  \
   [get_cells {core/spi_inst_shift_in_reg[2]}]  \
@@ -1028,131 +955,70 @@ group_path -weight 1.000000 -name C2C -from [list \
   [get_cells {core/spi_inst_shift_in_reg[60]}]  \
   [get_cells {core/spi_inst_shift_in_reg[61]}]  \
   [get_cells {core/spi_inst_shift_in_reg[62]}]  \
+  [get_cells {core/spi_inst_shift_in_reg[63]}]  \
+  [get_cells {core/spi_inst_shift_out_reg[0]}]  \
   [get_cells {core/spi_inst_shift_out_reg[1]}]  \
   [get_cells {core/spi_inst_shift_out_reg[2]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[2]233}]  \
   [get_cells {core/spi_inst_shift_out_reg[3]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[3]234}]  \
   [get_cells {core/spi_inst_shift_out_reg[4]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[4]235}]  \
   [get_cells {core/spi_inst_shift_out_reg[5]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[5]236}]  \
   [get_cells {core/spi_inst_shift_out_reg[6]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[6]237}]  \
   [get_cells {core/spi_inst_shift_out_reg[7]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[7]238}]  \
   [get_cells {core/spi_inst_shift_out_reg[8]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[8]239}]  \
   [get_cells {core/spi_inst_shift_out_reg[9]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[9]240}]  \
   [get_cells {core/spi_inst_shift_out_reg[10]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[10]241}]  \
   [get_cells {core/spi_inst_shift_out_reg[11]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[11]242}]  \
   [get_cells {core/spi_inst_shift_out_reg[12]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[12]243}]  \
   [get_cells {core/spi_inst_shift_out_reg[13]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[13]244}]  \
   [get_cells {core/spi_inst_shift_out_reg[14]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[14]245}]  \
   [get_cells {core/spi_inst_shift_out_reg[15]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[15]246}]  \
   [get_cells {core/spi_inst_shift_out_reg[16]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[16]247}]  \
   [get_cells {core/spi_inst_shift_out_reg[17]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[17]248}]  \
   [get_cells {core/spi_inst_shift_out_reg[18]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[18]249}]  \
   [get_cells {core/spi_inst_shift_out_reg[19]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[19]250}]  \
   [get_cells {core/spi_inst_shift_out_reg[20]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[20]251}]  \
   [get_cells {core/spi_inst_shift_out_reg[21]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[21]252}]  \
   [get_cells {core/spi_inst_shift_out_reg[22]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[22]253}]  \
   [get_cells {core/spi_inst_shift_out_reg[23]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[23]254}]  \
   [get_cells {core/spi_inst_shift_out_reg[24]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[24]255}]  \
   [get_cells {core/spi_inst_shift_out_reg[25]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[25]256}]  \
   [get_cells {core/spi_inst_shift_out_reg[26]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[26]257}]  \
   [get_cells {core/spi_inst_shift_out_reg[27]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[27]258}]  \
   [get_cells {core/spi_inst_shift_out_reg[28]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[28]259}]  \
   [get_cells {core/spi_inst_shift_out_reg[29]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[29]260}]  \
   [get_cells {core/spi_inst_shift_out_reg[30]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[30]261}]  \
   [get_cells {core/spi_inst_shift_out_reg[31]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[31]262}]  \
   [get_cells {core/spi_inst_shift_out_reg[32]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[32]263}]  \
   [get_cells {core/spi_inst_shift_out_reg[33]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[33]264}]  \
   [get_cells {core/spi_inst_shift_out_reg[34]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[34]265}]  \
   [get_cells {core/spi_inst_shift_out_reg[35]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[35]266}]  \
   [get_cells {core/spi_inst_shift_out_reg[36]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[36]267}]  \
   [get_cells {core/spi_inst_shift_out_reg[37]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[37]268}]  \
   [get_cells {core/spi_inst_shift_out_reg[38]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[38]269}]  \
   [get_cells {core/spi_inst_shift_out_reg[39]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[39]270}]  \
   [get_cells {core/spi_inst_shift_out_reg[40]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[40]271}]  \
   [get_cells {core/spi_inst_shift_out_reg[41]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[41]272}]  \
   [get_cells {core/spi_inst_shift_out_reg[42]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[42]273}]  \
   [get_cells {core/spi_inst_shift_out_reg[43]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[43]274}]  \
   [get_cells {core/spi_inst_shift_out_reg[44]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[44]275}]  \
   [get_cells {core/spi_inst_shift_out_reg[45]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[45]276}]  \
   [get_cells {core/spi_inst_shift_out_reg[46]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[46]277}]  \
   [get_cells {core/spi_inst_shift_out_reg[47]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[47]278}]  \
   [get_cells {core/spi_inst_shift_out_reg[48]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[48]279}]  \
   [get_cells {core/spi_inst_shift_out_reg[49]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[49]280}]  \
   [get_cells {core/spi_inst_shift_out_reg[50]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[50]281}]  \
   [get_cells {core/spi_inst_shift_out_reg[51]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[51]282}]  \
   [get_cells {core/spi_inst_shift_out_reg[52]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[52]283}]  \
   [get_cells {core/spi_inst_shift_out_reg[53]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[53]284}]  \
   [get_cells {core/spi_inst_shift_out_reg[54]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[54]285}]  \
   [get_cells {core/spi_inst_shift_out_reg[55]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[55]286}]  \
   [get_cells {core/spi_inst_shift_out_reg[56]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[56]287}]  \
   [get_cells {core/spi_inst_shift_out_reg[57]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[57]288}]  \
   [get_cells {core/spi_inst_shift_out_reg[58]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[58]289}]  \
   [get_cells {core/spi_inst_shift_out_reg[59]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[59]290}]  \
   [get_cells {core/spi_inst_shift_out_reg[60]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[60]291}]  \
   [get_cells {core/spi_inst_shift_out_reg[61]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[61]292}]  \
   [get_cells {core/spi_inst_shift_out_reg[62]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[62]293}]  \
-  [get_cells {core/spi_inst_shift_out_reg[63]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[63]294}]  \
   [get_cells {core/spi_tx_data_reg[0]}]  \
   [get_cells {core/spi_tx_data_reg[1]}]  \
   [get_cells {core/spi_tx_data_reg[2]}]  \
@@ -1431,8 +1297,6 @@ group_path -weight 1.000000 -name C2O -from [list \
   [get_cells {core/data_reg_reg[61]}]  \
   [get_cells {core/data_reg_reg[62]}]  \
   [get_cells {core/data_reg_reg[63]}]  \
-  [get_cells core/done_decrypt_latched_reg]  \
-  [get_cells core/done_encrypt_latched_reg]  \
   [get_cells {core/key_reg_reg[1]}]  \
   [get_cells {core/key_reg_reg[2]}]  \
   [get_cells {core/key_reg_reg[3]}]  \
@@ -1489,13 +1353,14 @@ group_path -weight 1.000000 -name C2O -from [list \
   [get_cells {core/key_reg_reg[61]}]  \
   [get_cells {core/key_reg_reg[62]}]  \
   [get_cells {core/key_reg_reg[63]}]  \
-  [get_cells core/spi_inst_cs_prev_reg]  \
-  [get_cells {core/spi_inst_in_count_reg[0]}]  \
-  [get_cells {core/spi_inst_in_count_reg[1]}]  \
-  [get_cells {core/spi_inst_in_count_reg[2]}]  \
-  [get_cells {core/spi_inst_in_count_reg[3]}]  \
-  [get_cells {core/spi_inst_in_count_reg[4]}]  \
-  [get_cells {core/spi_inst_in_count_reg[5]}]  \
+  [get_cells core/spi_inst_active_reg]  \
+  [get_cells {core/spi_inst_bit_count_reg[0]}]  \
+  [get_cells {core/spi_inst_bit_count_reg[1]}]  \
+  [get_cells {core/spi_inst_bit_count_reg[2]}]  \
+  [get_cells {core/spi_inst_bit_count_reg[3]}]  \
+  [get_cells {core/spi_inst_bit_count_reg[4]}]  \
+  [get_cells {core/spi_inst_bit_count_reg[5]}]  \
+  [get_cells {core/spi_inst_bit_count_reg[6]}]  \
   [get_cells {core/spi_inst_input_text_reg[0]}]  \
   [get_cells {core/spi_inst_input_text_reg[1]}]  \
   [get_cells {core/spi_inst_input_text_reg[2]}]  \
@@ -1561,14 +1426,9 @@ group_path -weight 1.000000 -name C2O -from [list \
   [get_cells {core/spi_inst_input_text_reg[62]}]  \
   [get_cells {core/spi_inst_input_text_reg[63]}]  \
   [get_cells core/spi_inst_miso_reg_reg]  \
-  [get_cells core/spi_inst_miso_reg_reg368]  \
-  [get_cells {core/spi_inst_out_count_reg[0]354}]  \
-  [get_cells {core/spi_inst_out_count_reg[1]355}]  \
-  [get_cells {core/spi_inst_out_count_reg[2]356}]  \
-  [get_cells {core/spi_inst_out_count_reg[3]357}]  \
-  [get_cells {core/spi_inst_out_count_reg[4]358}]  \
-  [get_cells {core/spi_inst_out_count_reg[5]359}]  \
-  [get_cells {core/spi_inst_out_count_reg[6]360}]  \
+  [get_cells core/spi_inst_sclk_prev_reg]  \
+  [get_cells core/spi_inst_sclk_sync1_reg]  \
+  [get_cells core/spi_inst_sclk_sync2_reg]  \
   [get_cells {core/spi_inst_shift_in_reg[0]}]  \
   [get_cells {core/spi_inst_shift_in_reg[1]}]  \
   [get_cells {core/spi_inst_shift_in_reg[2]}]  \
@@ -1632,131 +1492,70 @@ group_path -weight 1.000000 -name C2O -from [list \
   [get_cells {core/spi_inst_shift_in_reg[60]}]  \
   [get_cells {core/spi_inst_shift_in_reg[61]}]  \
   [get_cells {core/spi_inst_shift_in_reg[62]}]  \
+  [get_cells {core/spi_inst_shift_in_reg[63]}]  \
+  [get_cells {core/spi_inst_shift_out_reg[0]}]  \
   [get_cells {core/spi_inst_shift_out_reg[1]}]  \
   [get_cells {core/spi_inst_shift_out_reg[2]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[2]233}]  \
   [get_cells {core/spi_inst_shift_out_reg[3]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[3]234}]  \
   [get_cells {core/spi_inst_shift_out_reg[4]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[4]235}]  \
   [get_cells {core/spi_inst_shift_out_reg[5]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[5]236}]  \
   [get_cells {core/spi_inst_shift_out_reg[6]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[6]237}]  \
   [get_cells {core/spi_inst_shift_out_reg[7]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[7]238}]  \
   [get_cells {core/spi_inst_shift_out_reg[8]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[8]239}]  \
   [get_cells {core/spi_inst_shift_out_reg[9]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[9]240}]  \
   [get_cells {core/spi_inst_shift_out_reg[10]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[10]241}]  \
   [get_cells {core/spi_inst_shift_out_reg[11]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[11]242}]  \
   [get_cells {core/spi_inst_shift_out_reg[12]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[12]243}]  \
   [get_cells {core/spi_inst_shift_out_reg[13]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[13]244}]  \
   [get_cells {core/spi_inst_shift_out_reg[14]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[14]245}]  \
   [get_cells {core/spi_inst_shift_out_reg[15]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[15]246}]  \
   [get_cells {core/spi_inst_shift_out_reg[16]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[16]247}]  \
   [get_cells {core/spi_inst_shift_out_reg[17]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[17]248}]  \
   [get_cells {core/spi_inst_shift_out_reg[18]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[18]249}]  \
   [get_cells {core/spi_inst_shift_out_reg[19]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[19]250}]  \
   [get_cells {core/spi_inst_shift_out_reg[20]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[20]251}]  \
   [get_cells {core/spi_inst_shift_out_reg[21]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[21]252}]  \
   [get_cells {core/spi_inst_shift_out_reg[22]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[22]253}]  \
   [get_cells {core/spi_inst_shift_out_reg[23]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[23]254}]  \
   [get_cells {core/spi_inst_shift_out_reg[24]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[24]255}]  \
   [get_cells {core/spi_inst_shift_out_reg[25]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[25]256}]  \
   [get_cells {core/spi_inst_shift_out_reg[26]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[26]257}]  \
   [get_cells {core/spi_inst_shift_out_reg[27]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[27]258}]  \
   [get_cells {core/spi_inst_shift_out_reg[28]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[28]259}]  \
   [get_cells {core/spi_inst_shift_out_reg[29]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[29]260}]  \
   [get_cells {core/spi_inst_shift_out_reg[30]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[30]261}]  \
   [get_cells {core/spi_inst_shift_out_reg[31]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[31]262}]  \
   [get_cells {core/spi_inst_shift_out_reg[32]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[32]263}]  \
   [get_cells {core/spi_inst_shift_out_reg[33]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[33]264}]  \
   [get_cells {core/spi_inst_shift_out_reg[34]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[34]265}]  \
   [get_cells {core/spi_inst_shift_out_reg[35]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[35]266}]  \
   [get_cells {core/spi_inst_shift_out_reg[36]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[36]267}]  \
   [get_cells {core/spi_inst_shift_out_reg[37]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[37]268}]  \
   [get_cells {core/spi_inst_shift_out_reg[38]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[38]269}]  \
   [get_cells {core/spi_inst_shift_out_reg[39]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[39]270}]  \
   [get_cells {core/spi_inst_shift_out_reg[40]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[40]271}]  \
   [get_cells {core/spi_inst_shift_out_reg[41]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[41]272}]  \
   [get_cells {core/spi_inst_shift_out_reg[42]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[42]273}]  \
   [get_cells {core/spi_inst_shift_out_reg[43]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[43]274}]  \
   [get_cells {core/spi_inst_shift_out_reg[44]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[44]275}]  \
   [get_cells {core/spi_inst_shift_out_reg[45]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[45]276}]  \
   [get_cells {core/spi_inst_shift_out_reg[46]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[46]277}]  \
   [get_cells {core/spi_inst_shift_out_reg[47]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[47]278}]  \
   [get_cells {core/spi_inst_shift_out_reg[48]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[48]279}]  \
   [get_cells {core/spi_inst_shift_out_reg[49]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[49]280}]  \
   [get_cells {core/spi_inst_shift_out_reg[50]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[50]281}]  \
   [get_cells {core/spi_inst_shift_out_reg[51]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[51]282}]  \
   [get_cells {core/spi_inst_shift_out_reg[52]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[52]283}]  \
   [get_cells {core/spi_inst_shift_out_reg[53]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[53]284}]  \
   [get_cells {core/spi_inst_shift_out_reg[54]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[54]285}]  \
   [get_cells {core/spi_inst_shift_out_reg[55]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[55]286}]  \
   [get_cells {core/spi_inst_shift_out_reg[56]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[56]287}]  \
   [get_cells {core/spi_inst_shift_out_reg[57]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[57]288}]  \
   [get_cells {core/spi_inst_shift_out_reg[58]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[58]289}]  \
   [get_cells {core/spi_inst_shift_out_reg[59]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[59]290}]  \
   [get_cells {core/spi_inst_shift_out_reg[60]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[60]291}]  \
   [get_cells {core/spi_inst_shift_out_reg[61]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[61]292}]  \
   [get_cells {core/spi_inst_shift_out_reg[62]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[62]293}]  \
-  [get_cells {core/spi_inst_shift_out_reg[63]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[63]294}]  \
   [get_cells {core/spi_tx_data_reg[0]}]  \
   [get_cells {core/spi_tx_data_reg[1]}]  \
   [get_cells {core/spi_tx_data_reg[2]}]  \
@@ -2040,8 +1839,6 @@ group_path -weight 1.000000 -name I2C -from [list \
   [get_cells {core/data_reg_reg[61]}]  \
   [get_cells {core/data_reg_reg[62]}]  \
   [get_cells {core/data_reg_reg[63]}]  \
-  [get_cells core/done_decrypt_latched_reg]  \
-  [get_cells core/done_encrypt_latched_reg]  \
   [get_cells {core/key_reg_reg[1]}]  \
   [get_cells {core/key_reg_reg[2]}]  \
   [get_cells {core/key_reg_reg[3]}]  \
@@ -2098,13 +1895,14 @@ group_path -weight 1.000000 -name I2C -from [list \
   [get_cells {core/key_reg_reg[61]}]  \
   [get_cells {core/key_reg_reg[62]}]  \
   [get_cells {core/key_reg_reg[63]}]  \
-  [get_cells core/spi_inst_cs_prev_reg]  \
-  [get_cells {core/spi_inst_in_count_reg[0]}]  \
-  [get_cells {core/spi_inst_in_count_reg[1]}]  \
-  [get_cells {core/spi_inst_in_count_reg[2]}]  \
-  [get_cells {core/spi_inst_in_count_reg[3]}]  \
-  [get_cells {core/spi_inst_in_count_reg[4]}]  \
-  [get_cells {core/spi_inst_in_count_reg[5]}]  \
+  [get_cells core/spi_inst_active_reg]  \
+  [get_cells {core/spi_inst_bit_count_reg[0]}]  \
+  [get_cells {core/spi_inst_bit_count_reg[1]}]  \
+  [get_cells {core/spi_inst_bit_count_reg[2]}]  \
+  [get_cells {core/spi_inst_bit_count_reg[3]}]  \
+  [get_cells {core/spi_inst_bit_count_reg[4]}]  \
+  [get_cells {core/spi_inst_bit_count_reg[5]}]  \
+  [get_cells {core/spi_inst_bit_count_reg[6]}]  \
   [get_cells {core/spi_inst_input_text_reg[0]}]  \
   [get_cells {core/spi_inst_input_text_reg[1]}]  \
   [get_cells {core/spi_inst_input_text_reg[2]}]  \
@@ -2170,14 +1968,9 @@ group_path -weight 1.000000 -name I2C -from [list \
   [get_cells {core/spi_inst_input_text_reg[62]}]  \
   [get_cells {core/spi_inst_input_text_reg[63]}]  \
   [get_cells core/spi_inst_miso_reg_reg]  \
-  [get_cells core/spi_inst_miso_reg_reg368]  \
-  [get_cells {core/spi_inst_out_count_reg[0]354}]  \
-  [get_cells {core/spi_inst_out_count_reg[1]355}]  \
-  [get_cells {core/spi_inst_out_count_reg[2]356}]  \
-  [get_cells {core/spi_inst_out_count_reg[3]357}]  \
-  [get_cells {core/spi_inst_out_count_reg[4]358}]  \
-  [get_cells {core/spi_inst_out_count_reg[5]359}]  \
-  [get_cells {core/spi_inst_out_count_reg[6]360}]  \
+  [get_cells core/spi_inst_sclk_prev_reg]  \
+  [get_cells core/spi_inst_sclk_sync1_reg]  \
+  [get_cells core/spi_inst_sclk_sync2_reg]  \
   [get_cells {core/spi_inst_shift_in_reg[0]}]  \
   [get_cells {core/spi_inst_shift_in_reg[1]}]  \
   [get_cells {core/spi_inst_shift_in_reg[2]}]  \
@@ -2241,131 +2034,70 @@ group_path -weight 1.000000 -name I2C -from [list \
   [get_cells {core/spi_inst_shift_in_reg[60]}]  \
   [get_cells {core/spi_inst_shift_in_reg[61]}]  \
   [get_cells {core/spi_inst_shift_in_reg[62]}]  \
+  [get_cells {core/spi_inst_shift_in_reg[63]}]  \
+  [get_cells {core/spi_inst_shift_out_reg[0]}]  \
   [get_cells {core/spi_inst_shift_out_reg[1]}]  \
   [get_cells {core/spi_inst_shift_out_reg[2]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[2]233}]  \
   [get_cells {core/spi_inst_shift_out_reg[3]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[3]234}]  \
   [get_cells {core/spi_inst_shift_out_reg[4]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[4]235}]  \
   [get_cells {core/spi_inst_shift_out_reg[5]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[5]236}]  \
   [get_cells {core/spi_inst_shift_out_reg[6]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[6]237}]  \
   [get_cells {core/spi_inst_shift_out_reg[7]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[7]238}]  \
   [get_cells {core/spi_inst_shift_out_reg[8]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[8]239}]  \
   [get_cells {core/spi_inst_shift_out_reg[9]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[9]240}]  \
   [get_cells {core/spi_inst_shift_out_reg[10]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[10]241}]  \
   [get_cells {core/spi_inst_shift_out_reg[11]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[11]242}]  \
   [get_cells {core/spi_inst_shift_out_reg[12]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[12]243}]  \
   [get_cells {core/spi_inst_shift_out_reg[13]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[13]244}]  \
   [get_cells {core/spi_inst_shift_out_reg[14]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[14]245}]  \
   [get_cells {core/spi_inst_shift_out_reg[15]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[15]246}]  \
   [get_cells {core/spi_inst_shift_out_reg[16]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[16]247}]  \
   [get_cells {core/spi_inst_shift_out_reg[17]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[17]248}]  \
   [get_cells {core/spi_inst_shift_out_reg[18]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[18]249}]  \
   [get_cells {core/spi_inst_shift_out_reg[19]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[19]250}]  \
   [get_cells {core/spi_inst_shift_out_reg[20]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[20]251}]  \
   [get_cells {core/spi_inst_shift_out_reg[21]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[21]252}]  \
   [get_cells {core/spi_inst_shift_out_reg[22]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[22]253}]  \
   [get_cells {core/spi_inst_shift_out_reg[23]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[23]254}]  \
   [get_cells {core/spi_inst_shift_out_reg[24]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[24]255}]  \
   [get_cells {core/spi_inst_shift_out_reg[25]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[25]256}]  \
   [get_cells {core/spi_inst_shift_out_reg[26]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[26]257}]  \
   [get_cells {core/spi_inst_shift_out_reg[27]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[27]258}]  \
   [get_cells {core/spi_inst_shift_out_reg[28]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[28]259}]  \
   [get_cells {core/spi_inst_shift_out_reg[29]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[29]260}]  \
   [get_cells {core/spi_inst_shift_out_reg[30]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[30]261}]  \
   [get_cells {core/spi_inst_shift_out_reg[31]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[31]262}]  \
   [get_cells {core/spi_inst_shift_out_reg[32]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[32]263}]  \
   [get_cells {core/spi_inst_shift_out_reg[33]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[33]264}]  \
   [get_cells {core/spi_inst_shift_out_reg[34]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[34]265}]  \
   [get_cells {core/spi_inst_shift_out_reg[35]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[35]266}]  \
   [get_cells {core/spi_inst_shift_out_reg[36]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[36]267}]  \
   [get_cells {core/spi_inst_shift_out_reg[37]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[37]268}]  \
   [get_cells {core/spi_inst_shift_out_reg[38]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[38]269}]  \
   [get_cells {core/spi_inst_shift_out_reg[39]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[39]270}]  \
   [get_cells {core/spi_inst_shift_out_reg[40]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[40]271}]  \
   [get_cells {core/spi_inst_shift_out_reg[41]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[41]272}]  \
   [get_cells {core/spi_inst_shift_out_reg[42]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[42]273}]  \
   [get_cells {core/spi_inst_shift_out_reg[43]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[43]274}]  \
   [get_cells {core/spi_inst_shift_out_reg[44]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[44]275}]  \
   [get_cells {core/spi_inst_shift_out_reg[45]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[45]276}]  \
   [get_cells {core/spi_inst_shift_out_reg[46]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[46]277}]  \
   [get_cells {core/spi_inst_shift_out_reg[47]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[47]278}]  \
   [get_cells {core/spi_inst_shift_out_reg[48]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[48]279}]  \
   [get_cells {core/spi_inst_shift_out_reg[49]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[49]280}]  \
   [get_cells {core/spi_inst_shift_out_reg[50]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[50]281}]  \
   [get_cells {core/spi_inst_shift_out_reg[51]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[51]282}]  \
   [get_cells {core/spi_inst_shift_out_reg[52]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[52]283}]  \
   [get_cells {core/spi_inst_shift_out_reg[53]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[53]284}]  \
   [get_cells {core/spi_inst_shift_out_reg[54]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[54]285}]  \
   [get_cells {core/spi_inst_shift_out_reg[55]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[55]286}]  \
   [get_cells {core/spi_inst_shift_out_reg[56]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[56]287}]  \
   [get_cells {core/spi_inst_shift_out_reg[57]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[57]288}]  \
   [get_cells {core/spi_inst_shift_out_reg[58]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[58]289}]  \
   [get_cells {core/spi_inst_shift_out_reg[59]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[59]290}]  \
   [get_cells {core/spi_inst_shift_out_reg[60]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[60]291}]  \
   [get_cells {core/spi_inst_shift_out_reg[61]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[61]292}]  \
   [get_cells {core/spi_inst_shift_out_reg[62]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[62]293}]  \
-  [get_cells {core/spi_inst_shift_out_reg[63]}]  \
-  [get_cells {core/spi_inst_shift_out_reg[63]294}]  \
   [get_cells {core/spi_tx_data_reg[0]}]  \
   [get_cells {core/spi_tx_data_reg[1]}]  \
   [get_cells {core/spi_tx_data_reg[2]}]  \

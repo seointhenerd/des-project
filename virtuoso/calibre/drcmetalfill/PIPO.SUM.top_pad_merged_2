@@ -1,0 +1,283 @@
+********************************************************************************
+Product   : Virtuoso(R) XStream Out
+Program   : @(#)$CDS: strmout version 6.1.8-64b 06/22/2022 16:16 (sjfhw317) $
+          : sub-version  IC6.1.8-64b.500.26 
+Started at: 01-Dec-2025  10:49:21
+User Name : u1425837
+Host Name : lab2-30.eng.utah.edu
+Directory : /home/u1425837/des-project/virtuoso
+CADENCE Design Systems, Inc.
+********************************************************************************
+Info: Cellview Rev Num:99,  Tech Rev Num:59
+
+
+                       Individual Cell Statistics - Basic Objects
+---------------------------------------------------------------------------------------------------------------------------------------
+Library/Cell/View               Instance Array   Polygon  Rect   Path   PathSeg   Text   TextDisplay   Line   Dot   Arc   Donut   Ellipse 
+---------------------------------------------------------------------------------------------------------------------------------------
+top_pad/top_pad/layout          39393    0       0        27892  50435  0         23708  0             0      0     0     0       0       
+SC_LIB/FILL16/layout            0        0       0        44     0      0         0      0             0      0     0     0       0       
+top_pad/top_pad_VIA17/layout    0        0       0        44     0      0         0      0             0      0     0     0       0       
+tsmc18/M2_M1/layout             0        0       0        12     0      0         0      0             0      0     0     0       0       
+top_pad/top_pad_VIA3/layout     0        0       0        38     0      0         0      0             0      0     0     0       0       
+tsmc18/M3_M2/layout             0        0       0        322    0      0         0      0             0      0     0     0       0       
+SC_LIB/FILL32/layout            0        0       0        76     0      0         0      0             0      0     0     0       0       
+tsmc18/M2_M1/layout             0        0       0        12     0      0         0      0             0      0     0     0       0       
+tsmc18/M2_M1/layout             0        0       0        3      0      0         0      0             0      0     0     0       0       
+tsmc18/M3_M2/layout             0        0       0        3      0      0         0      0             0      0     0     0       0       
+top_pad/top_pad_VIA16/layout    0        0       0        21     0      0         0      0             0      0     0     0       0       
+top_pad/top_pad_VIA22/layout    0        0       0        93     0      0         0      0             0      0     0     0       0       
+tsmc18/M2_M1/layout             0        0       0        3      0      0         0      0             0      0     0     0       0       
+top_pad/top_pad_VIA1/layout     0        0       0        80     0      0         0      0             0      0     0     0       0       
+top_pad/VIA2NORTH/layout        0        0       0        3      0      0         0      0             0      0     0     0       0       
+SC_LIB/XOR2X1/layout            0        0       11       52     0      0         75     0             0      0     0     0       0       
+top_pad/top_pad_VIA23/layout    0        0       0        15     0      0         0      0             0      0     0     0       0       
+top_pad/top_pad_VIA19/layout    0        0       0        876    0      0         0      0             0      0     0     0       0       
+top_pad/top_pad_VIA15/layout    0        0       0        21     0      0         0      0             0      0     0     0       0       
+PADS_LIB/pad_fill_01/layout     0        0       0        13     0      0         2      0             0      0     0     0       0       
+PADS_LIB/pad_fill_8/layout      0        0       6        729    0      0         2      0             0      0     0     0       0       
+PADS_LIB/pad_gnd/layout         8        0       9        3081   0      0         4      0             0      0     0     0       0       
+top_pad/top_pad_VIA21/layout    0        0       0        93     0      0         0      0             0      0     0     0       0       
+sealring/tsmc_c018_sealring_corner_1p6m/layout                  0        0       17       9      0      0         0      0             0      0     0     0       0       
+tsmc18/M3_M2/layout             0        0       0        106    0      0         0      0             0      0     0     0       0       
+top_pad/top_pad_VIA8/layout     0        0       0        12     0      0         0      0             0      0     0     0       0       
+PADS_LIB/pad_out/layout         4        0       85       2489   0      0         4      0             0      0     0     0       0       
+tsmc18/M2_M1/layout             0        0       0        16     0      0         0      0             0      0     0     0       0       
+tsmc18/M2_M1/layout             0        0       0        182    0      0         0      0             0      0     0     0       0       
+SC_LIB/ANTENNA/layout           0        0       0        17     0      0         17     0             0      0     0     0       0       
+tsmc18/M3_M2/layout             0        0       0        182    0      0         0      0             0      0     0     0       0       
+top_pad/top_pad_VIA14/layout    0        0       0        21     0      0         0      0             0      0     0     0       0       
+PADS_LIB/padbox/layout          728      0       0        11     0      0         0      0             0      0     0     0       0       
+tsmc18/M4_M3/layout             0        0       0        182    0      0         0      0             0      0     0     0       0       
+top_pad/top_pad_VIA20/layout    0        0       0        1060   0      0         0      0             0      0     0     0       0       
+tsmc18/M3_M2/layout             0        0       0        362    0      0         0      0             0      0     0     0       0       
+SC_LIB/BUFX1/layout             0        0       7        26     0      0         32     0             0      0     0     0       0       
+top_pad/top_pad_VIA6/layout     0        0       0        12     0      0         0      0             0      0     0     0       0       
+PADS_LIB/pad_corner/layout      0        0       8        6269   0      0         2      0             0      0     0     0       0       
+tsmc18/M2_M1/layout             0        0       0        3      0      0         0      0             0      0     0     0       0       
+SC_LIB/FILL1/layout             0        0       0        11     0      0         0      0             0      0     0     0       0       
+top_pad/top_pad_VIA13/layout    0        0       0        21     0      0         0      0             0      0     0     0       0       
+top_pad/VIA2SOUTH/layout        0        0       0        3      0      0         0      0             0      0     0     0       0       
+SC_LIB/FILL2/layout             0        0       0        13     0      0         0      0             0      0     0     0       0       
+PADS_LIB/padboxx/layout         0        0       0        45     0      0         0      0             0      0     0     0       0       
+PADS_LIB/met14/layout           0        0       0        3      0      0         0      0             0      0     0     0       0       
+SC_LIB/FILL4/layout             0        0       0        17     0      0         0      0             0      0     0     0       0       
+top_pad/top_pad_VIA4/layout     0        0       0        8      0      0         0      0             0      0     0     0       0       
+PADS_LIB/pad_fill_4/layout      0        0       0        417    0      0         2      0             0      0     0     0       0       
+PADS_LIB/pad_fill_32/layout     0        0       6        2851   0      0         2      0             0      0     0     0       0       
+top_pad/top_pad_VIA12/layout    0        0       0        15     0      0         0      0             0      0     0     0       0       
+tsmc18/M4_M3/layout             0        0       0        3      0      0         0      0             0      0     0     0       0       
+sealring/tsmc_c018_seal_ring_edge_1p6m/layout                   0        0       0        26     0      0         0      0             0      0     0     0       0       
+tsmc18/M2_M1/layout             0        0       0        22     0      0         0      0             0      0     0     0       0       
+tsmc18/M2_M1/layout             0        0       0        14     0      0         0      0             0      0     0     0       0       
+PADS_LIB/pad_vdd/layout         1        0       28       9025   0      0         11     0             0      0     0     0       0       
+tsmc18/M3_M2/layout             0        0       0        3      0      0         0      0             0      0     0     0       0       
+top_pad/top_pad_VIA2/layout     0        0       0        80     0      0         0      0             0      0     0     0       0       
+SC_LIB/DFFQSRX1/layout          0        0       70       235    0      0         294    0             0      0     0     0       0       
+top_pad/top_pad_VIA11/layout    0        0       0        876    0      0         0      0             0      0     0     0       0       
+top_pad/top_pad_VIA27/layout    0        0       0        93     0      0         0      0             0      0     0     0       0       
+tsmc18/M2_M1/layout             0        0       0        3      0      0         0      0             0      0     0     0       0       
+SC_LIB/OR2X1/layout             0        0       9        30     0      0         47     0             0      0     0     0       0       
+SC_LIB/INVX2/layout             0        0       3        21     0      0         18     0             0      0     0     0       0       
+SC_LIB/MUX2X1/layout            0        0       14       44     0      0         83     0             0      0     0     0       0       
+sealring/tsmc_c018_sealring_1p6m/layout                         7744     0       0        1      0      0         0      0             0      0     0     0       0       
+top_pad/top_pad_VIA0/layout     0        0       0        171    0      0         0      0             0      0     0     0       0       
+top_pad/top_pad_VIA9/layout     0        0       0        431    0      0         0      0             0      0     0     0       0       
+SC_LIB/INVX4/layout             0        0       3        27     0      0         18     0             0      0     0     0       0       
+top_pad/top_pad_VIA10/layout    0        0       0        876    0      0         0      0             0      0     0     0       0       
+top_pad/top_pad_VIA26/layout    0        0       0        93     0      0         0      0             0      0     0     0       0       
+SC_LIB/NOR2X1/layout            0        0       6        26     0      0         33     0             0      0     0     0       0       
+SC_LIB/FILL8/layout             0        0       0        28     0      0         0      0             0      0     0     0       0       
+PADS_LIB/pad_fill_005/layout    0        0       0        13     0      0         2      0             0      0     0     0       0       
+tsmc18/M4_M3/layout             0        0       0        106    0      0         0      0             0      0     0     0       0       
+SC_LIB/NAND3X1/layout           0        0       6        34     0      0         41     0             0      0     0     0       0       
+tsmc18/M2_M1/layout             0        0       0        6      0      0         0      0             0      0     0     0       0       
+top_pad/top_pad_VIA7/layout     0        0       0        12     0      0         0      0             0      0     0     0       0       
+PADS_LIB/pad_in/layout          4        0       86       2490   0      0         4      0             0      0     0     0       0       
+top_pad/top_pad_merged_2/layout 1        0       0        0      0      0         0      0             0      0     0     0       0       
+PADS_LIB/pad_fill_2/layout      0        0       0        215    0      0         2      0             0      0     0     0       0       
+SC_LIB/NAND2X1/layout           0        0       5        27     0      0         33     0             0      0     0     0       0       
+tsmc18/M2_M1/layout             0        0       0        3      0      0         0      0             0      0     0     0       0       
+PADS_LIB/pad_fill_16/layout     0        0       6        1555   0      0         2      0             0      0     0     0       0       
+tsmc18/M2_M1/layout             0        0       0        322    0      0         0      0             0      0     0     0       0       
+top_pad/top_pad_VIA18/layout    0        0       0        44     0      0         0      0             0      0     0     0       0       
+SC_LIB/AND2X1/layout            0        0       9        30     0      0         47     0             0      0     0     0       0       
+top_pad/top_pad_VIA5/layout     0        0       0        12     0      0         0      0             0      0     0     0       0       
+top_pad/top_pad_sealring_2/layout                               2        0       0        0      0      0         0      0             0      0     0     0       0       
+tsmc18/M2_M1/layout             0        0       0        106    0      0         0      0             0      0     0     0       0       
+tsmc18/pdio_m/layout            0        0       0        3669   0      0         7      0             0      0     0     0       0       
+PADS_LIB/met14_hor/layout       0        0       0        4      0      0         0      0             0      0     0     0       0       
+---------------------------------------------------------------------------------------------------------------------------------------
+
+                       Individual Cell Statistics - Advanced Objects
+---------------------------------------------------------------------------------------------------------------------------------------
+Library/Cell/View               PRBdy    OtherBdy   AreaBlkg   LayerBlkg  AreaHalo   Row   Marker   CustVia   StdVia    CdsGenVia
+---------------------------------------------------------------------------------------------------------------------------------------
+top_pad/top_pad/layout          0        0          0          0          0          0     0        0         33215     0        
+SC_LIB/FILL16/layout            0        0          0          0          0          0     0        0         0         0        
+top_pad/top_pad_VIA17/layout    0        0          0          0          0          0     0        0         0         0        
+tsmc18/M2_M1/layout             0        0          0          0          0          0     0        0         0         0        
+top_pad/top_pad_VIA3/layout     0        0          0          0          0          0     0        0         0         0        
+tsmc18/M3_M2/layout             0        0          0          0          0          0     0        0         0         0        
+SC_LIB/FILL32/layout            0        0          0          0          0          0     0        0         0         0        
+tsmc18/M2_M1/layout             0        0          0          0          0          0     0        0         0         0        
+tsmc18/M2_M1/layout             0        0          0          0          0          0     0        0         0         0        
+tsmc18/M3_M2/layout             0        0          0          0          0          0     0        0         0         0        
+top_pad/top_pad_VIA16/layout    0        0          0          0          0          0     0        0         0         0        
+top_pad/top_pad_VIA22/layout    0        0          0          0          0          0     0        0         0         0        
+tsmc18/M2_M1/layout             0        0          0          0          0          0     0        0         0         0        
+top_pad/top_pad_VIA1/layout     0        0          0          0          0          0     0        0         0         0        
+top_pad/VIA2NORTH/layout        0        0          0          0          0          0     0        0         0         0        
+SC_LIB/XOR2X1/layout            0        0          0          0          0          0     0        0         0         0        
+top_pad/top_pad_VIA23/layout    0        0          0          0          0          0     0        0         0         0        
+top_pad/top_pad_VIA19/layout    0        0          0          0          0          0     0        0         0         0        
+top_pad/top_pad_VIA15/layout    0        0          0          0          0          0     0        0         0         0        
+PADS_LIB/pad_fill_01/layout     0        0          0          0          0          0     0        0         0         0        
+PADS_LIB/pad_fill_8/layout      0        0          0          0          0          0     0        0         0         0        
+PADS_LIB/pad_gnd/layout         0        0          0          0          0          0     0        0         15        0        
+top_pad/top_pad_VIA21/layout    0        0          0          0          0          0     0        0         0         0        
+sealring/tsmc_c018_sealring_corner_1p6m/layout                  0        0          0          0          0          0     0        0         0         0        
+tsmc18/M3_M2/layout             0        0          0          0          0          0     0        0         0         0        
+top_pad/top_pad_VIA8/layout     0        0          0          0          0          0     0        0         0         0        
+PADS_LIB/pad_out/layout         0        0          0          0          0          0     0        0         11        0        
+tsmc18/M2_M1/layout             0        0          0          0          0          0     0        0         0         0        
+tsmc18/M2_M1/layout             0        0          0          0          0          0     0        0         0         0        
+SC_LIB/ANTENNA/layout           0        0          0          0          0          0     0        0         0         0        
+tsmc18/M3_M2/layout             0        0          0          0          0          0     0        0         0         0        
+top_pad/top_pad_VIA14/layout    0        0          0          0          0          0     0        0         0         0        
+PADS_LIB/padbox/layout          0        0          0          0          0          0     0        0         0         0        
+tsmc18/M4_M3/layout             0        0          0          0          0          0     0        0         0         0        
+top_pad/top_pad_VIA20/layout    0        0          0          0          0          0     0        0         0         0        
+tsmc18/M3_M2/layout             0        0          0          0          0          0     0        0         0         0        
+SC_LIB/BUFX1/layout             0        0          0          0          0          0     0        0         0         0        
+top_pad/top_pad_VIA6/layout     0        0          0          0          0          0     0        0         0         0        
+PADS_LIB/pad_corner/layout      0        0          0          0          0          0     0        0         0         0        
+tsmc18/M2_M1/layout             0        0          0          0          0          0     0        0         0         0        
+SC_LIB/FILL1/layout             0        0          0          0          0          0     0        0         0         0        
+top_pad/top_pad_VIA13/layout    0        0          0          0          0          0     0        0         0         0        
+top_pad/VIA2SOUTH/layout        0        0          0          0          0          0     0        0         0         0        
+SC_LIB/FILL2/layout             0        0          0          0          0          0     0        0         0         0        
+PADS_LIB/padboxx/layout         0        0          0          0          0          0     0        0         0         0        
+PADS_LIB/met14/layout           0        0          0          0          0          0     0        0         3         0        
+SC_LIB/FILL4/layout             0        0          0          0          0          0     0        0         0         0        
+top_pad/top_pad_VIA4/layout     0        0          0          0          0          0     0        0         0         0        
+PADS_LIB/pad_fill_4/layout      0        0          0          0          0          0     0        0         0         0        
+PADS_LIB/pad_fill_32/layout     0        0          0          0          0          0     0        0         0         0        
+top_pad/top_pad_VIA12/layout    0        0          0          0          0          0     0        0         0         0        
+tsmc18/M4_M3/layout             0        0          0          0          0          0     0        0         0         0        
+sealring/tsmc_c018_seal_ring_edge_1p6m/layout                   0        0          0          0          0          0     0        0         0         0        
+tsmc18/M2_M1/layout             0        0          0          0          0          0     0        0         0         0        
+tsmc18/M2_M1/layout             0        0          0          0          0          0     0        0         0         0        
+PADS_LIB/pad_vdd/layout         0        0          0          0          0          0     0        0         16        0        
+tsmc18/M3_M2/layout             0        0          0          0          0          0     0        0         0         0        
+top_pad/top_pad_VIA2/layout     0        0          0          0          0          0     0        0         0         0        
+SC_LIB/DFFQSRX1/layout          0        0          0          0          0          0     0        0         0         0        
+top_pad/top_pad_VIA11/layout    0        0          0          0          0          0     0        0         0         0        
+top_pad/top_pad_VIA27/layout    0        0          0          0          0          0     0        0         0         0        
+tsmc18/M2_M1/layout             0        0          0          0          0          0     0        0         0         0        
+SC_LIB/OR2X1/layout             0        0          0          0          0          0     0        0         0         0        
+SC_LIB/INVX2/layout             0        0          0          0          0          0     0        0         0         0        
+SC_LIB/MUX2X1/layout            0        0          0          0          0          0     0        0         0         0        
+sealring/tsmc_c018_sealring_1p6m/layout                         0        0          0          0          0          0     0        0         0         0        
+top_pad/top_pad_VIA0/layout     0        0          0          0          0          0     0        0         0         0        
+top_pad/top_pad_VIA9/layout     0        0          0          0          0          0     0        0         0         0        
+SC_LIB/INVX4/layout             0        0          0          0          0          0     0        0         0         0        
+top_pad/top_pad_VIA10/layout    0        0          0          0          0          0     0        0         0         0        
+top_pad/top_pad_VIA26/layout    0        0          0          0          0          0     0        0         0         0        
+SC_LIB/NOR2X1/layout            0        0          0          0          0          0     0        0         0         0        
+SC_LIB/FILL8/layout             0        0          0          0          0          0     0        0         0         0        
+PADS_LIB/pad_fill_005/layout    0        0          0          0          0          0     0        0         0         0        
+tsmc18/M4_M3/layout             0        0          0          0          0          0     0        0         0         0        
+SC_LIB/NAND3X1/layout           0        0          0          0          0          0     0        0         0         0        
+tsmc18/M2_M1/layout             0        0          0          0          0          0     0        0         0         0        
+top_pad/top_pad_VIA7/layout     0        0          0          0          0          0     0        0         0         0        
+PADS_LIB/pad_in/layout          0        0          0          0          0          0     0        0         12        0        
+top_pad/top_pad_merged_2/layout 0        0          0          0          0          0     0        0         0         0        
+PADS_LIB/pad_fill_2/layout      0        0          0          0          0          0     0        0         0         0        
+SC_LIB/NAND2X1/layout           0        0          0          0          0          0     0        0         0         0        
+tsmc18/M2_M1/layout             0        0          0          0          0          0     0        0         0         0        
+PADS_LIB/pad_fill_16/layout     0        0          0          0          0          0     0        0         0         0        
+tsmc18/M2_M1/layout             0        0          0          0          0          0     0        0         0         0        
+top_pad/top_pad_VIA18/layout    0        0          0          0          0          0     0        0         0         0        
+SC_LIB/AND2X1/layout            0        0          0          0          0          0     0        0         0         0        
+top_pad/top_pad_VIA5/layout     0        0          0          0          0          0     0        0         0         0        
+top_pad/top_pad_sealring_2/layout                               0        0          0          0          0          0     0        0         0         0        
+tsmc18/M2_M1/layout             0        0          0          0          0          0     0        0         0         0        
+tsmc18/pdio_m/layout            0        0          0          0          0          0     0        0         0         0        
+PADS_LIB/met14_hor/layout       0        0          0          0          0          0     0        0         3         0        
+---------------------------------------------------------------------------------------------------------------------------------------
+
+                       Statistics of Layers 
+---------------------------------------------------------------------------------------------------------------------------------------
+Cadence         Cadence         Stream  Stream   
+Layer           Purpose         Layer   Datatype  Polygon  Rect     Path     Text     TextDisplay   Line Dot Arc Donut Ellipse Pathseg
+---------------------------------------------------------------------------------------------------------------------------------------
+IP              drawing         63      63        0        0        0        693      0             0    0   0   0     0      0      
+VTM_N           drawing         24      0         0        1        0        0        0             0    0   0   0     0      0      
+DIFF            drawing         3       0         40       155      0        0        0             0    0   0   0     0      0      
+VIA34           drawing         29      0         2        2257     0        0        0             0    0   0   0     0      0      
+PAD             drawing         19      0         1        2        0        0        0             0    0   0   0     0      0      
+VTM_P           drawing         23      0         0        1        0        0        0             0    0   0   0     0      0      
+METAL3          drawing         28      0         0        1107     19123    0        0             0    0   0   0     0      0      
+VIA23           drawing         27      0         3        1009     0        0        0             0    0   0   0     0      0      
+METAL2          pin             41      0         0        0        0        26       0             0    0   0   0     0      0      
+SEALRING        drawing         126     0         0        2        0        0        0             0    0   0   0     0      0      
+METAL5          drawing         33      0         0        47       0        0        0             0    0   0   0     0      0      
+POLY1           drawing         13      0         85       37       0        0        0             0    0   0   0     0      0      
+VIA45           drawing         32      0         3        1789     0        0        0             0    0   0   0     0      0      
+METAL1          drawing         16      0         173      2932     0        0        0             0    0   0   0     0      0      
+TEXT            drawing         59      0         0        23702    0        23702    0             0    0   0   0     0      0      
+NIMP            drawing         8       0         9        59       0        0        0             0    0   0   0     0      0      
+NWELL           drawing         2       0         9        42       0        0        0             0    0   0   0     0      0      
+METAL2          drawing         18      0         44       3219     23091    0        0             0    0   0   0     0      0      
+POBLK           dummy           150     21        0        11       0        0        0             0    0   0   0     0      0      
+WELLBODY        drawing         103     0         3        20       0        0        0             0    0   0   0     0      0      
+ESD2DUMMY       drawing         137     0         0        8        0        0        0             0    0   0   0     0      0      
+METAL1          pin             40      0         0        0        0        59       0             0    0   0   0     0      0      
+RPO             drawing         34      0         1        81       0        0        0             0    0   0   0     0      0      
+VIA56           drawing         39      0         2        1281     0        0        0             0    0   0   0     0      0      
+CONT            drawing         15      0         3        25758    0        0        0             0    0   0   0     0      0      
+PIMP            drawing         7       0         14       56       0        0        0             0    0   0   0     0      0      
+METAL3          pin             42      0         0        0        0        2        0             0    0   0   0     0      0      
+METAL6          pin             45      0         0        0        0        10       0             0    0   0   0     0      0      
+ODBLK           dummy           150     20        0        11       0        0        0             0    0   0   0     0      0      
+METAL4          drawing         31      0         0        17       8221     0        0             0    0   0   0     0      0      
+PLDUMMY         drawing         66      0         0        1        0        0        0             0    0   0   0     0      0      
+SDI             drawing         58      0         0        12       0        0        0             0    0   0   0     0      0      
+VIA12           drawing         17      0         2        4998     0        0        0             0    0   0   0     0      0      
+METAL6          drawing         38      0         0        45       0        0        0             0    0   0   0     0      0      
+prBoundary      drawing         62      0         0        2        0        0        0             0    0   0   0     0      0      
+DIODUMMY        drawing         56      0         0        3        0        0        0             0    0   0   0     0      0      
+---------------------------------------------------------------------------------------------------------------------------------------
+
+Summary of Objects Translated:
+	Scalar Instances:		47885
+	Array Instances:		0
+	Polygons:			394
+	Paths:				50435
+	Rectangles:			68665
+	Lines:				0
+	Arcs:				0
+	Donuts:				0
+	Dots:				0
+	Ellipses:			0
+	Boundaries:			0
+	Area Blockages:			0
+	Layer Blockages:		0
+	Area Halos:			0
+	Markers:			0
+	Rows:				0
+	Standard Vias:			33275
+	Custom Vias:			0
+	CdsGen Vias:			0
+	Pathsegs:			0
+	Text:				24492
+	TextDisplay:		0
+	Cells:				92
+Design Libraries: 
+
+DEFINE SC_LIB	/research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/oa/SC_LIB
+DEFINE tsmc18	/research/ece/lnis-teaching/Designkits/tsmc180nm/pdk/tsmc18
+DEFINE top_pad	/home/u1425837/des-project/virtuoso/top_pad
+DEFINE sealring	/research/ece/lnis-teaching/Designkits/tsmc180nm/pdk/sealring
+DEFINE PADS_LIB	/research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/oa/PADS_LIB

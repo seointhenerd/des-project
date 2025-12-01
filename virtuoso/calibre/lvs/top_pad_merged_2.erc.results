@@ -1,0 +1,31 @@
+top_pad_merged_2 1000
+mnpg
+0 0 2 Dec  1 10:44:54 2025                                                      
+Rule File Pathname: /home/u1425837/des-project/virtuoso/calibre/lvs/_calibre.lvs_
+MOS connected to both power and ground
+mppg
+0 0 2 Dec  1 10:44:54 2025                                                      
+Rule File Pathname: /home/u1425837/des-project/virtuoso/calibre/lvs/_calibre.lvs_
+MOS connected to both power and ground
+floating
+0 0 2 Dec  1 10:44:54 2025                                                      
+Rule File Pathname: /home/u1425837/des-project/virtuoso/calibre/lvs/_calibre.lvs_
+Please check the floating gate
+floating.nxwell_float
+0 0 3 Dec  1 10:44:54 2025
+ERROR IN PATHCHK                                     
+Rule File Pathname: /home/u1425837/des-project/virtuoso/calibre/lvs/_calibre.lvs_
+Floating nxwell_float is not allowed
+floating.psub
+0 0 3 Dec  1 10:44:54 2025
+ERROR IN PATHCHK                                     
+Rule File Pathname: /home/u1425837/des-project/virtuoso/calibre/lvs/_calibre.lvs_
+Floating psub is not allowed
+npvss49
+0 0 2 Dec  1 10:44:54 2025                                                      
+Rule File Pathname: /home/u1425837/des-project/virtuoso/calibre/lvs/_calibre.lvs_
+ntap connected to GROUND
+ppvdd49
+0 0 2 Dec  1 10:44:54 2025                                                      
+Rule File Pathname: /home/u1425837/des-project/virtuoso/calibre/lvs/_calibre.lvs_
+ptap connected to POWER

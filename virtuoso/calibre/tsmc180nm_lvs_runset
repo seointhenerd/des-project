@@ -1,28 +1,29 @@
 *lvsRulesFile: /research/ece/lnis-teaching/Designkits/tsmc180nm/pdk/Calibre/lvs/calibre.lvs
 *lvsRunDir: $PWD/calibre/lvs
-*lvsLayoutPaths: soc_top.calibre.db
-*lvsLayoutPrimary: soc_top
-*lvsLayoutLibrary: soc_top
+*lvsLayoutPaths: top_pad.calibre.db
+*lvsLayoutPrimary: top_pad
+*lvsLayoutLibrary: top_pad
 *lvsLayoutView: layout
 *lvsLayoutGetFromViewer: 1
-*lvsSourcePath: soc_top.sp
-*lvsSourcePrimary: soc_top
-*lvsSourceLibrary: soc_top
+*lvsSourcePath: top_pad.sp
+*lvsSourcePrimary: top_pad
+*lvsSourceLibrary: top_pad
 *lvsSourceView: schematic
-*lvsSpiceFile: soc_top.sp
+*lvsSpiceFile: top_pad.sp
 *lvsPowerNames: vdd vdd! vcc vcc! VCC VCC! VDD VDD!
 *lvsGroundNames: gnd gnd! vss vss! GND GND! VSS VSS!
-*lvsERCDatabase: soc_top.erc.results
-*lvsERCSummaryFile: soc_top.erc.summary
+*lvsERCDatabase: top_pad.erc.results
+*lvsERCSummaryFile: top_pad.erc.summary
 *lvsIncludeCmdsType: SVRF
-*lvsSVRFCmds: {SOURCE CASE YES} {LAYOUT CASE YES} {} {} {} {} {}
-*lvsReportFile: soc_top.lvs.report
+*lvsSVRFCmds: {SOURCE CASE YES} {LAYOUT CASE YES} {} {} {} {} {} {} {}
+*lvsReportFile: top_pad.lvs.report
 *cmnWarnLayoutOverwrite: 0
 *cmnWarnSourceOverwrite: 0
 *cmnShowOptions: 1
+*cmnV2LVS_LastTranslation: 1764605325
 *cmnSlaveHosts: {use {}} {hostName {}} {cpuCount {}} {a32a64 {}} {rsh {}} {maxMem {}} {workingDir {}} {layerDir {}} {mgcLibPath {}} {launchName {}}
 *cmnLSFSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
 *cmnGridSlaveTbl: {use 1} {totalCpus 1} {minCpus 1} {architecture {{}}} {minMemory {{}}} {resourceOptions {{}}} {submitOptions {{}}}
-*cmnFDILayoutLibrary: soc_top
+*cmnFDILayoutLibrary: top_pad
 *cmnFDILayoutView: layout
-*cmnFDIDEFLayoutPath: soc_top.def
+*cmnFDIDEFLayoutPath: top_pad.def

@@ -1,0 +1,61 @@
+top_pad_merged_2 1000
+SOFTCHK DNW CONTACT.
+0 0 0 Dec  1 10:44:54 2025                                                      
+SOFTCHK poly_term CONTACT.
+0 0 0 Dec  1 10:44:54 2025                                                      
+SOFTCHK poly_term CONTACT.
+0 0 0 Dec  1 10:44:54 2025                                                      
+SOFTCHK rfdmy56 CONTACT.
+0 0 0 Dec  1 10:44:54 2025                                                      
+SOFTCHK nxwell CONTACT.
+0 0 0 Dec  1 10:44:54 2025                                                      
+SOFTCHK RFDUMMY5T CONTACT.
+0 0 0 Dec  1 10:44:54 2025                                                      
+SOFTCHK RFDUMMY6T CONTACT.
+0 0 0 Dec  1 10:44:54 2025                                                      
+SOFTCHK coll CONTACT.
+0 0 0 Dec  1 10:44:54 2025                                                      
+SOFTCHK coll_od2 CONTACT.
+0 0 0 Dec  1 10:44:54 2025                                                      
+SOFTCHK n_psub CONTACT.
+1 1 4 Dec  1 10:44:54 2025                                                      
+Net 3 is selected for stamping.
+Rejected nets: 1
+Net 3 is selected for stamping.
+Rejected nets: 1
+p 1 10
+CN top_pad_merged_2 c 1 0 0 1 0 0 0
+DN 1
+46490 -51475
+2066490 -51475
+2066490 1838525
+2056490 1838525
+2056490 -41475
+56490 -41475
+56490 1828525
+2056490 1828525
+2056490 1838525
+46490 1838525
+SOFTCHK psub CONTACT.
+1 1 4 Dec  1 10:44:54 2025                                                      
+Net 3 is selected for stamping.
+Rejected nets: 1
+Net 3 is selected for stamping.
+Rejected nets: 1
+p 1 10
+CN top_pad_merged_2 c 1 0 0 1 0 0 0
+DN 1
+46490 -51475
+2066490 -51475
+2066490 1838525
+2056490 1838525
+2056490 -41475
+56490 -41475
+56490 1828525
+2056490 1828525
+2056490 1838525
+46490 1838525
+SOFTCHK psub_term CONTACT.
+0 0 0 Dec  1 10:44:54 2025                                                      
+SOFTCHK rw CONTACT.
+0 0 0 Dec  1 10:44:54 2025                                                      

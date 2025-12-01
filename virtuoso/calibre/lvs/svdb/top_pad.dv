@@ -1,0 +1,6 @@
+# CALIBRE-LVS DISCREPANCY VIEWER TCL FILE 
+# FILE: svdb/top_pad.dv
+dv_start matched                                  
+dv_cell {top_pad} {top_pad} matched
+dv_obj_count -transformed_nets {12371 12371} -transformed_inst {15555 15555} -transformed_port {6 6}
+dv_end

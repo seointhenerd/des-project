@@ -1,0 +1,33 @@
+
+
+       #############################################################
+       ##                                                         ##
+       ##               C A L I B R E    S Y S T E M              ##
+       ##                                                         ##
+       ##    C I R C U I T   E X T R A C T I O N   R E P O R T    ##
+       ##                                                         ##
+       #############################################################
+
+
+REPORT FILE NAME:         top_pad_merged_2.lvs.report.ext
+LAYOUT NAME:              top_pad_merged_2.calibre.db ('top_pad_merged_2')
+CREATION TIME:            Mon Dec  1 10:44:50 2025
+CURRENT DIRECTORY:        /home/u1425837/des-project/virtuoso/calibre/lvs
+USER NAME:                u1425837
+CALIBRE VERSION:          v2021.2_37.20    Tue Jun 1 14:42:29 PDT 2021
+
+
+
+Extraction Errors and Warnings for cell "top_pad_merged_2"
+----------------------------------------------------------
+
+WARNING:  Stamping conflict in SCONNECT - Multiple source nets stamp one target net.
+          Use LVS REPORT OPTION S or LVS SOFTCHK statement to obtain detailed information.
+
+
+
+WARNING: Invalid PATHCHK request "! POWER": no POWER nets present, operation aborted.
+
+
+WARNING: Invalid PATHCHK request "! GROUND": no GROUND nets present, operation aborted.
+

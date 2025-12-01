@@ -1,0 +1,12 @@
+# Automagically generated file: Please do not edit!
+lvs_ExtfVersion 3
+lvs_ExtRunTimes 1764613475 1764613479
+lvs_ExtOutFile RUNDIR /home/u1425837/des-project/virtuoso/calibre/lvs
+lvs_ExtOutFile RULES_FILE /home/u1425837/des-project/virtuoso/calibre/lvs/_calibre.lvs_
+lvs_ExtInfoExtSummary {0 0 0 0 0 0 0 0 0 0 0}
+lvs_ExtInfoErcSummary {7 0 0 0 0 0 0 0 0 1 0}
+lvs_ExtInfoDfmSummary {0}
+lvs_ExtOutFile LAYOUT_NETLIST /home/u1425837/des-project/virtuoso/calibre/lvs/top_pad.sp
+lvs_ExtOutFile EXTRACTION_REPORT top_pad.lvs.report.ext
+lvs_ExtOutFile ERC_DATABASE top_pad.erc.results
+lvs_ExtOutFile ERC_SUMMARY top_pad.erc.summary

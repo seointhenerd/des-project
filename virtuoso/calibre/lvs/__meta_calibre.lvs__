@@ -1,0 +1,6 @@
+DRC ICSTATION YES
+
+SOURCE CASE YES
+LAYOUT CASE YES
+
+INCLUDE "/research/ece/lnis-teaching/Designkits/tsmc180nm/pdk/Calibre/lvs/calibre.lvs"
