@@ -14,7 +14,7 @@ module TopModule (
     // DES control registers
     reg [63:0] key_reg;
     reg [63:0] data_reg;
-    reg crypt;  // 0=encrypt, 1=decrypt
+    reg crypt;
     
     // DES status signals
     wire done_encrypt, done_decrypt;
@@ -27,15 +27,14 @@ module TopModule (
     wire cs_rise;
     reg cs_rise_delayed;
     
-    // 0=KEY, 1=DATA, 2=CONTROL, 3=WAIT
+    // Transaction state
     reg [1:0] transaction_state;
-    
-    // Delayed trigger flag
     reg trigger_operation;
     
-    // SPI instance - CRITICAL: SPI uses active-LOW reset!
+    // SPI instance - NOW USES CLK!
     SPI spi_inst (
-        .rst        (~rst),      // Invert: TopModule rst=1 means active, SPI needs rst=1 for active
+        .clk        (clk),       // *** CHANGED: now uses clk ***
+        .rst        (~rst),
         .sclk       (sclk),
         .cs_n       (cs_n),
         .mosi       (mosi),
@@ -56,21 +55,21 @@ module TopModule (
         .output_text  (des_output)
     );
     
+    // Update spi_tx_data when encryption/decryption is done
     always @(posedge clk or posedge rst) begin
         if (rst) begin
             spi_tx_data <= 64'h0;
         end else begin
-            // Latch output when done
-            if ((done_encrypt_latched || done_decrypt_latched) && transaction_state == 2'd3) begin
+            if (done_encrypt || done_decrypt) begin
                 spi_tx_data <= des_output;
             end
-            // Clear when starting new transaction
-            if (cs_rise_delayed && transaction_state == 2'd0) begin
+            else if (cs_rise_delayed && transaction_state == 2'd0) begin
                 spi_tx_data <= 64'h0;
             end
         end
     end
     
+    // CS edge detection
     always @(posedge clk or posedge rst) begin
         if (rst) begin
             cs_meta <= 1'b1;
@@ -86,6 +85,7 @@ module TopModule (
     end
     assign cs_rise = (cs_prev == 1'b0) && (cs_sync == 1'b1);
     
+    // Transaction state machine
     always @(posedge clk or posedge rst) begin
         if (rst) begin
             transaction_state <= 2'd0;
@@ -98,20 +98,20 @@ module TopModule (
             
             if (cs_rise_delayed) begin
                 case (transaction_state)
-                    2'd0: begin  // KEY state
+                    2'd0: begin
                         key_reg <= spi_rx_data;
                         transaction_state <= 2'd1;
                     end
-                    2'd1: begin  // DATA state
+                    2'd1: begin
                         data_reg <= spi_rx_data;
                         transaction_state <= 2'd2;
                     end
-                    2'd2: begin  // CONTROL state
+                    2'd2: begin
                         crypt <= spi_rx_data[0];
                         transaction_state <= 2'd3;
                         trigger_operation <= 1'b1;
                     end
-                    2'd3: begin  // WAIT state
+                    2'd3: begin
                         if (!active) begin
                             transaction_state <= 2'd0;
                         end
@@ -122,6 +122,7 @@ module TopModule (
         end
     end
     
+    // DES operation control
     always @(posedge clk or posedge rst) begin
         if (rst) begin
             start_encrypt <= 1'b0;
@@ -138,6 +139,7 @@ module TopModule (
         end
     end
     
+    // Active flag
     always @(posedge clk or posedge rst) begin
         if (rst) begin
             active <= 1'b0;
@@ -148,6 +150,7 @@ module TopModule (
         end
     end
     
+    // Done flags
     always @(posedge clk or posedge rst) begin
         if (rst) begin
             done_encrypt_latched <= 1'b0;

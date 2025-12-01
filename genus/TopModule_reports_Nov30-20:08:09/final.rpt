@@ -1,0 +1,51 @@
+
+
+Working Directory = /home/u1425837/des-project/genus
+QoS Summary for TopModule
+==========================================================================================
+Metric                          generic         map             syn_opt         final          
+==========================================================================================
+Slack (ps):                      -354               0               0               0
+  R2R (ps):                      -354               0               0               0
+  I2R (ps):                  no_value        no_value        no_value        no_value
+  R2O (ps):                  no_value        no_value        no_value        no_value
+  I2O (ps):                  no_value        no_value        no_value        no_value
+  CG  (ps):                  no_value        no_value        no_value        no_value
+TNS (ps):                      -5,278               0               0               0
+  R2R (ps):                    -5,278               0               0               0
+  I2R (ps):                  no_value        no_value        no_value        no_value
+  R2O (ps):                  no_value        no_value        no_value        no_value
+  I2O (ps):                  no_value        no_value        no_value        no_value
+  CG  (ps):                  no_value        no_value        no_value        no_value
+Failing Paths:                     32               0               0               0
+Cell Area:                    134,753         162,183         153,009         153,009
+Total Cell Area:              134,753         162,183         153,009         153,009
+Leaf Instances:                 4,790           5,209           4,590           4,590
+Total Instances:                4,790           5,209           4,590           4,590
+Utilization (%):                 0.00            0.00            0.00            0.00
+Tot. Net Length (um):        no_value        no_value        no_value        no_value
+Avg. Net Length (um):        no_value        no_value        no_value        no_value
+Route Overflow H (%):        no_value        no_value        no_value        no_value
+Route Overflow V (%):        no_value        no_value        no_value        no_value
+MBCI(%) (bits/gate) :            0.00            0.00            0.00            0.00
+Norm Cong Hotspot Area:
+  Max Cong:                  no_value        no_value        no_value        no_value
+  Tot Cong:                  no_value        no_value        no_value        no_value
+==========================================================================================
+CPU  Runtime (h:m:s):        00:00:31        00:00:18        00:00:09        00:00:00
+Real Runtime (h:m:s):        00:00:30        00:00:15        00:00:08        00:00:01
+CPU  Elapsed (h:m:s):        00:00:34        00:00:53        00:01:01        00:01:01
+Real Elapsed (h:m:s):        00:00:31        00:00:46        00:00:54        00:00:55
+Memory (MB):                  1580.50         1581.66         1581.48         1583.48
+==========================================================================================
+==========================================================================================
+Flow Settings:
+==========================================================================================
+Total Runtime (h:m:s): 00:00:55
+Total Memory (MB):     1583.48
+Executable Version:    21.15-s080_1
+==========================================================================================
+Total Cell Area =  Cell Area + Physical Cell Area
+Total Instances =  Leaf Instances + Physical Instances
+
+

@@ -1,4 +1,4 @@
-create_clock -name clk -period 10 [get_ports clk]
+create_clock -name clk -period 6 [get_ports clk]
 
 set_clock_uncertainty 2 [get_clocks clk]
 set_clock_transition -rise -min 1.25 [get_clocks clk]

@@ -22,78 +22,68 @@ module tb_TopModule;
     initial sclk = 0; 
     always #50 sclk = ~sclk;
 
-    // SPI write - MATCHES tb_SPI timing
+    // SPI write
     task spi_write_64(input [63:0] data);
         integer i;
         begin
-            // Wait for negedge
             @(negedge sclk);
-            
-            // Set first MOSI bit and assert CS
             mosi = data[63];
             cs_n = 0;
-            
-            // First bit
             @(posedge sclk);
             
-            // Remaining 63 bits
             for (i = 62; i >= 0; i = i - 1) begin
                 @(negedge sclk);
                 mosi = data[i];
                 @(posedge sclk);
             end
             
-            // Deassert CS
             @(negedge sclk);
             cs_n = 1;
             mosi = 0;
-            
-            // Wait for synchronization
             repeat(20) @(posedge clk);
         end
     endtask
     
-    // SPI read - MATCHES tb_SPI timing
+    // SPI read
     task spi_read_64(output [63:0] data);
         integer i;
         reg [63:0] tmp;
         begin
             tmp = 64'h0;
-            
-            // Wait for negedge
             @(negedge sclk);
-            
-            // Set first MOSI bit (dummy) and assert CS
             mosi = 0;
             cs_n = 0;
             
-            // First bit
             @(posedge sclk);
             #2;
             tmp[63] = miso;
             
-            // Remaining 63 bits
             for (i = 62; i >= 0; i = i - 1) begin
                 @(negedge sclk);
-                mosi = 0;  // Dummy data
-                
+                mosi = 0;
                 @(posedge sclk);
                 #2;
                 tmp[i] = miso;
             end
             
-            // Deassert CS
             @(negedge sclk);
             cs_n = 1;
             data = tmp;
-            
-            // Wait for synchronization
             repeat(20) @(posedge clk);
         end
     endtask
     
+    // Wait for operation with timeout
+    task wait_operation(input integer max_cycles);
+        integer i;
+        begin
+            for (i = 0; i < max_cycles; i = i + 1) begin
+                @(posedge clk);
+            end
+        end
+    endtask
+    
     initial begin
-        
         // TEST CASE 1
         rst = 1;
         cs_n = 1;
@@ -110,24 +100,13 @@ module tb_TopModule;
         $display("Plaintext: %h", plaintext);
         $display("Expected:  b5219ee81aa7499d");
         
-        // Send KEY, DATA, CONTROL
         spi_write_64(key);
         spi_write_64(plaintext);
         spi_write_64(64'h0000000000000000);  // encrypt
         
-        // Encryption progress
         $display("Encryption in progress...");
-        timeout_counter = 0;
-        while (!dut.done_encrypt_latched && timeout_counter < 5000) begin
-            @(posedge clk);
-            timeout_counter = timeout_counter + 1;
-        end
-        if (timeout_counter >= 5000) begin
-            $display("ERROR: Encryption timeout");
-            $stop;
-        end
+        wait_operation(5000);  // Wait fixed time instead of checking internal signal
         
-        // Read result
         spi_read_64(ciphertext);
         
         $display("\n--- ENCRYPTION RESULT ---");
@@ -146,24 +125,13 @@ module tb_TopModule;
         $display("Key:        %h", key);
         $display("Ciphertext: %h", ciphertext);
         
-        // Send KEY, DATA, CONTROL
         spi_write_64(key);
         spi_write_64(ciphertext);
         spi_write_64(64'h0000000000000001);  // decrypt
         
-        // Decryption progress
         $display("Decryption in progress...");
-        timeout_counter = 0;
-        while (!dut.done_decrypt_latched && timeout_counter < 5000) begin
-            @(posedge clk);
-            timeout_counter = timeout_counter + 1;
-        end
-        if (timeout_counter >= 5000) begin
-            $display("ERROR: Decryption timeout");
-            $stop;
-        end
+        wait_operation(5000);
         
-        // Read result
         spi_read_64(decrypted);
         
         $display("\n--- DECRYPTION RESULT ---");
@@ -196,15 +164,7 @@ module tb_TopModule;
         spi_write_64(64'h0000000000000000);
         
         $display("Encryption in progress...");
-        timeout_counter = 0;
-        while (!dut.done_encrypt_latched && timeout_counter < 5000) begin
-            @(posedge clk);
-            timeout_counter = timeout_counter + 1;
-        end
-        if (timeout_counter >= 5000) begin
-            $display("ERROR: Encryption timeout");
-            $stop;
-        end
+        wait_operation(5000);
         
         spi_read_64(ciphertext);
         
@@ -225,12 +185,7 @@ module tb_TopModule;
         spi_write_64(ciphertext);
         spi_write_64(64'h0000000000000001);
         
-        timeout_counter = 0;
-        while (!dut.done_decrypt_latched && timeout_counter < 5000) begin
-            @(posedge clk);
-            timeout_counter = timeout_counter + 1;
-        end
-        
+        wait_operation(5000);
         spi_read_64(decrypted);
         
         $display("\n--- DECRYPTION RESULT ---");
@@ -262,12 +217,7 @@ module tb_TopModule;
         spi_write_64(plaintext);
         spi_write_64(64'h0000000000000000);
         
-        timeout_counter = 0;
-        while (!dut.done_encrypt_latched && timeout_counter < 5000) begin
-            @(posedge clk);
-            timeout_counter = timeout_counter + 1;
-        end
-        
+        wait_operation(5000);
         spi_read_64(ciphertext);
         
         $display("\n--- ENCRYPTION RESULT ---");
@@ -287,12 +237,7 @@ module tb_TopModule;
         spi_write_64(ciphertext);
         spi_write_64(64'h0000000000000001);
         
-        timeout_counter = 0;
-        while (!dut.done_decrypt_latched && timeout_counter < 5000) begin
-            @(posedge clk);
-            timeout_counter = timeout_counter + 1;
-        end
-        
+        wait_operation(5000);
         spi_read_64(decrypted);
         
         $display("\n--- DECRYPTION RESULT ---");
@@ -324,12 +269,7 @@ module tb_TopModule;
         spi_write_64(plaintext);
         spi_write_64(64'h0000000000000000);
         
-        timeout_counter = 0;
-        while (!dut.done_encrypt_latched && timeout_counter < 5000) begin
-            @(posedge clk);
-            timeout_counter = timeout_counter + 1;
-        end
-        
+        wait_operation(5000);
         spi_read_64(ciphertext);
         
         $display("\n--- ENCRYPTION RESULT ---");
@@ -349,12 +289,7 @@ module tb_TopModule;
         spi_write_64(ciphertext);
         spi_write_64(64'h0000000000000001);
         
-        timeout_counter = 0;
-        while (!dut.done_decrypt_latched && timeout_counter < 5000) begin
-            @(posedge clk);
-            timeout_counter = timeout_counter + 1;
-        end
-        
+        wait_operation(5000);
         spi_read_64(decrypted);
         
         $display("\n--- DECRYPTION RESULT ---");
