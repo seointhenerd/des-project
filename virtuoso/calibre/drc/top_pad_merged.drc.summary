@@ -3,7 +3,7 @@
 ==================================================================================
 === CALIBRE::DRC-H SUMMARY REPORT
 ===
-Execution Date/Time:       Mon Dec  1 12:33:09 2025
+Execution Date/Time:       Mon Dec  1 19:55:35 2025
 Calibre Version:           v2021.2_37.20    Tue Jun 1 14:42:29 PDT 2021
 Rule File Pathname:        /home/u1425837/des-project/virtuoso/calibre/drc/_CLM18_LM16_LM152_6M_fullchip.215a_
 Rule File Title:           
@@ -69,7 +69,7 @@ LAYER M5DMY ....... TOTAL Original Geometry Count = 224193 (224193)
 LAYER M5i ......... TOTAL Original Geometry Count = 6403   (14152)
 LAYER M6SLOTi ..... TOTAL Original Geometry Count = 0      (0)
 LAYER M6DMY ....... TOTAL Original Geometry Count = 48923  (48923)
-LAYER M6i ......... TOTAL Original Geometry Count = 3307   (11056)
+LAYER M6i ......... TOTAL Original Geometry Count = 3308   (11057)
 LAYER MDSLOTi ..... TOTAL Original Geometry Count = 0      (0)
 LAYER MDDMY ....... TOTAL Original Geometry Count = 0      (0)
 LAYER MDi ......... TOTAL Original Geometry Count = 0      (0)
@@ -526,7 +526,7 @@ RULECHECK UTM40K.E.3 .................. TOTAL Result Count = 0 (0)
 RULECHECK UTM40K.I.1 .................. TOTAL Result Count = 0 (0)
 RULECHECK UTM40K.I.2 .................. TOTAL Result Count = 0 (0)
 RULECHECK UTM40K.R.2 .................. TOTAL Result Count = 0 (0)
-RULECHECK UTM40K.R.3 .................. TOTAL Result Count = 1 (1)
+RULECHECK UTM40K.R.3 .................. TOTAL Result Count = 0 (0)
 RULECHECK UTM40K.A.2 .................. TOTAL Result Count = 0 (0)
 RULECHECK DNW.W.1 ..................... TOTAL Result Count = 0 (0)
 RULECHECK DNW.S.1 ..................... TOTAL Result Count = 0 (0)
@@ -685,13 +685,11 @@ RULECHECK DRM.R.1 ..................... NOT EXECUTED
 ----------------------------------------------------------------------------------
 --- RULECHECK RESULTS STATISTICS (BY CELL)
 ---
-CELL top_pad_merged ........ TOTAL Result Count = 1 (1)
-    RULECHECK UTM40K.R.3 ... TOTAL Result Count = 1 (1)
 ----------------------------------------------------------------------------------
 --- SUMMARY
 ---
 TOTAL CPU Time:                  108
 TOTAL REAL Time:                 9
-TOTAL Original Layer Geometries: 1805827 (3920437)
+TOTAL Original Layer Geometries: 1805828 (3920438)
 TOTAL DRC RuleChecks Executed:   525
-TOTAL DRC Results Generated:     1 (1)
+TOTAL DRC Results Generated:     0 (0)

@@ -11,10 +11,17 @@
 
 REPORT FILE NAME:         top_pad_merged.lvs.report.ext
 LAYOUT NAME:              top_pad_merged.calibre.db ('top_pad_merged')
-CREATION TIME:            Mon Dec  1 12:25:44 2025
+CREATION TIME:            Mon Dec  1 12:55:47 2025
 CURRENT DIRECTORY:        /home/u1425837/des-project/virtuoso/calibre/lvs
 USER NAME:                u1425837
 CALIBRE VERSION:          v2021.2_37.20    Tue Jun 1 14:42:29 PDT 2021
 
+
+
+Extraction Errors and Warnings for cell "top_pad_merged"
+--------------------------------------------------------
+
+WARNING:  Stamping conflict in SCONNECT - Multiple source nets stamp one target net.
+          Use LVS REPORT OPTION S or LVS SOFTCHK statement to obtain detailed information.
 
 

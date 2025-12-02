@@ -2,7 +2,7 @@
 Product   : Virtuoso(R) XStream Out
 Program   : @(#)$CDS: strmout version 6.1.8-64b 06/22/2022 16:16 (sjfhw317) $
           : sub-version  IC6.1.8-64b.500.26 
-Started at: 01-Dec-2025  12:33:06
+Started at: 01-Dec-2025  19:55:32
 User Name : u1425837
 Host Name : lab2-30.eng.utah.edu
 Directory : /home/u1425837/des-project/virtuoso
@@ -27,14 +27,14 @@ case                                    Preserve
 convertDot                              node
 convertPcellPin                         geometry
 
-INFO (XSTRM-223): 1. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_764617586840.
-INFO (XSTRM-223): 2. Translating stdVia tsmc18/M3_M2/layout as STRUCTURE M3_M2_CDNS_764617586841.
-INFO (XSTRM-223): 3. Translating stdVia tsmc18/M4_M3/layout as STRUCTURE M4_M3_CDNS_764617586842.
-INFO (XSTRM-223): 4. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_764617586843.
-INFO (XSTRM-223): 5. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_764617586844.
-INFO (XSTRM-223): 6. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_764617586845.
-INFO (XSTRM-223): 7. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_764617586846.
-INFO (XSTRM-223): 8. Translating stdVia tsmc18/M3_M2/layout as STRUCTURE M3_M2_CDNS_764617586847.
+INFO (XSTRM-223): 1. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_764644132120.
+INFO (XSTRM-223): 2. Translating stdVia tsmc18/M3_M2/layout as STRUCTURE M3_M2_CDNS_764644132121.
+INFO (XSTRM-223): 3. Translating stdVia tsmc18/M4_M3/layout as STRUCTURE M4_M3_CDNS_764644132122.
+INFO (XSTRM-223): 4. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_764644132123.
+INFO (XSTRM-223): 5. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_764644132124.
+INFO (XSTRM-223): 6. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_764644132125.
+INFO (XSTRM-223): 7. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_764644132126.
+INFO (XSTRM-223): 8. Translating stdVia tsmc18/M3_M2/layout as STRUCTURE M3_M2_CDNS_764644132127.
 INFO (XSTRM-223): 9. Translating cellView SC_LIB/ANTENNA/layout as STRUCTURE ANTENNA.
 INFO (XSTRM-223): 10. Translating cellView SC_LIB/BUFX1/layout as STRUCTURE BUFX1.
 WARNING (XSTRM-35): The objects in the layer-purpose pair 'text:drawing' are ignored. This is because the layer-purpose pair used in the design is not specified in the layer map file. Specify the layer-purpose pair in the layer map file and try again.
@@ -50,27 +50,27 @@ INFO (XSTRM-223): 19. Translating cellView SC_LIB/MUX2X1/layout as STRUCTURE MUX
 INFO (XSTRM-223): 20. Translating cellView SC_LIB/INVX4/layout as STRUCTURE INVX4.
 INFO (XSTRM-223): 21. Translating cellView PADS_LIB/pad_corner/layout as STRUCTURE pad_corner.
 INFO (XSTRM-180): You have not used the '-objectMap' option. The design has instance(s) of at least one of following OpenAccess objects: oaBlockage, oaBoundary, oaRow, and oaMarker. Any information about these objects will not be translated into the generated stream file. Use the '-objectMap' option to translate/preserve these objects using XStream.
-INFO (XSTRM-223): 22. Translating stdVia tsmc18/M3_M2/layout as STRUCTURE M3_M2_CDNS_764617586848.
-INFO (XSTRM-223): 23. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_764617586849.
-INFO (XSTRM-223): 24. Translating stdVia tsmc18/M3_M2/layout as STRUCTURE M3_M2_CDNS_7646175868410.
-INFO (XSTRM-223): 25. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_7646175868411.
+INFO (XSTRM-223): 22. Translating stdVia tsmc18/M3_M2/layout as STRUCTURE M3_M2_CDNS_764644132128.
+INFO (XSTRM-223): 23. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_764644132129.
+INFO (XSTRM-223): 24. Translating stdVia tsmc18/M3_M2/layout as STRUCTURE M3_M2_CDNS_7646441321210.
+INFO (XSTRM-223): 25. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_7646441321211.
 INFO (XSTRM-223): 26. Translating cellView PADS_LIB/padboxx/layout as STRUCTURE padboxx.
 INFO (XSTRM-223): 27. Translating cellView PADS_LIB/padbox/layout as STRUCTURE padbox.
 INFO (XSTRM-223): 28. Translating cellView PADS_LIB/pad_vdd/layout as STRUCTURE pad_vdd.
-INFO (XSTRM-223): 29. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_7646175868412.
-INFO (XSTRM-223): 30. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_7646175868413.
-INFO (XSTRM-223): 31. Translating stdVia tsmc18/M4_M3/layout as STRUCTURE M4_M3_CDNS_7646175868414.
-INFO (XSTRM-223): 32. Translating stdVia tsmc18/M3_M2/layout as STRUCTURE M3_M2_CDNS_7646175868415.
-INFO (XSTRM-223): 33. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_7646175868416.
+INFO (XSTRM-223): 29. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_7646441321212.
+INFO (XSTRM-223): 30. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_7646441321213.
+INFO (XSTRM-223): 31. Translating stdVia tsmc18/M4_M3/layout as STRUCTURE M4_M3_CDNS_7646441321214.
+INFO (XSTRM-223): 32. Translating stdVia tsmc18/M3_M2/layout as STRUCTURE M3_M2_CDNS_7646441321215.
+INFO (XSTRM-223): 33. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_7646441321216.
 INFO (XSTRM-223): 34. Translating cellView PADS_LIB/met14/layout as STRUCTURE met14.
-INFO (XSTRM-223): 35. Translating cellView tsmc18/pdio_m/layout as STRUCTURE pdio_m_CDNS_764617586840.
+INFO (XSTRM-223): 35. Translating cellView tsmc18/pdio_m/layout as STRUCTURE pdio_m_CDNS_764644132120.
 INFO (XSTRM-223): 36. Translating cellView PADS_LIB/pad_gnd/layout as STRUCTURE pad_gnd.
-INFO (XSTRM-223): 37. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_7646175868417.
-INFO (XSTRM-223): 38. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_7646175868418.
-INFO (XSTRM-223): 39. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_7646175868419.
-INFO (XSTRM-223): 40. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_7646175868420.
-INFO (XSTRM-223): 41. Translating stdVia tsmc18/M3_M2/layout as STRUCTURE M3_M2_CDNS_7646175868421.
-INFO (XSTRM-223): 42. Translating stdVia tsmc18/M4_M3/layout as STRUCTURE M4_M3_CDNS_7646175868422.
+INFO (XSTRM-223): 37. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_7646441321217.
+INFO (XSTRM-223): 38. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_7646441321218.
+INFO (XSTRM-223): 39. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_7646441321219.
+INFO (XSTRM-223): 40. Translating stdVia tsmc18/M2_M1/layout as STRUCTURE M2_M1_CDNS_7646441321220.
+INFO (XSTRM-223): 41. Translating stdVia tsmc18/M3_M2/layout as STRUCTURE M3_M2_CDNS_7646441321221.
+INFO (XSTRM-223): 42. Translating stdVia tsmc18/M4_M3/layout as STRUCTURE M4_M3_CDNS_7646441321222.
 INFO (XSTRM-223): 43. Translating cellView PADS_LIB/met14_hor/layout as STRUCTURE met14_hor.
 INFO (XSTRM-223): 44. Translating cellView PADS_LIB/pad_in/layout as STRUCTURE pad_in.
 INFO (XSTRM-223): 45. Translating cellView PADS_LIB/pad_out/layout as STRUCTURE pad_out.
@@ -166,10 +166,10 @@ Summary of Objects Translated:
 	Standard Vias                           33275
 	Custom Vias:                            0
 	CdsGen Vias:                            0
-	Pathsegs:                               1
+	Pathsegs:                               2
 	Text:                                   24492
 	TextDisplay:                            2
 	Cells:                                  116
 
-Elapsed Time: 2.8s   User Time: 0.4s   CPU Time: 0.1s   Peak VM: 73368KB
+Elapsed Time: 2.6s   User Time: 0.4s   CPU Time: 0.1s   Peak VM: 72188KB
 INFO (XSTRM-234): Translation completed. '0' error(s) and '2' warning(s) found.

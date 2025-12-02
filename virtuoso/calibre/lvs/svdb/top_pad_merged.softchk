@@ -1,27 +1,27 @@
 top_pad_merged 1000
 SOFTCHK DNW CONTACT.
-0 0 0 Dec  1 12:18:53 2025                                                      
+0 0 0 Dec  1 12:55:59 2025                                                      
 SOFTCHK poly_term CONTACT.
-0 0 0 Dec  1 12:18:53 2025                                                      
+0 0 0 Dec  1 12:55:59 2025                                                      
 SOFTCHK poly_term CONTACT.
-0 0 0 Dec  1 12:18:53 2025                                                      
+0 0 0 Dec  1 12:55:59 2025                                                      
 SOFTCHK rfdmy56 CONTACT.
-0 0 0 Dec  1 12:18:53 2025                                                      
+0 0 0 Dec  1 12:55:59 2025                                                      
 SOFTCHK nxwell CONTACT.
-0 0 0 Dec  1 12:18:53 2025                                                      
+0 0 0 Dec  1 12:55:59 2025                                                      
 SOFTCHK RFDUMMY5T CONTACT.
-0 0 0 Dec  1 12:18:53 2025                                                      
+0 0 0 Dec  1 12:55:59 2025                                                      
 SOFTCHK RFDUMMY6T CONTACT.
-0 0 0 Dec  1 12:18:53 2025                                                      
+0 0 0 Dec  1 12:55:59 2025                                                      
 SOFTCHK coll CONTACT.
-0 0 0 Dec  1 12:18:53 2025                                                      
+0 0 0 Dec  1 12:55:59 2025                                                      
 SOFTCHK coll_od2 CONTACT.
-0 0 0 Dec  1 12:18:53 2025                                                      
+0 0 0 Dec  1 12:55:59 2025                                                      
 SOFTCHK n_psub CONTACT.
-1 1 4 Dec  1 12:18:53 2025                                                      
-Net 476 is selected for stamping.
+1 1 4 Dec  1 12:56:00 2025                                                      
+Net VSS is selected for stamping.
 Rejected nets: 475
-Net 476 is selected for stamping.
+Net VSS is selected for stamping.
 Rejected nets: 475
 p 1 10
 CN top_pad_merged c 1 0 0 1 0 0 0
@@ -37,10 +37,10 @@ DN 475
 1930000 1734800
 -80000 1734800
 SOFTCHK psub CONTACT.
-1 1 4 Dec  1 12:18:53 2025                                                      
-Net 476 is selected for stamping.
+1 1 4 Dec  1 12:56:00 2025                                                      
+Net VSS is selected for stamping.
 Rejected nets: 475
-Net 476 is selected for stamping.
+Net VSS is selected for stamping.
 Rejected nets: 475
 p 1 10
 CN top_pad_merged c 1 0 0 1 0 0 0
@@ -56,6 +56,6 @@ DN 475
 1930000 1734800
 -80000 1734800
 SOFTCHK psub_term CONTACT.
-0 0 0 Dec  1 12:18:53 2025                                                      
+0 0 0 Dec  1 12:56:00 2025                                                      
 SOFTCHK rw CONTACT.
-0 0 0 Dec  1 12:18:53 2025                                                      
+0 0 0 Dec  1 12:56:00 2025                                                      

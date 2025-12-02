@@ -21,5 +21,5 @@ DEFINE RF2SH /research/ece/lnis-teaching/Designkits/tsmc180nm/full_custom_lib/oa
 #Removed by ddDeleteObj: DEFINE top_pad /home/u1425837/des-project/virtuoso/top_pad
 #Removed by ddDeleteObj: DEFINE top_pad /home/u1425837/des-project/virtuoso/top_pad
 #Removed by ddDeleteObj: DEFINE des_tapeout /home/u1425837/des-project/virtuoso/des_tapeout
-DEFINE top_pad_trash /home/u1425837/des-project/virtuoso/top_pad_trash
+#Removed by ddDeleteObj: DEFINE top_pad_trash /home/u1425837/des-project/virtuoso/top_pad_trash
 DEFINE top_pad /home/u1425837/des-project/virtuoso/top_pad

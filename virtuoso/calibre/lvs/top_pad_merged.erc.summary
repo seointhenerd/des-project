@@ -3,7 +3,7 @@
 ==================================================================================
 === CALIBRE::ERC-H SUMMARY REPORT
 ===
-Execution Date/Time:          Mon Dec  1 12:25:44 2025
+Execution Date/Time:          Mon Dec  1 12:55:47 2025
 Calibre Version:              v2021.2_37.20    Tue Jun 1 14:42:29 PDT 2021
 Rule File Pathname:           /home/u1425837/des-project/virtuoso/calibre/lvs/_calibre.lvs_
 Rule File Title:              
@@ -251,7 +251,7 @@ LAYER M5 .......... TOTAL Original Geometry Count = 6403   (14152)
 LAYER M5SLOT ...... TOTAL Original Geometry Count = 0      (0)
 LAYER RMDMY5i ..... TOTAL Original Geometry Count = 0      (0)
 LAYER INDDMY ...... TOTAL Original Geometry Count = 0      (0)
-LAYER DUM6 ........ TOTAL Original Geometry Count = 48923  (48923)
+LAYER DUM6 ........ TOTAL Original Geometry Count = 48922  (48922)
 LAYER M6 .......... TOTAL Original Geometry Count = 3307   (11056)
 LAYER M6SLOT ...... TOTAL Original Geometry Count = 0      (0)
 LAYER RMDMY6i ..... TOTAL Original Geometry Count = 0      (0)
@@ -318,6 +318,6 @@ RULECHECK ppvdd49 ................. TOTAL Result Count = 0 (0)
 ---
 TOTAL CPU Time:                              10
 TOTAL REAL Time:                             12
-TOTAL Original Layer Geometries:             1805792 (3904677)
+TOTAL Original Layer Geometries:             1805791 (3904676)
 TOTAL ERC RuleChecks Executed:               7
 TOTAL ERC RuleCheck Results Generated:       0 (0)

@@ -24,4 +24,4 @@ lvs_GroundName VSS!
 lvs_LvsOutFile LVS_REPORT top_pad_merged.lvs.report
 lvs_LvsOutFile SOURCE_NETLIST /home/u1425837/des-project/virtuoso/calibre/lvs/top_pad_merged.sp
 lvs_LvsOutFile RULES_FILE /home/u1425837/des-project/virtuoso/calibre/lvs/_calibre.lvs_
-lvs_LvsRunTimes 1764617157 1764617158
+lvs_LvsRunTimes 1764618960 1764618960
