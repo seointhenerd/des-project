@@ -1,6 +1,7 @@
-`timescale 1ns/1ps
 
+`timescale 1ns/1ps
 module tb_SPI;
+  reg         clk;
   reg         rst;
   reg         sclk;
   reg         cs_n;
@@ -9,125 +10,80 @@ module tb_SPI;
   reg  [63:0] output_text;
   wire [63:0] input_text;
   
-  SPI dut (
-    .rst(rst),
-    .sclk(sclk),
-    .cs_n(cs_n),
-    .mosi(mosi),
-    .miso(miso),
-    .output_text(output_text),
-    .input_text(input_text)
-  );
-  
-  // Clock: 20ns period (50MHz)
+  // Clock generation (fast internal clock)
   initial begin
-    sclk = 1'b0;
-    forever #10 sclk = ~sclk;
+    clk = 1'b0;
+    forever #0.5 clk = ~clk; // 1GHz clock (much faster than SPI clock)
   end
   
-  // SPI Master transaction
-  task spi_transfer;
-    input  [63:0] tx_data;
-    output [63:0] rx_data;
+  SPI dut (
+    .clk        (clk),
+    .rst        (rst),
+    .sclk       (sclk),
+    .cs_n       (cs_n),
+    .mosi       (mosi),
+    .miso       (miso),
+    .output_text(output_text),
+    .input_text (input_text)
+  );
+  
+  // SPI master frame: 64-bit transfer, Mode 0 (MSB first)
+  task spi_frame64;
+    input  [63:0] mosi_word;
+    output [63:0] miso_word;
     integer i;
     begin
-      rx_data = 64'h0;
+      #5 cs_n = 1'b0; // select slave
+      #5; // Wait for synchronization
       
-      // Wait for negedge
-      @(negedge sclk);
-      
-      // Set first MOSI bit and assert CS
-      mosi = tx_data[63];
-      cs_n = 1'b0;
-      
-      // First bit
-      @(posedge sclk);
-      #2;
-      rx_data[63] = miso;
-      
-      // Remaining 63 bits
-      for (i = 62; i >= 0; i = i - 1) begin
-        @(negedge sclk);
-        mosi = tx_data[i];
-        
-        @(posedge sclk);
+      for (i = 63; i >= 0; i = i - 1) begin
+        mosi = mosi_word[i];
+        #2 sclk = 1'b1;         // rising: sample MOSI
+        #2 miso_word[i] = miso; // capture MISO after rising edge
+        sclk = 1'b0;            // falling: slave updates next bit
         #2;
-        rx_data[i] = miso;
       end
       
-      // Deassert CS
-      @(negedge sclk);
-      cs_n = 1'b1;
-      mosi = 1'b0;
-      
-      // Wait
-      repeat(4) @(negedge sclk);
+      #5 cs_n = 1'b1;          // deselect
+      #10;                     // Wait for synchronization and processing
     end
   endtask
   
-  // Test sequence
-  reg [63:0] rx_data;
-  integer errors;
+  task expect64;
+    input [63:0] got, exp;
+    input [80*8:1] tag;
+    begin
+      if (got !== exp) begin
+        $display("[FAIL] %0s  exp=0x%016h  got=0x%016h", tag, exp, got);
+        $fatal(1);
+      end else
+        $display("[PASS] %0s  0x%016h", tag, got);
+    end
+  endtask
+  
+  reg [63:0] mosi_word;
+  reg [63:0] miso_cap;
   
   initial begin
-    errors = 0;
-    rst = 1'b0;
-    cs_n = 1'b1;
-    mosi = 1'b0;
-    output_text = 64'h0;
+    // reset
+    sclk = 1'b0; cs_n = 1'b1; mosi = 1'b0; output_text = 64'd0;
+    rst  = 1'b0; #10; rst = 1'b1; #10;
     
-    // Reset pulse
-    #25;
-    rst = 1'b1;
-    #100;
+    // Case 1
+    mosi_word   = 64'h0123_4567_89AB_CDEF; // incoming data
+    output_text = 64'hDEAD_BEEF_CAFE_FEED; // outgoing data
+    spi_frame64(mosi_word, miso_cap);
+    expect64(input_text, mosi_word, "INPUT_TEXT (from MOSI)");
+    expect64(miso_cap,   output_text, "MISO stream (output_text)");
     
-    $display("\n========================================");
-    $display("       SPI 64-BIT TEST");
-    $display("========================================\n");
-    
-    //=== Test 1 ===
-    $display("Test 1:");
-    output_text = 64'hDEAD_BEEF_CAFE_FEED;
-    spi_transfer(64'h0123_4567_89AB_CDEF, rx_data);
-    
-    $display("  MOSI sent: 0123456789ABCDEF");
-    $display("  MOSI recv: %h %s", input_text, 
-             (input_text == 64'h0123_4567_89AB_CDEF) ? "PASS" : "FAIL");
-    if (input_text != 64'h0123_4567_89AB_CDEF) errors = errors + 1;
-    
-    $display("  MISO expt: DEADBEEFCAFEFEED");
-    $display("  MISO recv: %h %s", rx_data,
-             (rx_data == 64'hDEAD_BEEF_CAFE_FEED) ? "PASS" : "FAIL");
-    if (rx_data != 64'hDEAD_BEEF_CAFE_FEED) errors = errors + 1;
-    
-    #200;
-    
-    //=== Test 2 ===
-    $display("\nTest 2:");
+    // Case 2
+    mosi_word   = 64'hA5A5_F0F0_55AA_0F0F;
     output_text = 64'h1122_3344_5566_7788;
-    spi_transfer(64'hA5A5_F0F0_55AA_0F0F, rx_data);
+    spi_frame64(mosi_word, miso_cap);
+    expect64(input_text, mosi_word, "INPUT_TEXT #2");
+    expect64(miso_cap,   output_text, "MISO stream #2");
     
-    $display("  MOSI sent: A5A5F0F055AA0F0F");
-    $display("  MOSI recv: %h %s", input_text,
-             (input_text == 64'hA5A5_F0F0_55AA_0F0F) ? "PASS" : "FAIL");
-    if (input_text != 64'hA5A5_F0F0_55AA_0F0F) errors = errors + 1;
-    
-    $display("  MISO expt: 1122334455667788");
-    $display("  MISO recv: %h %s", rx_data,
-             (rx_data == 64'h1122_3344_5566_7788) ? "PASS" : "FAIL");
-    if (rx_data != 64'h1122_3344_5566_7788) errors = errors + 1;
-    
-    #200;
-    
-    $display("\n========================================");
-    if (errors == 0) begin
-      $display("       ALL TESTS PASSED!");
-    end else begin
-      $display("       %0d ERRORS DETECTED", errors);
-    end
-    $display("========================================\n");
-    
-    $stop;
+    $display("SPI I/O 64 test: all passed!");
+    #20 $stop;
   end
-
 endmodule
