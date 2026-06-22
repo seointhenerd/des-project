@@ -1,4 +1,27 @@
-# ECE_5710_6710_F25
+# ECE_5710_6710_F25 - DES project
+
+A 16-round Feistel DES (Data Encryption Standard) engine implemented in Verilog and taken through a full RTL-to-GDSII implementation flow on TSMC 180nm, using Cadence Genus (synthesis), Cadence Innovus (place & route), and Calibre (DRC/LVS sign-off).
+
+---
+
+## Overview
+
+| Item | Detail |
+|---|---|
+| Algorithm | DES — 16-round Feistel network |
+| Technology | TSMC 180nm |
+| Gate Count | 4,524 gates (post-P&R, Innovus `area.rpt`) |
+| WNS (pre-CTS) | −12.742 ns |
+| WNS (post-CTS) | +4.315 ns |
+| Timing Violations Eliminated | 803 |
+| DRC Violations | 0 |
+| LVS Violations | 0 |
+| Antenna Diodes Inserted | 17 |
+| Tools | Cadence Genus, Cadence Innovus, Cadence Virtuoso, Calibre |
+
+---
+## Block Diagram
+<img width="1573" height="1803" alt="Image" src="https://github.com/user-attachments/assets/dfca1ca9-3e3d-436b-9c45-48287cb6c44d" />
 
 ## Getting Started
 
@@ -41,8 +64,6 @@ cd genus
   ```csh
 cd innovus
 ```
-### Project
-  Check Canvas
 
 ## Module Testing
 
